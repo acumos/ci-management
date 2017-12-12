@@ -3,6 +3,12 @@
 
     jobs:
       - '{project-name}-ci-jobs'
+      - '{project-name}-packer-jobs':
+          platforms:
+            - centos
+          templates:
+            - basebuild
+          os-cloud-file-id: 'packer-cloud-env'
 
     project: ci-management
     project-name: ci-management
