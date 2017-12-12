@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "811de22f_c4c4247d",
+        "filename": "jjb/defaults.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-12-12T20:44:11Z",
+      "side": 1,
+      "message": "This is incorrect and needs to \u0027Primary\u0027 since that is the name given to the current Gerrit link",
+      "range": {
+        "startLine": 23,
+        "startChar": 25,
+        "endLine": 23,
+        "endChar": 42
+      },
+      "revId": "5cc8178d0e4744d8cb5bc6faca2e591acac08812",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    }
+  ]
+}
