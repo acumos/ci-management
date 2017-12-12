@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "c5c5800e_d7cc20ba",
+        "filename": "packer/provision/baseline.sh",
+        "patchSetId": 4
+      },
+      "lineNbr": 173,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-12-12T23:51:11Z",
+      "side": 1,
+      "message": "Dangling whitespace",
+      "range": {
+        "startLine": 173,
+        "startChar": 0,
+        "endLine": 173,
+        "endChar": 4
+      },
+      "revId": "6aeee84dc8f9121be90f7a14d3c05141b367b69c",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    }
+  ]
+}
