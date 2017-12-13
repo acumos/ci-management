@@ -1,0 +1,12 @@
+---
+- project:
+    name: on-boarding-project
+    project-name: on-boarding-app
+    project: on-boarding
+    mvn-goals: clean install -f onboarding-app/pom.xml
+    mvn-settings: on-boarding-settings
+    jobs:
+      - '{project-name}-maven-jobs'
+    stream:
+      - master:
+          branch: master
