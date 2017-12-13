@@ -40,4 +40,6 @@
 
     # Nexus
     staging-profile-id: 3428955350b21
+    mvn-snapshot-id: snapshots
     mvn-staging-id: staging
+    nexus-snapshot-repo: snapshots
