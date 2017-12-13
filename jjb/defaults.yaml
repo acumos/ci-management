@@ -39,5 +39,6 @@
         -Dorg.ops4j.pax.url.mvn.localRepository=/tmp/r
 
     # Nexus
+    mvn-snapshot-id: snapshot
     staging-profile-id: 3428955350b21
     mvn-staging-id: staging
