@@ -1,0 +1,22 @@
+---
+- project:
+    name: cds-proj-name
+    project-name: 'cds'
+    project: 'common-dataservice'
+    mvn-settings: 'cds-settings'
+    subproject:
+      - 'client':
+          pom:     'cmn-data-svc-client/pom.xml'
+          pattern: 'cmn-data-svc-client/**'
+      - 'server':
+          pom:     'cmn-data-svc-server/pom.xml'
+          pattern: 'cmn-data-svc-server/**'
+
+    jobs:
+      - '{project-name}-{stream}-{subproject}-verify-java'
+      - '{project-name}-{stream}-{subproject}-merge-java'
+      - '{project-name}-{stream}-{subproject}-release-java-daily'
+
+    stream:
+      - 'master':
+          branch: 'master'
