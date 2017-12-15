@@ -3,7 +3,7 @@
 This repository has resources to generate jobs in the Linux Foundation Jenkins instance
 using the Jenkins Job Builder https://docs.openstack.org/infra/system-config/jjb.html
 
-## Testing the templates 
+## Testing the templates
 
 To test the Acumos templates locally (instead of submitting Gerrit reviews and waiting):
 
