@@ -3,10 +3,16 @@
     name: cds-project
     project-name: common-dataservice-build
     project: common-dataservice
-    mvn-goals: clean install
     mvn-settings: common-dataservice-settings
     jobs:
+      # maven group has clm, release, verify, verify-dependencies
       - '{project-name}-maven-jobs'
+      # javadoc group has -publish and -verify
+      - '{project-name}-maven-javadoc-jobs'
+      # Merge invokes deploy goal
+      - '{project-name}-maven-merge-{stream}'
+      - '{project-name}-sonar'
+      # TODO: ADD DOCKER
     stream:
       - master:
           branch: master
