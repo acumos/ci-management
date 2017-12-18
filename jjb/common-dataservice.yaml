@@ -3,10 +3,17 @@
     name: cds-project
     project-name: common-dataservice-build
     project: common-dataservice
-    mvn-goals: clean install
     mvn-settings: common-dataservice-settings
     jobs:
+      # maven group has clm, release, verify, verify-dependencies
       - '{project-name}-maven-jobs'
+      # javadoc group has -publish and -verify
+      # waiting for mvn-site-id value
+      # - '{project-name}-maven-javadoc-jobs'
+      - gerrit-maven-sonar
+      # Merge invokes deploy goal
+      - gerrit-maven-merge
+      # TODO: ADD DOCKER
     stream:
       - master:
           branch: master
