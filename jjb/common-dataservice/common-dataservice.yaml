@@ -4,11 +4,17 @@
     project-name: common-dataservice-build
     project: common-dataservice
     mvn-settings: common-dataservice-settings
+    # for javadoc jobs
+    # mvn-site-id: common-dataservice-settings
+    builders:
+      - lf-infra-docker-login:
+          global-settings-file: global-settings
+          settings-file: '{mvn-settings}'
     jobs:
       # maven group has clm, release, verify, verify-dependencies
       - '{project-name}-maven-jobs'
       # javadoc group has -publish and -verify
-      # waiting for mvn-site-id value
+      # javadoc jobs throw errors
       # - '{project-name}-maven-javadoc-jobs'
       - gerrit-maven-sonar
       # Merge invokes deploy goal
