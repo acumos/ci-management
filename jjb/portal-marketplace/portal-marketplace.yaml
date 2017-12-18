@@ -1,0 +1,13 @@
+---
+- project:
+    name: portal-marketplace-project
+    project-name: portal-marketplace
+    project: portal-marketplace
+    mvn-settings: portal-marketplace-settings
+    jobs:
+      - '{project-name}-maven-jobs'
+      # merge job is not yet part of global JJB
+      - gerrit-maven-merge
+    stream:
+      - master:
+          branch: master

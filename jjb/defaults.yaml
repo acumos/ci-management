@@ -14,8 +14,8 @@
     build-days-to-keep: 30
 
     # Timeout in minutes
-    build-timeout: 360
-    build-node: centos7-basebuild-2c-1g
+    build-timeout: 30
+    build-node: centos7-basebuild-4c-4g
 
     archive-artifacts: ''
 
@@ -41,5 +41,5 @@
     # Nexus
     mvn-snapshot-id: snapshots
     nexus-snapshot-repo: snapshots
-    staging-profile-id: 3428955350b21
     mvn-staging-id: staging
+    staging-profile-id: 3428955350b21

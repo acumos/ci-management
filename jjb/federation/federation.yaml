@@ -1,0 +1,14 @@
+---
+- project:
+    name: federation-project
+    project-name: federation
+    project: federation
+    mvn-params: -f gateway/pom.xml
+    mvn-settings: federation-settings
+    jobs:
+      - '{project-name}-maven-jobs'
+      # merge job is not yet part of global JJB
+      - gerrit-maven-merge
+    stream:
+      - master:
+          branch: master

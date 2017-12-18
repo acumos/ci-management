@@ -1,0 +1,13 @@
+---
+- project:
+    name: runtime-orchestrator-project
+    project-name: runtime-orchestrator
+    project: runtime-orchestrator
+    mvn-settings: runtime-orchestrator-settings
+    jobs:
+      - '{project-name}-maven-jobs'
+      # merge job is not yet part of global JJB
+      - gerrit-maven-merge
+    stream:
+      - master:
+          branch: master
