@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "f68f5186_343f0e78",
+        "filename": "jjb/common-dataservice/common-dataservice.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 89
+      },
+      "writtenOn": "2017-12-18T22:41:49Z",
+      "side": 1,
+      "message": "You should keep this as:\nsettings-file: \u0027{mvn-settings}\u0027\n\nSince it is already defined we won\u0027t get confused in the small chance that we change the name of that settings file.",
+      "revId": "c37d2c632c0361e0e8ce10d80e02bd35f02b4566",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    }
+  ]
+}
