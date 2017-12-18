@@ -1,9 +1,9 @@
 ---
 - project:
-    name: cds-project
-    project-name: common-dataservice-build
-    project: common-dataservice
-    mvn-settings: common-dataservice-settings
+    name: acumos-hippo-cms-project
+    project-name: acumos-hippo-cms
+    project: acumos-hippo-cms
+    mvn-settings: acumos-hippo-cms-settings
     jobs:
       - '{project-name}-maven-jobs'
       # merge job is not yet part of global JJB

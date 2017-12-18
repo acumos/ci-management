@@ -1,9 +1,10 @@
 ---
 - project:
-    name: cds-project
-    project-name: common-dataservice-build
-    project: common-dataservice
-    mvn-settings: common-dataservice-settings
+    name: federation-project
+    project-name: federation
+    project: federation
+    mvn-params: -f gateway/pom.xml
+    mvn-settings: federation-settings
     jobs:
       - '{project-name}-maven-jobs'
       # merge job is not yet part of global JJB

@@ -1,9 +1,9 @@
 ---
 - project:
-    name: cds-project
-    project-name: common-dataservice-build
-    project: common-dataservice
-    mvn-settings: common-dataservice-settings
+    name: runtime-orchestrator-project
+    project-name: runtime-orchestrator
+    project: runtime-orchestrator
+    mvn-settings: runtime-orchestrator-settings
     jobs:
       - '{project-name}-maven-jobs'
       # merge job is not yet part of global JJB

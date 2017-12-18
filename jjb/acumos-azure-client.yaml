@@ -1,14 +1,13 @@
 ---
 - project:
-    name: cds-project
-    project-name: common-dataservice-build
-    project: common-dataservice
-    mvn-settings: common-dataservice-settings
+    name: acumos-azure-client-project
+    project-name: acumos-azure-client
+    project: acumos-azure-client
+    mvn-settings: acumos-azure-client-settings
     jobs:
       - '{project-name}-maven-jobs'
       # merge job is not yet part of global JJB
       - gerrit-maven-merge
-      # TODO: ADD DOCKER
     stream:
       - master:
           branch: master

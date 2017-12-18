@@ -1,9 +1,9 @@
 ---
 - project:
-    name: cds-project
-    project-name: common-dataservice-build
-    project: common-dataservice
-    mvn-settings: common-dataservice-settings
+    name: design-studio-project
+    project-name: design-studio
+    project: design-studio
+    mvn-settings: design-studio-settings
     jobs:
       - '{project-name}-maven-jobs'
       # merge job is not yet part of global JJB
