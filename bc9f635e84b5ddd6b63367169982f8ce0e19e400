@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "d3918e1f_69935144",
+        "filename": "packer/provision/docker.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2017-12-19T15:40:51Z",
+      "side": 1,
+      "message": "Dangling white space",
+      "range": {
+        "startLine": 10,
+        "startChar": 31,
+        "endLine": 10,
+        "endChar": 32
+      },
+      "revId": "bc9f635e84b5ddd6b63367169982f8ce0e19e400",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    }
+  ]
+}
