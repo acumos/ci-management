@@ -44,6 +44,8 @@
     nexus-snapshot-repo: snapshots
     mvn-staging-id: staging
     staging-profile-id: 3428955350b21
+    mvn-site-id: site
+
 
     # Javadoc
     javadoc-path: org.acumos.$PROJECT/$STREAM

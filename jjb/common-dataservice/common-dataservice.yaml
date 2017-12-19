@@ -4,7 +4,6 @@
     project-name: common-dataservice-build
     project: common-dataservice
     mvn-settings: common-dataservice-settings
-    mvn-site-id: '{mvn-settings}'
     builders:
       - lf-infra-docker-login:
           global-settings-file: global-settings
