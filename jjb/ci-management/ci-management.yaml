@@ -8,6 +8,7 @@
             - centos
           templates:
             - basebuild
+            - docker
           os-cloud-file-id: 'packer-cloud-env'
 
     project: ci-management
