@@ -4,20 +4,17 @@
     project-name: common-dataservice-build
     project: common-dataservice
     mvn-settings: common-dataservice-settings
+    # see download messages
+    mvn-params: '-Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=info -Dbuild.number=${BUILD_NUMBER}'
     # needs docker-enabled build node
     build-node: centos7-docker-4c-4g
-    builders:
-      - lf-infra-docker-login:
-          global-settings-file: global-settings
-          settings-file: '{mvn-settings}'
     jobs:
-      # maven group has clm, release, verify, verify-dependencies
-      - '{project-name}-maven-jobs'
+      - gerrit-maven-dl-verify
+      - gerrit-maven-dl-merge
+      - gerrit-maven-dl-release
       # javadoc group has -publish and -verify
       - '{project-name}-maven-javadoc-jobs'
       - gerrit-maven-sonar
-      # Merge invokes deploy goal
-      - gerrit-maven-merge
     stream:
       - master:
           branch: master
