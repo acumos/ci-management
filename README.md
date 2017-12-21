@@ -5,12 +5,49 @@ using the Jenkins Job Builder https://docs.openstack.org/infra/system-config/jjb
 
 ## Testing the templates
 
-To test the Acumos templates locally (instead of submitting Gerrit reviews and waiting):
+These instructions explain how to test the Acumos templates before submitting Gerrit reviews.
+Prerequisites:
 
-1. Check out the global JJB templates submodule within this repo:
+Install the Jenkins job builder:
+
+    pip install --user jenkins-job-builder
+
+Check out the global JJB templates submodule within this repo:
 
     git submodule update --init
 
-2. Run the Jenkins job-builder script in this directory:
+### Test Locally
+
+Check sanity by running the Jenkins job-builder script in this directory:
 
     jenkins-jobs test -r jjb
+
+### Deploy the templates to the Jenkins sandbox
+
+Login (or request permission to login) at the Jenkins sandbox:
+
+    https://jenkins.acumos.org/sandbox
+
+Get the authentication token from the sandbox:
+    a) click on your user name (top right)
+    b) click Configure (left menu)
+    c) click API Token (button)
+
+Create a config file jenkins.ini using this template and your credentials:
+
+	[job_builder]
+	ignore_cache=True
+	keep_descriptions=False
+	recursive=True
+
+	[jenkins]
+	query_plugins_info=False
+	url=https://jenkins.acumos.org/sandbox
+	user=YOUR-USER-NAME
+	password=YOUR-API-TOKEN
+
+Build and deploy jobs:
+
+    jenkins-jobs --conf jenkins.ini update jjb
+
+In the sandbox find the job then click the button "Build with parameters"

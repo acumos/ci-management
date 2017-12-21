@@ -1,5 +1,5 @@
 ---
-# GLOBAL jenkins defaults
+# Acumos jenkins defaults
 
 - defaults:
     name: global
@@ -8,7 +8,7 @@
     lftools-version:  <1.0.0
 
     # lf-infra-defaults
-    jenkins-ssh-credential: 'jenkins'
+    jenkins-ssh-credential: jenkins
 
     # build discards
     build-days-to-keep: 30
@@ -20,24 +20,16 @@
     archive-artifacts: ''
 
     # default gerrit server definition
-    gerrit-server-name: 'gerrit.acumos.org'
+    gerrit-server-name: gerrit.acumos.org
 
-    # Set default maven version used for everything
-    mvn-version: 'mvn33'
-
+    # Default maven version
+    mvn-version: mvn33
     # Default maven goals
     mvn-goals: 'clean install'
+    # Default JVM invocation options
     mvn-opts: ''
-
-    # Maven / Java
-    # use "warn" to disable download messages from the TransferListener
-    acumos-infra-mvn-opts: |
-        --show-version
-        --batch-mode
-        -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=info
-        -Djenkins
-        -Dmaven.repo.local=/tmp/r
-        -Dorg.ops4j.pax.url.mvn.localRepository=/tmp/r
+    # Publish build number
+    mvn-params: '-Dbuild.number=${{BUILD_NUMBER}}'
 
     # Nexus
     mvn-snapshot-id: snapshots
@@ -45,7 +37,6 @@
     mvn-staging-id: staging
     staging-profile-id: 3428955350b21
     mvn-site-id: site
-
 
     # Javadoc
     javadoc-path: org.acumos.$PROJECT/$STREAM
