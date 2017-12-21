@@ -1,0 +1,333 @@
+---
+# This is an excerpt of global-jjb/jjb/lf-maven-jobs.yaml.
+# These templates add the lf-infra-docker-login builder
+# for benefit of Acumos projects that build docker images.
+
+####################
+# COMMON FUNCTIONS #
+####################
+
+# Changed prefix from lf to acumos; no other change from global-jjb
+- acumos_maven_common: &acumos_maven_common
+    name: acumos-maven-common
+
+    project-type: freestyle
+    node: '{build-node}'
+    jdk: '{java-version}'
+
+    properties:
+      - lf-infra-properties:
+          build-days-to-keep: '{build-days-to-keep}'
+
+    parameters:
+      - lf-infra-parameters:
+          project: '{project}'
+          branch: '{branch}'
+          stream: '{stream}'
+          lftools-version: '{lftools-version}'
+      - lf-infra-maven-parameters:
+          mvn-opts: '{mvn-opts}'
+          mvn-params: '{mvn-params}'
+          mvn-version: '{mvn-version}'
+          # Staging repos do not make sense for CLM jobs so set it blank.
+          staging-profile-id: '{staging-profile-id}'
+      - string:
+          name: ARCHIVE_ARTIFACTS
+          default: '{archive-artifacts}'
+          description: Artifacts to archive to the logs server.
+
+    wrappers:
+      - lf-infra-wrappers:
+          build-timeout: '{build-timeout}'
+          jenkins-ssh-credential: '{jenkins-ssh-credential}'
+
+    publishers:
+      # TODO: Make email notification work.
+      # - lf-infra-email-notify:
+      #     email-recipients: '{email-recipients}'
+      #     email-prefix: '[releng]'
+      - lf-infra-publish
+
+###############
+# Maven Merge #
+###############
+
+# Changed prefix from lf to acumos;
+# adds lf-infra-docker-login to version from global-jjb
+- acumos_maven_merge: &acumos_maven_merge
+    name: acumos-maven-merge
+
+    ######################
+    # Default parameters #
+    ######################
+
+    archive-artifacts: ''
+    branch: master
+    build-days-to-keep: 30  # 30 days in case we need to troubleshoot
+    build-timeout: 30
+    cron: ''
+    git-url: '$GIT_URL/$PROJECT'
+    java-version: openjdk8
+    mvn-global-settings: global-settings
+    mvn-opts: ''
+    mvn-params: '-Dmerge'
+    mvn-version: mvn33
+    nexus-cut-dirs: 6  # Number of dirs in the Nexus path to remove for wget -r.
+    staging-profile-id: ''  # Unused by this job.
+    stream: master
+    submodule-recursive: true
+
+    gerrit_merge_triggers:
+      - change-merged-event
+      - comment-added-contains-event:
+          comment-contains-value: remerge$
+
+    gerrit_trigger_file_paths:
+      - compare-type: ANT
+        pattern: '**'
+
+    post_build_trigger: ''
+
+    #####################
+    # Job Configuration #
+    #####################
+
+    builders:
+      - lf-jacoco-nojava-workaround
+      - lf-maven-install:
+          mvn-version: '{mvn-version}'
+      - lf-provide-maven-settings:
+          global-settings-file: '{mvn-global-settings}'
+          settings-file: '{mvn-settings}'
+      - lf-infra-docker-login:
+          global-settings-file: '{mvn-global-settings}'
+          settings-file: '{mvn-settings}'
+      - lf-infra-create-netrc:
+          server-id: '{mvn-snapshot-id}'
+      - inject:
+          properties-content: |
+              NEXUS_CUT_DIRS={nexus-cut-dirs}
+              NEXUS_REPO={nexus-snapshot-repo}
+      - shell: !include-raw-escape:
+          - ../global-jjb/shell/lftools-install.sh
+          - ../global-jjb/shell/common-variables.sh
+          - ../global-jjb/shell/maven-fetch-metadata.sh
+          - ../global-jjb/shell/maven-build.sh
+          - ../global-jjb/shell/maven-deploy.sh
+      - lf-provide-maven-settings-cleanup
+
+    publishers:
+      - findbugs
+      - lf-jacoco-report
+      - lf-infra-publish
+      - trigger-parameterized-builds: '{obj:post_build_trigger}'
+
+# Adds -dl- to name and calls renamed macros; no other change from global-jjb
+- job-template:
+    name: '{project-name}-maven-dl-merge-{stream}'
+    id: gerrit-maven-dl-merge
+    <<: *acumos_maven_common
+    # yamllint disable-line rule:key-duplicates
+    <<: *acumos_maven_merge
+
+    scm:
+      - lf-infra-gerrit-scm:
+          jenkins-ssh-credential: '{jenkins-ssh-credential}'
+          git-url: '{git-url}'
+          refspec: '$GERRIT_REFSPEC'
+          branch: '$GERRIT_BRANCH'
+          submodule-recursive: '{submodule-recursive}'
+          choosing-strategy: default
+
+    triggers:
+      - timed: 'H H * * 0'
+      - gerrit:
+          server-name: '{gerrit-server-name}'
+          trigger-on: '{obj:gerrit_merge_triggers}'
+          projects:
+            - project-compare-type: ANT
+              project-pattern: '{project}'
+              branches:
+                - branch-compare-type: ANT
+                  branch-pattern: '**/{branch}'
+              file-paths: '{obj:gerrit_trigger_file_paths}'
+
+#################
+# Maven Release #
+#################
+
+# Changed prefix from lf to acumos;
+# adds lf-infra-docker-login to version from global-jjb
+- acumos_maven_release: &acumos_maven_release
+    name: acumos-maven-release
+
+    ######################
+    # Default parameters #
+    ######################
+
+    archive-artifacts: ''
+    branch: master
+    build-days-to-keep: 30  # 30 days in case a release takes long to get approved.
+    build-timeout: 30
+    cron: ''
+    git-url: '$GIT_URL/$PROJECT'
+    java-version: openjdk8
+    mvn-global-settings: global-settings
+    mvn-opts: ''
+    mvn-params: ''
+    mvn-version: mvn33
+    stream: master
+    submodule-recursive: true
+
+    gerrit_release_triggers:
+      - comment-added-contains-event:
+          comment-contains-value: build release$
+
+    #####################
+    # Job Configuration #
+    #####################
+
+    builders:
+      - lf-jacoco-nojava-workaround
+      - lf-maven-install:
+          mvn-version: '{mvn-version}'
+      - lf-provide-maven-settings:
+          global-settings-file: '{mvn-global-settings}'
+          settings-file: '{mvn-settings}'
+      - lf-infra-docker-login:
+          global-settings-file: '{mvn-global-settings}'
+          settings-file: '{mvn-settings}'
+      - lf-infra-create-netrc:
+          server-id: '{mvn-staging-id}'
+      - shell: !include-raw-escape:
+          - ../global-jjb/shell/lftools-install.sh
+          - ../global-jjb/shell/common-variables.sh
+          - ../global-jjb/shell/maven-patch-release.sh
+          - ../global-jjb/shell/maven-build.sh
+          - ../global-jjb/shell/maven-stage.sh
+      - lf-provide-maven-settings-cleanup
+
+# Adds -dl- to name and calls renamed macros; no other change from global-jjb
+- job-template:
+    name: '{project-name}-maven-dl-release-{stream}'
+    id: gerrit-maven-dl-release
+    <<: *acumos_maven_common
+    # yamllint disable-line rule:key-duplicates
+    <<: *acumos_maven_release
+
+    scm:
+      - lf-infra-gerrit-scm:
+          jenkins-ssh-credential: '{jenkins-ssh-credential}'
+          git-url: '{git-url}'
+          refspec: '$GERRIT_REFSPEC'
+          branch: '$GERRIT_BRANCH'
+          submodule-recursive: '{submodule-recursive}'
+          choosing-strategy: default
+
+    triggers:
+      - timed: '{obj:cron}'
+      - gerrit:
+          server-name: '{gerrit-server-name}'
+          trigger-on: '{obj:gerrit_release_triggers}'
+          projects:
+            - project-compare-type: ANT
+              project-pattern: '{project}'
+              branches:
+                - branch-compare-type: ANT
+                  branch-pattern: '**/{branch}'
+
+################
+# Maven Verify #
+################
+
+# Changed prefix from lf to acumos;
+# adds lf-infra-docker-login to version from global-jjb;
+# uses acumos common variables script.
+- acumos_maven_verify: &acumos_maven_verify
+    name: acumos-maven-verify
+
+    ######################
+    # Default parameters #
+    ######################
+
+    archive-artifacts: ''
+    branch: master
+    build-days-to-keep: 7
+    build-timeout: 60
+    git-url: '$GIT_URL/$PROJECT'
+    java-version: openjdk8
+    mvn-global-settings: global-settings
+    mvn-opts: ''
+    mvn-params: '-Dstream=$STREAM'
+    mvn-version: mvn33
+    staging-profile-id: ''  # Unused in this job
+    stream: master
+    submodule-recursive: true
+
+    gerrit_verify_triggers:
+      - patchset-created-event:
+          exclude-drafts: true
+          exclude-trivial-rebase: false
+          exclude-no-code-change: false
+      - draft-published-event
+      - comment-added-contains-event:
+          comment-contains-value: recheck$
+    gerrit_trigger_file_paths:
+      - compare-type: ANT
+        pattern: '**'
+
+    #####################
+    # Job Configuration #
+    #####################
+
+    concurrent: true
+
+    builders:
+      - lf-jacoco-nojava-workaround
+      - lf-maven-install:
+          mvn-version: '{mvn-version}'
+      - lf-provide-maven-settings:
+          global-settings-file: '{mvn-global-settings}'
+          settings-file: '{mvn-settings}'
+      - lf-infra-docker-login:
+          global-settings-file: '{mvn-global-settings}'
+          settings-file: '{mvn-settings}'
+      - shell: !include-raw-escape:
+          - ../global-jjb/shell/lftools-install.sh
+          - ../global-jjb/shell/common-variables.sh
+          - ../global-jjb/shell/maven-build.sh
+      - lf-provide-maven-settings-cleanup
+
+    publishers:
+      - findbugs
+      - lf-jacoco-report
+      - lf-infra-publish
+
+# Adds -dl- to name and calls renamed macros; no other change from global-jjb
+- job-template:
+    name: '{project-name}-maven-dl-verify-{stream}-{mvn-version}-{java-version}'
+    id: gerrit-maven-dl-verify
+    <<: *acumos_maven_common
+    # yamllint disable-line rule:key-duplicates
+    <<: *acumos_maven_verify
+
+    scm:
+      - lf-infra-gerrit-scm:
+          jenkins-ssh-credential: '{jenkins-ssh-credential}'
+          git-url: '{git-url}'
+          refspec: '$GERRIT_REFSPEC'
+          branch: '$GERRIT_BRANCH'
+          submodule-recursive: '{submodule-recursive}'
+          choosing-strategy: gerrit
+
+    triggers:
+      - gerrit:
+          server-name: '{gerrit-server-name}'
+          trigger-on: '{obj:gerrit_verify_triggers}'
+          projects:
+            - project-compare-type: ANT
+              project-pattern: '{project}'
+              branches:
+                - branch-compare-type: ANT
+                  branch-pattern: '**/{branch}'
+              file-paths: '{obj:gerrit_trigger_file_paths}'

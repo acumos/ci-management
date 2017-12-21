@@ -1,0 +1,11 @@
+---
+- project:
+    name: acumos-python-client-project
+    project-name: acumos-python-client
+    project: acumos-python-client
+    mvn-settings: acumos-python-client-settings
+    jobs:
+      - '{project-name}-python-jobs'
+    stream:
+      - master:
+          branch: master

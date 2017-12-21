@@ -1,0 +1,11 @@
+---
+- project:
+    name: vm-predictor-project
+    project-name: vm-predictor
+    project: vm-predictor
+    mvn-settings: vm-predictor-settings
+    jobs:
+      - '{project-name}-python-jobs'
+    stream:
+      - master:
+          branch: master
