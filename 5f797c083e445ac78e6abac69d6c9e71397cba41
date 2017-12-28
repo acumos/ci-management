@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "e8ed24e0_9784f5eb",
+        "filename": "jjb/acumos-jjb/defaults.yaml",
+        "patchSetId": 9
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 62
+      },
+      "writtenOn": "2017-12-28T19:26:50Z",
+      "side": 1,
+      "message": "Any changes to this file should remain in the defaults.yaml in jjb/defaults.yaml do not move it.",
+      "revId": "5f797c083e445ac78e6abac69d6c9e71397cba41",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "205111e0_ab4fe17d",
+        "filename": "jjb/defaults.yaml",
+        "patchSetId": 9
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 62
+      },
+      "writtenOn": "2017-12-28T19:26:50Z",
+      "side": 1,
+      "message": "Why is this file being deleted? It is needed by lfci.",
+      "revId": "5f797c083e445ac78e6abac69d6c9e71397cba41",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    }
+  ]
+}
