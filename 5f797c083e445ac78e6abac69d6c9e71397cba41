@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "e5d768b7_0a2c9939",
+        "filename": "jjb/acumos-jjb/acumos-maven-jobs.yaml",
+        "patchSetId": 9
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 62
+      },
+      "writtenOn": "2017-12-28T19:30:30Z",
+      "side": 1,
+      "message": "Personally I\u0027d rather see the new docker jobs be incorporated into global-jjb somehow but I do not understand the changes here.\n\nIt is difficult to support the job templates if they are being copied around and not being centrally managed.\n\nIf we can test this on the Jenkins sandbox and prove it does what is needed we can pull out the config segment needed into global-jjb so that no duplication of work is needed.",
+      "revId": "5f797c083e445ac78e6abac69d6c9e71397cba41",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "e8ed24e0_9784f5eb",
         "filename": "jjb/acumos-jjb/defaults.yaml",
         "patchSetId": 9
