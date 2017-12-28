@@ -19,6 +19,75 @@
     },
     {
       "key": {
+        "uuid": "87156349_97932c2e",
+        "filename": "jjb/acumos-jjb/acumos-maven-jobs.yaml",
+        "patchSetId": 9
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2017-12-28T20:37:28Z",
+      "side": 1,
+      "message": "I would LOVE to reuse stuff from global-jjb but Jeremy Phelps explained that docker support is not available there.\n\nThe only material change here is to add the lf-infra-docker-login builder to the three macros.  The three templates are unchanged EXCEPT they need to use the revised macros, so I had to replicate the templates also.\n\nIs there a way to include a builder conditionally?  I.e., if my project supplies a parameter indicating the need to login at docker, then include that builder in the Jenkins job?",
+      "parentUuid": "e5d768b7_0a2c9939",
+      "revId": "5f797c083e445ac78e6abac69d6c9e71397cba41",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7ca66594_822d6a2c",
+        "filename": "jjb/acumos-jjb/acumos-maven-jobs.yaml",
+        "patchSetId": 9
+      },
+      "lineNbr": 102,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2017-12-28T20:37:28Z",
+      "side": 1,
+      "message": "Adding this builder is the only change to this template",
+      "revId": "5f797c083e445ac78e6abac69d6c9e71397cba41",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a88b8cf0_92e6198c",
+        "filename": "jjb/acumos-jjb/acumos-maven-jobs.yaml",
+        "patchSetId": 9
+      },
+      "lineNbr": 197,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2017-12-28T20:37:28Z",
+      "side": 1,
+      "message": "Adding this builder is the only change to this template",
+      "revId": "5f797c083e445ac78e6abac69d6c9e71397cba41",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8065a654_6ff32556",
+        "filename": "jjb/acumos-jjb/acumos-maven-jobs.yaml",
+        "patchSetId": 9
+      },
+      "lineNbr": 292,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2017-12-28T20:37:28Z",
+      "side": 1,
+      "message": "Adding this builder is the only change",
+      "revId": "5f797c083e445ac78e6abac69d6c9e71397cba41",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "e8ed24e0_9784f5eb",
         "filename": "jjb/acumos-jjb/defaults.yaml",
         "patchSetId": 9
