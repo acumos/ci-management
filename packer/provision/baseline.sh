@@ -173,7 +173,12 @@ EOF
     cabal install "Cabal<1.18"  # Pull Cabal version that is capable of building shellcheck
     cabal install --bindir=/usr/local/bin "shellcheck-0.4.6"  # Pin shellcheck version
 
-    yum install -y python-virtualenv
+    # Install python3 and dependencies, needed for Coala linting at least
+    yum install -y python34
+    yum install -y python34-{devel,virtualenv,setuptools,pip}
+
+    # Install python dependencies, useful generally
+    yum install -y python-{devel,virtualenv,setuptools,pip}
 
     # --- END LFTOOLS DEPS
     ######################
@@ -226,6 +231,13 @@ EOF
     apt-get dist-upgrade -m
 
     ensure_ubuntu_install unzip xz-utils puppet git libxml-xpath-perl
+
+    # Install python3 and dependencies, needed for Coala linting
+    ensure_ubuntu_install python3
+    ensure_ubuntu_install python3-{dev,setuptools,pip}
+
+    # Install python and dependencies
+    ensure_ubuntu_install python-{dev,virtualenv,setuptools,pip}
 
     # install Java 7
     echo "---> Configuring OpenJDK"
