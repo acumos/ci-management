@@ -150,6 +150,8 @@ EOF
     ########################
     # --- START LFTOOLS DEPS
 
+    yum install -y crudini
+
     # Used by various scripts to push patches to Gerrit
     yum install -y git-review
 
@@ -252,6 +254,8 @@ EOF
     ########################
     # --- START LFTOOLS DEPS
 
+    ensure_ubuntu_install crudini
+
     # Used by various scripts to push patches to Gerrit
     ensure_ubuntu_install git-review
 
@@ -325,4 +329,3 @@ esac
 
 # execute steps for all systems
 all_systems
-
