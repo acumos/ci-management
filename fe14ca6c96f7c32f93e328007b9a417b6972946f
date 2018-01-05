@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8b90525d_f3302ca7",
+        "filename": "jjb/acumos-jjb/acumos-maven-jobs.yaml",
+        "patchSetId": 17
+      },
+      "lineNbr": 289,
+      "author": {
+        "id": 89
+      },
+      "writtenOn": "2018-01-05T22:36:02Z",
+      "side": 1,
+      "message": "Can you take lf-provide-maven-settings macro out here.  It is included in the lf-infra-docker-login macro already.",
+      "revId": "fe14ca6c96f7c32f93e328007b9a417b6972946f",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    }
+  ]
+}
