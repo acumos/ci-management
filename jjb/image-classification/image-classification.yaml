@@ -1,0 +1,11 @@
+---
+- project:
+    name: image-classification-project
+    project-name: image-classification
+    project: image-classification
+    mvn-settings: image-classification-settings
+    jobs:
+      - '{project-name}-python-jobs'
+    stream:
+      - master:
+          branch: master

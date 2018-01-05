@@ -1,0 +1,11 @@
+---
+- project:
+    name: face-privacy-filter-project
+    project-name: face-privacy-filter
+    project: face-privacy-filter
+    mvn-settings: face-privacy-filter-settings
+    jobs:
+      - '{project-name}-python-jobs'
+    stream:
+      - master:
+          branch: master

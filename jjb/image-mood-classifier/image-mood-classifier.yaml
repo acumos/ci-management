@@ -1,0 +1,11 @@
+---
+- project:
+    name: image-mood-classifier-project
+    project-name: image-mood-classifier
+    project: image-mood-classifier-client
+    mvn-settings: image-mood-classifier-settings
+    jobs:
+      - '{project-name}-python-jobs'
+    stream:
+      - master:
+          branch: master
