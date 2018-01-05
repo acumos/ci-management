@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ad73cf8d_43d6dd3e",
+        "filename": "shell/snapshot-strip.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-01-05T19:13:48Z",
+      "side": 1,
+      "message": "Why is this script needed?",
+      "revId": "32c5d637e4677c3c3750a4b2121f9107fb191c4d",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    }
+  ]
+}
