@@ -244,7 +244,8 @@
 
 # Changed prefix from lf to acumos;
 # adds lf-infra-docker-login to version from global-jjb;
-# uses acumos common variables script.
+# uses acumos common variables script;
+# uses acumos maven-package shell script.
 - acumos_maven_verify: &acumos_maven_verify
     name: acumos-maven-verify
 
@@ -298,7 +299,7 @@
       - shell: !include-raw-escape:
           - ../global-jjb/shell/lftools-install.sh
           - ../global-jjb/shell/common-variables.sh
-          - ../global-jjb/shell/maven-build.sh
+          - shell/maven-package.sh
       - lf-provide-maven-settings-cleanup
 
     publishers:
