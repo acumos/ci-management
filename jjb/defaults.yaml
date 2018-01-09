@@ -28,8 +28,6 @@
     mvn-goals: 'clean install'
     # Default JVM invocation options
     mvn-opts: ''
-    # Publish build number
-    mvn-params: '-Dbuild.number=${{BUILD_NUMBER}}'
 
     # Nexus
     mvn-snapshot-id: snapshots
