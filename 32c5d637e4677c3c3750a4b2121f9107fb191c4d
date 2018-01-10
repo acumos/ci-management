@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "4ce42fb2_38b0c79e",
+        "filename": "jjb/acumos-docker-templates.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 201,
+      "author": {
+        "id": 89
+      },
+      "writtenOn": "2018-01-10T18:25:56Z",
+      "side": 1,
+      "message": "Chris, it\u0027s used here in the daily build to staging job.",
+      "revId": "32c5d637e4677c3c3750a4b2121f9107fb191c4d",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ad73cf8d_43d6dd3e",
         "filename": "shell/snapshot-strip.sh",
         "patchSetId": 3
@@ -13,6 +30,24 @@
       "writtenOn": "2018-01-05T19:13:48Z",
       "side": 1,
       "message": "Why is this script needed?",
+      "revId": "32c5d637e4677c3c3750a4b2121f9107fb191c4d",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "aab5faba_d9574fc6",
+        "filename": "shell/snapshot-strip.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 89
+      },
+      "writtenOn": "2018-01-10T18:25:56Z",
+      "side": 1,
+      "message": "It\u0027s used in the docker release daily job to \"staging\".  See my other comment.",
+      "parentUuid": "ad73cf8d_43d6dd3e",
       "revId": "32c5d637e4677c3c3750a4b2121f9107fb191c4d",
       "serverId": "655300a2-7a56-4504-9153-881edd907bea",
       "unresolved": false
