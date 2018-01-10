@@ -46,8 +46,8 @@ Create a config file jenkins.ini using this template and your credentials:
 	user=YOUR-USER-NAME
 	password=YOUR-API-TOKEN
 
-Build and deploy jobs:
+Build and deploy a specific job:
 
-    jenkins-jobs --conf jenkins.ini update jjb
+    jenkins-jobs --conf jenkins.ini update jjb your-job-name-here
 
 In the sandbox find the job then click the button "Build with parameters"
