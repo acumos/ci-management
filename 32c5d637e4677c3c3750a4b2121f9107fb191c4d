@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "7fc197d5_e74df60f",
+        "filename": "jjb/acumos-docker-templates.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 201,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-01-10T18:40:49Z",
+      "side": 1,
+      "message": "Thanks, I must be blind.",
+      "parentUuid": "4ce42fb2_38b0c79e",
+      "revId": "32c5d637e4677c3c3750a4b2121f9107fb191c4d",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ad73cf8d_43d6dd3e",
         "filename": "shell/snapshot-strip.sh",
         "patchSetId": 3
