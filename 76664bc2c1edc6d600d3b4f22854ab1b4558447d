@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0b1a731d_85141c01",
+        "filename": "jjb/runtime-orchestrator/runtime-orchestrator.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 89
+      },
+      "writtenOn": "2018-01-11T15:09:51Z",
+      "side": 1,
+      "message": "Can we get rid of this whitespace?",
+      "revId": "76664bc2c1edc6d600d3b4f22854ab1b4558447d",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    }
+  ]
+}
