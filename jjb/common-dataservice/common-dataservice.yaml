@@ -1,6 +1,5 @@
 ---
 - project:
-    # useless 
     name: cds-project
     # jenkins job name prefix
     project-name: common-dataservice
