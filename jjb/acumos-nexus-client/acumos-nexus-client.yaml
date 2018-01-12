@@ -1,0 +1,16 @@
+---
+- project:
+    name: acumos-nexus-client-project
+    project-name: acumos-nexus-client
+    project: acumos-nexus-client
+    mvn-settings: acumos-nexus-client-settings
+    jobs:
+      - '{project-name}-maven-jobs'
+      # merge job is not yet part of global JJB
+      - gerrit-maven-merge
+      # javadoc group has -publish and -verify
+      - '{project-name}-maven-javadoc-jobs'
+      - gerrit-maven-sonar
+    stream:
+      - master:
+          branch: master
