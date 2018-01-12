@@ -1,0 +1,29 @@
+- project:
+    name: packer-builder-jobs
+
+    jobs:
+      - '{project-name}-packer-jobs'
+
+    project: ci-management
+    project-name: ci-management
+    build-node: centos7-builder-2c-1g
+
+    platforms:
+      - centos
+
+    templates: builder
+
+- project:
+    name: packer-docker-jobs
+
+    jobs:
+      - '{project-name}-packer-jobs'
+
+    project: ci-management
+    project-name: ci-management
+    build-node: centos7-builder-2c-1g
+
+    platforms:
+      - centos
+
+    templates: docker
