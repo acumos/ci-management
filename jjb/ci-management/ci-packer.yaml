@@ -9,7 +9,7 @@
     build-node: centos7-builder-2c-1g
 
     platforms:
-      - centos
+      - centos-7
 
     templates:
       - builder
