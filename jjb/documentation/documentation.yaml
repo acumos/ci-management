@@ -1,0 +1,13 @@
+---
+- project:
+    name: documentation-project
+    project-name: documentation
+    project: documentation
+    mvn-settings: documentation-settings
+    # name of project at ReadTheDocs.org
+    rtd-project: acumos-documentation
+    jobs:
+      - '{project-name}-rtd-jobs'
+    stream:
+      - master:
+          branch: master

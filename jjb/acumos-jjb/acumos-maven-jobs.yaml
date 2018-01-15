@@ -141,6 +141,7 @@
           choosing-strategy: default
 
     triggers:
+      # push fresh build weekly to SNAPSHOT repository
       - timed: 'H H * * 0'
       - gerrit:
           server-name: '{gerrit-server-name}'
