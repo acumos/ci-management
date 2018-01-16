@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6281cf15_64fae1aa",
+        "filename": "jjb/acumos-jjb/acumos-maven-jobs.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 145,
+      "author": {
+        "id": 62
+      },
+      "writtenOn": "2018-01-16T14:51:07Z",
+      "side": 1,
+      "message": "What\u0027s the purpose of this change?\n\nThe reason we have a weekly merge job is because every week SNAPSHOT repos are purged if they are older than 3 weeks old. So the weekly merge job repopulates the SNAPSHOTS repo with a fresh build and works as a way to ensure that the project continues to be able to build their project.\n\nThis benefits projects in finding inactive projects which are not keeping up with maintaining their builds so that TSCs for example can make decisions on what to do with inactive projects.",
+      "revId": "488fb9ac716fd23cac09664a5fc0994d5476181c",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    }
+  ]
+}
