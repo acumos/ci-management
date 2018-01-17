@@ -109,6 +109,8 @@
           properties-content: |
               NEXUS_CUT_DIRS={nexus-cut-dirs}
               NEXUS_REPO={nexus-snapshot-repo}
+              NEXUS3_PULL_REGISTRY={nexus3-public-registry}
+              NEXUS3_PUSH_REGISTRY={nexus3-snapshot-registry}
       - shell: !include-raw-escape:
           - ../global-jjb/shell/lftools-install.sh
           - ../global-jjb/shell/common-variables.sh
@@ -202,6 +204,10 @@
           settings-file: '{mvn-settings}'
       - lf-infra-create-netrc:
           server-id: '{mvn-staging-id}'
+      - inject:
+          properties-content: |
+              NEXUS3_PULL_REGISTRY={nexus3-public-registry}
+              NEXUS3_PUSH_REGISTRY={nexus3-staging-registry}
       - shell: !include-raw-escape:
           - ../global-jjb/shell/lftools-install.sh
           - ../global-jjb/shell/common-variables.sh
@@ -297,6 +303,9 @@
       - lf-provide-maven-settings:
           global-settings-file: '{mvn-global-settings}'
           settings-file: '{mvn-settings}'
+      - inject:
+          properties-content: |
+              NEXUS3_PULL_REGISTRY={nexus3-public-registry}
       - shell: !include-raw-escape:
           - ../global-jjb/shell/lftools-install.sh
           - ../global-jjb/shell/common-variables.sh
