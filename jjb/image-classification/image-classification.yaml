@@ -4,6 +4,7 @@
     project-name: image-classification
     project: image-classification
     mvn-settings: image-classification-settings
+    python-version: python3
     jobs:
       - '{project-name}-python-jobs'
     stream:

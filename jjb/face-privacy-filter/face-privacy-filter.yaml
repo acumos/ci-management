@@ -4,6 +4,7 @@
     project-name: face-privacy-filter
     project: face-privacy-filter
     mvn-settings: face-privacy-filter-settings
+    python-version: python3
     jobs:
       - '{project-name}-python-jobs'
     stream:

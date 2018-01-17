@@ -4,6 +4,7 @@
     project-name: image-mood-classifier
     project: image-mood-classifier-client
     mvn-settings: image-mood-classifier-settings
+    python-version: python3
     jobs:
       - '{project-name}-python-jobs'
     stream:

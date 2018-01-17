@@ -4,6 +4,7 @@
     project-name: acumos-python-client
     project: acumos-python-client
     mvn-settings: acumos-python-client-settings
+    python-version: python3
     jobs:
       - '{project-name}-python-jobs'
     stream:
