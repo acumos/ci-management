@@ -37,9 +37,9 @@
     mvn-site-id: site
 
     # Nexus3 for dockers
-    nexus3-public-registry: nexus3.acumos.org:10001
-    nexus3-snapshot-registry: nexus3.acumos.org:10003
-    nexus3-staging-registry:  nexus3.acumos.org:10004
+    nexus3-public-registry:   'nexus3.acumos.org:10001'
+    nexus3-snapshot-registry: 'nexus3.acumos.org:10003'
+    nexus3-staging-registry:  'nexus3.acumos.org:10004'
 
     # Javadoc
     javadoc-path: org.acumos.$PROJECT/$STREAM
