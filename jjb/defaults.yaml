@@ -29,12 +29,17 @@
     # Default JVM invocation options
     mvn-opts: ''
 
-    # Nexus
+    # Nexus for jars
     mvn-snapshot-id: snapshots
     nexus-snapshot-repo: snapshots
     mvn-staging-id: staging
     staging-profile-id: 3428955350b21
     mvn-site-id: site
 
+    # Nexus3 for dockers
+    nexus3-public-registry: nexus3.acumos.org:10001  
+    nexus3-snapshot-registry: nexus3.acumos.org:10003  
+    nexus3-staging-registry:  nexus3.acumos.org:10004
+    
     # Javadoc
     javadoc-path: org.acumos.$PROJECT/$STREAM
