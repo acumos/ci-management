@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "321d4670_eb2f9fc8",
+        "filename": "jjb/acumos-jjb/shell/acumos-maven-install.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 62
+      },
+      "writtenOn": "2018-01-18T19:18:20Z",
+      "side": 1,
+      "message": "Should be set -x as set +x disables the verbosity.",
+      "revId": "114d7ce2b9fb03bde66f6c82759b638523f89466",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "a165fbd2_94f0a586",
         "filename": "jjb/acumos-jjb/shell/acumos-maven-sonar.sh",
         "patchSetId": 1
