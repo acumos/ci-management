@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "a165fbd2_94f0a586",
+        "filename": "jjb/acumos-jjb/shell/acumos-maven-sonar.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 62
+      },
+      "writtenOn": "2018-01-18T19:11:07Z",
+      "side": 1,
+      "message": "According to sonar docs we should be at minimum using `clean install` otherwise multi-module projects will fail. Does clean install work for your docker situation?",
+      "revId": "114d7ce2b9fb03bde66f6c82759b638523f89466",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    }
+  ]
+}
