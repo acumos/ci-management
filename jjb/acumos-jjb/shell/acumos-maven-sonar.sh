@@ -9,18 +9,33 @@
 # http://www.eclipse.org/legal/epl-v10.html
 ##############################################################################
 
-# This script builds a Maven project and installs artifacts.
+# This script builds a Maven project and deploys it into a staging repo which
+# can be used to deploy elsewhere later eg. Nexus staging / snapshot repos.
 
 # DO NOT enable -u because $MAVEN_PARAMS and $MAVEN_OPTIONS could be unbound.
 # Ensure we fail the job if any steps fail.
 set -e -o pipefail
 set +u
+# be verbose
+set +x
 
 export MAVEN_OPTS
 
 # Disable SC2086 because we want to allow word splitting for $MAVEN_* parameters.
 # shellcheck disable=SC2086
-$MVN clean install \
+# Uses goal test instead of deploy
+$MVN clean test \
+    -e -Dsonar \
     --global-settings "$GLOBAL_SETTINGS_FILE" \
     --settings "$SETTINGS_FILE" \
+    -DaltDeploymentRepository=staging::default::file:"$WORKSPACE"/m2repo \
+    $MAVEN_OPTIONS $MAVEN_PARAMS
+
+# Disable SC2086 because we want to allow word splitting for $MAVEN_* parameters.
+# shellcheck disable=SC2086
+$MVN $SONAR_MAVEN_GOAL \
+    -e -Dsonar -Dsonar.host.url="$SONAR_HOST_URL" \
+    --global-settings "$GLOBAL_SETTINGS_FILE" \
+    --settings "$SETTINGS_FILE" \
+    -DaltDeploymentRepository=staging::default::file:"$WORKSPACE"/m2repo \
     $MAVEN_OPTIONS $MAVEN_PARAMS
