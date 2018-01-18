@@ -16,7 +16,7 @@
       - gerrit-maven-dl-release
       # javadoc group has -publish and -verify
       - '{project-name}-maven-javadoc-jobs'
-      - gerrit-maven-sonar
+      - gerrit-maven-dl-sonar
     stream:
       - master:
           branch: master
