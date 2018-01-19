@@ -5,6 +5,7 @@
     project: acumos-python-client
     mvn-settings: acumos-python-client-settings
     python-version: python3
+    build-timeout: 30
     jobs:
       - '{project-name}-python-jobs'
     stream:
