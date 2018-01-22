@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2a26aa3c_179c3dba",
+        "filename": "README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-01-22T18:26:21Z",
+      "side": 1,
+      "message": "I still suggest putting a period here and adding something like \"... using the Jenkins Job Builder (JJB). For more info on using the JJB, please see: https://docs.openstack.org/infra/system-config/jjb.html\"",
+      "range": {
+        "startLine": 4,
+        "startChar": 29,
+        "endLine": 4,
+        "endChar": 30
+      },
+      "revId": "2d3e4f9e58337b865cc7c8944105dc7fa87b85a4",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    }
+  ]
+}
