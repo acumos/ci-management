@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "09d209d5_120fc0a5",
+        "filename": "README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 62
+      },
+      "writtenOn": "2018-01-22T17:28:33Z",
+      "side": 1,
+      "message": "Please cleanup the trailing whitespace in this file.\n\n(seems like our usual linter hasn\u0027t been setup in this repo we should probably do that...)",
+      "revId": "2422bf3046d9e6226a9a9be0dc6672b2ebcad970",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5f65ebf9_3b1e2859",
         "filename": "README.md",
         "patchSetId": 1
@@ -43,6 +60,23 @@
         "endLine": 4,
         "endChar": 86
       },
+      "revId": "2422bf3046d9e6226a9a9be0dc6672b2ebcad970",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "f7729c82_9d040d0a",
+        "filename": "jjb/runtime-orchestrator/runtime-orchestrator.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 62
+      },
+      "writtenOn": "2018-01-22T17:28:33Z",
+      "side": 1,
+      "message": "What\u0027s the point of breaking out of the job-group?",
       "revId": "2422bf3046d9e6226a9a9be0dc6672b2ebcad970",
       "serverId": "655300a2-7a56-4504-9153-881edd907bea",
       "unresolved": false
