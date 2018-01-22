@@ -90,6 +90,30 @@
     },
     {
       "key": {
+        "uuid": "0eff2cf4_7efa1f5d",
+        "filename": "README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 62
+      },
+      "writtenOn": "2018-01-22T18:07:28Z",
+      "side": 1,
+      "message": "JJB is an OpenStack software project. The official documentation URL is the openstack URL. They Mirror to readthedocs apparently but that is not the official documentation path.",
+      "parentUuid": "357f6616_7a01ce9a",
+      "range": {
+        "startLine": 4,
+        "startChar": 31,
+        "endLine": 4,
+        "endChar": 86
+      },
+      "revId": "2422bf3046d9e6226a9a9be0dc6672b2ebcad970",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "f7729c82_9d040d0a",
         "filename": "jjb/runtime-orchestrator/runtime-orchestrator.yaml",
         "patchSetId": 1
