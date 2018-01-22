@@ -1,3 +1,4 @@
+# Builds a jar then a docker
 ---
 - project:
     name: cds-project
@@ -6,16 +7,16 @@
     # git repo
     project: common-dataservice
     mvn-settings: common-dataservice-settings
-    # pass Jenkins build number
     mvn-params: -Dbuild.number=${{BUILD_NUMBER}}
-    # needs docker-enabled build node
     build-node: centos7-docker-4c-4g
     jobs:
+      # custom Acumos templates
       - gerrit-maven-dl-verify
       - gerrit-maven-dl-merge
       - gerrit-maven-dl-release
-      # javadoc group has -publish and -verify
+      # standard Global JJB templates
       - '{project-name}-maven-javadoc-jobs'
+      - gerrit-maven-clm
       - gerrit-maven-sonar
     stream:
       - master:

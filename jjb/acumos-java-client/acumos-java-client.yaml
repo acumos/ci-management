@@ -6,7 +6,6 @@
     mvn-settings: acumos-java-client-settings
     jobs:
       - '{project-name}-maven-jobs'
-      # javadoc group has -publish and -verify
       - '{project-name}-maven-javadoc-jobs'
       - gerrit-maven-sonar
     stream:
