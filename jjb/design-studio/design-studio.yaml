@@ -11,11 +11,14 @@
     # needs docker-enabled build node
     build-node: centos7-docker-4c-4g
     jobs:
+      # custom Acumos templates
       - gerrit-maven-dl-verify
       - gerrit-maven-dl-merge
       - gerrit-maven-dl-release
-      # javadoc group has -publish and -verify
-      - '{project-name}-maven-javadoc-jobs'
+      # standard Global JJB templates
+      - gerrit-maven-clm
+      - gerrit-maven-javadoc-publish
+      - gerrit-maven-javadoc-verify
       - gerrit-maven-sonar
     stream:
       - master:
