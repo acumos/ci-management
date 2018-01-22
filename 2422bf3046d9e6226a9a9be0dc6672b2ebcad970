@@ -22,6 +22,30 @@
       "revId": "2422bf3046d9e6226a9a9be0dc6672b2ebcad970",
       "serverId": "655300a2-7a56-4504-9153-881edd907bea",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9d192b85_a16b6c2e",
+        "filename": "README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-01-22T16:22:39Z",
+      "side": 1,
+      "message": "Yes, this is the documentation of the Jenkins Job Builder",
+      "parentUuid": "5f65ebf9_3b1e2859",
+      "range": {
+        "startLine": 4,
+        "startChar": 31,
+        "endLine": 4,
+        "endChar": 86
+      },
+      "revId": "2422bf3046d9e6226a9a9be0dc6672b2ebcad970",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
     }
   ]
 }
