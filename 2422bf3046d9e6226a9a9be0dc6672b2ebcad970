@@ -66,6 +66,30 @@
     },
     {
       "key": {
+        "uuid": "357f6616_7a01ce9a",
+        "filename": "README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-01-22T17:58:08Z",
+      "side": 1,
+      "message": "I guess I was wondering why the link wasn\u0027t to the readthedocs site (http://jenkins-job-builder.readthedocs.io/en/latest/) or to a Linux Foundation Jenkins site with the same type of info (if it exists). Perhaps change the sentence to read: \"This repository has templates that generate jobs in the Linux Founation Jenkins instance using the Jenkins Job Builder (JJB). For JJB docs, please see: http://jenkins-job-builder.readthedocs.io/en/latest/  and  https://docs.openstack.org/infra/system-config/jjb.html\"  -- note that the readthedocs page contains the link to the openstack site so it may be redundant to include both links.",
+      "parentUuid": "9d192b85_a16b6c2e",
+      "range": {
+        "startLine": 4,
+        "startChar": 31,
+        "endLine": 4,
+        "endChar": 86
+      },
+      "revId": "2422bf3046d9e6226a9a9be0dc6672b2ebcad970",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "f7729c82_9d040d0a",
         "filename": "jjb/runtime-orchestrator/runtime-orchestrator.yaml",
         "patchSetId": 1
