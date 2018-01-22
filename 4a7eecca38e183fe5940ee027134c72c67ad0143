@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "75bc822f_c4ec89a6",
+        "filename": ".coafile",
+        "patchSetId": 1
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 62
+      },
+      "writtenOn": "2018-01-22T18:24:57Z",
+      "side": 1,
+      "message": "Let\u0027s ignore global-jjb in this too.",
+      "revId": "4a7eecca38e183fe5940ee027134c72c67ad0143",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    }
+  ]
+}
