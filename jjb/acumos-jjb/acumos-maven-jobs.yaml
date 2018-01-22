@@ -263,7 +263,7 @@
     archive-artifacts: ''
     branch: master
     build-days-to-keep: 7
-    build-timeout: 60
+    build-timeout: 30
     git-url: '$GIT_URL/$PROJECT'
     java-version: openjdk8
     mvn-global-settings: global-settings
