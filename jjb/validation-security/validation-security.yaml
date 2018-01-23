@@ -1,0 +1,13 @@
+---
+- project:
+    name: validation-security-project
+    project-name: validation-security
+    project: validation-security
+    mvn-settings: validation-security-settings
+    python-version: python3
+    build-timeout: 30
+    jobs:
+      - '{project-name}-python-jobs'
+    stream:
+      - master:
+          branch: master
