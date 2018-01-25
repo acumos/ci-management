@@ -1,5 +1,7 @@
 - project:
     name: ci-jobs
+    # default 10 min is too little during busy hour
+    build-timeout: 30
 
     jobs:
       - '{project-name}-ci-jobs'
