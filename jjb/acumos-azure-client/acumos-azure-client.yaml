@@ -14,7 +14,7 @@
       # custom Acumos templates
       - gerrit-maven-dl-verify
       - gerrit-maven-dl-merge
-      - gerrit-maven-dl-release
+      - gerrit-maven-dl-stage
       # standard Global JJB templates
       - '{project-name}-maven-javadoc-jobs'
       - gerrit-maven-clm
