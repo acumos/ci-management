@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "1504e853_c65ce922",
+        "filename": "jjb/acumos-docker-templates.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 165,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-01-26T03:10:46Z",
+      "side": 1,
+      "message": "May I suggest using the name \"stage\" instead of \"release\", that is more accurate.",
+      "revId": "32c5d637e4677c3c3750a4b2121f9107fb191c4d",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4ce42fb2_38b0c79e",
         "filename": "jjb/acumos-docker-templates.yaml",
         "patchSetId": 3
