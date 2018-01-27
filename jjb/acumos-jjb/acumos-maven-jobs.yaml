@@ -65,7 +65,7 @@
     branch: master
     build-days-to-keep: 30  # 30 days in case we need to troubleshoot
     build-timeout: 30
-    cron: ''
+    cron: 'H H * * 0'  # build weekly to refresh snapshots
     git-url: '$GIT_URL/$PROJECT'
     java-version: openjdk8
     mvn-global-settings: global-settings
@@ -143,8 +143,7 @@
           choosing-strategy: default
 
     triggers:
-      # push fresh build weekly to SNAPSHOT repository
-      - timed: 'H H * * 0'
+      - timed: '{cron}'
       - gerrit:
           server-name: '{gerrit-server-name}'
           trigger-on: '{obj:gerrit_merge_triggers}'
@@ -173,7 +172,7 @@
     branch: master
     build-days-to-keep: 30  # 30 days in case it takes long to get approved.
     build-timeout: 30
-    cron: ''
+    cron: 'H 11 * * *'  # build daily release candidate
     git-url: '$GIT_URL/$PROJECT'
     java-version: openjdk8
     mvn-global-settings: global-settings
