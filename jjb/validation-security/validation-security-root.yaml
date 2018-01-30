@@ -1,0 +1,18 @@
+---
+- project:
+    name: validation-security-root-project
+    # jenkins job name prefix
+    project-name: validation-security-root
+    # git repo
+    project: validation-security
+    project-settings: validation-security-settings
+    # need docker-enabled host
+    build-node: centos7-docker-4c-4g
+    # subdirectory of project
+    docker_root: ROOT
+    jobs:
+      - '{project-name}-docker-jobs'
+      - '{project-name}-python-jobs'
+    stream:
+      - master:
+          branch: master
