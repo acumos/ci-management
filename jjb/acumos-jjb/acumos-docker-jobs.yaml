@@ -1,5 +1,7 @@
 ---
 # Docker templates for Acumos projects
+# Wholly independent of maven, POM files, etc.
+# Jenkins defines DOCKER_REGISTRY with host name only.
 
 - job-group:
     name: '{project-name}-docker-jobs'
@@ -179,13 +181,11 @@
           # Docker registry is purposely not using an '_' so as to not conflict
           # with the Jenkins global env var
           properties-content: |
-            DOCKER_ARGS={docker_build_args}
-            DOCKER_NAME={docker_name}
-            DOCKER_ROOT={docker_root}
-            DOCKERREGISTRY={docker_registry}
-
+              DOCKER_ARGS={docker_build_args}
+              DOCKER_NAME={docker_name}
+              DOCKER_ROOT={docker_root}
+              DOCKERREGISTRY={docker_registry}
       # Do the docker build
-      - shell: !include-raw: shell/snapshot-strip.sh
       - shell: !include-raw: shell/docker-build.sh
       - inject:
           # Import the docker image information from the build step
@@ -240,7 +240,8 @@
     docker_root: '$WORKSPACE'
     docker_build_args: ''
     docker_name: 'unnamed'
-    # no docker push registry here
+    # Default to LF standard 'snapshots' docker registry
+    docker_registry: '$DOCKER_REGISTRY:10003'
     docker_tag: 'latest'
     git-url: '$GIT_URL/$PROJECT'
     pre_build_script: ''
@@ -273,12 +274,12 @@
           settings-file: '{project-settings}'
       - shell: '{pre_build_script}'
       - inject:
-          # no docker registry
           properties-content: |
-            DOCKER_ARGS={docker_build_args}
-            DOCKER_NAME={docker_name}
-            DOCKER_ROOT={docker_root}
-            DOCKER_TAG={docker_tag}
+              DOCKER_ARGS={docker_build_args}
+              DOCKER_NAME={docker_name}
+              DOCKER_ROOT={docker_root}
+              DOCKER_TAG={docker_tag}
+              DOCKERREGISTRY={docker_registry}
       # Do the docker build
       - shell: !include-raw: shell/docker-build.sh
       - inject:
