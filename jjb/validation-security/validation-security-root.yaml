@@ -10,8 +10,6 @@
     build-node: centos7-docker-4c-4g
     # subdirectory of project
     docker_root: ROOT
-    docker_name: val-sec-root
-    docker_tag: 1.0
     jobs:
       - '{project-name}-docker-jobs'
       - '{project-name}-python-jobs'

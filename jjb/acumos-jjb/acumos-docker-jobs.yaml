@@ -1,7 +1,7 @@
 ---
 # Docker templates for Acumos projects
 # Wholly independent of maven, POM files, etc.
-# Jenkins defines DOCKER_REGISTRY with host name only.
+# Project must define image name and tag in pom.xml.
 
 - job-group:
     name: '{project-name}-docker-jobs'
@@ -57,10 +57,9 @@
     cron: 'H H * * 0'  # build weekly to refresh snapshots
     docker_root: '$WORKSPACE'
     docker_build_args: ''
-    docker_name: 'unnamed'
     # Default to LF standard 'snapshots' docker registry
+    # Jenkins defines DOCKER_REGISTRY with host name only
     docker_registry: '$DOCKER_REGISTRY:10003'
-    docker_tag: 'latest'
     git-url: '$GIT_URL/$PROJECT'
     pre_build_script: ''
     post_build_script: ''
@@ -92,7 +91,6 @@
           # with the Jenkins global env var
           properties-content: |
               DOCKER_ARGS={docker_build_args}
-              DOCKER_NAME={docker_name}
               DOCKER_ROOT={docker_root}
               DOCKERREGISTRY={docker_registry}
       # Do the docker build
@@ -154,10 +152,9 @@
     cron: ''
     docker_root: '$WORKSPACE'
     docker_build_args: ''
-    docker_name: 'unnamed'
     # Default to LF standard 'staging' docker registry
+    # Jenkins defines DOCKER_REGISTRY with host name only
     docker_registry: '$DOCKER_REGISTRY:10004'
-    docker_tag: 'latest'
     git-url: '$GIT_URL/$PROJECT'
     pre_build_script: ''
     post_build_script: ''
@@ -182,10 +179,10 @@
           # with the Jenkins global env var
           properties-content: |
               DOCKER_ARGS={docker_build_args}
-              DOCKER_NAME={docker_name}
               DOCKER_ROOT={docker_root}
               DOCKERREGISTRY={docker_registry}
       # Do the docker build
+      - shell: !include-raw: shell/strip-pom-snapshot.sh
       - shell: !include-raw: shell/docker-build.sh
       - inject:
           # Import the docker image information from the build step
@@ -239,10 +236,9 @@
     build-timeout: 30
     docker_root: '$WORKSPACE'
     docker_build_args: ''
-    docker_name: 'unnamed'
     # Default to LF standard 'snapshots' docker registry
+    # No push is done; the registry is required for the image name
     docker_registry: '$DOCKER_REGISTRY:10003'
-    docker_tag: 'latest'
     git-url: '$GIT_URL/$PROJECT'
     pre_build_script: ''
     post_build_script: ''
@@ -276,9 +272,7 @@
       - inject:
           properties-content: |
               DOCKER_ARGS={docker_build_args}
-              DOCKER_NAME={docker_name}
               DOCKER_ROOT={docker_root}
-              DOCKER_TAG={docker_tag}
               DOCKERREGISTRY={docker_registry}
       # Do the docker build
       - shell: !include-raw: shell/docker-build.sh
