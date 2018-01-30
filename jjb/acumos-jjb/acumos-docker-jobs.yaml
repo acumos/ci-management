@@ -94,6 +94,7 @@
               DOCKER_ARGS={docker_build_args}
               DOCKER_NAME={docker_name}
               DOCKER_ROOT={docker_root}
+              DOCKER_TAG={docker_tag}
               DOCKERREGISTRY={docker_registry}
       # Do the docker build
       - shell: !include-raw: shell/docker-build.sh
@@ -184,8 +185,10 @@
               DOCKER_ARGS={docker_build_args}
               DOCKER_NAME={docker_name}
               DOCKER_ROOT={docker_root}
+              DOCKER_TAG={docker_tag}
               DOCKERREGISTRY={docker_registry}
       # Do the docker build
+      - shell: !include-raw: shell/strip-pom-snapshot.sh
       - shell: !include-raw: shell/docker-build.sh
       - inject:
           # Import the docker image information from the build step
