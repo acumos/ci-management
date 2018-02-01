@@ -1,0 +1,64 @@
+---
+- parameter:
+    name: test-automation-test-plan
+    parameters:
+      - string:
+          name: TESTPLAN
+          default: '{test-plan}'
+          description: 'General test plan we will run unless stream-specific one is found'
+
+- parameter:
+    name: test-automation-test-options
+    parameters:
+      - string:
+          name: TESTOPTIONS
+          default: '{test-options}'
+          description: 'Robot command options'
+
+- parameter:
+    name: html-publisher-dir
+    parameters:
+      - string:
+          name: HTMLDIR
+          default: '{html-dir}'
+          description: 'Directory location to be used by HTML publisher plugin'
+
+- parameter:
+    name: html-publisher-files
+    parameters:
+      - string:
+          name: HTMLFILES
+          default: '{html-files}'
+          description: 'File name to be used by HTML publisher plugin to produce the report'
+
+- builder:
+    name: test-automation-install-robotframework
+    builders:
+      - shell:
+          !include-raw:
+          - shell/include-raw-test-automation-install-robotframework.sh
+
+- builder:
+    name: test-automation-run-test
+    builders:
+      - shell: "${WORKSPACE}/test/csit/run-csit.sh ${TESTPLAN} ${TESTOPTIONS}"
+
+- builder:
+    name: test-automation-autorelease-fix-relativepaths
+    builders:
+      - shell: "${WORKSPACE}/autorelease/scripts/fix-relativepaths.sh"
+
+- builder:
+    name: test-automation-autorelease-set-version
+    builders:
+      - shell: "${WORKSPACE}/autorelease/scripts/set-version.sh"
+
+- publisher:
+    name: test-automation-robot
+    publishers:
+      - robot:
+          output-path: 'archives'
+          other-files: ''
+          unstable-threshold: '{unstable-if}'
+          pass-threshold: '{pass-if}'
+          only-critical: false
