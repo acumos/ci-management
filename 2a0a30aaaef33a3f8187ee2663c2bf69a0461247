@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "d45cf1f6_0d7270ca",
+        "filename": "jjb/acumos-jjb/acumos-csit-jobs.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 89
+      },
+      "writtenOn": "2018-02-05T15:48:49Z",
+      "side": 1,
+      "message": "Acumos doesn\u0027t seem to have a project named \u0027integration\u0027.",
+      "revId": "2a0a30aaaef33a3f8187ee2663c2bf69a0461247",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "33e6acf1_6fe61795",
+        "filename": "jjb/acumos-jjb/acumos-csit-jobs.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 89
+      },
+      "writtenOn": "2018-02-05T15:48:49Z",
+      "side": 1,
+      "message": "No project with this name?",
+      "revId": "2a0a30aaaef33a3f8187ee2663c2bf69a0461247",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "cfd182d8_f48e626f",
+        "filename": "jjb/acumos-jjb/acumos-csit-jobs.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 66,
+      "author": {
+        "id": 89
+      },
+      "writtenOn": "2018-02-05T15:48:49Z",
+      "side": 1,
+      "message": "No project with this name?",
+      "revId": "2a0a30aaaef33a3f8187ee2663c2bf69a0461247",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    }
+  ]
+}
