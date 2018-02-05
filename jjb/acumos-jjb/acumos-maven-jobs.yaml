@@ -54,6 +54,7 @@
 
 # Changed prefix from lf to acumos;
 # adds lf-infra-docker-login to version from global-jjb
+# adds pull and push registries
 - acumos_maven_merge: &acumos_maven_merge
     name: acumos-maven-merge
 
@@ -69,6 +70,7 @@
     git-url: '$GIT_URL/$PROJECT'
     java-version: openjdk8
     mvn-global-settings: global-settings
+    mvn-goals: clean deploy
     mvn-opts: ''
     mvn-params: '-Dmerge'
     mvn-version: mvn33
@@ -113,10 +115,10 @@
               NEXUS3_PUSH_REGISTRY={nexus3-snapshot-registry}
       - shell: !include-raw-escape:
           - ../global-jjb/shell/lftools-install.sh
-          - ../global-jjb/shell/common-variables.sh
           - ../global-jjb/shell/maven-fetch-metadata.sh
-          - ../global-jjb/shell/maven-build.sh
-          - ../global-jjb/shell/maven-deploy.sh
+      - lf-maven-build:
+          mvn-goals: '{mvn-goals}'
+      - lf-maven-deploy
       - lf-provide-maven-settings-cleanup
 
     publishers:
@@ -176,6 +178,7 @@
     git-url: '$GIT_URL/$PROJECT'
     java-version: openjdk8
     mvn-global-settings: global-settings
+    mvn goals: clean deploy
     mvn-opts: ''
     mvn-params: ''
     mvn-version: mvn33
@@ -209,10 +212,10 @@
               NEXUS3_PUSH_REGISTRY={nexus3-staging-registry}
       - shell: !include-raw-escape:
           - ../global-jjb/shell/lftools-install.sh
-          - ../global-jjb/shell/common-variables.sh
           - ../global-jjb/shell/maven-patch-release.sh
-          - ../global-jjb/shell/maven-build.sh
-          - ../global-jjb/shell/maven-stage.sh
+      - lf-maven-build:
+          mvn-goals: '{mvn-goals}'
+      - lf-maven-stage
       - lf-provide-maven-settings-cleanup
 
 # Adds -dl- to name and calls renamed macros; no other change from global-jjb
@@ -251,7 +254,7 @@
 # Changed prefix from lf to acumos;
 # adds lf-infra-docker-login to version from global-jjb;
 # uses acumos common variables script;
-# uses acumos maven-install shell script.
+# sets install (not deploy) goal
 - acumos_maven_verify: &acumos_maven_verify
     name: acumos-maven-verify
 
@@ -266,6 +269,7 @@
     git-url: '$GIT_URL/$PROJECT'
     java-version: openjdk8
     mvn-global-settings: global-settings
+    mvn-goals: clean install
     mvn-opts: ''
     mvn-params: '-Dstream=$STREAM'
     mvn-version: mvn33
@@ -295,6 +299,8 @@
       - lf-jacoco-nojava-workaround
       - lf-maven-install:
           mvn-version: '{mvn-version}'
+      - lf-update-java-alternatives:
+          java-version: '{java-version}'
       - lf-infra-docker-login:
           global-settings-file: '{mvn-global-settings}'
           settings-file: '{mvn-settings}'
@@ -307,8 +313,8 @@
               NEXUS3_PULL_REGISTRY={nexus3-public-registry}
       - shell: !include-raw-escape:
           - ../global-jjb/shell/lftools-install.sh
-          - ../global-jjb/shell/common-variables.sh
-          - shell/maven-install.sh
+      - lf-maven-build:
+          mvn-goals: '{mvn-goals}'
       - lf-provide-maven-settings-cleanup
 
     publishers:
