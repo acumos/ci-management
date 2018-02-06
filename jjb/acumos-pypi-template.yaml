@@ -1,0 +1,88 @@
+---
+- job-template:
+    # Job template for PyPI staging jobs
+    # Daily Builds
+
+    name: '{project-name}-python-stage-{stream}'
+
+    project-type: freestyle
+    node: '{build-node}'
+
+    properties:
+      - lf-infra-properties:
+          build-days-to-keep: '{build-days-to-keep}'
+
+    parameters:
+      - lf-infra-parameters:
+          project: '{project}'
+          branch: '{branch}'
+          stream: '{stream}'
+          lftools-version: '{lftools-version}'
+
+    scm:
+      - lf-infra-gerrit-scm:
+          jenkins-ssh-credential: '{jenkins-ssh-credential}'
+          git-url: '{git-url}'
+          refspec: '$GERRIT_REFSPEC'
+          branch: '$GERRIT_BRANCH'
+          submodule-recursive: '{submodule-recursive}'
+          choosing-strategy: default
+
+    triggers:
+      # 11:00am UTC
+      - timed: 'H 11 * * *'
+      - gerrit-trigger-release-manually:
+          server: '{server-name}'
+          project: '{project}'
+          branch: '{branch}'
+
+    builders:
+
+    publishers:
+      - lf-infra-publish
+
+    wrappers:
+     - lf-infra-wrappers:
+         build-timeout: '{build-timeout}'
+         jenkins-ssh-credential: '{jenkins-ssh-credential}'
+
+- job-template:
+    # Job template for PyPI release jobs
+    # Requires manual trigger
+
+    name: '{project-name}-python-release-{stream}'
+
+    project-type: freestyle
+    node: '{build-node}'
+
+    properties:
+      - infra-properties:
+          build-days-to-keep: '{build-days-to-keep}'
+
+    parameters:
+      - infra-parameters:
+          project: '{project}'
+          branch: '{branch}'
+          stream: '{stream}'
+          lftools-version: '{lftools-version}'
+ 
+    scm:
+      - lf-infra-gerrit-scm:
+          jenkins-ssh-credential: '{jenkins-ssh-credential}'
+          git-url: '{git-url}'
+          refspec: '$GERRIT_REFSPEC'
+          branch: '$GERRIT_BRANCH'
+          submodule-recursive: '{submodule-recursive}'
+          choosing-strategy: default
+
+    triggers:
+
+    builders:
+
+    publishers:
+      - lf-infra-publish
+
+    wrappers:
+     - lf-infra-wrappers:
+         build-timeout: '{build-timeout}'
+         jenkins-ssh-credential: '{jenkins-ssh-credential}'
