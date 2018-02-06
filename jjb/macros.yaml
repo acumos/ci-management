@@ -1,0 +1,11 @@
+---
+# Global macros
+
+# PARAMETERS
+- parameter:
+    name: pypi-server
+    parameters:
+    - string:
+        name: PYPI_SERVER
+        default: '{pypi_server}'
+        description: 'PyPI repository name'
