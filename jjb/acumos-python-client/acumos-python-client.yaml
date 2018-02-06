@@ -8,9 +8,8 @@
     build-timeout: 30
     jobs:
       - '{project-name}-python-jobs'
-      - '{project-name}-python-stage-{stream}'
-      - '{project-name}-python-release-{stream}':
-          pypi_server: release
+      - '{project-name}-python-staging-{stream}'
+      - '{project-name}-python-release-{stream}'
     stream:
       - master:
           branch: master

@@ -3,7 +3,7 @@
 # Script to push PyPI artifacts to the Nexus3 staging repository
 
 # Activate previously created virtualenv for tox
-source $WORKSPACE/venv-tox/bin/activate
+source "/tmp/v/tox/bin/activate"
 
 # Install twine
 pip install twine
