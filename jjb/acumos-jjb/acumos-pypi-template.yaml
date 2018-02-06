@@ -1,0 +1,84 @@
+---
+# Job definition Anchors
+- pypi_job_boiler_plate: &pypi_job_boiler_plate
+    name: pypi_job_boiler_plate
+
+    project-type: freestyle
+    node: '{build-node}'
+
+    #####################
+    # Job configuration #
+    #####################
+
+    properties:
+      - lf-infra-properties:
+        build-days-to-keep: '{build-days-to-keep}'
+
+    parameters:
+      - lf-infra-parameters:
+          project: '{project}'
+          branch: '{branch}'
+          stream: '{stream}'
+          lftools-version: '{lftools-version}'
+
+    scm:
+      - lf-infra-gerrit-scm:
+          jenkins-ssh-credential: '{jenkins-ssh-credential}'
+          git-url: '{git-url}'
+          refspec: '$GERRIT_REFSPEC'
+          branch: '$GERRIT_BRANCH'
+          submodule-recursive: '{submodule-recursive}'
+          choosing-strategy: default
+
+    wrappers:
+      - lf-infra-wrappers:
+          build-timeout: '{build-timeout}'
+          jenkins-ssh-credential: '{jenkins-ssh-credential}'
+
+    builders:
+      - provide-maven-settings:
+        global-settings-file: 'pypirc'
+        settings-file: '{mvn-settings}'
+      - shell: !include-raw-escape:
+          # Workaround issue where the tox run later breaks lftools virtualenv
+          # Without running the install first the run in the publisher will fail
+          # due to missing lftools because it gets installed into a tox venv
+          - ../global-jjb/shell/lftools-install.sh
+      - lf-infra-tox-install:
+          python-version: '{python-version}'
+      - shell: !include-raw-escape: ../shell/tox-run.sh
+      - shell:
+          !include-raw-escape: ../../shell/pypi-publish.sh
+
+    publishers:
+      - lf-infra-publish
+
+- job-template:
+    name: '{project-name}-python-stage-{stream}'
+
+    # Job template for PyPI staging jobs
+    # Daily Builds
+
+    <<: *pypi_job_boiler_plate
+
+    triggers:
+      # 11:00am UTC
+      - timed: 'H 11 * * *'
+      - gerrit-trigger-patch-submitted:
+          server: '{server-name}'
+          project: '{project}'
+          branch: '{branch}'
+
+- job-template:
+    name: '{project-name}-python-release-{stream}'
+
+    # Job template for PyPI release jobs
+    # Requires manual trigger
+
+    <<: *pypi_job_boiler_plate
+
+    triggers:
+      - gerrit-trigger-release-manually:
+          server: '{server-name}'
+          project: '{project}'
+          branch: '{branch}'
