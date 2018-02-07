@@ -157,9 +157,9 @@
                   branch-pattern: '**/{branch}'
               file-paths: '{obj:gerrit_trigger_file_paths}'
 
-#################
-# Maven Release #
-#################
+###########################
+# Maven Stage aka Release #
+###########################
 
 # Changed prefix from lf to acumos;
 # adds lf-infra-docker-login to version from global-jjb
@@ -170,7 +170,6 @@
     # Default parameters #
     ######################
 
-    archive-artifacts: ''
     branch: master
     build-days-to-keep: 30  # 30 days in case it takes long to get approved.
     build-timeout: 30
@@ -178,7 +177,7 @@
     git-url: '$GIT_URL/$PROJECT'
     java-version: openjdk8
     mvn-global-settings: global-settings
-    mvn goals: clean deploy
+    mvn-goals: clean deploy
     mvn-opts: ''
     mvn-params: ''
     mvn-version: mvn33
@@ -197,10 +196,12 @@
       - lf-jacoco-nojava-workaround
       - lf-maven-install:
           mvn-version: '{mvn-version}'
+      - lf-update-java-alternatives:
+          java-version: '{java-version}'
       - lf-infra-docker-login:
           global-settings-file: '{mvn-global-settings}'
           settings-file: '{mvn-settings}'
-      # must provide maven settings AFTER docker due to its cleanup
+      # must provide maven settings AFTER docker-login due to its cleanup
       - lf-provide-maven-settings:
           global-settings-file: '{mvn-global-settings}'
           settings-file: '{mvn-settings}'
