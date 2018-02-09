@@ -1,15 +1,15 @@
 ---
 - project:
-    name: validation-security-wrapper-project
+    name: validation-security-engine-project
     # jenkins job name prefix
-    project-name: validation-security-wrapper
+    project-name: validation-security-engine
     # git repo
     project: validation-security
     project-settings: validation-security-settings
     # need docker-enabled host
     build-node: centos7-docker-4c-4g
     # subdirectory of project
-    docker_root: WRAPPER
+    docker_root: validation_engine
     jobs:
       - '{project-name}-docker-jobs'
     stream:
