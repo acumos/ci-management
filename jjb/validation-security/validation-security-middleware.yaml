@@ -1,15 +1,15 @@
 ---
 - project:
-    name: validation-security-celery-project
+    name: validation-security-middleware-project
     # jenkins job name prefix
-    project-name: validation-security-celery
+    project-name: validation-security-middleware
     # git repo
     project: validation-security
     project-settings: validation-security-settings
     # need docker-enabled host
     build-node: centos7-docker-4c-4g
     # subdirectory of project
-    docker_root: celery
+    docker_root: validation_middleware
     jobs:
       - '{project-name}-docker-jobs'
     stream:
