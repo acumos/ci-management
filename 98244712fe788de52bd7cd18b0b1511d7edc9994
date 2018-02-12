@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "57717699_29ee637e",
+        "filename": "jjb/validation-security/validation-security-client.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-02-12T13:59:30Z",
+      "side": 1,
+      "message": "a tiny nit: maybe this should say \"validation-security-client-project\"",
+      "revId": "98244712fe788de52bd7cd18b0b1511d7edc9994",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ca7ca483_e6a14acb",
+        "filename": "jjb/validation-security/validation-security-engine.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-02-12T13:59:30Z",
+      "side": 1,
+      "message": "Similar nit: maybe this should say validation-security-engine-project",
+      "revId": "98244712fe788de52bd7cd18b0b1511d7edc9994",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ea5479a_5aee293a",
+        "filename": "jjb/validation-security/validation-security-middleware.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-02-12T13:59:30Z",
+      "side": 1,
+      "message": "A tiny matter: maybe this should say validation-security-middleware-project",
+      "revId": "98244712fe788de52bd7cd18b0b1511d7edc9994",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    }
+  ]
+}
