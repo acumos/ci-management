@@ -1,0 +1,89 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "78021f4d_94ccf6f0",
+        "filename": "jjb/acumos-pypi-template.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2018-02-12T16:54:29Z",
+      "side": 1,
+      "message": "Add anchor here:\n- acumos_pypi_boilerplate \u0026acumos_pypi_boilerplate",
+      "revId": "0d3b642e0d2a48cfde184701818d22222d6d175d",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "25e0f91a_6a81d1de",
+        "filename": "jjb/acumos-pypi-template.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2018-02-12T16:54:29Z",
+      "side": 1,
+      "message": "Look over different anchor designs from global-jjb for setting default parameters",
+      "revId": "0d3b642e0d2a48cfde184701818d22222d6d175d",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "97b524d3_450f02ff",
+        "filename": "jjb/acumos-pypi-template.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2018-02-12T16:54:29Z",
+      "side": 1,
+      "message": "Call the anchor:\n\u003c\u003c: *acumos_pypi_boilerplate",
+      "revId": "0d3b642e0d2a48cfde184701818d22222d6d175d",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "79b16ded_f2221dc4",
+        "filename": "jjb/acumos-pypi-template.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2018-02-12T16:54:29Z",
+      "side": 1,
+      "message": "Where is this trigger being defined?",
+      "revId": "0d3b642e0d2a48cfde184701818d22222d6d175d",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e977410c_22536d93",
+        "filename": "jjb/acumos-pypi-template.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2018-02-12T16:54:29Z",
+      "side": 1,
+      "message": "Call the anchor:\n\u003c\u003c: *acumos_pypi_boilerplate",
+      "revId": "0d3b642e0d2a48cfde184701818d22222d6d175d",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    }
+  ]
+}
