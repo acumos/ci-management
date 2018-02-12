@@ -1,0 +1,13 @@
+---
+- project:
+    name: proto-viewer-project
+    project-name: proto-viewer
+    project: proto-viewer
+    mvn-settings: proto-settings
+    python-version: python3
+    build-timeout: 30
+    jobs:
+      - '{project-name}-python-jobs'
+    stream:
+      - master:
+          branch: master
