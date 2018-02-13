@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "aade9fee_c799adc3",
+        "filename": "jjb/proto-viewer/proto-viewer.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 89
+      },
+      "writtenOn": "2018-02-13T19:17:04Z",
+      "side": 1,
+      "message": "The file is proto-viewer-settings in jenkins.",
+      "revId": "e4c9d037c9e19882fbf7b71953ab517905a4b591",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    }
+  ]
+}
