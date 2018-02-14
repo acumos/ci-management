@@ -1,0 +1,84 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "c5afb4c9_f9869beb",
+        "filename": "jjb/acumos-pypi-template.yaml",
+        "patchSetId": 15
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2018-02-14T19:15:33Z",
+      "side": 1,
+      "message": "Acumos has a acumos-jjb directory this should live there right now:\n\nfile name change from jjb/acumos-pypi-template.yaml to jjb/acumos-jjb/acumos-pypi-template.yaml",
+      "revId": "080ff6ecc7a2b16ade26824865ddd254e8db7086",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "35819698_0dceab35",
+        "filename": "jjb/acumos-pypi-template.yaml",
+        "patchSetId": 15
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2018-02-14T19:15:33Z",
+      "side": 1,
+      "message": "We shouldn\u0027t be doing raw shell in our JJB, this should be cracked out into a include-raw / include-raw-escape script",
+      "range": {
+        "startLine": 49,
+        "startChar": 0,
+        "endLine": 57,
+        "endChar": 11
+      },
+      "revId": "080ff6ecc7a2b16ade26824865ddd254e8db7086",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "aa68ec51_58eb8491",
+        "filename": "jjb/acumos-pypi-template.yaml",
+        "patchSetId": 15
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2018-02-14T19:15:33Z",
+      "side": 1,
+      "message": "Based on the name change being requested here and in I51f7c1d579c0ece49ec73e025b2c3cff385e7779 this should be ../../shell/pypi-publish.sh",
+      "range": {
+        "startLine": 59,
+        "startChar": 29,
+        "endLine": 59,
+        "endChar": 44
+      },
+      "revId": "080ff6ecc7a2b16ade26824865ddd254e8db7086",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b6523be1_03f82cff",
+        "filename": "jjb/acumos-pypi-template.yaml",
+        "patchSetId": 15
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2018-02-14T19:15:33Z",
+      "side": 1,
+      "message": "This needs to be moved _into_ a job-template",
+      "revId": "080ff6ecc7a2b16ade26824865ddd254e8db7086",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    }
+  ]
+}
