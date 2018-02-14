@@ -1,0 +1,84 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "f47046b8_cc62c4af",
+        "filename": "jjb/acumos-jjb/acumos-pypi-template.yaml",
+        "patchSetId": 19
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2018-02-14T21:28:15Z",
+      "side": 1,
+      "message": "remove for",
+      "range": {
+        "startLine": 13,
+        "startChar": 0,
+        "endLine": 14,
+        "endChar": 22
+      },
+      "revId": "042fbf692212b5738ffec8635125b2ad7eae3e6c",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1ca9e335_e0434af3",
+        "filename": "jjb/acumos-jjb/acumos-pypi-template.yaml",
+        "patchSetId": 19
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2018-02-14T21:28:15Z",
+      "side": 1,
+      "message": "Move this to line 78 \u0026 90\n\nafter the line 90 add the following builder steps\n1) inject a new PYPI_SERVER\u003dpypi\n2) call the pypi-publish.sh again",
+      "range": {
+        "startLine": 45,
+        "startChar": 0,
+        "endLine": 58,
+        "endChar": 56
+      },
+      "revId": "042fbf692212b5738ffec8635125b2ad7eae3e6c",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9c982314_786527f7",
+        "filename": "jjb/acumos-jjb/acumos-pypi-template.yaml",
+        "patchSetId": 19
+      },
+      "lineNbr": 70,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2018-02-14T21:28:15Z",
+      "side": 1,
+      "message": "add:\n\nparameters:\n  - pypi-server:\n      pypi_server: staging",
+      "revId": "042fbf692212b5738ffec8635125b2ad7eae3e6c",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9426d2cd_51c082cf",
+        "filename": "jjb/acumos-jjb/acumos-pypi-template.yaml",
+        "patchSetId": 19
+      },
+      "lineNbr": 84,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2018-02-14T21:28:15Z",
+      "side": 1,
+      "message": "add:\n\nparameters:\n  - pypi-server:\n      pypi_server: server",
+      "revId": "042fbf692212b5738ffec8635125b2ad7eae3e6c",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    }
+  ]
+}
