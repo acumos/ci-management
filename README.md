@@ -45,6 +45,15 @@ from the Global JJB templates of similar names.  The only notable change is
 adding invocation of a "builder" (aka shell script) that obtains Nexus3 docker
 registry credentials and logs in at the nexus3.acumos.org registry.  With that
 prerequisite met, the Maven docker plugin succeeds in pulling and pushing images.
+In addition the custom templates above, we have python-release and python-staging jobs.
+python-release is triggered by a comment of `release`, builds the app, and pushes it to
+PyPi.release in Nexus 3 and the public PyPi repo.  Note that if the same version of the app
+already exists in the release repos the push will be rejected.
+python-staging is triggered by a comment of `remerge` and also a gerrit merge event.  It
+too builds the app but instead, pushes it PyPi.staging in Nexus3.  This will overwrite a similiarly 
+versioned app in the staging repo.  These artifacts in the staging repo should be viewed as 
+"release candidates".  These are the artifacts you will concentrate your integration/user acceptance
+testing on.
 
 ## Testing the templates
 
