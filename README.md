@@ -46,6 +46,30 @@ adding invocation of a "builder" (aka shell script) that obtains Nexus3 docker
 registry credentials and logs in at the nexus3.acumos.org registry.  With that
 prerequisite met, the Maven docker plugin succeeds in pulling and pushing images.
 
+#### Python Custom JJB Templates
+If a Python project needs to publish artifacts to the Nexus3 PyPI repositories,
+we have python-release and python-staging jobs.
+
+A Python project can add these jobs to their project.yaml file
+
+    jobs:
+      - '{project-name}-python-release-{stream}'
+      - '{project-name}-python-staging-{stream}'
+
+The python-release is triggered by a comment of `release`, builds the app, and
+pushes it to PyPi.release in Nexus 3.  Note that if the same version of the app
+already exists in the release repos the push will be rejected. python-staging is
+triggered by a comment of `remerge` and also a gerrit merge event.  It too
+builds the app but instead, pushes it PyPi.staging in Nexus3.  This will
+overwrite a similiarly versioned app in the staging repo.  These artifacts in
+the staging repo should be viewed as "release candidates".  These are the
+artifacts you will concentrate your integration/user acceptance testing on.
+
+Nexus3 PyPI URLS
+
+    Nexus3 PyPI staging URL: https://nexus3.acumos.org/repository/PyPi.staging/
+    Nexus3 PyPI release URL: https://nexus3.acumos.org/repository/PyPi.release/
+
 ## Testing the templates
 
 These instructions explain how to test the Acumos templates before submitting Gerrit reviews.
