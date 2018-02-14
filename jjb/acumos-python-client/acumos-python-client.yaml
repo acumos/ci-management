@@ -6,8 +6,11 @@
     mvn-settings: acumos-python-client-settings
     python-version: python3
     build-timeout: 30
+    build-node: entos7-builder-4c-4g
     jobs:
       - '{project-name}-python-jobs'
+      - '{project-name}-python-staging-{stream}'
+      - '{project-name}-python-release-{stream}'
     stream:
       - master:
           branch: master
