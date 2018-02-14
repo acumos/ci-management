@@ -1,0 +1,15 @@
+---
+# Global macros
+
+- trigger:
+    name: timed-release
+    triggers:
+      - timed: '{timed}'
+
+- builder:
+    name: publish-pypi
+    builders:
+      - inject:
+          properties-content: PYPI_SERVER={pypi-server}
+      - shell:
+          !include-raw-escape: ../shell/pypi-publish.sh
