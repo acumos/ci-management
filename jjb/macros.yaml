@@ -1,0 +1,34 @@
+---
+# Global macros
+
+# PARAMETERS
+- parameter:
+    name: pypi-server
+    parameters:
+      - string:
+          name: PYPI_SERVER
+          default: '{pypi-server}'
+          description: 'PyPI repository name'
+
+- trigger:
+    name: timed-release
+    triggers:
+      - timed: '{obj:cron}'
+
+- trigger:
+    name: gerrit-trigger-release-manually
+    triggers:
+      - gerrit:
+          server-name: '{server}'
+          trigger-on:
+            - comment-added-contains-event:
+                comment-contains-value: 'please release'
+          projects:
+            - project-compare-type: 'ANT'
+              project-pattern: '{project}'
+              branches:
+                - branch-compare-type: 'ANT'
+                  branch-pattern: '**/{branch}'
+              file-paths:
+                - compare-type: 'ANT'
+                  pattern: '**'
