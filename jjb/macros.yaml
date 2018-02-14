@@ -1,0 +1,16 @@
+---
+# Global macros
+
+# PARAMETERS
+- parameter:
+    name: pypi-server
+    parameters:
+      - string:
+          name: PYPI_SERVER
+          default: '{pypi-server}'
+          description: 'PyPI repository name'
+
+- trigger:
+    name: timed-release
+    triggers:
+      - cron: '{obj:cron}'
