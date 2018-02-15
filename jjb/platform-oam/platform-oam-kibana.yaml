@@ -1,0 +1,18 @@
+---
+- project:
+    name: platform-oam-kibana-project
+    # jenkins job name prefix
+    project-name: platform-oam-kibana
+    # git repo
+    project: platform-oam
+    project-settings: platform-oam-settings
+    # need docker-enabled host
+    build-node: centos7-docker-4c-4g
+    # subdirectory of project
+    docker_root: elk-stack/kibana
+    jobs:
+      - '{project-name}-docker-jobs'
+    stream:
+      - master:
+          branch: master
+
