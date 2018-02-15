@@ -1,0 +1,11 @@
+---
+- project:
+    name: platform-oam-project
+    # jenkins job name prefix
+    project-name: platform-oam
+    # git repo
+    project: platform-oam
+    mvn-settings: platform-oam-settings
+    stream:
+      - master:
+          branch: master
