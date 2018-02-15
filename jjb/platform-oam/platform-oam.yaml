@@ -1,0 +1,15 @@
+---
+- project:
+    name: platform-oam-project
+    # jenkins job name prefix
+    project-name: platform-oam
+    # git repo
+    project: platform-oam
+    mvn-settings: platform-oam-settings
+    ## needs docker-enabled build node
+    build-node: centos7-docker-4c-4g
+    jobs:
+      - '{project-name}-rtd-jobs'
+    stream:
+      - master:
+          branch: master
