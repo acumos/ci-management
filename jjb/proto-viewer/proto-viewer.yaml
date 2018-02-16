@@ -3,11 +3,13 @@
     name: proto-viewer-project
     project-name: proto-viewer
     project: proto-viewer
-    mvn-settings: proto-viewer-settings
+    project-settings: proto-viewer-settings
     python-version: python3
     build-timeout: 30
+    # docker_root no needed, docker file is in root
     jobs:
       - '{project-name}-python-jobs'
+      - '{project-name}-docker-jobs'
     stream:
       - master:
           branch: master
