@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "a9734f03_1fd3fd72",
+        "filename": "shell/pypi-publish.sh",
+        "patchSetId": 32
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 62
+      },
+      "writtenOn": "2018-02-21T18:33:17Z",
+      "side": 1,
+      "message": "If we\u0027re staging the release then I think the release job should not also be compiling a new binary.\n\nInstead it should take the staged release artifacts (otherwise that defeats the purpose of staging binaries in the first place) and push those to pypi and wherever else they need to go.",
+      "range": {
+        "startLine": 13,
+        "startChar": 0,
+        "endLine": 13,
+        "endChar": 33
+      },
+      "revId": "5218190dcadec31bf0e0e06fad352a2086859fdb",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    }
+  ]
+}
