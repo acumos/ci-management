@@ -1,0 +1,19 @@
+---
+- project:
+    name: databroker-project
+    project-name: databroker
+    project: databroker
+    mvn-settings: databroker-settings
+    build-node: centos7-docker-4c-4g
+    jobs:
+      # custom Acumos templates
+      - gerrit-maven-dl-verify
+      - gerrit-maven-dl-merge
+      - gerrit-maven-dl-stage
+      # standard Global JJB templates
+      - '{project-name}-maven-javadoc-jobs'
+      - gerrit-maven-clm
+      - gerrit-maven-sonar
+    stream:
+      - master:
+          branch: master
