@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "851fc359_90dbbef7",
+        "filename": "jjb/acumos-jjb/acumos-csit-jobs.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 89
+      },
+      "writtenOn": "2018-02-23T14:46:06Z",
+      "side": 1,
+      "message": "This macro doesn\u0027t exist in Acumos yet.",
+      "revId": "e5ed11622437b8ec16b5c60907bb3920f0069389",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1c9ee458_531c8327",
+        "filename": "jjb/acumos-jjb/acumos-csit-jobs.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 89
+      },
+      "writtenOn": "2018-02-23T14:46:06Z",
+      "side": 1,
+      "message": "This macro doesn\u0027t exist in Acumos yet.",
+      "revId": "e5ed11622437b8ec16b5c60907bb3920f0069389",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "298129b9_57db6a4a",
+        "filename": "jjb/acumos-jjb/acumos-csit-jobs.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 89
+      },
+      "writtenOn": "2018-02-23T14:46:06Z",
+      "side": 1,
+      "message": "This macro doesn\u0027t exist in Acumos yet.",
+      "revId": "e5ed11622437b8ec16b5c60907bb3920f0069389",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6478c5eb_233f9c36",
+        "filename": "jjb/acumos-jjb/acumos-csit-jobs.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 89
+      },
+      "writtenOn": "2018-02-23T14:46:06Z",
+      "side": 1,
+      "message": "This macro doesn\u0027t exist in Acumos yet.",
+      "revId": "e5ed11622437b8ec16b5c60907bb3920f0069389",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    }
+  ]
+}
