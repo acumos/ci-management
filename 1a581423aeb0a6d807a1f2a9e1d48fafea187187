@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "501a5b8c_7cf66ed1",
+        "filename": "jjb/acumos-jjb/acumos-pypi-template.yaml",
+        "patchSetId": 39
+      },
+      "lineNbr": 119,
+      "author": {
+        "id": 62
+      },
+      "writtenOn": "2018-02-23T14:48:27Z",
+      "side": 1,
+      "message": "This inject + shell pattern should be a macro because we use it twice. Then the macro can be called with something like:\n\n\n - pypi-publish:\n     pypi-server: release\n - pypi-publish:\n     pypi-server: pypi\n\n\nWith this pattern we do not need to pass the pypi-server parameter in the parameters section as we\u0027re injecting it as part of the macro.",
+      "range": {
+        "startLine": 116,
+        "startChar": 0,
+        "endLine": 119,
+        "endChar": 58
+      },
+      "revId": "1a581423aeb0a6d807a1f2a9e1d48fafea187187",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    }
+  ]
+}
