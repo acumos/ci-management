@@ -1,0 +1,84 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4b393015_29352b47",
+        "filename": "jjb/acumos-jjb/acumos-pypi-template.yaml",
+        "patchSetId": 42
+      },
+      "lineNbr": 75,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2018-02-23T18:21:06Z",
+      "side": 1,
+      "message": "Need all the tox steps from the global-jjb python verify as well as a build step, if tox does not do a build",
+      "revId": "f19c58a0c9f3c62be4d8fa23a5c940b49388bc1a",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "90896eb5_7ba7d761",
+        "filename": "jjb/acumos-jjb/acumos-pypi-template.yaml",
+        "patchSetId": 42
+      },
+      "lineNbr": 109,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2018-02-23T18:21:06Z",
+      "side": 1,
+      "message": "Need to download the already built staged artifacts into the dist directory",
+      "revId": "f19c58a0c9f3c62be4d8fa23a5c940b49388bc1a",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3c5add25_0dbdc885",
+        "filename": "shell/pypi-publish.sh",
+        "patchSetId": 42
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2018-02-23T18:21:06Z",
+      "side": 1,
+      "message": "Dangling white space",
+      "range": {
+        "startLine": 3,
+        "startChar": 31,
+        "endLine": 3,
+        "endChar": 32
+      },
+      "revId": "f19c58a0c9f3c62be4d8fa23a5c940b49388bc1a",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "527b704b_c47d4a72",
+        "filename": "shell/pypi-publish.sh",
+        "patchSetId": 42
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2018-02-23T18:21:06Z",
+      "side": 1,
+      "message": "Remove this for publishing, should be moved to a separate build script provided that tox doesn\u0027t automatically build the dist artifacts",
+      "range": {
+        "startLine": 11,
+        "startChar": 0,
+        "endLine": 16,
+        "endChar": 33
+      },
+      "revId": "f19c58a0c9f3c62be4d8fa23a5c940b49388bc1a",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    }
+  ]
+}
