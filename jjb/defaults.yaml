@@ -15,7 +15,7 @@
 
     # Timeout in minutes
     build-timeout: 30
-    build-node: centos7-basebuild-4c-4g
+    build-node: centos7-builder-2c-1g
 
     archive-artifacts: ''
 
@@ -39,7 +39,7 @@
     # Nexus3 for dockers
     nexus3-public-registry: nexus3.acumos.org:10001
     nexus3-snapshot-registry: nexus3.acumos.org:10003
-    nexus3-staging-registry:  nexus3.acumos.org:10004
+    nexus3-staging-registry: nexus3.acumos.org:10004
 
     # Javadoc
     javadoc-path: org.acumos.$PROJECT/$STREAM
