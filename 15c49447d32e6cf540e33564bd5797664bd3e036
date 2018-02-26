@@ -1,0 +1,78 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "44b4525f_52384e60",
+        "filename": "jjb/macros.yaml",
+        "patchSetId": 48
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-02-26T17:09:39Z",
+      "side": 1,
+      "message": "If these macros are specific to Acumos, may I suggest using the file name acumos-macros.yaml and moving it to the acumos-jjb subdirectory?",
+      "revId": "15c49447d32e6cf540e33564bd5797664bd3e036",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "563a0fe7_5aa4bf11",
+        "filename": "shell/pypi-dist-build.sh",
+        "patchSetId": 48
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-02-26T17:09:39Z",
+      "side": 1,
+      "message": "I suggest moving this file to the directory acumos-jjb/shell",
+      "range": {
+        "startLine": 1,
+        "startChar": 0,
+        "endLine": 1,
+        "endChar": 11
+      },
+      "revId": "15c49447d32e6cf540e33564bd5797664bd3e036",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a3ca3cc_feee3257",
+        "filename": "shell/pypi-get.sh",
+        "patchSetId": 48
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-02-26T17:09:39Z",
+      "side": 1,
+      "message": "I suggest moving this file to the directory acumos-jjb/shell",
+      "revId": "15c49447d32e6cf540e33564bd5797664bd3e036",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "700272d1_c30449e4",
+        "filename": "shell/pypi-publish.sh",
+        "patchSetId": 48
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-02-26T17:09:39Z",
+      "side": 1,
+      "message": "I suggest moving this file to the directory acumos-jjb/shell",
+      "revId": "15c49447d32e6cf540e33564bd5797664bd3e036",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    }
+  ]
+}
