@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "689e62e0_4bc35ac5",
+        "filename": "jjb/defaults.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 62
+      },
+      "writtenOn": "2018-02-26T20:20:50Z",
+      "side": 1,
+      "message": "This cuts CPUs in half and RAM by 1/4th of what was previously default.\n\nHave we evaluated if this breaks any existing jobs that depend on the default setting?",
+      "revId": "523d8d240827dc0058db3b866883d51136de8977",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    }
+  ]
+}
