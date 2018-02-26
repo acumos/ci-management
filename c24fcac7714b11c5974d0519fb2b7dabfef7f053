@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "62940340_fbe11709",
+        "filename": "jjb/acumos-jjb/acumos-pypi-template.yaml",
+        "patchSetId": 51
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 62
+      },
+      "writtenOn": "2018-02-26T21:45:49Z",
+      "side": 1,
+      "message": "Instead of hardcoding the build node here allow the project to override it in their project section with the appropriate configuration. that\u0027s the configuration that looks like this:\n\n - project:\n   name: some-project\n   jobs:\n      - pypi-staging-job:\n          build-node: centos7-builder-4c-4g\n\nIf we use this patch as an example then that would be the file. \"acumos-python-client.yaml\"",
+      "revId": "c24fcac7714b11c5974d0519fb2b7dabfef7f053",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    }
+  ]
+}
