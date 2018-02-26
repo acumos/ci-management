@@ -16,6 +16,23 @@
       "revId": "c24fcac7714b11c5974d0519fb2b7dabfef7f053",
       "serverId": "655300a2-7a56-4504-9153-881edd907bea",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "cc510e05_fe42257d",
+        "filename": "jjb/acumos-python-client/acumos-python-client.yaml",
+        "patchSetId": 51
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 62
+      },
+      "writtenOn": "2018-02-26T21:48:30Z",
+      "side": 1,
+      "message": "stream:\n   - master:\n       branch: master\n build-node: centos7-builder-4c-4g\n\n(or whatever the smallest VM supported that the python-client project is capable of building against successfully).",
+      "revId": "c24fcac7714b11c5974d0519fb2b7dabfef7f053",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
     }
   ]
 }
