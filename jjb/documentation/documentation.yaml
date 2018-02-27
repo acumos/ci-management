@@ -7,7 +7,8 @@
     # name of project at ReadTheDocs.org
     rtd-project: acumos-documentation
     jobs:
-      - '{project-name}-rtd-jobs'
+      - gerrit-rtd-verify
+      - acumos-gerrit-rtd-merge
     stream:
       - master:
           branch: master
