@@ -46,6 +46,7 @@ adding invocation of a "builder" (aka shell script) that obtains Nexus3 docker
 registry credentials and logs in at the nexus3.acumos.org registry.  With that
 prerequisite met, the Maven docker plugin succeeds in pulling and pushing images.
 
+<<<<<<< HEAD
 #### Python Custom JJB Templates
 If a Python project needs to publish artifacts to the Nexus3 PyPI repositories,
 we have python-release and python-staging jobs.
@@ -69,6 +70,14 @@ Nexus3 PyPI URLS
 
     Nexus3 PyPI staging URL: https://nexus3.acumos.org/repository/PyPi.staging/
     Nexus3 PyPI release URL: https://nexus3.acumos.org/repository/PyPi.release/
+=======
+### Custom JJB templates for documentation
+
+A custom JJB template is used for a documentation merge job.  This builds documentation
+and pushes it to a private document server hosted in Amazon Web Services.  The job runs
+on every merge performed on the documentation repository.  This job is a temporary
+provision until the Acumos project is opened to the general public in late March 2018.
+>>>>>>> 3b00e8a... Rsync docs to AWS
 
 ## Testing the templates
 
