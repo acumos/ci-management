@@ -1,0 +1,106 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "53579873_6b8d0dbb",
+        "filename": "jjb/acumos-jjb/acumos-pypi-template.yaml",
+        "patchSetId": 60
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-02-27T21:42:03Z",
+      "side": 1,
+      "message": "Why is this remerge trigger defined in the base boilerplate aka Yaml anchor?  Should that be in a merge template?",
+      "revId": "8d284e5e8313292ae8d093947ae80a3013fd9403",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e3b2a1d_d980e8c9",
+        "filename": "jjb/acumos-jjb/acumos-pypi-template.yaml",
+        "patchSetId": 60
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-02-27T21:42:03Z",
+      "side": 1,
+      "message": "Does this stage an artifact in prep for release, or actually release an artifact?  If the former, then this name is not appropriate and should be changed to \"-stage-\".",
+      "revId": "8d284e5e8313292ae8d093947ae80a3013fd9403",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4b10e52f_2ad7745a",
+        "filename": "jjb/acumos-python-client/acumos-python-client.yaml",
+        "patchSetId": 60
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-02-27T21:42:03Z",
+      "side": 1,
+      "message": "Is this the node with all the prerequisites that were installed for the Python people?",
+      "revId": "8d284e5e8313292ae8d093947ae80a3013fd9403",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7f0cc1ea_87adc7fa",
+        "filename": "jjb/macros.yaml",
+        "patchSetId": 60
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-02-27T21:42:03Z",
+      "side": 1,
+      "message": "This is not a global macro, it\u0027s a custom-to-acumos macro.",
+      "revId": "8d284e5e8313292ae8d093947ae80a3013fd9403",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "446ec00f_50140ecd",
+        "filename": "shell/pypi-dist-build.sh",
+        "patchSetId": 60
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-02-27T21:42:03Z",
+      "side": 1,
+      "message": "Please echo the script name, and set -e -x for chattiness and debug",
+      "revId": "8d284e5e8313292ae8d093947ae80a3013fd9403",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "51a87f10_497737bf",
+        "filename": "shell/pypi-publish.sh",
+        "patchSetId": 60
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-02-27T21:42:03Z",
+      "side": 1,
+      "message": "Please fix typo.\n\nIs this to stage or release artifacts?",
+      "revId": "8d284e5e8313292ae8d093947ae80a3013fd9403",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    }
+  ]
+}
