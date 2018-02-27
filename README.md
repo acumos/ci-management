@@ -52,6 +52,13 @@ met, the Maven docker plugin succeeds in pulling and pushing images.
 A Python library project can be configured to publish artifacts to Nexus3 PyPI repositories
 at the Linux Foundation and the global PyPI index.  Add these jobs to the project YAML file:
 
+#### Python Custom JJB Templates
+
+If a Python project needs to publish artifacts to the Nexus3 PyPI repositories,
+we have python-release and python-staging jobs.
+
+A Python project can add these jobs to their project.yaml file
+
     jobs:
       - '{project-name}-python-staging-{stream}'
       - '{project-name}-python-release-{stream}'
@@ -75,6 +82,13 @@ Library authors can configure pip to pull artifacts from either of these Nexus3 
 
     Nexus3 PyPI staging URL: https://nexus3.acumos.org/repository/PyPi.staging/
     Nexus3 PyPI release URL: https://nexus3.acumos.org/repository/PyPi.release/
+
+### Documentation Custom JJB templates
+
+A custom JJB template is used for a documentation merge job.  This builds documentation
+and pushes it to a private document server hosted in Amazon Web Services.  The job runs
+on every merge performed on the documentation repository.  This job is a temporary
+provision until the Acumos project is opened to the general public in late March 2018.
 
 ## Testing the templates
 
