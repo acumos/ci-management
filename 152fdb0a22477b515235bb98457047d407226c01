@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4512e237_1fca583d",
+        "filename": "jjb/defaults.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-02-28T12:40:07Z",
+      "side": 1,
+      "message": "Please add a comment here explaining briefly the content of this image, which I believe has custom-to-project additions like protoc and python, but not docker.  In other words, it\u0027s not generic.  Actually this might be a good place to list ALL the images available in the Acumos Jenkins environment. Thx.",
+      "revId": "152fdb0a22477b515235bb98457047d407226c01",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    }
+  ]
+}
