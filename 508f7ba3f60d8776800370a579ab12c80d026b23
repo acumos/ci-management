@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7f48ea1b_f952f608",
+        "filename": "jjb/acumos-jjb/acumos-pypi-template.yaml",
+        "patchSetId": 62
+      },
+      "lineNbr": 72,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-02-28T20:40:13Z",
+      "side": 1,
+      "message": "Please add a pattern to trigger this from Gerrit with a comment",
+      "revId": "508f7ba3f60d8776800370a579ab12c80d026b23",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    }
+  ]
+}
