@@ -34,6 +34,24 @@
       "revId": "508f7ba3f60d8776800370a579ab12c80d026b23",
       "serverId": "655300a2-7a56-4504-9153-881edd907bea",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "21c7425b_419269b8",
+        "filename": "jjb/acumos-jjb/acumos-pypi-template.yaml",
+        "patchSetId": 62
+      },
+      "lineNbr": 72,
+      "author": {
+        "id": 16
+      },
+      "writtenOn": "2018-02-28T20:49:04Z",
+      "side": 1,
+      "message": "This is correct. I did not see the utility of adding a human in the loop for pushes releases. IMO if the code has gone through Jenkins and was independently reviewed by another person, then I see no reason to automatically push.\n\n**If** Acumos had some sort of integration testing suite, I can see utility in having a staging package index that would be flushed to release upon successful integration tests. But since we don\u0027t I see the comment trigger as an onerous unnecessary step.",
+      "parentUuid": "e1639d25_89fb79cb",
+      "revId": "508f7ba3f60d8776800370a579ab12c80d026b23",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
     }
   ]
 }
