@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "1c3fdd3d_041116bc",
+        "filename": "jjb/acumos-jjb/acumos-pypi-template.yaml",
+        "patchSetId": 60
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 2
+      },
+      "writtenOn": "2018-02-28T00:00:48Z",
+      "side": 1,
+      "message": "This job triggers on a merge and it fails you can just comment remerge.",
+      "parentUuid": "53579873_6b8d0dbb",
+      "revId": "8d284e5e8313292ae8d093947ae80a3013fd9403",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4e3b2a1d_d980e8c9",
         "filename": "jjb/acumos-jjb/acumos-pypi-template.yaml",
         "patchSetId": 60
@@ -98,6 +116,24 @@
       "writtenOn": "2018-02-27T21:42:03Z",
       "side": 1,
       "message": "Please fix typo.\n\nIs this to stage or release artifacts?",
+      "revId": "8d284e5e8313292ae8d093947ae80a3013fd9403",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e4f235fb_9f023c67",
+        "filename": "shell/pypi-publish.sh",
+        "patchSetId": 60
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 2
+      },
+      "writtenOn": "2018-02-28T00:00:48Z",
+      "side": 1,
+      "message": "This is a script that will publish artifacts to stage, release, and eventually pypi index.",
+      "parentUuid": "51a87f10_497737bf",
       "revId": "8d284e5e8313292ae8d093947ae80a3013fd9403",
       "serverId": "655300a2-7a56-4504-9153-881edd907bea",
       "unresolved": false
