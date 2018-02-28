@@ -70,6 +70,75 @@
       "revId": "508f7ba3f60d8776800370a579ab12c80d026b23",
       "serverId": "655300a2-7a56-4504-9153-881edd907bea",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9797f677_6661a96d",
+        "filename": "jjb/acumos-jjb/acumos-pypi-template.yaml",
+        "patchSetId": 62
+      },
+      "lineNbr": 92,
+      "author": {
+        "id": 62
+      },
+      "writtenOn": "2018-02-28T22:06:30Z",
+      "side": 1,
+      "message": "I\u0027m confused why staging and releasing are one and the same, then there\u0027s really no point in staging because the artifacts are getting released.",
+      "range": {
+        "startLine": 89,
+        "startChar": 0,
+        "endLine": 92,
+        "endChar": 30
+      },
+      "revId": "508f7ba3f60d8776800370a579ab12c80d026b23",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "124e6c18_55562ab4",
+        "filename": "shell/pypi-dist-build.sh",
+        "patchSetId": 62
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 62
+      },
+      "writtenOn": "2018-02-28T22:06:30Z",
+      "side": 1,
+      "message": "Twine isn\u0027t used in this file so probably doesn\u0027t need to be installed. Only the wheel package needs to be installed as far as I can tell.",
+      "range": {
+        "startLine": 5,
+        "startChar": 0,
+        "endLine": 8,
+        "endChar": 23
+      },
+      "revId": "508f7ba3f60d8776800370a579ab12c80d026b23",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4073a17e_11d1bddb",
+        "filename": "shell/pypi-publish.sh",
+        "patchSetId": 62
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 62
+      },
+      "writtenOn": "2018-02-28T22:06:30Z",
+      "side": 1,
+      "message": "Double quote to prevent globbing and word splitting.\n\nhttps://github.com/koalaman/shellcheck/wiki/SC2086",
+      "range": {
+        "startLine": 10,
+        "startChar": 16,
+        "endLine": 10,
+        "endChar": 28
+      },
+      "revId": "508f7ba3f60d8776800370a579ab12c80d026b23",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
     }
   ]
 }
