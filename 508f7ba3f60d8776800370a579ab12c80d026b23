@@ -16,6 +16,24 @@
       "revId": "508f7ba3f60d8776800370a579ab12c80d026b23",
       "serverId": "655300a2-7a56-4504-9153-881edd907bea",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e1639d25_89fb79cb",
+        "filename": "jjb/acumos-jjb/acumos-pypi-template.yaml",
+        "patchSetId": 62
+      },
+      "lineNbr": 72,
+      "author": {
+        "id": 2
+      },
+      "writtenOn": "2018-02-28T20:45:36Z",
+      "side": 1,
+      "message": "Paul specifically requested to remove the trigger on comment from the job.",
+      "parentUuid": "7f48ea1b_f952f608",
+      "revId": "508f7ba3f60d8776800370a579ab12c80d026b23",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
     }
   ]
 }
