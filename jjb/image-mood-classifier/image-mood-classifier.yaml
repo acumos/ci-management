@@ -2,7 +2,7 @@
 - project:
     name: image-mood-classifier-project
     project-name: image-mood-classifier
-    project: image-mood-classifier-client
+    project: image-mood-classifier
     mvn-settings: image-mood-classifier-settings
     python-version: python3
     jobs:
