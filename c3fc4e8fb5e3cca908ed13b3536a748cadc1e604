@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fcc12b55_3c538a79",
+        "filename": "jjb/acumos-jjb/acumos-rtd-jobs.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 78,
+      "author": {
+        "id": 89
+      },
+      "writtenOn": "2018-02-28T18:24:04Z",
+      "side": 1,
+      "message": "Ok this is on the money, now we need to add back in a script that actually builds the docs right before this rsync call.  To copy from global-jjb I think https://github.com/lfit/releng-global-jjb/blob/master/shell/rtd-verify.sh will work.",
+      "revId": "c3fc4e8fb5e3cca908ed13b3536a748cadc1e604",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    }
+  ]
+}
