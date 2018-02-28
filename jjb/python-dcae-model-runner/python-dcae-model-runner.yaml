@@ -1,0 +1,14 @@
+---
+- project:
+    name: python-dcae-model-runner-project
+    project-name: python-dcae-model-runner
+    project: python-dcae-model-runner
+    mvn-settings: python-dcae-model-runner-settings
+    python-version: python3
+    build-timeout: 30
+    concurrent: false
+    jobs:
+      - '{project-name}-python-jobs'
+    stream:
+      - master:
+          branch: master
