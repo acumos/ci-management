@@ -16,6 +16,24 @@
       "revId": "152fdb0a22477b515235bb98457047d407226c01",
       "serverId": "655300a2-7a56-4504-9153-881edd907bea",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a224e853_240175f3",
+        "filename": "jjb/defaults.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 62
+      },
+      "writtenOn": "2018-02-28T17:28:22Z",
+      "side": 1,
+      "message": "Personally I don\u0027t think this is a good place to put this info and have started advising folks that \"build-node\" should not be a default setting. Projects should choose in their own project files the build-node appropriate for their projects.\n\nAs for figuring what\u0027s available in the image I think it\u0027s better to link to the directory packer/provision/\u003cimage\u003e.yaml This is where all the images are defined and would ensure that docs are not desynced from reality.",
+      "parentUuid": "4512e237_1fca583d",
+      "revId": "152fdb0a22477b515235bb98457047d407226c01",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
     }
   ]
 }
