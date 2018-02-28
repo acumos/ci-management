@@ -34,6 +34,24 @@
       "revId": "152fdb0a22477b515235bb98457047d407226c01",
       "serverId": "655300a2-7a56-4504-9153-881edd907bea",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "f2945bb4_569c95c9",
+        "filename": "jjb/defaults.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 2
+      },
+      "writtenOn": "2018-02-28T17:36:02Z",
+      "side": 1,
+      "message": "I agree we should not set a default build-node.",
+      "parentUuid": "a224e853_240175f3",
+      "revId": "152fdb0a22477b515235bb98457047d407226c01",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
     }
   ]
 }
