@@ -54,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "fd819bd0_1e9bdc07",
+        "filename": "jjb/acumos-jjb/acumos-pypi-template.yaml",
+        "patchSetId": 60
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 2
+      },
+      "writtenOn": "2018-02-28T16:41:50Z",
+      "side": 1,
+      "message": "This job releases artifacts to the staging and release repositories on a merge.",
+      "parentUuid": "4e3b2a1d_d980e8c9",
+      "revId": "8d284e5e8313292ae8d093947ae80a3013fd9403",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4b10e52f_2ad7745a",
         "filename": "jjb/acumos-python-client/acumos-python-client.yaml",
         "patchSetId": 60
@@ -88,6 +106,24 @@
     },
     {
       "key": {
+        "uuid": "4ab57048_86e84b60",
+        "filename": "jjb/macros.yaml",
+        "patchSetId": 60
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 2
+      },
+      "writtenOn": "2018-02-28T16:41:50Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7f0cc1ea_87adc7fa",
+      "revId": "8d284e5e8313292ae8d093947ae80a3013fd9403",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "446ec00f_50140ecd",
         "filename": "shell/pypi-dist-build.sh",
         "patchSetId": 60
@@ -99,6 +135,24 @@
       "writtenOn": "2018-02-27T21:42:03Z",
       "side": 1,
       "message": "Please echo the script name, and set -e -x for chattiness and debug",
+      "revId": "8d284e5e8313292ae8d093947ae80a3013fd9403",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "76efb941_894af9aa",
+        "filename": "shell/pypi-dist-build.sh",
+        "patchSetId": 60
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 2
+      },
+      "writtenOn": "2018-02-28T16:41:50Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "446ec00f_50140ecd",
       "revId": "8d284e5e8313292ae8d093947ae80a3013fd9403",
       "serverId": "655300a2-7a56-4504-9153-881edd907bea",
       "unresolved": false
