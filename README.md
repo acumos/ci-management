@@ -36,36 +36,41 @@ This is inappropriate for Acumos docker projects because that goal causes a dock
 image to be pushed to a Docker registry.  For example, every javadoc and sonar job
 does a full build, but should not push docker images.
 
-### Custom JJB templates
+### Custom JJB templates for Java + Docker projects
 
-Custom JJB templates are used for Maven/Java verify, build and release jobs on
+Custom JJB templates are used for Java/Maven verify, build and release jobs on
 projects that use docker.  Acumos has multiple projects that build a jar then
 wrap it into a docker image using a Maven plugin.  These templates are derived
-from the Global JJB templates of similar names.  The only notable change is
-adding invocation of a "builder" (aka shell script) that obtains Nexus3 docker
-registry credentials and logs in at the nexus3.acumos.org registry.  With that
-prerequisite met, the Maven docker plugin succeeds in pulling and pushing images.
+from the Global JJB templates of similar names.  The primary change is adding
+invocation of a "builder" (aka shell script) that obtains Nexus3 docker registry
+credentials and logs in at the nexus3.acumos.org registry.  With that prerequisite
+met, the Maven docker plugin succeeds in pulling and pushing images.
 
-#### Python Custom JJB Templates
-If a Python project needs to publish artifacts to the Nexus3 PyPI repositories,
-we have python-release and python-staging jobs.
+### Custom JJB templates for Python library projects
 
-A Python project can add these jobs to their project.yaml file
+A Python library project can be configured to publish artifacts to Nexus3 PyPI repositories
+at the Linux Foundation and the global PyPI index.  Add these jobs to the project YAML file:
 
     jobs:
-      - '{project-name}-python-release-{stream}'
       - '{project-name}-python-staging-{stream}'
+      - '{project-name}-python-release-{stream}'
 
-The python-release is triggered by a comment of `release`, builds the app, and
-pushes it to PyPi.release in Nexus 3.  Note that if the same version of the app
-already exists in the release repos the push will be rejected. python-staging is
-triggered by a comment of `remerge` and also a gerrit merge event.  It too
-builds the app but instead, pushes it PyPi.staging in Nexus3.  This will
-overwrite a similiarly versioned app in the staging repo.  These artifacts in
-the staging repo should be viewed as "release candidates".  These are the
-artifacts you will concentrate your integration/user acceptance testing on.
+The python-staging job build the project and pushes the build artifacts to an index named
+"PyPi.staging" in the Linux Foundation's Nexus3 repository.  This job is triggered on every
+Gerrit merge event.  In case of failure, this job can also be triggered manually by posting
+a comment "remerge" (like every other merge job) in the appropriate Gerrit review request.
+If the same version of the artifact already exists in the staging repo it will be overwritten.
+These artifacts in the staging repo should be viewed as release candidates, and are the prime
+artifacts for integration and user acceptance testing.
 
-Nexus3 PyPI URLS
+The python-release job builds the project and pushes the build artifacts to an index named
+"PyPi.release" in the Linux Foundation's Nexus 3 repository.  This job must be triggered
+manually by posting a comment "release" in the appropriate Gerrit review request.  Note that
+if the same version of the artifact already exists in the release repo the push will fail.
+Note also the deviation from Java release practices: this release job re-builds the artifact
+where in the Java/Maven workflow a staged artifact is copied.
+
+Library authors can configure pip to pull artifacts from either of these Nexus3 PyPI URLS:
 
     Nexus3 PyPI staging URL: https://nexus3.acumos.org/repository/PyPi.staging/
     Nexus3 PyPI release URL: https://nexus3.acumos.org/repository/PyPi.release/
