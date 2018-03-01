@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "39b923a1_09182646",
+        "filename": "jjb/acumos-jjb/acumos-rtd-jobs.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 101,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-03-01T20:48:27Z",
+      "side": 1,
+      "message": "Need a manual (backup) trigger please.",
+      "revId": "025b8e2753693fd599e329a195629c9d052a2189",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "52a3a515_c8669b7c",
+        "filename": "jjb/acumos-jjb/shell/rtd-verify.sh",
+        "patchSetId": 6
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-03-01T20:48:27Z",
+      "side": 1,
+      "message": "please add -x so the shell is chatty",
+      "revId": "025b8e2753693fd599e329a195629c9d052a2189",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e8863ee_c8179c2b",
+        "filename": "jjb/acumos-jjb/shell/tox-install.sh",
+        "patchSetId": 6
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-03-01T20:48:27Z",
+      "side": 1,
+      "message": "Why is this replicated?  Is it different from the version in Global-JJB?",
+      "revId": "025b8e2753693fd599e329a195629c9d052a2189",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    }
+  ]
+}
