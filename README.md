@@ -12,11 +12,10 @@ templates.
 
 ### Global JJB templates
 
-Global JJB templates are used as much as possible. As of this writing this includes
-CLM, RST/RTD documentation, javadoc, python and simple Maven/Java jar jobs.
-
-Note that the Global JJB jobs originated with the Open Daylight project and reflect
-CI/CD design choices made there.
+Global JJB jobs originated with the Open Daylight project and reflect CI/CD design choices
+made there.  Global JJB templates are used as much as possible in Acumos. As of this writing
+this includes CLM, RST/RTD documentation, javadoc, simple Maven/Java jar jobs and some Python
+jobs.
 
 Documentation of Global JJB templates can be found here:
 
@@ -26,54 +25,51 @@ Documentation of Global JJB templates can be found here:
 
 As of this writing Global JJB provides no support for use of a Docker Maven plugin.
 The Global JJB docker jobs assume all resources will be pulled from network resources such
-as the Nexus jar repository first, but it makes little sense to deploy Spring-repackaged
+as the Nexus2 jar repository first. In Acumos it makes little sense to deploy Spring-repackaged
 super jars of 50+ MB each that are not intended for public consumption.
 
-#### Maven goal issues
+### Custom JJB templates for Java + Docker projects
 
-Most Global JJB jobs use the "deploy" goal, currently hardcoded in shell scripts.
-This is inappropriate for Acumos docker projects because that goal causes a docker
-image to be pushed to a Docker registry.  For example, every javadoc and sonar job
-does a full build, but should not push docker images.
+Acumos has multiple projects that build a jar then wrap it into a docker image using a Maven
+plugin.  Custom JJB templates are used for Java/Maven verify, build and release jobs on these
+projects.  The custom templates are derived from the Global JJB templates of similar names. 
+The primary change is adding invocation of a "builder" (aka shell script) that obtains Nexus3
+docker registry credentials and logs in at the nexus3.acumos.org registry.  With that prerequisite
+met, the Maven docker plugin succeeds in pulling and pushing images.
 
-### Custom JJB templates
+### Custom JJB templates for Python library projects
 
-Custom JJB templates are used for Maven/Java verify, build and release jobs on
-projects that use docker.  Acumos has multiple projects that build a jar then
-wrap it into a docker image using a Maven plugin.  These templates are derived
-from the Global JJB templates of similar names.  The only notable change is
-adding invocation of a "builder" (aka shell script) that obtains Nexus3 docker
-registry credentials and logs in at the nexus3.acumos.org registry.  With that
-prerequisite met, the Maven docker plugin succeeds in pulling and pushing images.
-
-#### Python Custom JJB Templates
-If a Python project needs to publish artifacts to the Nexus3 PyPI repositories,
-we have python-release and python-staging jobs.
-
-A Python project can add these jobs to their project.yaml file
+A Python library project can be configured to publish artifacts to Nexus3 PyPI repositories
+at the Linux Foundation and the global PyPI index.  Add these jobs to the project YAML file:
 
     jobs:
-      - '{project-name}-python-release-{stream}'
       - '{project-name}-python-staging-{stream}'
+      - '{project-name}-python-release-{stream}'
 
-The python-release is triggered by a comment of `release`, builds the app, and
-pushes it to PyPi.release in Nexus 3.  Note that if the same version of the app
-already exists in the release repos the push will be rejected. python-staging is
-triggered by a comment of `remerge` and also a gerrit merge event.  It too
-builds the app but instead, pushes it PyPi.staging in Nexus3.  This will
-overwrite a similiarly versioned app in the staging repo.  These artifacts in
-the staging repo should be viewed as "release candidates".  These are the
-artifacts you will concentrate your integration/user acceptance testing on.
+The python-staging job build the project and pushes the build artifacts to an index named
+"PyPi.staging" in the Linux Foundation's Nexus3 repository.  This job is triggered on every
+Gerrit merge event.  In case of failure, this job can also be triggered manually by posting
+a comment "remerge" (like every other merge job) in the appropriate Gerrit review request.
+If the same version of the artifact already exists in the staging repo it will be overwritten.
+These artifacts in the staging repo should be viewed as release candidates, and are the prime
+artifacts for integration and user acceptance testing.
 
-Nexus3 PyPI URLS
+The python-release job builds the project and pushes the build artifacts to an index named
+"PyPi.release" in the Linux Foundation's Nexus 3 repository.  This job must be triggered
+manually by posting a comment "release" in the appropriate Gerrit review request.  Note that
+if the same version of the artifact already exists in the release repo the push will fail.
+Note also the deviation from Java release practices: this release job re-builds the artifact
+where in the Java/Maven workflow a staged artifact is copied.
+
+Library authors can configure pip to pull artifacts from either of these Nexus3 PyPI URLS:
 
     Nexus3 PyPI staging URL: https://nexus3.acumos.org/repository/PyPi.staging/
     Nexus3 PyPI release URL: https://nexus3.acumos.org/repository/PyPi.release/
 
 ## Testing the templates
 
-These instructions explain how to test the Acumos templates before submitting Gerrit reviews.
-Prerequisites:
+These instructions explain how to test the Acumos templates using the Jenkins sandbox.
+This will catch errors before submitting the changes as Gerrit reviews.  Prerequisites:
 
 Install the Jenkins job builder:
 
@@ -91,7 +87,7 @@ Check sanity by running the Jenkins job-builder script in this directory:
 
 ### Deploy the templates to the Jenkins sandbox
 
-Login (after requesting permission) at the Jenkins sandbox:
+Login (after requesting membership in group acumos-jenkins-sandbox-access) at the Jenkins sandbox:
 
     https://jenkins.acumos.org/sandbox
 
@@ -128,9 +124,10 @@ In the sandbox visit the job page, then click the button "Build with parameters"
 
 ### How to build from a Gerrit review branch
 
+This explains how to run verify a job in the Sandbox on an open review.
 Most "verify" jobs accept parameters to build code in a review submitted to
-Gerrit.  You will need the change ref spec, which is a Git branch name.  Get
-this by inspecting Gerrit's "download" links at the top right.  The branch
+Gerrit.  You must specify the change ref spec, which is a Git branch name. 
+Get this by inspecting Gerrit's "download" links at the top right.  The branch
 name will be something like this:
 
 	refs/changes/78/578/2
