@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "47359f31_db360867",
+        "filename": "jjb/acumos-jjb/shell/tox-install.sh",
+        "patchSetId": 7
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-03-01T22:35:29Z",
+      "side": 1,
+      "message": "Is this duplicated from global-jjb for a reason?  Jeremy I posted this same comment and you replied \"Fixed\" yet I see the file still here; what was the fix?",
+      "revId": "06660f751501111c70488bfdde41cd4d9ae8c282",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    }
+  ]
+}
