@@ -1,0 +1,123 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "f70171a0_e280b6ae",
+        "filename": "README.md",
+        "patchSetId": 63
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-03-02T11:47:22Z",
+      "side": 1,
+      "message": "This seems to be a notably different workflow from standard LF practice, where the merge job (\"remerge\") pushes artifacts to a snapshot repository, and a release job (\"build release\") pushes artifacts to a staging repository.\n\nPlease break this big paragraph into seconds, one for the docker stuff, one for the pypi stuff.",
+      "revId": "d6723bcbb02e342f1793b290f72fc8cb975938c2",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bdb71b43_40572d32",
+        "filename": "jjb/acumos-jjb/acumos-pypi-template.yaml",
+        "patchSetId": 63
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-03-02T11:47:22Z",
+      "side": 1,
+      "message": "Maybe adding a job group is appropriate here",
+      "revId": "d6723bcbb02e342f1793b290f72fc8cb975938c2",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "56bea23a_20d27792",
+        "filename": "jjb/acumos-jjb/acumos-pypi-template.yaml",
+        "patchSetId": 63
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-03-02T11:47:22Z",
+      "side": 1,
+      "message": "why did you put the definition of the triggers into the boilerplate anchor?  This is quite different practice from other template files.\n\nThe second is truly a release action, right? Not a \"stage\" action?  Might be worth checking in with Thanh who has been working up a release job, what trigger comment is he using.",
+      "revId": "d6723bcbb02e342f1793b290f72fc8cb975938c2",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "df8d7697_ca32cdca",
+        "filename": "jjb/acumos-jjb/acumos-pypi-template.yaml",
+        "patchSetId": 63
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-03-02T11:47:22Z",
+      "side": 1,
+      "message": "I was confused by this, here you\u0027ve used \"staging\" but it\u0027s triggered by \"remerge\".  This seems to differ from the usual practice where staging is triggered by \"build release\". So what is the definition of \"staging\" for PyPI actions?",
+      "revId": "d6723bcbb02e342f1793b290f72fc8cb975938c2",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8d5fae5f_9cab9bdf",
+        "filename": "jjb/acumos-jjb/acumos-pypi-template.yaml",
+        "patchSetId": 63
+      },
+      "lineNbr": 98,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-03-02T11:47:22Z",
+      "side": 1,
+      "message": "This releases to LF PyPI index only?  And someday to the global PyPI, or will that be a separate template?",
+      "revId": "d6723bcbb02e342f1793b290f72fc8cb975938c2",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "311f2b99_db00ac80",
+        "filename": "jjb/macros.yaml",
+        "patchSetId": 63
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-03-02T11:47:22Z",
+      "side": 1,
+      "message": "Will this publish to any PyPI, LF or global?",
+      "revId": "d6723bcbb02e342f1793b290f72fc8cb975938c2",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "67db3f36_d1f5be44",
+        "filename": "shell/pypi-dist-build.sh",
+        "patchSetId": 63
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-03-02T11:47:22Z",
+      "side": 1,
+      "message": "I know I sound like a broken record, but I still don\u0027t understand why this shell script must be in a different directory from the other custom-to-Acumos-project shell scripts invoked by custom-to-Acumos-project JJB templates.  Vanessa mentioned something about \"your tests require the location here\".  Please help me understand.  My motivation is to keep shell scripts together, not scatter them.",
+      "revId": "d6723bcbb02e342f1793b290f72fc8cb975938c2",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    }
+  ]
+}
