@@ -80,8 +80,12 @@ where in the Java/Maven workflow a staged artifact is copied.
 
 Library authors can configure pip to pull artifacts from either of these Nexus3 PyPI URLS:
 
+The python-staging job publishes to the Nexus3 staging repository
     Nexus3 PyPI staging URL: https://nexus3.acumos.org/repository/PyPi.staging/
+
+The python-release job publishes to the Nexus3 release and pypi.org repository
     Nexus3 PyPI release URL: https://nexus3.acumos.org/repository/PyPi.release/
+    PyPI URL:  https://pypi.python.org/pypi/acumos/
 
 ### Documentation Custom JJB templates
 
