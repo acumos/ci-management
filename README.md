@@ -65,10 +65,12 @@ overwrite a similiarly versioned app in the staging repo.  These artifacts in
 the staging repo should be viewed as "release candidates".  These are the
 artifacts you will concentrate your integration/user acceptance testing on.
 
-Nexus3 PyPI URLS
-
+The python-staging job publishes to the Nexus3 staging repository
     Nexus3 PyPI staging URL: https://nexus3.acumos.org/repository/PyPi.staging/
+
+The python-release job publishes to the Nexus3 release and pypi.org repository
     Nexus3 PyPI release URL: https://nexus3.acumos.org/repository/PyPi.release/
+    PyPI URL:  https://pypi.python.org/pypi/acumos/
 
 ## Testing the templates
 

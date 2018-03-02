@@ -124,3 +124,5 @@
 
       - publish-pypi:
           pypi-server: release
+      - publish-pypi:
+          pypi-server: pypi
