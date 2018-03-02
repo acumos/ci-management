@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "7a611530_7250407e",
+        "filename": "README.md",
+        "patchSetId": 63
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 16
+      },
+      "writtenOn": "2018-03-02T15:24:22Z",
+      "side": 1,
+      "message": "I\u0027m not as familiar with the existing workflow commands as Chris, but I agree we should reuse the same vocabulary if the semantics are the same.\n\nI have three small suggestions:\n\n1. It might be easier to spot this Python-specific section in a Python subsection. Maybe an h4 header (e.g. #### Python)?\n\n2. Perhaps we should include the index URLs (e.g. as embedded links) for PyPI.release and PyPi.staging, so that others know where the packages can be accessed.\n\n3. From the perspective of someone who is not directly involved in this discussion, I can imagine they wouldn\u0027t know how to utilize this change on their own Python project (and not all Python projects will want packages made).\n\nI think it would be informative to say something like \"if a Python project needs these staging and release workflows, they need the \u0027{project-name}-python-staging-{stream}\u0027 and \u0027{project-name}-python-release-{stream}\u0027 jobs in their jjb\".\n\nOtherwise I don\u0027t think those important steps would be documented anywhere.",
+      "parentUuid": "f70171a0_e280b6ae",
+      "revId": "d6723bcbb02e342f1793b290f72fc8cb975938c2",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "bdb71b43_40572d32",
         "filename": "jjb/acumos-jjb/acumos-pypi-template.yaml",
         "patchSetId": 63
