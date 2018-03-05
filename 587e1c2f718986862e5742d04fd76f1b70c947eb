@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5fb127bf_ae90d6dc",
+        "filename": "README.md",
+        "patchSetId": 3
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-03-05T18:36:26Z",
+      "side": 1,
+      "message": "minor typo - \"build\" build be \"builds\" right?",
+      "range": {
+        "startLine": 49,
+        "startChar": 27,
+        "endLine": 49,
+        "endChar": 28
+      },
+      "revId": "587e1c2f718986862e5742d04fd76f1b70c947eb",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "836dedd9_60eed98c",
+        "filename": "README.md",
+        "patchSetId": 3
+      },
+      "lineNbr": 127,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-03-05T18:36:26Z",
+      "side": 1,
+      "message": "\"how to run verify a job\" -- ?? how to run a verify job? how to run a job? how to verify a job?",
+      "range": {
+        "startLine": 127,
+        "startChar": 14,
+        "endLine": 127,
+        "endChar": 37
+      },
+      "revId": "587e1c2f718986862e5742d04fd76f1b70c947eb",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    }
+  ]
+}
