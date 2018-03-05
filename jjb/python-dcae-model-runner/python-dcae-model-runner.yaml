@@ -9,6 +9,8 @@
     concurrent: false
     jobs:
       - '{project-name}-python-jobs'
+      - '{project-name}-python-release-{stream}'
+      - '{project-name}-python-staging-{stream}'
     stream:
       - master:
           branch: master
