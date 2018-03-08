@@ -62,7 +62,7 @@
     gerrit_merge_triggers:
       - change-merged-event
       - comment-added-contains-event:
-          comment-contains-value: remerge$
+          comment-contains-value: rtd-remerge$
 
     #####################
     # Job Configuration #

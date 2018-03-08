@@ -10,11 +10,11 @@
     gerrit_merge_triggers:
       - change-merged-event
       - comment-added-contains-event:
-          comment-contains-value: remerge$
+          comment-contains-value: pypi-remerge$
 
     gerrit_release_trigger:
       - comment-added-contains-event:
-          comment-contains-value: release$
+          comment-contains-value: pypi-release$
 
     gerrit_trigger_file_paths:
       - compare-type: ANT
@@ -105,6 +105,14 @@
       - gerrit:
           server-name: '{gerrit-server-name}'
           trigger-on: '{obj:gerrit_release_trigger}'
+          projects:
+            - project-compare-type: ANT
+              project-pattern: '{project}'
+              branches:
+                - branch-compare-type: ANT
+                  branch-pattern: '**/{branch}'
+              file-paths: '{obj:gerrit_trigger_file_paths}'
+
 
     builders:
       - shell: !include-raw-escape:
