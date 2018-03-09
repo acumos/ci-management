@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "2c1996c6_1075f7db",
+        "filename": "INFO.template.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-03-09T20:58:27Z",
+      "side": 1,
+      "message": "May I please request a brief header that explains the purpose of this YAML, what Jenkins job (if any) is created, how it\u0027s used, where to find a generated result?",
+      "revId": "362b9eaa27767e15c4c008a4fabfa03a9c3ea94b",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9f94ad80_1babd51c",
         "filename": "INFO.template.yaml",
         "patchSetId": 1
