@@ -131,6 +131,4 @@
           !include-raw-escape: ../acumos-jjb/shell/pypi-dist-build.sh
 
       - publish-pypi:
-          pypi-server: release
-      - publish-pypi:
           pypi-server: pypi
