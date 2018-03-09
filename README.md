@@ -73,8 +73,9 @@ artifacts for integration and user acceptance testing.
 
 The python-release job builds the project and pushes the build artifacts to an index named
 "PyPi.release" in the Linux Foundation's Nexus 3 repository.  This job must be triggered
-manually by posting a comment "release" in the appropriate Gerrit review request.  Note that
-if the same version of the artifact already exists in the release repo the push will fail.
+manually by posting a comment "pypi-release" or "pypi-remerge" in the
+appropriate Gerrit review request.  Note that if the same version of the
+artifact already exists in the release repo the push will fail.
 Note also the deviation from Java release practices: this release job re-builds the artifact
 where in the Java/Maven workflow a staged artifact is copied.
 
