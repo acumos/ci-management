@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "57857c2f_9aa8a788",
+        "filename": "jjb/acumos-jjb/shell/rtd-merge.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 62
+      },
+      "writtenOn": "2018-03-13T23:06:40Z",
+      "side": 1,
+      "message": "the scm git plugin handles this so we do not need to explicitly call it.",
+      "revId": "bdf1cfb3961e77ff9d0970e3d8b1ad0d7f132b22",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    }
+  ]
+}
