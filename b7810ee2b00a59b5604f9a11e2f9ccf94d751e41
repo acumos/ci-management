@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "950bb307_c0877c3d",
+        "filename": "jjb/acumos-jjb/shell/rtd-merge.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 62
+      },
+      "writtenOn": "2018-03-13T22:41:48Z",
+      "side": 0,
+      "message": "Don\u0027t need this either. Merge jobs should not be fetching GERRIT_REFSPECs They should be building HEAD of branch.",
+      "range": {
+        "startLine": 22,
+        "startChar": 0,
+        "endLine": 23,
+        "endChar": 20
+      },
+      "revId": "b7810ee2b00a59b5604f9a11e2f9ccf94d751e41",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    }
+  ]
+}
