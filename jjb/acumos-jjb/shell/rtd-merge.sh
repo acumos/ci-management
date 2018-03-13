@@ -8,21 +8,14 @@
 # which accompanies this distribution, and is available at
 # http://www.eclipse.org/legal/epl-v10.html
 ##############################################################################
-echo "---> rtd-verify.sh"
+echo "---> rtd-merge.sh"
 
 # Ensure we fail the job if any steps fail.
 # DO NOT set -u as virtualenv's activate script has unbound variables
 set -x -e -o pipefail
 
-echo "---> Fetching project"
-if [ "$GERRIT_PROJECT" != "$PROJECT" ]; then
-    cd "docs/submodules/$GERRIT_PROJECT"
-fi
-
-git fetch origin "$GERRIT_REFSPEC" && git checkout FETCH_HEAD
-git submodule update
-
 echo "---> Generating docs"
 cd "$WORKSPACE"
+git submodule update
 tox -edocs
 
