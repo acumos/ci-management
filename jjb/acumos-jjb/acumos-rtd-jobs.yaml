@@ -77,7 +77,7 @@
       # instead build locally and  rsync to private doc server
       - shell: !include-raw-escape:
           - ../global-jjb/shell/tox-install.sh
-          - shell/rtd-verify.sh
+          - shell/rtd-merge.sh
           - shell/rsync-docs.sh
 
 - job-template:
