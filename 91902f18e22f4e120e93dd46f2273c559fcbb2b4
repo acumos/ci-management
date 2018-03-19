@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "e32391e8_487d0446",
+        "filename": "jjb/validation-security/validation-task-manager.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-03-19T18:40:20Z",
+      "side": 1,
+      "message": "I don\u0027t see this subdirectory in the validation-security project - possibly a change that is coming?",
+      "revId": "91902f18e22f4e120e93dd46f2273c559fcbb2b4",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    }
+  ]
+}
