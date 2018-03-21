@@ -4,6 +4,3 @@
 [submodule "jjb/global-jjb"]
 	path = jjb/global-jjb
 	url = https://github.com/lfit/releng-global-jjb
-[submodule "lf-ansible"]
-	path = lf-ansible
-	url = https://github.com/lfit/releng-lf-ansible.git
