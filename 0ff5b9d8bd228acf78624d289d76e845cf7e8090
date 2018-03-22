@@ -1,0 +1,9 @@
+Code-Review+1: Thanh Ha <thanh.ha@linuxfoundation.org>
+Verified+1: Acumos Jobbuilder <acumos-jobbuilder@jenkins.acumos.org>
+Code-Review+1: Chris Lott <clott@research.att.com>
+Code-Review+2: Vanessa Rene Valderrama <vvalderrama@linuxfoundation.org>
+Submitted-by: Vanessa Rene Valderrama <vvalderrama@linuxfoundation.org>
+Submitted-at: Thu, 22 Mar 2018 13:19:50 +0000
+Reviewed-on: https://gerrit.acumos.org/r/1382
+Project: ci-management
+Branch: refs/heads/master
