@@ -8,7 +8,8 @@
     rtd-project: acumos-documentation
     jobs:
       - gerrit-rtd-verify
-      - acumos-gerrit-rtd-merge
+      - gerrit-rtd-merge # this job POSTS to public readthedocs.org
+      - acumos-gerrit-rtd-merge # this job points at privdocs server
     stream:
       - master:
           branch: master
