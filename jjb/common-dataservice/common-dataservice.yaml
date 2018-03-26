@@ -21,3 +21,5 @@
     stream:
       - master:
           branch: master
+      - r1.14:
+          branch: r1.14
