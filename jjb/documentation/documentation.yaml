@@ -5,7 +5,7 @@
     project: documentation
     mvn-settings: documentation-settings
     # name of project at ReadTheDocs.org
-    rtd-project: acumos
+    rtd-project: acumos-documentation
     jobs:
       - '{project-name}-rtd-jobs'
     stream:
