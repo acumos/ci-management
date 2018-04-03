@@ -7,7 +7,16 @@
     jobs:
       - '{project-name}-maven-jobs'
       - '{project-name}-maven-javadoc-jobs'
-      - gerrit-maven-sonar
     stream:
       - master:
           branch: master
+
+- project:
+    name: acumos-java-client-sonar
+    jobs:
+      - gerrit-maven-sonar
+
+    project: acumos-java-client
+    project-name: acumos-java-client
+    branch: master
+    mvn-settings: acumos-java-client-settings

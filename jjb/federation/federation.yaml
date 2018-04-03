@@ -18,7 +18,16 @@
       # standard Global JJB templates
       - '{project-name}-maven-javadoc-jobs'
       - gerrit-maven-clm
-      - gerrit-maven-sonar
     stream:
       - master:
           branch: master
+
+- project:
+    name: federation-sonar
+    jobs:
+      - gerrit-maven-sonar
+
+    project: federation
+    project-name: federation
+    branch: master
+    mvn-settings: federation-settings

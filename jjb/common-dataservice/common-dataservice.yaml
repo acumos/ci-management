@@ -17,9 +17,18 @@
       # standard Global JJB templates
       - '{project-name}-maven-javadoc-jobs'
       - gerrit-maven-clm
-      - gerrit-maven-sonar
     stream:
       - master:
           branch: master
       - r1.14:
           branch: r1.14
+
+- project:
+    name: common-dataservice-sonar
+    jobs:
+      - gerrit-maven-sonar
+
+    project: common-dataservice
+    project-name: common-dataservice
+    branch: master
+    mvn-settings: common-dataservice-settings

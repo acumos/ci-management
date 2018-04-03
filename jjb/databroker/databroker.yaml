@@ -13,7 +13,16 @@
       # standard Global JJB templates
       - '{project-name}-maven-javadoc-jobs'
       - gerrit-maven-clm
-      - gerrit-maven-sonar
     stream:
       - master:
           branch: master
+
+- project:
+    name: databroker-sonar
+    jobs:
+      - gerrit-maven-sonar
+
+    project: databroker
+    project-name: databroker
+    branch: master
+    mvn-settings: databroker-settings

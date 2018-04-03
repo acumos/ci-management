@@ -15,7 +15,16 @@
       # standard Global JJB templates
       - '{project-name}-maven-javadoc-jobs'
       - gerrit-maven-clm
-      - gerrit-maven-sonar
     stream:
       - master:
           branch: master
+
+- project:
+    name: openstack-client-sonar
+    jobs:
+      - gerrit-maven-sonar
+
+    project: openstack-client
+    project-name: openstack-client
+    branch: master
+    mvn-settings: openstack-client-settings

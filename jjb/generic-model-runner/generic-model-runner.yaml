@@ -18,7 +18,16 @@
       # standard Global JJB templates
       - '{project-name}-maven-javadoc-jobs'
       - gerrit-maven-clm
-      - gerrit-maven-sonar
     stream:
       - master:
           branch: master
+
+- project:
+    name: generic-model-runner-sonar
+    jobs:
+      - gerrit-maven-sonar
+
+    project: generic-model-runner
+    project-name: generic-model-runner
+    branch: master
+    mvn-settings: generic-model-runner-settings

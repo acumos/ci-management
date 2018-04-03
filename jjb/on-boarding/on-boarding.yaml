@@ -18,7 +18,16 @@
       # standard Global JJB templates
       - '{project-name}-maven-javadoc-jobs'
       - gerrit-maven-clm
-      - gerrit-maven-sonar
     stream:
       - master:
           branch: master
+
+- project:
+    name: on-boarding-sonar
+    jobs:
+      - gerrit-maven-sonar
+
+    project: on-boarding
+    project-name: on-boarding
+    branch: master
+    mvn-settings: on-boarding-settings

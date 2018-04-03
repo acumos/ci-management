@@ -18,7 +18,16 @@
       # standard Global JJB templates
       - '{project-name}-maven-javadoc-jobs'
       - gerrit-maven-clm
-      - gerrit-maven-sonar
     stream:
       - master:
           branch: master
+
+- project:
+    name: acumos-hippo-cms-sonar
+    jobs:
+      - gerrit-maven-sonar
+
+    project: acumos-hippo-cms
+    project-name: acumos-hippo-cms
+    branch: master
+    mvn-settings: acumos-hippo-cms-settings

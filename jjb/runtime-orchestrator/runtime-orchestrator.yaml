@@ -18,7 +18,16 @@
       # standard Global JJB templates
       - '{project-name}-maven-javadoc-jobs'
       - gerrit-maven-clm
-      - gerrit-maven-sonar
     stream:
       - master:
           branch: master
+
+- project:
+    name: runtime-orchestrator-sonar
+    jobs:
+      - gerrit-maven-sonar
+
+    project: runtime-orchestrator
+    project-name: runtime-orchestrator
+    branch: master
+    mvn-settings: runtime-orchestrator-settings

@@ -18,7 +18,16 @@
       # standard Global JJB templates
       - '{project-name}-maven-javadoc-jobs'
       - gerrit-maven-clm
-      - gerrit-maven-sonar
     stream:
       - master:
           branch: master
+
+- project:
+    name: portal-marketplace-sonar
+    jobs:
+      - gerrit-maven-sonar
+
+    project: portal-marketplace
+    project-name: portal-marketplace
+    branch: master
+    mvn-settings: portal-marketplace-settings
