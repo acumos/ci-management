@@ -24,10 +24,10 @@
 
 - project:
     name: runtime-orchestrator-sonar
-    jobs:
-      - gerrit-maven-sonar
-
     project: runtime-orchestrator
     project-name: runtime-orchestrator
-    branch: master
     mvn-settings: runtime-orchestrator-settings
+    branch: master
+    build-node: centos7-docker-4c-4g
+    jobs:
+      - gerrit-maven-sonar

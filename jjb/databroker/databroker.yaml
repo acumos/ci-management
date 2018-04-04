@@ -19,10 +19,10 @@
 
 - project:
     name: databroker-sonar
-    jobs:
-      - gerrit-maven-sonar
-
     project: databroker
     project-name: databroker
-    branch: master
     mvn-settings: databroker-settings
+    branch: master
+    build-node: centos7-docker-4c-4g
+    jobs:
+      - gerrit-maven-sonar

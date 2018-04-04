@@ -24,10 +24,10 @@
 
 - project:
     name: generic-model-runner-sonar
-    jobs:
-      - gerrit-maven-sonar
-
     project: generic-model-runner
     project-name: generic-model-runner
-    branch: master
     mvn-settings: generic-model-runner-settings
+    branch: master
+    build-node: centos7-docker-4c-4g
+    jobs:
+      - gerrit-maven-sonar

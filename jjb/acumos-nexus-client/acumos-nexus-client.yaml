@@ -13,10 +13,9 @@
 
 - project:
     name: acumos-nexus-client-sonar
-    jobs:
-      - gerrit-maven-sonar
-
     project: acumos-nexus-client
     project-name: acumos-nexus-client
-    branch: master
     mvn-settings: acumos-nexus-client-settings
+    branch: master
+    jobs:
+      - gerrit-maven-sonar

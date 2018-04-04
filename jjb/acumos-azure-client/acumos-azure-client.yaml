@@ -25,10 +25,10 @@
 
 - project:
     name: acumos-azure-client-sonar
-    jobs:
-      - gerrit-maven-sonar
-
     project: acumos-azure-client
     project-name: acumos-azure-client
-    branch: master
     mvn-settings: acumos-azure-client-settings
+    branch: master
+    build-node: centos7-docker-4c-4g
+    jobs:
+      - gerrit-maven-sonar

@@ -24,10 +24,10 @@
 
 - project:
     name: portal-marketplace-sonar
-    jobs:
-      - gerrit-maven-sonar
-
     project: portal-marketplace
     project-name: portal-marketplace
-    branch: master
     mvn-settings: portal-marketplace-settings
+    branch: master
+    build-node: centos7-docker-4c-4g
+    jobs:
+      - gerrit-maven-sonar

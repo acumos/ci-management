@@ -24,10 +24,10 @@
 
 - project:
     name: on-boarding-sonar
-    jobs:
-      - gerrit-maven-sonar
-
     project: on-boarding
     project-name: on-boarding
-    branch: master
     mvn-settings: on-boarding-settings
+    branch: master
+    build-node: centos7-docker-4c-4g
+    jobs:
+      - gerrit-maven-sonar
