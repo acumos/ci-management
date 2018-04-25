@@ -22,6 +22,9 @@
     # default gerrit server definition
     gerrit-server-name: gerrit.acumos.org
 
+    # Default java version
+    java-version: openjdk8
+
     # Default maven version
     mvn-version: mvn33
     # Default maven goals
