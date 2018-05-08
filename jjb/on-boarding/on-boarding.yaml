@@ -10,9 +10,6 @@
     mvn-params: -Dbuild.number=${{BUILD_NUMBER}}
     # needs docker-enabled build node
     build-node: centos7-docker-4c-4g
-    # additional params required by docker-jobs
-    project-settings: on-boarding-settings
-    docker_root: base-image/r
     jobs:
       # custom Acumos templates
       - gerrit-maven-dl-verify
@@ -21,18 +18,38 @@
       # standard Global JJB templates
       - '{project-name}-maven-javadoc-jobs'
       - gerrit-maven-clm
-      # R base image
-      - '{project-name}-docker-jobs'
     stream:
       - master:
           branch: master
 
 - project:
-    name: on-boarding-sonar
-    project: on-boarding
+    name: on-boarding-project-sonar
+    # jenkins job name prefix
     project-name: on-boarding
+    # git repo
+    project: on-boarding
     mvn-settings: on-boarding-settings
     branch: master
     build-node: centos7-docker-4c-4g
     jobs:
       - gerrit-maven-sonar
+
+- project:
+    name: on-boarding-project-base-r
+    # jenkins job name prefix
+    project-name: on-boarding-base-r
+    # git repo
+    project: on-boarding
+    branch: master
+    # needs docker-enabled build node
+    build-node: centos7-docker-4c-4g
+    # params required by docker-jobs
+    project-settings: on-boarding-settings
+    docker_root: base-image/r
+    # only trigger on file changes in subdir
+    gerrit_trigger_file_paths:
+      - compare-type: ANT
+        pattern: 'base-image/r/**'
+    jobs:
+      # R base image
+      - '{project-name}-docker-jobs'
