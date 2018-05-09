@@ -73,7 +73,7 @@
     mvn-goals: clean deploy
     mvn-opts: ''
     mvn-params: '-Dmerge'
-    mvn-version: mvn33
+    mvn-version: mvn35
     nexus-cut-dirs: 6  # Number of dirs in the Nexus path to remove for wget -r.
     staging-profile-id: ''  # Unused by this job.
     stream: master
@@ -180,7 +180,7 @@
     mvn-goals: clean deploy
     mvn-opts: ''
     mvn-params: ''
-    mvn-version: mvn33
+    mvn-version: mvn35
     stream: master
     submodule-recursive: true
 
@@ -273,7 +273,7 @@
     mvn-goals: clean install
     mvn-opts: ''
     mvn-params: '-Dstream=$STREAM'
-    mvn-version: mvn33
+    mvn-version: mvn35
     staging-profile-id: ''  # Unused in this job
     stream: master
     submodule-recursive: true

@@ -26,7 +26,7 @@
     java-version: openjdk8
 
     # Default maven version
-    mvn-version: mvn33
+    mvn-version: mvn35
     # Default maven goals
     mvn-goals: 'clean install'
     # Default JVM invocation options
