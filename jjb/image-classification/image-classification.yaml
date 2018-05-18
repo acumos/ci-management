@@ -3,6 +3,7 @@
     name: image-classification-project
     project-name: image-classification
     project: image-classification
+    build-node: centos7-avx-4c-4g
     mvn-settings: image-classification-settings
     python-version: python3
     jobs:
