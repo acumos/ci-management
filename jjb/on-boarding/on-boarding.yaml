@@ -21,6 +21,8 @@
     stream:
       - master:
           branch: master
+      - dev-challenge:
+          branch: dev-challenge
 
 - project:
     name: on-boarding-project-sonar

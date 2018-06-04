@@ -18,10 +18,11 @@
       # standard Global JJB templates
       - '{project-name}-maven-javadoc-jobs'
       - gerrit-maven-clm
-
     stream:
       - master:
           branch: master
+      - dev-challenge:
+          branch: dev-challenge
 
 - project:
     name: acumos-azure-client-sonar
