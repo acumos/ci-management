@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "bed84601_46ff214b",
+        "filename": "INFO.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2018-06-21T20:18:15Z",
+      "side": 1,
+      "message": "This repo hasn\u0027t moved to community governance yet. As such, there can\u0027t possibly be any community members that have committer rights (Sorry Chris)",
+      "range": {
+        "startLine": 47,
+        "startChar": 0,
+        "endLine": 51,
+        "endChar": 18
+      },
+      "revId": "8a2c8ec49e48c15080884238e5cb3c4e17907e01",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    }
+  ]
+}
