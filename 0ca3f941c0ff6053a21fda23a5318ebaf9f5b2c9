@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "aac32fe4_8ace89ea",
+        "filename": "INFO.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2018-06-22T17:56:38Z",
+      "side": 1,
+      "message": "This should be an underscore. The TZ format doesn\u0027t allow for spaces",
+      "range": {
+        "startLine": 46,
+        "startChar": 28,
+        "endLine": 46,
+        "endChar": 29
+      },
+      "revId": "0ca3f941c0ff6053a21fda23a5318ebaf9f5b2c9",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    }
+  ]
+}
