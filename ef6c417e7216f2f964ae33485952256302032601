@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "53cea708_666a3357",
+        "filename": "INFO.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 85
+      },
+      "writtenOn": "2018-06-22T00:30:25Z",
+      "side": 1,
+      "message": "This should be \"America/Los_Angeles\" since he is in Vancouver WA",
+      "range": {
+        "startLine": 11,
+        "startChar": 4,
+        "endLine": 11,
+        "endChar": 19
+      },
+      "revId": "ef6c417e7216f2f964ae33485952256302032601",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eeec4406_2ca32d7d",
+        "filename": "INFO.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 85
+      },
+      "writtenOn": "2018-06-22T00:30:25Z",
+      "side": 1,
+      "message": "use similar format for your timezone too like line 11",
+      "range": {
+        "startLine": 41,
+        "startChar": 16,
+        "endLine": 41,
+        "endChar": 21
+      },
+      "revId": "ef6c417e7216f2f964ae33485952256302032601",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4024c18a_479f5bec",
+        "filename": "INFO.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 85
+      },
+      "writtenOn": "2018-06-22T00:30:25Z",
+      "side": 1,
+      "message": "I think this should be \"America/New_York\"",
+      "range": {
+        "startLine": 46,
+        "startChar": 16,
+        "endLine": 46,
+        "endChar": 18
+      },
+      "revId": "ef6c417e7216f2f964ae33485952256302032601",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    }
+  ]
+}
