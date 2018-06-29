@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "5ad99c77_b8aa2a42",
+        "filename": "INFO.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-06-29T13:56:56Z",
+      "side": 1,
+      "message": "Vanessa is in Texas",
+      "parentUuid": "c2de7c8d_50bed66a",
+      "range": {
+        "startLine": 41,
+        "startChar": 17,
+        "endLine": 41,
+        "endChar": 32
+      },
+      "revId": "11bd1e46029e8959aafb15e5a6e81e3f12e12b4b",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "cea7fe42_14e078c1",
         "filename": "INFO.yaml",
         "patchSetId": 6
@@ -36,6 +60,30 @@
       "writtenOn": "2018-06-22T19:16:56Z",
       "side": 1,
       "message": "Jeremy is in Kentucky, is that slow time or Eastern time?",
+      "range": {
+        "startLine": 46,
+        "startChar": 17,
+        "endLine": 46,
+        "endChar": 32
+      },
+      "revId": "11bd1e46029e8959aafb15e5a6e81e3f12e12b4b",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ead956ea_c5736cec",
+        "filename": "INFO.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-06-29T13:56:56Z",
+      "side": 1,
+      "message": "haha. America/New_York",
+      "parentUuid": "cea7fe42_14e078c1",
       "range": {
         "startLine": 46,
         "startChar": 17,
