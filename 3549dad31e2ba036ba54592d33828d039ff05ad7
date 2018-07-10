@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0af371f4_4a792381",
+        "filename": "INFO.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-07-10T21:22:30Z",
+      "side": 1,
+      "message": "I believe this should be America/New_York.",
+      "range": {
+        "startLine": 46,
+        "startChar": 17,
+        "endLine": 46,
+        "endChar": 32
+      },
+      "revId": "3549dad31e2ba036ba54592d33828d039ff05ad7",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    }
+  ]
+}
