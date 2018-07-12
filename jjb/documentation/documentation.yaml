@@ -9,6 +9,7 @@
     rtd-token: 16db5d3ab702c6f956de7a326250b1b1794b9d1b
     jobs:
       - '{project-name}-rtd-jobs'
+      - gerrit-maven-clm
     stream:
       - master:
           branch: master
