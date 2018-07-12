@@ -7,6 +7,7 @@
     jobs:
       - '{project-name}-maven-jobs'
       - '{project-name}-maven-javadoc-jobs'
+      - gerrit-maven-clm
     stream:
       - master:
           branch: master
