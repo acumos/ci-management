@@ -7,6 +7,7 @@
     python-version: python3
     jobs:
       - '{project-name}-python-jobs'
+      - gerrit-maven-clm
     stream:
       - master:
           branch: master
