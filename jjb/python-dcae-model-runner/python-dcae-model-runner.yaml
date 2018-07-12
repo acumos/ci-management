@@ -11,6 +11,7 @@
       - '{project-name}-python-jobs'
       - '{project-name}-python-release-{stream}'
       - '{project-name}-python-staging-{stream}'
+      - gerrit-maven-clm
     stream:
       - master:
           branch: master
