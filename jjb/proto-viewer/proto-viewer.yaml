@@ -4,6 +4,7 @@
     project-name: proto-viewer
     project: proto-viewer
     project-settings: proto-viewer-settings
+    mvn-settings: proto-viewer-project
     python-version: python3
     build-node: centos7-docker-4c-4g
     build-timeout: 30
@@ -11,6 +12,7 @@
     jobs:
       - '{project-name}-python-jobs'
       - '{project-name}-docker-jobs'
+      - gerrit-maven-clm
     stream:
       - master:
           branch: master
