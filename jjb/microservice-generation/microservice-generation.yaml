@@ -2,7 +2,7 @@
 - project:
     name: microservice-generation-project
     # jenkins job name prefix
-    project-name: microservice-generation-app
+    project-name: microservice-generation
     # git repo
     project: microservice-generation
     mvn-settings: microservice-generation-settings
