@@ -22,6 +22,8 @@
           branch: master
       - r1.14:
           branch: r1.14
+      - r1.15:
+          branch: r1.15
 
 - project:
     name: common-dataservice-sonar
