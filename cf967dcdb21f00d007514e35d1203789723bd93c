@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "b04c0378_e2fc0d37",
+        "filename": "jjb/proto-viewer/proto-viewer.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-07-24T18:34:52Z",
+      "side": 1,
+      "message": "Uh, every other project with a mvn-settings entry uses value \"name-name-SETTINGS\" (not \"name-name-PROJECT\").  Maybe you want to make it consistent?",
+      "revId": "cf967dcdb21f00d007514e35d1203789723bd93c",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    }
+  ]
+}
