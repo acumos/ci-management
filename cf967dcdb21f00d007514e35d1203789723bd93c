@@ -16,6 +16,23 @@
       "revId": "cf967dcdb21f00d007514e35d1203789723bd93c",
       "serverId": "655300a2-7a56-4504-9153-881edd907bea",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3d42a7d6_93a0d3e0",
+        "filename": "jjb/proto-viewer/proto-viewer.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-08-03T14:08:14Z",
+      "side": 1,
+      "message": "Does CLM also work on Python?  There is no java here.",
+      "revId": "cf967dcdb21f00d007514e35d1203789723bd93c",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
     }
   ]
 }
