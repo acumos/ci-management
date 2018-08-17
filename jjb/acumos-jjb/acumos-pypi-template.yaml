@@ -26,6 +26,7 @@
 
     project-type: freestyle
     node: '{build-node}'
+    parallel: false
 
     parameters:
       - lf-infra-parameters:
@@ -33,6 +34,10 @@
           branch: '{branch}'
           stream: '{stream}'
           lftools-version: '{lftools-version}'
+      - bool:
+          name: PARALLEL
+          default: '{parallel}'
+          description: Tox test type used to configure serial or parallel testing.
 
     properties:
       - lf-infra-properties:
