@@ -1,0 +1,60 @@
+---
+- docker_cleanup_boiler_plate: &docker_cleanup_boiler_plate
+    name: docker_cleanup_boiler_plate
+
+    #####################
+    # Job Configuration #
+    #####################
+
+    project-type: freestyle
+    node: '{build-node}'
+    action: list
+
+    parameters:
+      - string:
+          name: PATTERN
+          default: '{pattern}'
+          description: Regex pattern to search for (include bash escaping)
+      - string:
+          name: REPO
+          default: '{repo}'
+          description: Docker repo to audit
+
+    properties:
+      - lf-infra-properties:
+          build-days-to-keep: '{build-days-to-keep}'
+
+    wrappers:
+      - lf-infra-wrappers:
+          build-timeout: '{build-timeout}'
+          jenkins-ssh-credential: '{jenkins-ssh-credential}'
+      - credentials-binding:
+          - username-password-separated:
+              credential-id: acumos-docker-cleanup
+              username: NEXUS_USER
+              password: NEXUS_PASS
+
+    builders:
+      - config-file-provider:
+          files:
+            - file-id: pypirc
+              target: '$HOME/.pypirc'
+      - shell:
+          !include-raw-escape: ../acumos-jjb/shell/run-nexus3-audit.sh
+
+    publishers:
+      - lf-infra-publish
+
+- job-template:
+    name: 'acumos-docker-cleanup-snapshot-repo'
+    repo: 'docker.snapshot'
+    pattern: 'SNAPSHOT'
+
+    <<: *docker_cleanup_boiler_plate
+
+- job-template:
+    name: 'acumos-docker-cleanup-staging-repo'
+    repo: 'docker.staging'
+    pattern: '^((?!SNAPSHOT).)*\$'
+
+    <<: *docker_cleanup_boiler_plate
