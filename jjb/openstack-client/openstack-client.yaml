@@ -14,7 +14,9 @@
       - gerrit-maven-dl-stage
       # standard Global JJB templates
       - '{project-name}-maven-javadoc-jobs'
-      - gerrit-maven-clm
+      # TODO: Add CLM jobs back once issue is resolved:
+      #       https://jira.linuxfoundation.org/browse/RELENG-1165
+      # - gerrit-maven-clm
     stream:
       - master:
           branch: master
