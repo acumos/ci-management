@@ -7,9 +7,7 @@
     python-version: python3
     jobs:
       - '{project-name}-python-jobs'
-      # TODO: Add CLM jobs back once issue is resolved:
-      #       https://jira.linuxfoundation.org/browse/RELENG-1165
-      # - gerrit-maven-clm
+      - gerrit-maven-clm
 
     stream:
       - master:
