@@ -2,6 +2,29 @@
   "comments": [
     {
       "key": {
+        "uuid": "c4ee5aa1_b3c42775",
+        "filename": "jjb/acumos-jjb/shell/run-nexus3-audit.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 62
+      },
+      "writtenOn": "2018-08-26T04:09:10Z",
+      "side": 1,
+      "message": "This script was written in 2017?",
+      "range": {
+        "startLine": 4,
+        "startChar": 16,
+        "endLine": 4,
+        "endChar": 20
+      },
+      "revId": "80e53c1d9d3b73b3c9f6fed421a7fd097e31bd42",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "328323d6_92e508e6",
         "filename": "jjb/acumos-jjb/shell/run-nexus3-audit.sh",
         "patchSetId": 3
@@ -36,6 +59,30 @@
       "writtenOn": "2018-08-26T01:13:21Z",
       "side": 1,
       "message": "Possibly we should commit this to the Acumos gerrit ci-management repo, just to keep it in house, so to speak?  I\u0027m not trying to take away credit, just keep it local.  Maybe?",
+      "range": {
+        "startLine": 24,
+        "startChar": 29,
+        "endLine": 24,
+        "endChar": 43
+      },
+      "revId": "80e53c1d9d3b73b3c9f6fed421a7fd097e31bd42",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5122db3a_ee6b4a60",
+        "filename": "jjb/acumos-jjb/shell/run-nexus3-audit.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 62
+      },
+      "writtenOn": "2018-08-26T04:09:10Z",
+      "side": 1,
+      "message": "This should be ported to lftools and packaged as part of lftools.",
+      "parentUuid": "807b13ee_91d1931e",
       "range": {
         "startLine": 24,
         "startChar": 29,
