@@ -1,0 +1,28 @@
+---
+- project:
+    name: model-deployments-project
+    project-name: model-deployments
+    project: model-deployments
+    mvn-settings: model-deployments-settings
+    build-node: centos7-docker-4c-4g
+    jobs:
+      # custom Acumos templates
+      - gerrit-maven-dl-verify
+      - gerrit-maven-dl-merge
+      - gerrit-maven-dl-stage
+      # standard Global JJB templates
+      - '{project-name}-maven-javadoc-jobs'
+      - gerrit-maven-clm
+    stream:
+      - master:
+          branch: master
+
+- project:
+    name: model-deployments-sonar
+    project: model-deployments
+    project-name: model-deployments
+    mvn-settings: model-deployments-settings
+    branch: master
+    build-node: centos7-docker-4c-4g
+    jobs:
+      - gerrit-maven-sonar
