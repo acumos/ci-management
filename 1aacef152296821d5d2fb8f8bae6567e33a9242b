@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "03fdb440_bd0427d0",
+        "filename": "jjb/model-deployments/model-deployments-predictor-management.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 225
+      },
+      "writtenOn": "2018-09-13T20:47:39Z",
+      "side": 1,
+      "message": "please refer here https://gerrit.acumos.org/r/#/c/2835/1/jjb/databroker/databroker-dataset.yaml\n\nit should be model-deployments/predictor-management",
+      "revId": "1aacef152296821d5d2fb8f8bae6567e33a9242b",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "397130ba_cfac14e5",
         "filename": "jjb/model-deployments/model-deployments-predictor-management.yaml",
         "patchSetId": 1
