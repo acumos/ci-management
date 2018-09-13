@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "397130ba_cfac14e5",
+        "filename": "jjb/model-deployments/model-deployments-predictor-management.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-09-13T18:26:12Z",
+      "side": 1,
+      "message": "This causes a package to be pushed to PyPI.  Are you ready for that?",
+      "range": {
+        "startLine": 12,
+        "startChar": 0,
+        "endLine": 12,
+        "endChar": 48
+      },
+      "revId": "1aacef152296821d5d2fb8f8bae6567e33a9242b",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7c58755b_ff8eeac1",
+        "filename": "jjb/model-deployments/model-deployments.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-09-13T18:26:12Z",
+      "side": 1,
+      "message": "If the child projects are Python, why does this use java templates?",
+      "revId": "1aacef152296821d5d2fb8f8bae6567e33a9242b",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    }
+  ]
+}
