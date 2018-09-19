@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "17c4321b_4a14b0fb",
+        "filename": "jjb/model-deployments/model-deployments-predictor-management.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-09-19T17:05:22Z",
+      "side": 1,
+      "message": "Maven is a java tool, this is probably for running the CLM/NexusIQ analysis on Java code, are you sure you really want this on a Python project?",
+      "range": {
+        "startLine": 13,
+        "startChar": 8,
+        "endLine": 13,
+        "endChar": 24
+      },
+      "revId": "92101ec4ac912b3944c4b2a167c4ba9a31b75e68",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    }
+  ]
+}
