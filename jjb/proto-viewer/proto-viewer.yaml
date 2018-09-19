@@ -12,7 +12,6 @@
     jobs:
       - '{project-name}-python-jobs'
       - '{project-name}-docker-jobs'
-      - gerrit-maven-clm
     stream:
       - master:
           branch: master
