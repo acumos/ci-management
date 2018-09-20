@@ -22,6 +22,29 @@
       "revId": "92101ec4ac912b3944c4b2a167c4ba9a31b75e68",
       "serverId": "655300a2-7a56-4504-9153-881edd907bea",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9cd36597_4159b663",
+        "filename": "jjb/model-deployments/model-deployments-predictor-management.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2018-09-20T20:21:26Z",
+      "side": 1,
+      "message": "You can remove or comment this line \"gerrit-maven-clm\" as this is only supported for java projects now, however Bryan claims that in future this can support python.",
+      "range": {
+        "startLine": 13,
+        "startChar": 6,
+        "endLine": 13,
+        "endChar": 24
+      },
+      "revId": "92101ec4ac912b3944c4b2a167c4ba9a31b75e68",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
     }
   ]
 }
