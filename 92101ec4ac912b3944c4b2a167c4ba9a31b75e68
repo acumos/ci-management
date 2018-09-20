@@ -45,6 +45,30 @@
       "revId": "92101ec4ac912b3944c4b2a167c4ba9a31b75e68",
       "serverId": "655300a2-7a56-4504-9153-881edd907bea",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "36c0d4a8_955e8477",
+        "filename": "jjb/model-deployments/model-deployments-predictor-management.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-09-20T20:23:18Z",
+      "side": 1,
+      "message": "I saw that this job line was on our other Python projects, but all those jobs were useless, so I removed them.  Please remove this entry also.",
+      "parentUuid": "17c4321b_4a14b0fb",
+      "range": {
+        "startLine": 13,
+        "startChar": 8,
+        "endLine": 13,
+        "endChar": 24
+      },
+      "revId": "92101ec4ac912b3944c4b2a167c4ba9a31b75e68",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
     }
   ]
 }
