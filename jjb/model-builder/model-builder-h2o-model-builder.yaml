@@ -1,0 +1,15 @@
+---
+- project:
+    name: model-builder-h2o-model-builder-project
+    project-name: model-builder-h2o-model-builder
+    project: model-builder/h2o-model-builder
+    mvn-settings: model-builder-h2o-model-builder-settings
+    python-version: python3
+    build-timeout: 30
+    concurrent: false
+    jobs:
+      - '{project-name}-python-jobs'
+      - '{project-name}-python-staging-{stream}'
+    stream:
+      - master:
+          branch: master
