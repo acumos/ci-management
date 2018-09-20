@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ab737a9e_1ab7c37e",
+        "filename": "jjb/model-deployments/model-deployments-predictor-management.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-09-20T20:23:18Z",
+      "side": 1,
+      "message": "This job prepares for pushing this package to PyPI.  Do you want that?  If you ONLY want basic python verification, you only need that first job line, \"-python-jobs\"",
+      "range": {
+        "startLine": 12,
+        "startChar": 0,
+        "endLine": 12,
+        "endChar": 48
+      },
+      "revId": "af2c5b630e4db8f5460422956e367cb0da086f35",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    }
+  ]
+}
