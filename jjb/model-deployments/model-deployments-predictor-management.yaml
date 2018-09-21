@@ -1,0 +1,14 @@
+---
+- project:
+    name: model-deployments-predictor-management-project
+    project-name: model-deployments-predictor-management
+    project: model-deployments/predictor-management
+    mvn-settings: model-deployments-predictor-management-settings
+    python-version: python3
+    build-timeout: 30
+    concurrent: false
+    jobs:
+      - '{project-name}-python-jobs'
+    stream:
+      - master:
+          branch: master
