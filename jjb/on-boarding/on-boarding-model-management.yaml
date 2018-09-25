@@ -1,0 +1,14 @@
+---
+- project:
+    name: on-boarding-model-management-project
+    project-name: on-boarding-model-management
+    project: on-boarding/model-management
+    mvn-settings: on-boarding-model-management-settings
+    python-version: python3
+    build-timeout: 30
+    concurrent: false
+    jobs:
+      - '{project-name}-python-jobs'
+    stream:
+      - master:
+          branch: master
