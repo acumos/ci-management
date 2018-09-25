@@ -20,6 +20,8 @@
     stream:
       - master:
           branch: master
+      - athena:
+          branch: r1.18
 
 - project:
     name: common-dataservice-sonar
