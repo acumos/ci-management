@@ -9,7 +9,7 @@
     - include_role: name=system-update
 
   roles:
-    - protobuf-install
+    - lfit.protobuf-install
 
   post_tasks:
     - name: System Reseal
