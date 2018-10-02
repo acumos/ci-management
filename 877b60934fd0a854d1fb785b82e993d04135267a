@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3861f43f_5ca7bce2",
+        "filename": "jjb/proto-viewer/proto-viewer.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-10-02T17:31:50Z",
+      "side": 1,
+      "message": "There is little point in using a Maven-based job here, this is a Python project, the stump pom.xml is only there to provide version details.",
+      "revId": "877b60934fd0a854d1fb785b82e993d04135267a",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    }
+  ]
+}
