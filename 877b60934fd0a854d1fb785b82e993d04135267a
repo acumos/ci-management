@@ -16,6 +16,24 @@
       "revId": "877b60934fd0a854d1fb785b82e993d04135267a",
       "serverId": "655300a2-7a56-4504-9153-881edd907bea",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "58fadf24_84647b20",
+        "filename": "jjb/proto-viewer/proto-viewer.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 223
+      },
+      "writtenOn": "2018-10-02T17:45:34Z",
+      "side": 1,
+      "message": "To fulfill the request I received (adding sonar scans to Python projects), we will need to use this job, and will have to modify the existing pom files, or add new ones.",
+      "parentUuid": "3861f43f_5ca7bce2",
+      "revId": "877b60934fd0a854d1fb785b82e993d04135267a",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
     }
   ]
 }
