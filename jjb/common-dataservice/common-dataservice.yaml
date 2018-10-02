@@ -21,7 +21,7 @@
       - master:
           branch: master
       - athena:
-          branch: r1.18
+          branch: athena
 
 - project:
     name: common-dataservice-sonar
