@@ -10,3 +10,16 @@
     stream:
       - master:
           branch: master
+
+- project:
+    name: face-privacy-filter-sonar
+    project-name: face-privacy-filter
+    project: face-privacy-filter
+    mvn-settings: face-privacy-filter-settings
+    build-node: centos7-docker-4c-4g
+    jobs:
+      - gerrit-maven-sonar
+    cron: 'H 11 * * *'
+    branch: 'master'
+    mvn-goals: 'clean install'
+    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'

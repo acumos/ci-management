@@ -11,3 +11,16 @@
     stream:
       - master:
           branch: master
+
+- project:
+    name: image-classification-sonar
+    project-name: image-classification
+    project: image-classification
+    mvn-settings: image-classification-settings
+    build-node: centos7-docker-4c-4g
+    jobs:
+      - gerrit-maven-sonar
+    cron: 'H 11 * * *'
+    branch: 'master'
+    mvn-goals: 'clean install'
+    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
