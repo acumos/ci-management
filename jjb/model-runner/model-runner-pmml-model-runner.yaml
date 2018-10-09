@@ -1,0 +1,14 @@
+---
+- project:
+    name: model-runner-pmml-model-runner-project
+    project-name: model-runner-pmml-model-runner
+    project: model-runner/pmml-model-runner
+    mvn-settings: model-runner-pmml-model-runner-settings
+    python-version: python3
+    build-timeout: 30
+    concurrent: false
+    jobs:
+      - '{project-name}-python-jobs'
+    stream:
+      - master:
+          branch: master
