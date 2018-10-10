@@ -14,6 +14,8 @@
     stream:
       - master:
           branch: master
+      - athena:
+          branch: athena
 
 - project:
     name: python-dcae-model-runner-sonar

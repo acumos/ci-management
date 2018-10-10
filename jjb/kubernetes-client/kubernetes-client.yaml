@@ -19,6 +19,8 @@
     stream:
       - master:
           branch: master
+      - athena:
+          branch: athena
 
 - project:
     name: kubernetes-client-sonar

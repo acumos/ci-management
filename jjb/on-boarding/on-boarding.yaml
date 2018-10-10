@@ -25,6 +25,8 @@
           branch: dev-challenge
       - onboarding-r1280:
           branch: onboarding-r1280
+      - athena:
+          branch: athena
 
 - project:
     name: on-boarding-project-sonar

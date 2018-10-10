@@ -21,6 +21,8 @@
     stream:
       - master:
           branch: master
+      - athena:
+          branch: athena
 
 - project:
     name: generic-model-runner-sonar

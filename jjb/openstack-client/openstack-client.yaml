@@ -18,6 +18,8 @@
     stream:
       - master:
           branch: master
+      - athena:
+          branch: athena
 
 - project:
     name: openstack-client-sonar

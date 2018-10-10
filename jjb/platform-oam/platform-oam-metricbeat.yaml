@@ -19,3 +19,5 @@
     stream:
       - master:
           branch: master
+      - athena:
+          branch: athena

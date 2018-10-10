@@ -23,6 +23,8 @@
           branch: master
       - dev-challenge:
           branch: dev-challenge
+      - athena:
+          branch: athena
 
 - project:
     name: portal-marketplace-sonar

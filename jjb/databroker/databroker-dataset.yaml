@@ -16,6 +16,7 @@
     stream:
       - master:
           branch: master
+      # no athena stream needed
 
 - project:
     name: databroker-dataset-sonar

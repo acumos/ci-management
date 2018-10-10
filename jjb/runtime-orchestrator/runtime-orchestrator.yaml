@@ -21,6 +21,8 @@
     stream:
       - master:
           branch: master
+      - athena:
+          branch: athena
 
 - project:
     name: runtime-orchestrator-sonar

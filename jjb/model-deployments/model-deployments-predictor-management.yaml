@@ -12,6 +12,7 @@
     stream:
       - master:
           branch: master
+      # no athena stream needed
 
 - project:
     name: model-deployments-predictor-management-sonar

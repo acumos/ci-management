@@ -10,6 +10,7 @@
     stream:
       - master:
           branch: master
+      # no athena stream needed
 
 - project:
     name: image-mood-classifier-sonar

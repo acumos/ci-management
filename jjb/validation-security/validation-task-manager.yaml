@@ -19,3 +19,4 @@
     stream:
       - master:
           branch: master
+      # no athena stream needed
