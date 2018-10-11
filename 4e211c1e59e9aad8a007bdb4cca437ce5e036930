@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3db521d4_c928dfb7",
+        "filename": "jjb/model-builder/model-builder-h2o-model-builder.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-10-11T23:19:24Z",
+      "side": 1,
+      "message": "this \"-management\" suffix doesn\u0027t look right",
+      "range": {
+        "startLine": 19,
+        "startChar": 50,
+        "endLine": 19,
+        "endChar": 60
+      },
+      "revId": "4e211c1e59e9aad8a007bdb4cca437ce5e036930",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "87502b56_b47056b0",
+        "filename": "jjb/model-builder/model-builder-h2o-model-builder.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-10-11T23:19:24Z",
+      "side": 1,
+      "message": "You don\u0027t need the docker-enabled build minion to run sonar, instead probably should use this for BOTH projects, copying what\u0027s done in acumos-python-client config:\n\n    build-node: centos7-avx-4c-4g\n\nSame goes for other sonar project configs",
+      "range": {
+        "startLine": 22,
+        "startChar": 16,
+        "endLine": 22,
+        "endChar": 36
+      },
+      "revId": "4e211c1e59e9aad8a007bdb4cca437ce5e036930",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    }
+  ]
+}
