@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "f207c526_917888cb",
+        "filename": "jjb/common-dataservice/common-dataservice-config-management.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-10-11T20:35:40Z",
+      "side": 1,
+      "message": "this is missing the Maven sonar scan configuration",
+      "revId": "c0a6a65813294c5430bd3a46a6aebf8420981159",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    }
+  ]
+}
