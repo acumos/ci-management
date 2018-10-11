@@ -1,0 +1,33 @@
+# Builds a jar then a docker
+---
+- project:
+    name: cds-project
+    # jenkins job name prefix
+    project-name: common-dataservice-config-management
+    project: common-dataservice/config-management
+    mvn-settings: common-dataservice-config-management-settings
+    mvn-params: -Dbuild.number=${{BUILD_NUMBER}}
+    build-node: centos7-docker-4c-4g
+    jobs:
+      # custom Acumos templates
+      - gerrit-maven-dl-verify
+      - gerrit-maven-dl-merge
+      - gerrit-maven-dl-stage
+      # standard Global JJB templates
+      - '{project-name}-maven-javadoc-jobs'
+      - gerrit-maven-clm
+    stream:
+      - master:
+          branch: master
+      - athena:
+          branch: athena
+
+- project:
+    name: common-dataservice-config-management-sonar
+    project: common-dataservice/config-management
+    project-name: common-dataservice-config-management
+    mvn-settings: common-dataservice-config-management-settings
+    branch: master
+    build-node: centos7-docker-4c-4g
+    jobs:
+      - gerrit-maven-sonar
