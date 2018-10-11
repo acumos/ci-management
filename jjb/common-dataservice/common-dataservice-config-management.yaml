@@ -1,0 +1,15 @@
+---
+- project:
+    name: common-dataservice-config-management-project
+    project-name: common-dataservice-config-management
+    project: common-dataservice/config-management
+    mvn-settings: common-dataservice-config-management-settings
+    python-version: python3
+    build-timeout: 30
+    concurrent: false
+    jobs:
+      - '{project-name}-python-jobs'
+    stream:
+      - master:
+          branch: master
+      # no athena stream needed
