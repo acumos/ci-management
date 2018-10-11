@@ -1,9 +1,9 @@
 ---
 - project:
-    name: on-boarding-model-management-project
-    project-name: on-boarding-model-management
-    project: on-boarding/model-management
-    mvn-settings: on-boarding-model-management-settings
+    name: common-dataservice-config-management-project
+    project-name: common-dataservice-config-management
+    project: common-dataservice/config-management
+    mvn-settings: common-dataservice-config-management-settings
     python-version: python3
     build-timeout: 30
     concurrent: false
