@@ -13,3 +13,16 @@
       - master:
           branch: master
       # no athena stream needed
+
+- project:
+    name: model-runner-h2o-model-runner-sonar
+    project-name: model-runner-h2o-model-runner
+    project: model-runner-h2o-model-runner
+    mvn-settings: model-runner-h2o-model-runner-settings
+    build-node: centos7-avx-4c-4g
+    jobs:
+      - gerrit-maven-sonar
+    cron: 'H 11 * * *'
+    branch: 'master'
+    mvn-goals: 'clean install'
+    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'

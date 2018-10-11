@@ -19,7 +19,7 @@
     project-name: model-deployments-predictor-management
     project: model-deployments-predictor-management
     mvn-settings: model-deployments-predictor-management-settings
-    build-node: centos7-docker-4c-4g
+    build-node: centos7-avx-4c-4g
     jobs:
       - gerrit-maven-sonar
     cron: 'H 11 * * *'
