@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9ccabbc3_b59ee388",
+        "filename": "jjb/common-dataservice/common-dataservice-config-management.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-10-11T21:11:58Z",
+      "side": 1,
+      "message": "Please add the config for Sonar:\n\n- project:\n    name: acumos-python-client-sonar\n    project-name: acumos-python-client\n    project: acumos-python-client\n    mvn-settings: acumos-python-client-settings\n    build-node: centos7-docker-4c-4g\n    jobs:\n      - gerrit-maven-sonar\n    cron: \u0027H 11 * * *\u0027\n    branch: \u0027master\u0027\n    mvn-goals: \u0027clean install\u0027\n    mvn-opts: \u0027-Xmx1024m -XX:MaxPermSize\u003d256m\u0027",
+      "revId": "dc4146b56d2e1755c94c058948b8dc541ff9515b",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    }
+  ]
+}
