@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6b187cdc_9e0139fa",
+        "filename": "jjb/common-dataservice/common-dataservice-config-management.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-10-11T20:55:13Z",
+      "side": 1,
+      "message": "Please remove",
+      "range": {
+        "startLine": 1,
+        "startChar": 2,
+        "endLine": 1,
+        "endChar": 28
+      },
+      "revId": "506cbc676b964bc0e71429091d4f271633e14da3",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "164e33a9_b70fdf17",
+        "filename": "jjb/common-dataservice/common-dataservice-config-management.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-10-11T20:55:13Z",
+      "side": 1,
+      "message": "You don\u0027t want any of these maven jobs, you need a python job that invokes tox",
+      "range": {
+        "startLine": 13,
+        "startChar": 0,
+        "endLine": 18,
+        "endChar": 24
+      },
+      "revId": "506cbc676b964bc0e71429091d4f271633e14da3",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    }
+  ]
+}
