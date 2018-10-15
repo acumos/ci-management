@@ -45,6 +45,30 @@
       "revId": "4e211c1e59e9aad8a007bdb4cca437ce5e036930",
       "serverId": "655300a2-7a56-4504-9153-881edd907bea",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "973850aa_cb1d0e6c",
+        "filename": "jjb/model-builder/model-builder-h2o-model-builder.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 253
+      },
+      "writtenOn": "2018-10-15T15:10:48Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "87502b56_b47056b0",
+      "range": {
+        "startLine": 22,
+        "startChar": 16,
+        "endLine": 22,
+        "endChar": 36
+      },
+      "revId": "4e211c1e59e9aad8a007bdb4cca437ce5e036930",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
     }
   ]
 }
