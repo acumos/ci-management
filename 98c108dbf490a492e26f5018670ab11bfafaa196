@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4fe3f096_558d2dba",
+        "filename": "jjb/common-dataservice/common-dataservice-config-management.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-10-15T16:28:13Z",
+      "side": 1,
+      "message": "this should be a forward slash",
+      "range": {
+        "startLine": 20,
+        "startChar": 31,
+        "endLine": 20,
+        "endChar": 32
+      },
+      "revId": "98c108dbf490a492e26f5018670ab11bfafaa196",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "dca8bb95_7c09c4ec",
+        "filename": "jjb/common-dataservice/common-dataservice-config-management.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-10-15T16:28:13Z",
+      "side": 1,
+      "message": "this probably should NOT be a forward slash",
+      "range": {
+        "startLine": 21,
+        "startChar": 36,
+        "endLine": 21,
+        "endChar": 37
+      },
+      "revId": "98c108dbf490a492e26f5018670ab11bfafaa196",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    }
+  ]
+}
