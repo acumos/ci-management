@@ -6,5 +6,7 @@ LOGS_SERVER=https://logs.acumos.org
 NEXUS_URL=https://nexus.acumos.org
 NEXUSPROXY=https://nexus.acumos.org
 REGISTRY_PORTS=10001 10002 10003 10004
+SIGUL_BRIDGE_IP=10.30.184.3
+SIGUL_KEY=acumos-sandbox
 SILO=sandbox
 SONAR_URL=https://sonar.acumos.org
