@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0074c222_c6d5320d",
+        "filename": "jjb/model-runner/model-runner-pmml-model-runner.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 223
+      },
+      "writtenOn": "2018-10-30T19:46:04Z",
+      "side": 1,
+      "message": "Minor issue, but please put a blank line between the two projects.",
+      "range": {
+        "startLine": 15,
+        "startChar": 0,
+        "endLine": 15,
+        "endChar": 10
+      },
+      "revId": "ac80df286326ce3149257263a2148503464bd6bd",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    }
+  ]
+}
