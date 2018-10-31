@@ -3,12 +3,15 @@
     name: model-builder-h2o-model-builder-project
     project-name: model-builder-h2o-model-builder
     project: model-builder/h2o-model-builder
+    project-settings: model-builder-h2o-model-builder-settings
+    build-node: centos7-docker-4c-4g
     mvn-settings: model-builder-h2o-model-builder-settings
     python-version: python3
     build-timeout: 30
     concurrent: false
     jobs:
       - '{project-name}-python-jobs'
+      - '{project-name}-docker-jobs'
     stream:
       - master:
           branch: master
