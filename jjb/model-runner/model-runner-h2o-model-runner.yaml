@@ -3,12 +3,15 @@
     name: model-runner-h2o-model-runner-project
     project-name: model-runner-h2o-model-runner
     project: model-runner/h2o-model-runner
+    project-settings: model-runner-h2o-model-runner-settings
+    build-node: centos7-docker-4c-4g
     mvn-settings: model-runner-h2o-model-runner-settings
     python-version: python3
     build-timeout: 30
     concurrent: false
     jobs:
       - '{project-name}-python-jobs'
+      - '{project-name}-docker-jobs'
     stream:
       - master:
           branch: master
