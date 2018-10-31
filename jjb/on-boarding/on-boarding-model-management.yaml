@@ -3,12 +3,15 @@
     name: on-boarding-model-management-project
     project-name: on-boarding-model-management
     project: on-boarding/model-management
+    project-settings: on-boarding-model-management-settings
+    build-node: centos7-docker-4c-4g
     mvn-settings: on-boarding-model-management-settings
     python-version: python3
     build-timeout: 30
     concurrent: false
     jobs:
       - '{project-name}-python-jobs'
+      - '{project-name}-docker-jobs'
     stream:
       - master:
           branch: master

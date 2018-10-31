@@ -3,12 +3,15 @@
     name: model-deployments-predictor-management-project
     project-name: model-deployments-predictor-management
     project: model-deployments/predictor-management
+    project-settings: model-deployments-predictor-management-settings
+    build-node: centos7-docker-4c-4g
     mvn-settings: model-deployments-predictor-management-settings
     python-version: python3
     build-timeout: 30
     concurrent: false
     jobs:
       - '{project-name}-python-jobs'
+      - '{project-name}-docker-jobs'
     stream:
       - master:
           branch: master
