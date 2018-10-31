@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2837fbab_e65fc79e",
+        "filename": "jjb/model-runner/model-runner-pmml-model-runner.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-10-31T17:44:48Z",
+      "side": 1,
+      "message": "does this project need a docker-image-builder job?",
+      "range": {
+        "startLine": 10,
+        "startChar": 4,
+        "endLine": 10,
+        "endChar": 8
+      },
+      "revId": "7a6d75eaca09f4a8d31c9fc3c62886b915ea2cfa",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    }
+  ]
+}
