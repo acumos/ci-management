@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fe0c5c1c_16859f56",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 88
+      },
+      "writtenOn": "2018-10-31T21:51:06Z",
+      "side": 1,
+      "message": "Another nit, Please ensure the Issue-Id is a part of the commit footer, the line above the \u0027change-id\u0027.",
+      "range": {
+        "startLine": 11,
+        "startChar": 0,
+        "endLine": 11,
+        "endChar": 21
+      },
+      "revId": "a55e58448de9e2e8b99d4e7ea06d4cff08070958",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    }
+  ]
+}
