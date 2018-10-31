@@ -9,6 +9,7 @@
     concurrent: false
     jobs:
       - '{project-name}-python-jobs'
+      - '{project-name}-docker-jobs'
     stream:
       - master:
           branch: master
