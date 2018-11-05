@@ -22,6 +22,29 @@
       "revId": "7a6d75eaca09f4a8d31c9fc3c62886b915ea2cfa",
       "serverId": "655300a2-7a56-4504-9153-881edd907bea",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5435a309_58bc6039",
+        "filename": "jjb/model-runner/model-runner-pmml-model-runner.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-11-05T21:20:32Z",
+      "side": 1,
+      "message": "I checked the open Gerrit changeset.  It has a Docker file.  Please add the docker image builder job.",
+      "range": {
+        "startLine": 11,
+        "startChar": 0,
+        "endLine": 11,
+        "endChar": 2
+      },
+      "revId": "7a6d75eaca09f4a8d31c9fc3c62886b915ea2cfa",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
     }
   ]
 }
