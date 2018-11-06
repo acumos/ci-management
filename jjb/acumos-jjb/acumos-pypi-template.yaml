@@ -51,6 +51,7 @@
           branch: '$GERRIT_BRANCH'
           submodule-recursive: true
           choosing-strategy: default
+          submodule-timeout: 10
 
     wrappers:
       - lf-infra-wrappers:
