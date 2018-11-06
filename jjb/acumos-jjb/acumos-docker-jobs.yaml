@@ -121,6 +121,7 @@
           branch: '$GERRIT_BRANCH'
           submodule-recursive: '{submodule-recursive}'
           choosing-strategy: default
+          submodule-timeout: 10
 
     triggers:
       - timed: '{cron}'
@@ -207,6 +208,7 @@
           branch: '$GERRIT_BRANCH'
           submodule-recursive: '{submodule-recursive}'
           choosing-strategy: default
+          submodule-timeout: 10
 
     triggers:
       - timed: '{obj:cron}'
@@ -300,6 +302,7 @@
           branch: '$GERRIT_BRANCH'
           submodule-recursive: '{submodule-recursive}'
           choosing-strategy: gerrit
+          submodule-timeout: 10
 
     triggers:
       - gerrit:
