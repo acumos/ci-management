@@ -52,7 +52,7 @@
     build-node: centos7-basebuild-4c-4g
     jobs:
       # standard Global JJB templates
-      - gerrit-maven-release
+      - gerrit-maven-stage
     stream:
       - master:
           branch: master
@@ -73,7 +73,7 @@
     build-node: centos7-basebuild-4c-4g
     jobs:
       # standard Global JJB templates
-      - gerrit-maven-release
+      - gerrit-maven-stage
     stream:
       - master:
           branch: master
