@@ -81,11 +81,7 @@
               file-paths: '{obj:gerrit_trigger_file_paths}'
 
     builders:
-      - shell: !include-raw-escape:
-          # Workaround where the tox run later breaks the lftools virtualenv.
-          # Without running the install first the run in the publisher will fail
-          # due to missing lftools because it gets installed into a tox venv.
-          - ../global-jjb/shell/lftools-install.sh
+      - lf-infra-pre-build
       - lf-infra-tox-install:
           python-version: '{python-version}'
       - shell: !include-raw-escape: ../global-jjb/shell/tox-run.sh
@@ -120,11 +116,7 @@
 
 
     builders:
-      - shell: !include-raw-escape:
-          # Workaround where the tox run later breaks the lftools virtualenv.
-          # Without running the install first the run in the publisher will fail
-          # due to missing lftools because it gets installed into a tox venv.
-          - ../global-jjb/shell/lftools-install.sh
+      - lf-infra-pre-build
       - lf-infra-tox-install:
           python-version: '{python-version}'
       - shell: !include-raw-escape: ../global-jjb/shell/tox-run.sh

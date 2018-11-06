@@ -113,8 +113,8 @@
               NEXUS_REPO={nexus-snapshot-repo}
               NEXUS3_PULL_REGISTRY={nexus3-public-registry}
               NEXUS3_PUSH_REGISTRY={nexus3-snapshot-registry}
+      - lf-infra-pre-build
       - shell: !include-raw-escape:
-          - ../global-jjb/shell/lftools-install.sh
           - ../global-jjb/shell/maven-fetch-metadata.sh
       - lf-maven-build:
           mvn-goals: '{mvn-goals}'
@@ -211,8 +211,8 @@
           properties-content: |
               NEXUS3_PULL_REGISTRY={nexus3-public-registry}
               NEXUS3_PUSH_REGISTRY={nexus3-staging-registry}
+      - lf-infra-pre-build
       - shell: !include-raw-escape:
-          - ../global-jjb/shell/lftools-install.sh
           - ../global-jjb/shell/maven-patch-release.sh
       - lf-maven-build:
           mvn-goals: '{mvn-goals}'
@@ -312,8 +312,7 @@
       - inject:
           properties-content: |
               NEXUS3_PULL_REGISTRY={nexus3-public-registry}
-      - shell: !include-raw-escape:
-          - ../global-jjb/shell/lftools-install.sh
+      - lf-infra-pre-build
       - lf-maven-build:
           mvn-goals: '{mvn-goals}'
       - lf-provide-maven-settings-cleanup
