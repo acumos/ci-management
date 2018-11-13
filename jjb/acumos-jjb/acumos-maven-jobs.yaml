@@ -29,12 +29,15 @@
           mvn-opts: '{mvn-opts}'
           mvn-params: '{mvn-params}'
           mvn-version: '{mvn-version}'
-          # Staging repos do not make sense for CLM jobs so set it blank.
           staging-profile-id: '{staging-profile-id}'
       - string:
           name: ARCHIVE_ARTIFACTS
           default: '{archive-artifacts}'
           description: Artifacts to archive to the logs server.
+      - string:
+          name: STAGING_PROFILE_ID
+          default: '{staging-profile-id}'
+          description: Nexus staging profile ID.
 
     wrappers:
       - lf-infra-wrappers:
