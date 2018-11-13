@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "c39f7559_95a4abe0",
+        "filename": "jjb/acumos-jjb/acumos-maven-jobs.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2018-11-13T10:37:30Z",
+      "side": 1,
+      "message": "New change seems at odds with this comment AND this entry, please harmonize.",
+      "range": {
+        "startLine": 32,
+        "startChar": 0,
+        "endLine": 33,
+        "endChar": 52
+      },
+      "revId": "9c02ecd7f5144aa32726412c4f3858e1d03f546e",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    }
+  ]
+}
