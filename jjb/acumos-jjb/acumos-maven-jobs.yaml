@@ -35,6 +35,10 @@
           name: ARCHIVE_ARTIFACTS
           default: '{archive-artifacts}'
           description: Artifacts to archive to the logs server.
+      - string:
+          name: STAGING_PROFILE_ID
+          default: '{staging-profile-id}'
+          description: Nexus staging profile ID.
 
     wrappers:
       - lf-infra-wrappers:
