@@ -1,5 +1,11 @@
 ---
 - project:
+    name: acumos-hippo-cms-project-view
+    project-name: acumos-hippo-cms
+    views:
+      - project-view
+
+- project:
     name: acumos-hippo-cms-project
     # jenkins job name prefix
     project-name: acumos-hippo-cms

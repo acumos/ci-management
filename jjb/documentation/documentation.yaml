@@ -1,5 +1,11 @@
 ---
 - project:
+    name: documentation-project-view
+    project-name: documentation
+    views:
+      - project-view
+
+- project:
     name: documentation-project
     project-name: documentation
     project: documentation

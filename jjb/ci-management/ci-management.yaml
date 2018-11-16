@@ -1,3 +1,10 @@
+---
+- project:
+    name: ci-jobs-project-view
+    project-name: ci-management
+    views:
+      - project-view
+
 - project:
     name: ci-jobs
     # default 10 min is too little during busy hour

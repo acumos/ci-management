@@ -1,5 +1,11 @@
 ---
 - project:
+    name: acumos-java-client-project-view
+    project-name: acumos-java-client
+    views:
+      - project-view
+
+- project:
     name: acumos-java-client-project
     project-name: acumos-java-client
     project: acumos-java-client

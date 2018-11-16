@@ -1,5 +1,11 @@
 ---
 - project:
+    name: acumos-python-client-project-view
+    project-name: acumos-python-client
+    views:
+      - project-view
+
+- project:
     name: acumos-python-client-project
     project-name: acumos-python-client
     project: acumos-python-client

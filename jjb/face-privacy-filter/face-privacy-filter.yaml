@@ -1,5 +1,11 @@
 ---
 - project:
+    name: face-privacy-filter-project-view
+    project-name: face-privacy-filter
+    views:
+      - project-view
+
+- project:
     name: face-privacy-filter-project
     project-name: face-privacy-filter
     project: face-privacy-filter

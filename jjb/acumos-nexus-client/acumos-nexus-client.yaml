@@ -1,5 +1,11 @@
 ---
 - project:
+    name: acumos-nexus-client-project-view
+    project-name: acumos-nexus-client
+    views:
+      - project-view
+
+- project:
     name: acumos-nexus-client-project
     project-name: acumos-nexus-client
     project: acumos-nexus-client

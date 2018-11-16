@@ -1,6 +1,12 @@
 # Builds a jar then a docker
 ---
 - project:
+    name: common-dataservice-project-view
+    project-name: common-dataservice
+    views:
+      - project-view
+
+- project:
     name: cds-project
     # jenkins job name prefix
     project-name: common-dataservice

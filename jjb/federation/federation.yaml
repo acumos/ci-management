@@ -1,5 +1,11 @@
 ---
 - project:
+    name: federation-project-view
+    project-name: federation
+    views:
+      - project-view
+
+- project:
     name: federation-project
     # jenkins job name prefix
     project-name: federation

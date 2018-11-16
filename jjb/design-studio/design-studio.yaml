@@ -1,5 +1,11 @@
 ---
 - project:
+    name: design-studio-project-view
+    project-name: design-studio
+    views:
+      - project-view
+
+- project:
     # builds everything including libraries
     name: design-studio-project
     # jenkins job name prefix

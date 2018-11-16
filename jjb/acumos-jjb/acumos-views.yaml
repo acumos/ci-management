@@ -1,0 +1,7 @@
+---
+- project:
+    name: clm-view
+    view-name: clm
+    view-regex: '.*-clm-.*'
+    views:
+      - common-view

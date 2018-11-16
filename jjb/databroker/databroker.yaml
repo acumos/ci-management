@@ -1,5 +1,11 @@
 ---
 - project:
+    name: databroker-project-view
+    project-name: databroker
+    views:
+      - project-view
+
+- project:
     name: databroker-project
     project-name: databroker
     project: databroker

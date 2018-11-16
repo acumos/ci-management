@@ -1,5 +1,11 @@
 ---
 - project:
+    name: acumos-azure-client-project-view
+    project-name: acumos-azure-client
+    views:
+      - project-view
+
+- project:
     name: acumos-azure-client-project
     # jenkins job name prefix
     project-name: acumos-azure-client
