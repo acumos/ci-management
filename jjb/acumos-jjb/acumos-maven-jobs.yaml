@@ -190,7 +190,7 @@
 
     gerrit_stage_triggers:
       - comment-added-contains-event:
-          comment-contains-value: build release$
+          comment-contains-value: stage-release$
 
     #####################
     # Job Configuration #
