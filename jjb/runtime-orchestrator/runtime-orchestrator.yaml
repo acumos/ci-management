@@ -1,5 +1,11 @@
 ---
 - project:
+    name: runtime-orchestrator-project-view
+    project-name: runtime-orchestrator
+    views:
+      - project-view
+
+- project:
     name: runtime-orchestrator-project
     # jenkins job name prefix
     project-name: runtime-orchestrator

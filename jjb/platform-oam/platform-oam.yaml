@@ -1,0 +1,6 @@
+---
+- project:
+    name: platform-oam-project-view
+    project-name: platform-oam
+    views:
+      - project-view

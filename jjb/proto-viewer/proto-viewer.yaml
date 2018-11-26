@@ -1,5 +1,11 @@
 ---
 - project:
+    name: proto-viewer-project-view
+    project-name: proto-viewer
+    views:
+      - project-view
+
+- project:
     name: proto-viewer-project
     project-name: proto-viewer
     project: proto-viewer

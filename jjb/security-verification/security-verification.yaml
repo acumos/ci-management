@@ -1,5 +1,11 @@
 ---
 - project:
+    name: security-verification-project-view
+    project-name: security-verification
+    views:
+      - project-view
+
+- project:
     name: security-verification-project
     # jenkins job name prefix
     project-name: security-verification

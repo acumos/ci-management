@@ -1,5 +1,11 @@
 ---
 - project:
+    name: python-model-runner-project-view
+    project-name: python-model-runner
+    views:
+      - project-view
+
+- project:
     name: python-model-runner-project
     project-name: python-model-runner
     project: python-model-runner

@@ -1,5 +1,11 @@
 ---
 - project:
+    name: python-dcae-model-runner-project-view
+    project-name: python-dcae-model-runner
+    views:
+      - project-view
+
+- project:
     name: python-dcae-model-runner-project
     project-name: python-dcae-model-runner
     project: python-dcae-model-runner

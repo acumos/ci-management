@@ -1,5 +1,11 @@
 ---
 - project:
+    name: vm-predictor-project-view
+    project-name: vm-predictor
+    views:
+      - project-view
+
+- project:
     name: vm-predictor-project
     project-name: vm-predictor
     project: vm-predictor

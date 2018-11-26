@@ -1,6 +1,12 @@
 # Triggers Python test via tox
 ---
 - project:
+    name: validation-security-project-view
+    project-name: validation-security
+    views:
+      - project-view
+
+- project:
     name: validation-security-project
     project-name: validation-security
     project: validation-security

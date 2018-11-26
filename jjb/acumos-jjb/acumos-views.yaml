@@ -12,3 +12,17 @@
     view-regex: '.*-merge-.*'
     views:
       - common-view
+
+- project:
+    name: stage-view
+    view-name: stage-jobs
+    view-regex: '.*-stage-.*'
+    views:
+      - common-view
+
+- project:
+    name: verify-view
+    view-name: verify-jobs
+    view-regex: '.*-verify-.*'
+    views:
+      - common-view
