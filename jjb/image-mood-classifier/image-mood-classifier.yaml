@@ -1,5 +1,11 @@
 ---
 - project:
+    name: image-mood-classifier-project-view
+    project-name: image-mood-classifier
+    views:
+      - project-view
+
+- project:
     name: image-mood-classifier-project
     project-name: image-mood-classifier
     project: image-mood-classifier

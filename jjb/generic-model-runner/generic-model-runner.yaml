@@ -1,5 +1,11 @@
 ---
 - project:
+    name: generic-model-runner-project-view
+    project-name: generic-model-runner
+    views:
+      - project-view
+
+- project:
     name: generic-model-runner-project
     # jenkins job name prefix
     project-name: generic-model-runner
