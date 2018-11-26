@@ -1,6 +1,12 @@
 # Builds a jar then a docker
 ---
 - project:
+    name: openstack-client-project-view
+    project-name: openstack-client
+    views:
+      - project-view
+
+- project:
     name: openstack-client-project
     project-name: openstack-client
     project: openstack-client

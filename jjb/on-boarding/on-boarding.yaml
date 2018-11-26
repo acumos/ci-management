@@ -1,5 +1,11 @@
 ---
 - project:
+    name: on-boarding-project-view
+    project-name: on-boarding
+    views:
+      - project-view
+
+- project:
     name: on-boarding-project
     # jenkins job name prefix
     project-name: on-boarding-app

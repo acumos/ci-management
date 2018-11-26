@@ -1,5 +1,11 @@
 ---
 - project:
+    name: microservice-generation-project-view
+    project-name: microservice-generation
+    views:
+      - project-view
+
+- project:
     name: microservice-generation-project
     # jenkins job name prefix
     project-name: microservice-generation

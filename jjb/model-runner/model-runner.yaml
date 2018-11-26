@@ -1,0 +1,6 @@
+---
+- project:
+    name: model-runner-project-view
+    project-name: model-runner
+    views:
+      - project-view

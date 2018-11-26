@@ -5,3 +5,11 @@
     view-regex: '.*-clm-.*'
     views:
       - common-view
+
+
+- project:
+    name: merge-view
+    view-name: merge-jobs
+    view-regex: '.*-merge-.*'
+    views:
+      - common-view

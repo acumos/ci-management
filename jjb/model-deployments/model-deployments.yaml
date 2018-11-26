@@ -1,0 +1,6 @@
+---
+- project:
+    name: model-deployments-project-view
+    project-name: model-deployments
+    views:
+      - project-view

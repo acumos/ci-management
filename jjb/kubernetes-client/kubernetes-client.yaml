@@ -1,5 +1,11 @@
 ---
 - project:
+    name: kubernetes-client-project-view
+    project-name: kubernetes-client
+    views:
+      - project-view
+
+- project:
     name: k8s-client-project
     # jenkins job name prefix
     project-name: kubernetes-client

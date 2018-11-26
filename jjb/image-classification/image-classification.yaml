@@ -1,5 +1,11 @@
 ---
 - project:
+    name: image-classification-project-view
+    project-name: image-classification
+    views:
+      - project-view
+
+- project:
     name: image-classification-project
     project-name: image-classification
     project: image-classification
