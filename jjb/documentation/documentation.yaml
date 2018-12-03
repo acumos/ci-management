@@ -10,6 +10,7 @@
     project-name: documentation
     project: documentation
     mvn-settings: documentation-settings
+    nexus-iq-namespace: 'acumos-'
     # ReadTheDocs.org configuration
     rtd-build-url: https://readthedocs.org/api/v2/webhook/acumos/30570/
     rtd-token: 16db5d3ab702c6f956de7a326250b1b1794b9d1b

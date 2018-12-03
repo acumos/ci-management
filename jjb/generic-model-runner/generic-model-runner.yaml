@@ -14,6 +14,7 @@
     mvn-settings: generic-model-runner-settings
     # pass Jenkins build number
     mvn-params: -Dbuild.number=${{BUILD_NUMBER}}
+    nexus-iq-namespace: 'acumos-'
     # needs docker-enabled build node
     build-node: centos7-docker-4c-4g
     jobs:

@@ -15,6 +15,7 @@
     mvn-settings: design-studio-settings
     # pass Jenkins build number
     mvn-params: -Dbuild.number=${{BUILD_NUMBER}}
+    nexus-iq-namespace: 'acumos-'
     # needs docker-enabled build node
     build-node: centos7-docker-4c-4g
     jobs:
