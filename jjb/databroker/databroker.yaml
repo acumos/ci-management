@@ -10,6 +10,7 @@
     project-name: databroker
     project: databroker
     mvn-settings: databroker-settings
+    nexus-iq-namespace: 'acumos-'
     build-node: centos7-docker-4c-4g
     jobs:
       # custom Acumos templates
