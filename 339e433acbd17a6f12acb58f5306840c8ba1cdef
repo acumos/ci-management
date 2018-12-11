@@ -22,6 +22,30 @@
       "revId": "339e433acbd17a6f12acb58f5306840c8ba1cdef",
       "serverId": "655300a2-7a56-4504-9153-881edd907bea",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a2c83ea_3a108afa",
+        "filename": "jenkins-config/clouds/openstack/ACUMOSVEX/cloud.cfg",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 223
+      },
+      "writtenOn": "2018-12-11T23:53:16Z",
+      "side": 1,
+      "message": "Yes, I noticed it wasn\u0027t defined while I was pulling the settings, but figured it was an oversight that this change should fix.",
+      "parentUuid": "e3db0154_37d7c935",
+      "range": {
+        "startLine": 8,
+        "startChar": 0,
+        "endLine": 9,
+        "endChar": 25
+      },
+      "revId": "339e433acbd17a6f12acb58f5306840c8ba1cdef",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
     }
   ]
 }
