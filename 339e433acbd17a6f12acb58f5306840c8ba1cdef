@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "e3db0154_37d7c935",
+        "filename": "jenkins-config/clouds/openstack/ACUMOSVEX/cloud.cfg",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 85
+      },
+      "writtenOn": "2018-12-11T23:50:37Z",
+      "side": 1,
+      "message": "Acumos Jenkins currently does not have this defined, but it will be anyways overwritten by the node templates in this same change.",
+      "range": {
+        "startLine": 8,
+        "startChar": 0,
+        "endLine": 9,
+        "endChar": 25
+      },
+      "revId": "339e433acbd17a6f12acb58f5306840c8ba1cdef",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    }
+  ]
+}
