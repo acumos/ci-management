@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7a9d5dbc_2ab46e55",
+        "filename": "jjb/platform-oam/platform-oam-log-demo.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 223
+      },
+      "writtenOn": "2018-12-12T17:02:56Z",
+      "side": 1,
+      "message": "There\u0027s no need for the view in here. Each project should only have the view defined once.",
+      "range": {
+        "startLine": 2,
+        "startChar": 0,
+        "endLine": 6,
+        "endChar": 20
+      },
+      "revId": "f5d7f88cd982791b862d01f56310f4298014c315",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    }
+  ]
+}
