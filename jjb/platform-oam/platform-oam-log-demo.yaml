@@ -1,0 +1,19 @@
+---
+- project:
+    name: platform-oam-log-demo-view
+    project-name: platform-oam
+    views:
+      - project-view
+
+- project:
+    name: platform-oam-log-demo-project
+    project-name: platform-oam
+    project: platform-oam
+    project-settings: platform-oam-settings
+    mvn-settings: platform-oam-settings
+    jobs:
+      - '{project-name}-maven-jobs'
+      - '{project-name}-maven-javadoc-jobs'
+    stream:
+      - master:
+          branch: master
