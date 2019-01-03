@@ -9,7 +9,8 @@
     mvn-params: '-f logging-demo'
     jobs:
       - '{project-name}-maven-jobs'
-      - '{project-name}-maven-javadoc-jobs'
+      # no javadoc because that fails on subdirectory 
+      # - '{project-name}-maven-javadoc-jobs'
     stream:
       - master:
           branch: master
