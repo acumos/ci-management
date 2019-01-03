@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "82d9f3d9_22362ce8",
+        "filename": "jjb/platform-oam/platform-oam-log-demo.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 62
+      },
+      "writtenOn": "2019-01-03T17:44:02Z",
+      "side": 1,
+      "message": "Trailing whitespace.",
+      "revId": "ffb31360915f04227ffc5b1f32a1784f853bf48c",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    }
+  ]
+}
