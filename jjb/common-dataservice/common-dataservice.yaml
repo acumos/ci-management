@@ -29,6 +29,8 @@
           branch: master
       - athena:
           branch: athena
+      - cds20:
+          branch: cds-2.0
 
 - project:
     name: common-dataservice-sonar
