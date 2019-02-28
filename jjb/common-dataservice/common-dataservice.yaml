@@ -31,6 +31,8 @@
           branch: athena
       - cds20:
           branch: cds-2.0
+      - cds21:
+          branch: cds-2.1
 
 - project:
     name: common-dataservice-sonar
