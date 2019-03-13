@@ -1,0 +1,5 @@
+- project:
+    name: workbench-project-view
+    project-name: workbench
+    views:
+      - project-view
