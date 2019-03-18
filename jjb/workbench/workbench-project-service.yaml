@@ -11,14 +11,17 @@
     mvn-params: '-f project-service -Dbuild.number=${{BUILD_NUMBER}}'
     nexus-iq-namespace: 'acumos-'
     build-node: centos7-docker-4c-4g
+    gerrit_trigger_file_paths:
+      - compare-type: REG_EXP
+        pattern: 'project-service/.*'
     jobs:
       # custom Acumos templates
       - gerrit-maven-dl-verify
       - gerrit-maven-dl-merge
       - gerrit-maven-dl-stage
-      # standard Global JJB templates
-      - '{project-name}-maven-javadoc-jobs'
-      - gerrit-maven-clm
+      # Global JJB templates do not yet support -f
+      # - '{project-name}-maven-javadoc-jobs'
+      # - gerrit-maven-clm
     stream:
       - master:
           branch: master
