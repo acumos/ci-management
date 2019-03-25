@@ -6,23 +6,17 @@
     # git repo
     project: workbench
     project-settings: workbench-settings
-    mvn-settings: workbench-settings
-    # subdirectory
-    mvn-params: '-f dashboard-webcomponent -Dbuild.number=${{BUILD_NUMBER}}'
     nexus-iq-namespace: 'acumos-'
     build-node: centos7-docker-4c-4g
+    # subdirectory
+    docker_root: dashboard-webcomponent
+    # subdirectory
     gerrit_trigger_file_paths:
       - compare-type: REG_EXP
         pattern: 'dashboard-webcomponent/.*'
     jobs:
-      # custom Acumos templates
-      - gerrit-maven-dl-verify
-      - gerrit-maven-dl-merge
-      - gerrit-maven-dl-stage
-      # Global JJB templates do not support -f
-      # - '{project-name}-maven-javadoc-jobs'
-      # - gerrit-maven-clm
+      # Only build is the docker
+      - '{project-name}-docker-jobs'
     stream:
       - master:
           branch: master
-
