@@ -19,9 +19,9 @@
       - gerrit-maven-dl-verify
       - gerrit-maven-dl-merge
       - gerrit-maven-dl-stage
-      # Global JJB templates do not yet support -f
+      # Javadoc template does not yet support -f
       # - '{project-name}-maven-javadoc-jobs'
-      # - gerrit-maven-clm
+      - gerrit-maven-clm
     stream:
       - master:
           branch: master
