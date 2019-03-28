@@ -17,8 +17,8 @@
     jobs:
       # custom Acumos templates
       - gerrit-maven-dl-verify
-      - gerrit-maven-dl-merge
-      - gerrit-maven-dl-stage
+      - gerrit-maven-dl-nd-merge
+      - gerrit-maven-dl-nd-stage
       # Javadoc template does not yet support -f
       # - '{project-name}-maven-javadoc-jobs'
       - gerrit-maven-clm
