@@ -1,7 +1,17 @@
 ---
-# Docker templates for Acumos projects
-# Wholly independent of maven, POM files, etc.
-# Project must define image name and tag in pom.xml.
+# Docker templates for Acumos projects with a Dockerfile.
+# Does not invoke maven, but requires a stub pom.xml
+# with artifactId for the docker image name
+# and version for the docker tag.  Example:
+#
+# <project xmlns="http://maven.apache.org/POM/4.0.0"
+#    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+#    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+#   <modelVersion>4.0.0</modelVersion>
+#   <groupId>org.acumos.unused</groupId>
+#   <artifactId>my-docker-image-name</artifactId>
+#   <version>my-docker-image-tag</version>
+# </project>
 
 - job-group:
     name: '{project-name}-docker-jobs'

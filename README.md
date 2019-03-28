@@ -7,8 +7,8 @@ using the Jenkins Job Builder.  For more information about that tool please see:
 
 ## Template design
 
-Acumos jobs are generated from standard Global JJB templates and from custom-to-project
-templates.
+Jenkins jobs are generated from standard Global JJB templates and from custom-to-project
+JJB templates.
 
 ## Software Prerequisites
 
@@ -17,7 +17,7 @@ The following software packages are needed to build Acumos components. These are
 * Docker version 1.13+
 * Java version version 1.8
 * Maven version version 3+
-* Python versions 3.4, 3.5, 3.6
+* Python versions 3.4, 3.5, 3.6, 3.7
 * Protocol buffers compiler (protoc) version 3.5.1+
 
 ### Global JJB templates
@@ -33,31 +33,50 @@ Documentation of Global JJB templates can be found here:
 
 #### Docker issues
 
-As of this writing Global JJB provides no support for use of a Docker Maven plugin.
-The Global JJB docker jobs assume all resources will be pulled from network resources such
+As of this writing Global JJB templates provide no support for use of a Docker Maven plugin.
+The Global JJB templates assume all resources will be pulled from network resources such
 as the Nexus2 jar repository first. In Acumos it makes little sense to deploy Spring-repackaged
 super jars of 50+ MB each that are not intended for public consumption.
 
 ### Custom JJB templates for Java + Docker projects
 
 Acumos has multiple projects that build a jar then wrap it into a docker image using a Maven
-plugin.  Custom JJB templates are used for Java/Maven verify, build and release jobs on these
-projects.  The custom templates are derived from the Global JJB templates of similar names. 
-The primary change is adding invocation of a "builder" (aka shell script) that obtains Nexus3
-docker registry credentials and logs in at the nexus3.acumos.org registry.  With that prerequisite
-met, the Maven docker plugin succeeds in pulling and pushing images.
+plugin, with no need to deploy that jar.  Acumos also has projects that build a jar and/or a
+Docker image and need to deploy the jar.  Custom JJB templates are used for Java/Maven verify,
+build and release jobs on all of these projects.  The custom templates are derived from the
+Global JJB templates of similar names.  A significant change is adding invocation of a "builder"
+(aka shell script) that obtains Nexus3 docker registry credentials and logs in at the
+nexus3.acumos.org registry.  With that prerequisite met, the Maven docker plugin succeeds in
+pulling and pushing images. 
+
+A Java project that includes a docker build and push action should use these jobs in its
+project.yaml file::
+
+    jobs:
+      - gerrit-maven-dl-verify
+      - gerrit-maven-dl-merge
+      - gerrit-maven-dl-stage
+
+A Java project that includes a docker build and push action, but does NOT publish any
+jar or pom file for deployment, should use these jobs in its project.yaml file::
+
+    jobs:
+      - gerrit-maven-dl-verify
+      - gerrit-maven-dl-nd-merge
+      - gerrit-maven-dl-nd-stage
+
+Note that the same verify job is used in both scenarios.
 
 ### Custom JJB templates for Python library projects
 
 A Python library project can be configured to publish artifacts to Nexus3 PyPI repositories
-at the Linux Foundation and the global PyPI index.  Add these jobs to the project YAML file:
+at the Linux Foundation and the global PyPI index.
 
 #### Python Custom JJB Templates
 
-If a Python project needs to publish artifacts to the Nexus3 PyPI repositories,
-we have python-release and python-staging jobs.
-
-A Python project can add these jobs to their project.yaml file
+If a Python project needs to publish artifacts to the Nexus3 PyPI repositories, we have
+python-release and python-staging jobs.  A Python project can add these jobs to their
+project.yaml file::
 
     jobs:
       - '{project-name}-python-staging-{stream}'
@@ -65,19 +84,15 @@ A Python project can add these jobs to their project.yaml file
 
 The python-staging job builds the project and pushes the build artifacts to an index named
 "PyPi.staging" in the Linux Foundation's Nexus3 repository.  This job is triggered on every
-Gerrit merge event.  In case of failure, this job can also be triggered manually by posting
-a comment "remerge" (like every other merge job) in the appropriate Gerrit review request.
-If the same version of the artifact already exists in the staging repo it will be overwritten.
-These artifacts in the staging repo should be viewed as release candidates, and are the prime
-artifacts for integration and user acceptance testing.
+Gerrit merge event.  If the same version of the artifact already exists in the staging repo
+it will be overwritten.  These artifacts in the staging repo should be viewed as release
+candidates, and are the prime artifacts for integration and user acceptance testing.
 
-The python-release job builds the project and pushes the build artifacts to the
-pypi.org index. This job must be triggered manually by posting a comment
-"pypi-release" or "pypi-remerge" in the appropriate Gerrit review request.
-Note that if the same version of the artifact already exists in the release
-repo the push will fail. Note also the deviation from Java release practices:
-this release job re-builds the artifact where in the Java/Maven workflow a
-staged artifact is copied.
+The python-release job builds the project and pushes the build artifacts to the pypi.org
+index. This job must be triggered manually by posting a comment "pypi-release" or "pypi-remerge"
+in the appropriate Gerrit review request.  Note that if the same version of the artifact already
+exists in the release repo the push will fail. Note also the deviation from Java release practices:
+this release job re-builds the artifact where in the Java/Maven workflow a staged artifact is copied.
 
 Library authors can configure pip to pull artifacts from PyPI URL:
 
@@ -87,18 +102,10 @@ The python-staging job publishes to the Nexus3 staging repository
 The python-release job publishes to the PyPI repository
     PyPI URL:  https://pypi.python.org/pypi/acumos/
 
-
-### Documentation Custom JJB templates
-
-A custom JJB template is used for a documentation merge job.  This builds documentation
-and pushes it to a private document server hosted in Amazon Web Services.  The job runs
-on every merge performed on the documentation repository.  This job is a temporary
-provision until the Acumos project is opened to the general public in late March 2018.
-
 ## Testing the templates
 
 These instructions explain how to test the Acumos templates using the Jenkins sandbox.
-This will catch errors before submitting the changes as Gerrit reviews.  Prerequisites:
+This catches errors before submitting the changes as Gerrit reviews.  Prerequisites:
 
 Install the Jenkins job builder:
 
