@@ -1,0 +1,32 @@
+---
+- project:
+    name: workbench-common-project
+    # jenkins job name prefix
+    project-name: workbench-common
+    # git repo
+    project: workbench
+    mvn-settings: workbench-settings
+    # subdirectory
+    mvn-params: '-f workbench-common -Dbuild.number=${{BUILD_NUMBER}}'
+    nexus-iq-namespace: 'acumos-'
+    gerrit_trigger_file_paths:
+      - compare-type: REG_EXP
+        pattern: 'workbench-common/.*'
+    jobs:
+      - '{project-name}-maven-jobs'
+      # Javadoc template does not yet support -f
+      # - '{project-name}-maven-javadoc-jobs'
+    stream:
+      - master:
+          branch: master
+
+- project:
+    name: workbench-common-sonar
+    project-name: workbench-common
+    project: workbench
+    mvn-settings: workbench-settings
+    # subdirectory
+    mvn-params: '-f workbench-common -Dbuild.number=${{BUILD_NUMBER}}'
+    branch: master
+    jobs:
+      - gerrit-maven-sonar
