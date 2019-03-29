@@ -1,0 +1,23 @@
+---
+- project:
+    name: workbench-common-project
+    # jenkins job name prefix
+    project-name: workbench-common
+    # git repo
+    project: workbench
+    mvn-settings: workbench-settings
+    jobs:
+      - '{project-name}-maven-jobs'
+      - '{project-name}-maven-javadoc-jobs'
+    stream:
+      - master:
+          branch: master
+
+- project:
+    name: workbench-common-sonar
+    project-name: workbench-common
+    project: workbench
+    mvn-settings: workbench-settings
+    branch: master
+    jobs:
+      - gerrit-maven-sonar
