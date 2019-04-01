@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "e295104b_4029fa80",
+        "filename": "jjb/platform-oam/platform-oam-elk-client.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2019-04-01T16:05:27Z",
+      "side": 1,
+      "message": "I don\u0027t think you want a view just for this single project. I think a view is for the platform-oam GROUP of projects.  And that view is already defined in platform-oam.yaml.",
+      "range": {
+        "startLine": 6,
+        "startChar": 8,
+        "endLine": 6,
+        "endChar": 15
+      },
+      "revId": "aad28144f4078263206cb5aa00282595dfc10495",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "d95b28db_b470d149",
+        "filename": "jjb/platform-oam/platform-oam-elk-client.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2019-04-01T16:05:27Z",
+      "side": 1,
+      "message": "The elk client is a new Java project in a subdirectory.  You need the -f and gerrit trigger regexp. Please copy from one of the workbench subprojects, those are useful as examples.",
+      "revId": "aad28144f4078263206cb5aa00282595dfc10495",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    }
+  ]
+}
