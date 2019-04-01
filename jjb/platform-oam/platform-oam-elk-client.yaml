@@ -1,0 +1,39 @@
+---
+- project:
+    name: platform-oam-elk-client-project-view
+    project-name: platform-oam-elk-client
+
+- project:
+    name: platform-oam-elk-client-project
+    # jenkins job name prefix
+    project-name: platform-oam-elk-client
+    # git repo
+    project: platform-oam
+    mvn-settings: platform-oam-settings
+    mvn-params: '-f elk-client -Dbuild.number=${{BUILD_NUMBER}}'
+    nexus-iq-namespace: 'acumos-'
+    build-node: centos7-docker-4c-4g
+    gerrit_trigger_file_paths:
+      - compare-type: REG_EXP
+        pattern: 'elk-client/.*'
+    jobs:
+      # custom Acumos templates
+      - gerrit-maven-dl-verify
+      - gerrit-maven-dl-merge
+      - gerrit-maven-dl-stage
+      # standard Global JJB templates
+      - '{project-name}-maven-javadoc-jobs'
+      - gerrit-maven-clm
+    stream:
+      - master:
+          branch: master
+
+- project:
+    name: platform-oam-elk-client-sonar
+    project: platform-oam-elk-client
+    project-name: platform-oam-elk-client
+    mvn-settings: platform-oam-elk-client-settings
+    branch: master
+    build-node: centos7-docker-4c-4g
+    jobs:
+      - gerrit-maven-sonar
