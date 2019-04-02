@@ -9,6 +9,10 @@
     mvn-settings: platform-oam-settings
     # POC code subdirectory
     mvn-params: '-f logging-demo'
+    # POC code subdirectory
+    gerrit_trigger_file_paths:
+      - compare-type: REG_EXP
+        pattern: 'logging-demo/.*'
     jobs:
       - '{project-name}-maven-jobs'
       # no javadoc because that fails on subdirectory
