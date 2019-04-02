@@ -18,7 +18,7 @@
       - gerrit-maven-dl-nd-merge
       - gerrit-maven-dl-nd-stage
       # standard Global JJB templates
-      - '{project-name}-maven-javadoc-jobs'
+      # - '{project-name}-maven-javadoc-jobs'
       - gerrit-maven-clm
     stream:
       - master:
