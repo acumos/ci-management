@@ -1,0 +1,9 @@
+Verified+1: Acumos Jobbuilder <acumos-jobbuilder@jenkins.acumos.org>
+Code-Review+1: Guy Jacobson <gj2418@att.com>
+Code-Review+1: Deven Panchal <dp023n@att.com>
+Code-Review+2: Eric Ball <eball@linuxfoundation.org>
+Submitted-by: Eric Ball <eball@linuxfoundation.org>
+Submitted-at: Tue, 02 Apr 2019 17:34:20 +0000
+Reviewed-on: https://gerrit.acumos.org/r/4055
+Project: ci-management
+Branch: refs/heads/master
