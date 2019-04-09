@@ -1,0 +1,22 @@
+---
+- project:
+    name: workbench-pipeline-catalog-webcomponent-project
+    # jenkins job name prefix
+    project-name: workbench-pipeline-catalog-webcomponent
+    # git repo
+    project: workbench
+    project-settings: workbench-settings
+    nexus-iq-namespace: 'acumos-'
+    build-node: centos7-docker-4c-4g
+    # subdirectory
+    docker_root: pipeline-catalog-webcomponent
+    # subdirectory
+    gerrit_trigger_file_paths:
+      - compare-type: REG_EXP
+        pattern: 'pipeline-catalog-webcomponent/.*'
+    jobs:
+      # Only build is the docker
+      - '{project-name}-docker-jobs'
+    stream:
+      - master:
+          branch: master
