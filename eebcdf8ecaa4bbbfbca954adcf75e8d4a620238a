@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5df9ddd0_a0f8fff6",
+        "filename": "jjb/common-dataservice/common-dataservice.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 223
+      },
+      "writtenOn": "2019-05-02T20:03:51Z",
+      "side": 1,
+      "message": "I\u0027m confused on what this \\/COMMIT_MSG regex is looking to match.",
+      "range": {
+        "startLine": 19,
+        "startChar": 42,
+        "endLine": 19,
+        "endChar": 54
+      },
+      "revId": "eebcdf8ecaa4bbbfbca954adcf75e8d4a620238a",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    }
+  ]
+}
