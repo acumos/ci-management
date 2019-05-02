@@ -14,6 +14,9 @@
     project: common-dataservice
     mvn-settings: common-dataservice-settings
     mvn-params: -Dbuild.number=${{BUILD_NUMBER}}
+    gerrit_trigger_file_paths:
+      - compare-type: REG_EXP
+        pattern: '^((?!migrate-cms-to-cds|\/COMMIT_MSG).)*$'
     nexus-iq-namespace: 'acumos-'
     build-node: centos7-docker-4c-4g
     jobs:
@@ -43,3 +46,25 @@
     build-node: centos7-docker-4c-4g
     jobs:
       - gerrit-maven-sonar
+
+- project:
+    name: cds-migration-project
+    # jenkins job name prefix
+    project-name: cds-migration
+    # git repo
+    project: common-dataservice
+    mvn-settings: common-dataservice-settings
+    # subdirectory
+    mvn-params: '-f migrate-cms-to-cds -Dbuild.number=${{BUILD_NUMBER}}'
+    gerrit_trigger_file_paths:
+      - compare-type: REG_EXP
+        pattern: 'migrate-cms-to-cds/.*'
+    build-node: centos7-docker-4c-4g
+    jobs:
+      # custom Acumos templates
+      - gerrit-maven-dl-verify
+      - gerrit-maven-dl-merge
+      - gerrit-maven-dl-stage
+    stream:
+      - master:
+          branch: master
