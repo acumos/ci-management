@@ -314,6 +314,10 @@
       - comment-added-contains-event:
           comment-contains-value: stage-release$
 
+    gerrit_trigger_file_paths:
+      - compare-type: ANT
+        pattern: '**'
+
     #####################
     # Job Configuration #
     #####################
@@ -377,6 +381,7 @@
               branches:
                 - branch-compare-type: ANT
                   branch-pattern: '**/{branch}'
+              file-paths: '{obj:gerrit_trigger_file_paths}'
 
 # Macro for docker login, maven deploy, NO lf deploy
 # Revised version of global jjb 'lf_maven_stage'
