@@ -156,6 +156,7 @@
           submodule-recursive: '{submodule-recursive}'
           choosing-strategy: default
           submodule-timeout: 10
+          submodule-disable: false
 
     triggers:
       - timed: '{cron}'
@@ -266,6 +267,7 @@
           submodule-recursive: '{submodule-recursive}'
           choosing-strategy: default
           submodule-timeout: 10
+          submodule-disable: false
 
     triggers:
       - timed: '{cron}'
@@ -369,6 +371,7 @@
           submodule-recursive: '{submodule-recursive}'
           choosing-strategy: default
           submodule-timeout: 10
+          submodule-disable: false
 
     triggers:
       - timed: '{obj:cron}'
@@ -467,6 +470,7 @@
           submodule-recursive: '{submodule-recursive}'
           choosing-strategy: default
           submodule-timeout: 10
+          submodule-disable: false
 
     triggers:
       - timed: '{obj:cron}'
@@ -577,6 +581,7 @@
           submodule-recursive: '{submodule-recursive}'
           choosing-strategy: gerrit
           submodule-timeout: 10
+          submodule-disable: false
 
     triggers:
       - gerrit:

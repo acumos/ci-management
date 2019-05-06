@@ -52,6 +52,7 @@
           submodule-recursive: true
           choosing-strategy: default
           submodule-timeout: 10
+          submodule-disable: false
 
     wrappers:
       - lf-infra-wrappers:
