@@ -1,15 +1,10 @@
 ---
 # Acumos templates for Java projects that use maven to
-# compile code and build/deploy Docker images.
+# compile code, build Docker images and deploy libraries.
 # This is an excerpt of global-jjb/jjb/lf-maven-jobs.yaml.
 # Unfortunately this breaks the transaction-like behavior
 # of Maven jobs that postpone deployment to final success.
-# Projects must pick one:
-# 1. The '-dl-' templates add the lf-infra-docker-login builder
-#    for projects that deploy jars and push docker images.
-# 2. The '-dl-nd-' templates add the lf-infra-docker login builder
-#    and drop the lf-maven-deploy builder for projects that
-#    deploy nothing, only push docker images.
+# The '-dl-' templates add the lf-infra-docker-login builder.
 
 ####################
 # COMMON FUNCTIONS #
@@ -126,8 +121,8 @@
           properties-content: |
               NEXUS_CUT_DIRS={nexus-cut-dirs}
               NEXUS_REPO={nexus-snapshot-repo}
-              NEXUS3_PULL_REGISTRY={nexus3-public-registry}
-              NEXUS3_PUSH_REGISTRY={nexus3-snapshot-registry}
+              NEXUS3_PULL_REGISTRY={container-public-registry}
+              NEXUS3_PUSH_REGISTRY={container-snapshot-registry}
       - lf-infra-pre-build
       - shell: !include-raw-escape:
           - ../global-jjb/shell/maven-fetch-metadata.sh
@@ -175,118 +170,6 @@
                 - branch-compare-type: ANT
                   branch-pattern: '**/{branch}'
               file-paths: '{obj:gerrit_trigger_file_paths}'
-
-# Macro for docker login, maven deploy, NO lf deploy
-# Revised version of global jjb 'lf_maven_merge'
-#  - changes name
-#  - adds lf-infra-docker-login builder
-#  - adds pull and push registries in properties
-#  - drops lf-maven-deploy builder
-- acumos_maven_merge_dl_nd: &acumos_maven_merge_dl_nd
-    name: acumos-maven-merge-dl-nd
-
-    ######################
-    # Default parameters #
-    ######################
-
-    archive-artifacts: ''
-    branch: master
-    build-days-to-keep: 30  # 30 days in case we need to troubleshoot
-    build-timeout: 30
-    cron: 'H H * * 0'  # build weekly to refresh snapshots
-    git-url: '$GIT_URL/$PROJECT'
-    java-version: openjdk8
-    mvn-global-settings: global-settings
-    mvn-goals: clean deploy
-    mvn-opts: ''
-    mvn-params: '-Dmerge'
-    mvn-version: mvn35
-    nexus-cut-dirs: 6  # Number of dirs in the Nexus path to remove for wget -r.
-    staging-profile-id: ''  # Unused by this job.
-    stream: master
-    submodule-recursive: true
-
-    gerrit_merge_triggers:
-      - change-merged-event
-      - comment-added-contains-event:
-          comment-contains-value: remerge$
-
-    gerrit_trigger_file_paths:
-      - compare-type: ANT
-        pattern: '**'
-
-    post_build_trigger: ''
-
-    #####################
-    # Job Configuration #
-    #####################
-
-    builders:
-      - lf-jacoco-nojava-workaround
-      - lf-maven-install:
-          mvn-version: '{mvn-version}'
-      - lf-infra-docker-login:
-          global-settings-file: '{mvn-global-settings}'
-          settings-file: '{mvn-settings}'
-      # must provide maven settings AFTER docker due to its cleanup
-      - lf-provide-maven-settings:
-          global-settings-file: '{mvn-global-settings}'
-          settings-file: '{mvn-settings}'
-      - lf-infra-create-netrc:
-          server-id: '{mvn-snapshot-id}'
-      - inject:
-          properties-content: |
-              NEXUS_CUT_DIRS={nexus-cut-dirs}
-              NEXUS_REPO={nexus-snapshot-repo}
-              NEXUS3_PULL_REGISTRY={nexus3-public-registry}
-              NEXUS3_PUSH_REGISTRY={nexus3-snapshot-registry}
-      - lf-infra-pre-build
-      - shell: !include-raw-escape:
-          - ../global-jjb/shell/maven-fetch-metadata.sh
-      - lf-maven-build:
-          mvn-goals: '{mvn-goals}'
-      - lf-provide-maven-settings-cleanup
-
-    publishers:
-      - findbugs
-      - lf-jacoco-report
-      - lf-infra-publish
-      - trigger-parameterized-builds: '{obj:post_build_trigger}'
-
-# Job template for docker login, maven deploy, NO lf deploy
-# Revised version of global jjb '{project-name}-maven-merge-{stream}'
-#  - calls locally defined macros
-- job-template:
-    name: '{project-name}-maven-dl-nd-merge-{stream}'
-    id: gerrit-maven-dl-nd-merge
-    <<: *acumos_maven_common
-    # yamllint disable-line rule:key-duplicates
-    <<: *acumos_maven_merge_dl_nd
-
-    scm:
-      - lf-infra-gerrit-scm:
-          jenkins-ssh-credential: '{jenkins-ssh-credential}'
-          git-url: '{git-url}'
-          refspec: '$GERRIT_REFSPEC'
-          branch: '$GERRIT_BRANCH'
-          submodule-recursive: '{submodule-recursive}'
-          choosing-strategy: default
-          submodule-timeout: 10
-          submodule-disable: false
-
-    triggers:
-      - timed: '{cron}'
-      - gerrit:
-          server-name: '{gerrit-server-name}'
-          trigger-on: '{obj:gerrit_merge_triggers}'
-          projects:
-            - project-compare-type: ANT
-              project-pattern: '{project}'
-              branches:
-                - branch-compare-type: ANT
-                  branch-pattern: '**/{branch}'
-              file-paths: '{obj:gerrit_trigger_file_paths}'
-
 
 ###########################
 # Maven Stage aka Release #
@@ -346,8 +229,8 @@
           server-id: '{mvn-staging-id}'
       - inject:
           properties-content: |
-              NEXUS3_PULL_REGISTRY={nexus3-public-registry}
-              NEXUS3_PUSH_REGISTRY={nexus3-staging-registry}
+              NEXUS3_PULL_REGISTRY={container-public-registry}
+              NEXUS3_PUSH_REGISTRY={container-staging-registry}
       - lf-infra-pre-build
       - shell: !include-raw-escape:
           - ../global-jjb/shell/maven-patch-release.sh
@@ -368,105 +251,6 @@
     <<: *acumos_maven_common
     # yamllint disable-line rule:key-duplicates
     <<: *acumos_maven_dl_stage
-
-    scm:
-      - lf-infra-gerrit-scm:
-          jenkins-ssh-credential: '{jenkins-ssh-credential}'
-          git-url: '{git-url}'
-          refspec: '$GERRIT_REFSPEC'
-          branch: '$GERRIT_BRANCH'
-          submodule-recursive: '{submodule-recursive}'
-          choosing-strategy: default
-          submodule-timeout: 10
-          submodule-disable: false
-
-    triggers:
-      - timed: '{obj:cron}'
-      - gerrit:
-          server-name: '{gerrit-server-name}'
-          trigger-on: '{obj:gerrit_stage_triggers}'
-          projects:
-            - project-compare-type: ANT
-              project-pattern: '{project}'
-              branches:
-                - branch-compare-type: ANT
-                  branch-pattern: '**/{branch}'
-              file-paths: '{obj:gerrit_trigger_file_paths}'
-
-# Macro for docker login, maven deploy, NO lf deploy
-# Revised version of global jjb 'lf_maven_stage'
-#  - changes name
-#  - adds lf-infra-docker-login
-#  - drops lf-maven-stage
-- acumos_maven_dl_nd_stage: &acumos_maven_dl_nd_stage
-    name: acumos-maven-dl-nd-stage
-
-    ######################
-    # Default parameters #
-    ######################
-
-    branch: master
-    build-days-to-keep: 30  # 30 days in case it takes long to get approved.
-    build-timeout: 30
-    cron: 'H 11 * * *'  # build daily release candidate
-    git-url: '$GIT_URL/$PROJECT'
-    java-version: openjdk8
-    mvn-global-settings: global-settings
-    mvn-goals: clean deploy
-    mvn-opts: ''
-    mvn-params: ''
-    mvn-version: mvn35
-    stream: master
-    submodule-recursive: true
-
-    gerrit_stage_triggers:
-      - comment-added-contains-event:
-          comment-contains-value: stage-release$
-
-    gerrit_trigger_file_paths:
-      - compare-type: ANT
-        pattern: '**'
-
-    #####################
-    # Job Configuration #
-    #####################
-
-    builders:
-      - lf-jacoco-nojava-workaround
-      - lf-maven-install:
-          mvn-version: '{mvn-version}'
-      - lf-update-java-alternatives:
-          java-version: '{java-version}'
-      - lf-infra-docker-login:
-          global-settings-file: '{mvn-global-settings}'
-          settings-file: '{mvn-settings}'
-      # must provide maven settings AFTER docker-login due to its cleanup
-      - lf-provide-maven-settings:
-          global-settings-file: '{mvn-global-settings}'
-          settings-file: '{mvn-settings}'
-      - lf-infra-create-netrc:
-          server-id: '{mvn-staging-id}'
-      - inject:
-          properties-content: |
-              NEXUS3_PULL_REGISTRY={nexus3-public-registry}
-              NEXUS3_PUSH_REGISTRY={nexus3-staging-registry}
-      - lf-infra-pre-build
-      - shell: !include-raw-escape:
-          - ../global-jjb/shell/maven-patch-release.sh
-      - lf-maven-build:
-          mvn-goals: '{mvn-goals}'
-      - lf-provide-maven-settings-cleanup
-
-# Job template for docker login, maven deploy, NO lf deploy
-# Revised version of global jjb '{project-name}-maven-stage-{stream}'
-#  - changes name
-#  - calls locally defined macros
-- job-template:
-    name: '{project-name}-maven-dl-nd-stage-{stream}'
-    id: gerrit-maven-dl-nd-stage
-    <<: *acumos_maven_common
-    # yamllint disable-line rule:key-duplicates
-    <<: *acumos_maven_dl_nd_stage
 
     scm:
       - lf-infra-gerrit-scm:
@@ -557,7 +341,7 @@
           settings-file: '{mvn-settings}'
       - inject:
           properties-content: |
-              NEXUS3_PULL_REGISTRY={nexus3-public-registry}
+              NEXUS3_PULL_REGISTRY={container-public-registry}
       - lf-infra-pre-build
       - lf-maven-build:
           mvn-goals: '{mvn-goals}'
