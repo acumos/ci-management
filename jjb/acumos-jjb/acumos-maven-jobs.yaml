@@ -23,6 +23,7 @@
     project-type: freestyle
     node: '{build-node}'
     jdk: '{java-version}'
+    maven-versions-plugin: false
 
     properties:
       - lf-infra-properties:
@@ -47,6 +48,10 @@
           name: STAGING_PROFILE_ID
           default: '{staging-profile-id}'
           description: Nexus staging profile ID.
+      - bool:
+          name: MAVEN_VERSIONS_PLUGIN
+          default: '{maven-versions-plugin}'
+          description: Use maven-versions-plugin to update pom versions.
 
     wrappers:
       - lf-infra-wrappers:
