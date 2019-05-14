@@ -353,7 +353,9 @@
           - ../global-jjb/shell/maven-patch-release.sh
       - lf-maven-build:
           mvn-goals: '{mvn-goals}'
-      - lf-maven-stage
+      - shell: !include-raw-escape:
+          - ../global-jjb/shell/common-variables.sh
+          - ../global-jjb/shell/maven-stage.sh
       - lf-provide-maven-settings-cleanup
 
 # Job template for docker login, maven deploy, lf deploy
