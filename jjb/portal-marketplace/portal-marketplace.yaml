@@ -32,6 +32,8 @@
           branch: dev-challenge
       - athena:
           branch: athena
+      - boreas:
+          branch: boreas
 
 - project:
     name: portal-marketplace-sonar
