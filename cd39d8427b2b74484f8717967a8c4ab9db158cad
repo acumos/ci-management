@@ -1,0 +1,8 @@
+Code-Review+1: Andrew Gauld <agauld@att.com>
+Verified+1: Acumos Jobbuilder <acumos-jobbuilder@jenkins.acumos.org>
+Code-Review+2: Jessica Wagantall <jwagantall@linuxfoundation.org>
+Submitted-by: Jessica Wagantall <jwagantall@linuxfoundation.org>
+Submitted-at: Mon, 10 Jun 2019 17:07:22 +0000
+Reviewed-on: https://gerrit.acumos.org/r/c/ci-management/+/4640
+Project: ci-management
+Branch: refs/heads/master
