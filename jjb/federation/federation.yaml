@@ -30,8 +30,8 @@
           branch: master
       - athena:
           branch: athena
-      - fgw21:
-          branch: fgw-2.1
+      - boreas:
+          branch: boreas
 
 - project:
     name: federation-sonar
