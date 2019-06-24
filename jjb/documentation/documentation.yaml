@@ -22,3 +22,5 @@
           branch: master
       - athena:
           branch: athena
+      - boreas:
+          branch: boreas
