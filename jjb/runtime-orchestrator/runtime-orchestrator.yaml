@@ -30,6 +30,10 @@
           branch: master
       - athena:
           branch: athena
+      - boreas:
+          branch: boreas
+      - stagepriorversion1:
+          branch: stagepriorversion1
 
 - project:
     name: runtime-orchestrator-sonar
