@@ -34,6 +34,8 @@
           branch: onboarding-r1280
       - athena:
           branch: athena
+      - boreas:
+          branch: boreas
 
 - project:
     name: on-boarding-project-sonar
