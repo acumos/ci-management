@@ -28,6 +28,8 @@
     stream:
       - master:
           branch: master
+      - boreas:
+          branch: boreas
       # no athena stream needed
 
 - project:
