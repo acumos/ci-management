@@ -1,0 +1,16 @@
+---
+
+- project:
+    name: acumos-c-client-project
+    project-name: acumos-c-client
+    project: acumos-c-client
+    mvn-settings: acumos-c-client-settings
+    build-timeout: 30
+    build-node: centos7-avx-4c-4g
+    parallel: false
+    jobs:
+      - '{project-name}-cmake-verify-{stream}'
+    stream:
+      - master:
+          branch: master
+
