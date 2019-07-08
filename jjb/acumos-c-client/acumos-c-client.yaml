@@ -1,0 +1,30 @@
+---
+- project:
+    name: acumos-c-client-project-view
+    project-name: acumos-c-client
+    views:
+      - project-view
+
+- project:
+    name: acumos-c-client-project
+    project-name: acumos-c-client
+    project: acumos-c-client
+    mvn-settings: acumos-c-client-settings
+    build-timeout: 30
+    build-node: centos7-avx-4c-4g
+    jobs:
+      - gerrit-cmake-verify
+    stream:
+      - master:
+          branch: master
+
+- project:
+    name: acumos-c-client-sonar
+    project-name: acumos-c-client
+    project: acumos-c-client
+    mvn-settings: acumos-c-client-settings
+    build-node: centos7-avx-4c-4g
+    branch: master
+    stream: master
+    jobs:
+      - gerrit-cmake-sonar
