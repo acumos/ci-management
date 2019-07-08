@@ -1,0 +1,43 @@
+---
+- project:
+    name: license-management-project-view
+    project-name: license-management
+    views:
+      - project-view
+
+- project:
+    name: license-management-project
+    # jenkins job name prefix
+    project-name: license-management
+    # git repo
+    project: license-management
+    mvn-settings: license-management-settings
+    # pass Jenkins build number
+    mvn-params: -Dbuild.number=${{BUILD_NUMBER}}
+    nexus-iq-namespace: 'acumos-'
+    # needs docker-enabled build node
+    build-node: centos7-docker-4c-4g
+    jobs:
+      # custom Acumos templates
+      - gerrit-maven-dl-verify
+      - gerrit-maven-dl-merge
+      - gerrit-maven-dl-stage
+      # standard Global JJB templates
+      - '{project-name}-maven-javadoc-jobs'
+      - gerrit-maven-clm
+    stream:
+      - master:
+          branch: master
+      # - boreas:
+      #     branch: boreas
+      # no athena stream needed
+
+- project:
+    name: license-management-sonar
+    project: license-management
+    project-name: license-management
+    mvn-settings: license-management-settings
+    branch: master
+    build-node: centos7-docker-4c-4g
+    jobs:
+      - gerrit-maven-sonar
