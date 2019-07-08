@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "f6f262db_fb97e5a6",
+        "filename": "jjb/acumos-c-client/acumos-c-client.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 85
+      },
+      "writtenOn": "2019-07-08T17:19:21Z",
+      "side": 1,
+      "message": "We need some jobs defined.. we can\u0027t leave this section blank.",
+      "range": {
+        "startLine": 11,
+        "startChar": 0,
+        "endLine": 14,
+        "endChar": 49
+      },
+      "revId": "610b20141df0c0184452f6fe823cdd4dceb94071",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    }
+  ]
+}
