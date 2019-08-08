@@ -15,7 +15,7 @@
       - compare-type: ANT
         pattern: 'elk-stack/logstash/**'
     jobs:
-      - '{project-name}-docker-jobs'
+      - '{project-name}-acumos-docker-jobs'
     stream:
       - master:
           branch: master

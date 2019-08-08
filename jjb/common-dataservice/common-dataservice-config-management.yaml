@@ -11,7 +11,7 @@
     concurrent: false
     jobs:
       - '{project-name}-python-jobs'
-      - '{project-name}-docker-jobs'
+      - '{project-name}-acumos-docker-jobs'
     stream:
       - master:
           branch: master

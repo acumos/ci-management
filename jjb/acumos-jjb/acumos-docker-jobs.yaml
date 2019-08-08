@@ -14,12 +14,12 @@
 # </project>
 
 - job-group:
-    name: '{project-name}-docker-jobs'
+    name: '{project-name}-acumos-docker-jobs'
 
     jobs:
-      - gerrit-docker-merge
-      - gerrit-docker-stage
-      - gerrit-docker-verify
+      - acumos-gerrit-docker-merge
+      - acumos-gerrit-docker-stage
+      - acumos-gerrit-docker-verify
 
 ####################
 # COMMON FUNCTIONS #
@@ -118,7 +118,7 @@
 
 - job-template:
     name: '{project-name}-docker-merge-{stream}'
-    id: gerrit-docker-merge
+    id: acumos-gerrit-docker-merge
     <<: *acumos_docker_common
     # yamllint disable-line rule:key-duplicates
     <<: *acumos_docker_merge
@@ -206,7 +206,7 @@
 
 - job-template:
     name: '{project-name}-docker-stage-{stream}'
-    id: gerrit-docker-stage
+    id: acumos-gerrit-docker-stage
     <<: *acumos_docker_common
     # yamllint disable-line rule:key-duplicates
     <<: *acumos_docker_stage
@@ -301,7 +301,7 @@
 
 - job-template:
     name: '{project-name}-docker-verify-{stream}'
-    id: gerrit-docker-verify
+    id: acumos-gerrit-docker-verify
     <<: *acumos_docker_common
     # yamllint disable-line rule:key-duplicates
     <<: *acumos_docker_verify
