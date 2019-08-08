@@ -67,4 +67,4 @@
         pattern: 'base-image/r/**'
     jobs:
       # R base image
-      - '{project-name}-docker-jobs'
+      - '{project-name}-acumos-docker-jobs'

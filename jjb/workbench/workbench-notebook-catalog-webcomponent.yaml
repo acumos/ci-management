@@ -16,7 +16,7 @@
         pattern: 'notebook-catalog-webcomponent/.*'
     jobs:
       # Only build is the docker
-      - '{project-name}-docker-jobs'
+      - '{project-name}-acumos-docker-jobs'
     stream:
       - master:
           branch: master
