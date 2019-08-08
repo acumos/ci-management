@@ -27,6 +27,8 @@
       # standard Global JJB templates
       - '{project-name}-maven-javadoc-jobs'
       - gerrit-maven-clm
+      # new self-release process
+      - '{project-name}-gerrit-release-jobs'
     stream:
       - master:
           branch: master
