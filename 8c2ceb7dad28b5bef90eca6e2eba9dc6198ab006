@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0d168e20_d5fd11f5",
+        "filename": "jjb/federation/federation.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2019-08-13T15:21:16Z",
+      "side": 1,
+      "message": "Yaml uses only spaces, no tabs; please change your tabs to spaces.",
+      "revId": "8c2ceb7dad28b5bef90eca6e2eba9dc6198ab006",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    }
+  ]
+}
