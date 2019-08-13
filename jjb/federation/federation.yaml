@@ -28,10 +28,13 @@
     stream:
       - master:
           branch: master
+          java-version: openjdk11
       - athena:
           branch: athena
+          java-version: openjdk8
       - boreas:
           branch: boreas
+          java-version: openjdk8
 
 - project:
     name: federation-sonar
