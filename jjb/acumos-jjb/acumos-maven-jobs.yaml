@@ -17,7 +17,6 @@
 
     project-type: freestyle
     node: '{build-node}'
-    jdk: '{java-version}'
     maven-versions-plugin: false
 
     properties:
