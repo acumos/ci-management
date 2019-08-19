@@ -1,0 +1,8 @@
+Verified+1: Acumos Jobbuilder <acumos-jobbuilder@jenkins.acumos.org>
+Code-Review+1: Manoop Talasila <talasila@research.att.com>
+Code-Review+2: Jessica Wagantall <jwagantall@linuxfoundation.org>
+Submitted-by: Jessica Wagantall <jwagantall@linuxfoundation.org>
+Submitted-at: Mon, 19 Aug 2019 17:33:46 +0000
+Reviewed-on: https://gerrit.acumos.org/r/c/ci-management/+/5029
+Project: ci-management
+Branch: refs/heads/master
