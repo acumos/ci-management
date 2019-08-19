@@ -1,4 +1,5 @@
-# UUID                                                    	Group Name
+# UUID                                             	Group Name
 #
-42f0c83244389e408b42fa668348002012ecba46                  	GitHub Replication
-ldap:cn=lf-collab-admins,ou=Groups,dc=freestandards,dc=org	ldap/lf-collab-admins
+42f0c83244389e408b42fa668348002012ecba46           	GitHub Replication
+ldap:cn=lf-releng,ou=Groups,dc=freestandards,dc=org	ldap/lf-releng
+ldap:cn=lf-sysops,ou=Groups,dc=freestandards,dc=org	ldap/lf-sysops
