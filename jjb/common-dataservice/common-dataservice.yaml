@@ -32,10 +32,13 @@
     stream:
       - master:
           branch: master
+          java-version: openjdk11
       - athena:
           branch: athena
+          java-version: openjdk8
       - boreas:
           branch: boreas
+          java-version: openjdk8
 
 - project:
     name: common-dataservice-sonar
@@ -44,6 +47,7 @@
     mvn-settings: common-dataservice-settings
     branch: master
     build-node: centos7-docker-4c-4g
+    java-version: openjdk11
     jobs:
       - gerrit-maven-sonar
 
@@ -60,6 +64,7 @@
       - compare-type: REG_EXP
         pattern: 'migrate-cms-to-cds/.*'
     build-node: centos7-docker-4c-4g
+    java-version: openjdk8
     jobs:
       # custom Acumos templates
       - gerrit-maven-dl-verify
