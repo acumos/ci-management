@@ -107,6 +107,8 @@
       - lf-jacoco-nojava-workaround
       - lf-maven-install:
           mvn-version: '{mvn-version}'
+      - lf-update-java-alternatives:
+          java-version: '{java-version}'
       - lf-infra-docker-login:
           global-settings-file: '{mvn-global-settings}'
           settings-file: '{mvn-settings}'
@@ -118,8 +120,6 @@
           server-id: '{mvn-snapshot-id}'
       - inject:
           properties-content: |
-              NEXUS_CUT_DIRS={nexus-cut-dirs}
-              NEXUS_REPO={nexus-snapshot-repo}
               NEXUS3_PULL_REGISTRY={container-public-registry}
               NEXUS3_PUSH_REGISTRY={container-snapshot-registry}
       - lf-infra-pre-build
