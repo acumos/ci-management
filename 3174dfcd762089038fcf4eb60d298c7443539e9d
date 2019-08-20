@@ -1,0 +1,7 @@
+Verified+1: Acumos Jobbuilder <acumos-jobbuilder@jenkins.acumos.org>
+Code-Review+2: Aric Gardner <agardner@linuxfoundation.org>
+Submitted-by: Eric Ball <eball@linuxfoundation.org>
+Submitted-at: Tue, 20 Aug 2019 20:58:00 +0000
+Reviewed-on: https://gerrit.acumos.org/r/c/ci-management/+/5051
+Project: ci-management
+Branch: refs/heads/master
