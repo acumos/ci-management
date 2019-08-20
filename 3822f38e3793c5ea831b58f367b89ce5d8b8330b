@@ -1,0 +1,8 @@
+Verified+1: Acumos Jobbuilder <acumos-jobbuilder@jenkins.acumos.org>
+Code-Review+2: DW Talton <dtalton@contractor.linuxfoundation.org>
+Code-Review+2: suresh channamallu <schannamallu@linuxfoundation.org>
+Submitted-by: Eric Ball <eball@linuxfoundation.org>
+Submitted-at: Tue, 20 Aug 2019 00:41:12 +0000
+Reviewed-on: https://gerrit.acumos.org/r/c/ci-management/+/5040
+Project: ci-management
+Branch: refs/heads/master
