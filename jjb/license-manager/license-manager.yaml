@@ -16,7 +16,7 @@
     mvn-params: -Dbuild.number=${{BUILD_NUMBER}}
     nexus-iq-namespace: 'acumos-'
     # needs docker-enabled build node
-    build-node: centos7-docker-4c-4g
+    build-node: ubuntu1804-docker-4c-4g
     jobs:
       # custom Acumos templates
       - gerrit-maven-dl-verify
@@ -28,6 +28,7 @@
     stream:
       - master:
           branch: master
+          java-version: openjdk11
       # - boreas:
       #     branch: boreas
       # no athena stream needed
@@ -37,7 +38,8 @@
     project: license-manager
     project-name: license-manager
     mvn-settings: license-manager-settings
-    branch: master
-    build-node: centos7-docker-4c-4g
+    build-node: ubuntu1804-docker-4c-4g
     jobs:
       - gerrit-maven-sonar
+    branch: master
+    java-version: openjdk11
