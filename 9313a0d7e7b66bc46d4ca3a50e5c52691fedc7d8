@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "610e712f_a0ed1c93",
+        "filename": "jjb/license-usage-manager/license-usage-manager.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 223
+      },
+      "writtenOn": "2019-08-28T18:30:54Z",
+      "side": 1,
+      "message": "Why not pull this comment as well? It was never very necessary, and is now significantly out of date.",
+      "range": {
+        "startLine": 34,
+        "startChar": 6,
+        "endLine": 34,
+        "endChar": 31
+      },
+      "revId": "9313a0d7e7b66bc46d4ca3a50e5c52691fedc7d8",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    }
+  ]
+}
