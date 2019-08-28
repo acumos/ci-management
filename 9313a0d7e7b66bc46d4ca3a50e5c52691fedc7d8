@@ -22,6 +22,30 @@
       "revId": "9313a0d7e7b66bc46d4ca3a50e5c52691fedc7d8",
       "serverId": "655300a2-7a56-4504-9153-881edd907bea",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "6a7dd308_d4626907",
+        "filename": "jjb/license-usage-manager/license-usage-manager.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 290
+      },
+      "writtenOn": "2019-08-28T19:56:10Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "610e712f_a0ed1c93",
+      "range": {
+        "startLine": 34,
+        "startChar": 6,
+        "endLine": 34,
+        "endChar": 31
+      },
+      "revId": "9313a0d7e7b66bc46d4ca3a50e5c52691fedc7d8",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
     }
   ]
 }
