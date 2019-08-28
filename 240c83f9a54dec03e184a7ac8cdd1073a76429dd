@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "253784bf_a25514f1",
+        "filename": "jjb/license-manager/license-manager.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 223
+      },
+      "writtenOn": "2019-08-28T18:31:32Z",
+      "side": 1,
+      "message": "Let\u0027s go ahead and pull these comments out like the LUM change.",
+      "range": {
+        "startLine": 32,
+        "startChar": 6,
+        "endLine": 34,
+        "endChar": 31
+      },
+      "revId": "240c83f9a54dec03e184a7ac8cdd1073a76429dd",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    }
+  ]
+}
