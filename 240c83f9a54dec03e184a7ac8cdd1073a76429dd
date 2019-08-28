@@ -46,6 +46,30 @@
       "revId": "240c83f9a54dec03e184a7ac8cdd1073a76429dd",
       "serverId": "655300a2-7a56-4504-9153-881edd907bea",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "f19c402a_c4bc8c1f",
+        "filename": "jjb/license-manager/license-manager.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 223
+      },
+      "writtenOn": "2019-08-28T21:53:37Z",
+      "side": 1,
+      "message": "There was no second patch pushed...",
+      "parentUuid": "20b9f55d_5a98e542",
+      "range": {
+        "startLine": 32,
+        "startChar": 6,
+        "endLine": 34,
+        "endChar": 31
+      },
+      "revId": "240c83f9a54dec03e184a7ac8cdd1073a76429dd",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
     }
   ]
 }
