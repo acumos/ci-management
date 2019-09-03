@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3c4806a4_22d60800",
+        "filename": "jjb/license-usage-manager/license-usage-manager.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2019-09-03T14:12:40Z",
+      "side": 1,
+      "message": "since you only have one stream (branch), why not move this into the body, near the build-node property? then it will apply to all streams (branches).",
+      "range": {
+        "startLine": 33,
+        "startChar": 0,
+        "endLine": 33,
+        "endChar": 3
+      },
+      "revId": "731964379a77c6ae85f9221f3a637b8c8bb656a2",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    }
+  ]
+}
