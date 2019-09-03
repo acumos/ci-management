@@ -44,8 +44,9 @@
     project-name: common-dataservice
     mvn-settings: common-dataservice-settings
     branch: master
-    # release requires sigul which requires centos
-    build-node: centos7-builder-2c-1g
+    # maven release requires sigul which requires centos
+    # container release requires docker
+    build-node: centos7-docker-4c-4g
     jobs:
       # new self-release process
       - '{project-name}-gerrit-release-jobs'
