@@ -27,8 +27,6 @@
       # standard Global JJB templates
       - '{project-name}-maven-javadoc-jobs'
       - gerrit-maven-clm
-      # new self-release process
-      - '{project-name}-gerrit-release-jobs'
     stream:
       - master:
           branch: master
@@ -39,6 +37,18 @@
       - boreas:
           branch: boreas
           java-version: openjdk8
+
+- project:
+    name: common-dataservice-release
+    project: common-dataservice
+    project-name: common-dataservice
+    mvn-settings: common-dataservice-settings
+    branch: master
+    # release requires sigul which requires centos
+    build-node: centos7-builder-2c-1g
+    jobs:
+      # new self-release process
+      - '{project-name}-gerrit-release-jobs'
 
 - project:
     name: common-dataservice-sonar
