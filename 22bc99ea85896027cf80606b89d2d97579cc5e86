@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "e2ce115f_7015e243",
+        "filename": "jjb/license-manager/license-manager.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2019-09-03T18:07:31Z",
+      "side": 1,
+      "message": "No, you cannot remove the \"stream:\" block here, that\u0027s required.  also please move the java-version block up above the jobs.",
+      "range": {
+        "startLine": 28,
+        "startChar": 0,
+        "endLine": 29,
+        "endChar": 3
+      },
+      "revId": "22bc99ea85896027cf80606b89d2d97579cc5e86",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    }
+  ]
+}
