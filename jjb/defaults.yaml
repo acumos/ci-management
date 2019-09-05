@@ -50,4 +50,4 @@
     javadoc-path: org.acumos.$PROJECT/$STREAM
 
     # Self-release process
-    jenkins-ssh-release-credential: 'jenkins-release'
+    jenkins-ssh-release-credential: 'acumos-release'
