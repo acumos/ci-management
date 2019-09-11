@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "733263a2_e246b2b5",
+        "filename": "jjb/spark-model-runner/spark-model-runner.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2019-09-11T17:00:30Z",
+      "side": 1,
+      "message": "project name is same for both, this is the reason for failure. PLease name it unique (may be add the subproject names here)",
+      "range": {
+        "startLine": 9,
+        "startChar": 10,
+        "endLine": 9,
+        "endChar": 36
+      },
+      "revId": "86c71750bfa70ad27facb7d29182449133d7da28",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "d834c6fc_077499c0",
+        "filename": "jjb/spark-model-runner/spark-model-runner.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2019-09-11T17:00:30Z",
+      "side": 1,
+      "message": "You need to specify the pom file location, so that it can trigger the specific pom file for this sub-project. You can do that using below vars too:\n\n          mvn-pom: \u0027spark-modelrunner/pom.xml\u0027\n          mvn-params: \u0027-f spark-modelrunner/pom.xml\u0027\n          pattern: \u0027spark-modelrunner/**\u0027\n\nSimilar changes applies for subproject below for - protobuff-common\n\n@Chris, is this good? or please propose if you see any other better way to handle. Thanks.",
+      "revId": "86c71750bfa70ad27facb7d29182449133d7da28",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    }
+  ]
+}
