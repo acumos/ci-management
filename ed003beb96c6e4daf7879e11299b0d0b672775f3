@@ -1,0 +1,142 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9546c996_c6ffa307",
+        "filename": "jjb/spark-model-runner/spark-model-runner.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2019-09-11T18:33:54Z",
+      "side": 1,
+      "message": "this should have the repo as a prefix, so maybe use \"spark-model-runner-smr\"",
+      "range": {
+        "startLine": 11,
+        "startChar": 18,
+        "endLine": 11,
+        "endChar": 35
+      },
+      "revId": "ed003beb96c6e4daf7879e11299b0d0b672775f3",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "7c8deb60_5f06729f",
+        "filename": "jjb/spark-model-runner/spark-model-runner.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2019-09-11T18:33:54Z",
+      "side": 1,
+      "message": "No acumos JJB template uses mvn-pom.  What is this parameter supposed to do?   I would not include it until you find a definite need.",
+      "range": {
+        "startLine": 16,
+        "startChar": 0,
+        "endLine": 16,
+        "endChar": 3
+      },
+      "revId": "ed003beb96c6e4daf7879e11299b0d0b672775f3",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "31bd9440_7f69cedf",
+        "filename": "jjb/spark-model-runner/spark-model-runner.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2019-09-11T18:33:54Z",
+      "side": 1,
+      "message": "To the best of my knowledge, no jjb template uses config parameter \"pattern\" Manoop what is this supposed to do?\n\nIf you want to limit the files that trigger this job you must do something like the following, copied from one of the workbench project JJB files:\n\n    gerrit_trigger_file_paths:\n      - compare-type: REG_EXP\n        pattern: \u0027notebook-service/.*\u0027",
+      "range": {
+        "startLine": 18,
+        "startChar": 0,
+        "endLine": 18,
+        "endChar": 3
+      },
+      "revId": "ed003beb96c6e4daf7879e11299b0d0b672775f3",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "b3da99b9_1a4e0c7e",
+        "filename": "jjb/spark-model-runner/spark-model-runner.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2019-09-11T18:33:54Z",
+      "side": 1,
+      "message": "like above this should have the repo prefix so maybe use \"spark-model-runner-pc\"",
+      "range": {
+        "startLine": 35,
+        "startChar": 18,
+        "endLine": 35,
+        "endChar": 34
+      },
+      "revId": "ed003beb96c6e4daf7879e11299b0d0b672775f3",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "2065c26e_64214a00",
+        "filename": "jjb/spark-model-runner/spark-model-runner.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2019-09-11T18:33:54Z",
+      "side": 1,
+      "message": "See above",
+      "range": {
+        "startLine": 40,
+        "startChar": 0,
+        "endLine": 40,
+        "endChar": 3
+      },
+      "revId": "ed003beb96c6e4daf7879e11299b0d0b672775f3",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "f796202f_4313b28e",
+        "filename": "jjb/spark-model-runner/spark-model-runner.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2019-09-11T18:33:54Z",
+      "side": 1,
+      "message": "See above.",
+      "range": {
+        "startLine": 42,
+        "startChar": 0,
+        "endLine": 42,
+        "endChar": 3
+      },
+      "revId": "ed003beb96c6e4daf7879e11299b0d0b672775f3",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    }
+  ]
+}
