@@ -8,19 +8,36 @@
 - project:
     name: spark-model-runner-project
     # jenkins job name prefix
-    project-name: spark-model-runner
+    project-name: spark-model-runner-smr
     # git repo
     project: spark-model-runner
     mvn-settings: spark-model-runner-settings
     # pass Jenkins build number
-    mvn-params: -Dbuild.number=${{BUILD_NUMBER}}
-    nexus-iq-namespace: 'acumos-'
+    mvn-params: '-f spark-modelrunner/pom.xml'
     # needs docker-enabled build node
     build-node: centos7-docker-4c-4g
     jobs:
-      - gerrit-maven-docker-verify
       - gerrit-maven-docker-merge
-      - gerrit-maven-docker-stage
+      - '{project-name}-maven-javadoc-jobs'
+      - gerrit-maven-clm
+    stream:
+      - master:
+          branch: master
+
+
+- project:
+    name: protobuf-common-project
+    # jenkins job name prefix
+    project-name: spark-model-runner-pc
+    # git repo
+    project: spark-model-runner
+    mvn-settings: spark-model-runner-settings
+    # pass Jenkins build number
+    mvn-params: '-f protobuf-common/pom.xml'
+    # needs docker-enabled build node
+    build-node: centos7-docker-4c-4g
+    jobs:
+      - gerrit-maven-docker-merge
       - '{project-name}-maven-javadoc-jobs'
       - gerrit-maven-clm
     stream:
