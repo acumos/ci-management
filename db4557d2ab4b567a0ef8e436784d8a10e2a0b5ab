@@ -1,0 +1,96 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "eeeef76a_1d153301",
+        "filename": "jjb/spark-model-runner/spark-model-runner.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2019-09-12T14:31:30Z",
+      "side": 1,
+      "message": "The -f pom argument is fine, but please preserve the -Dbuild.number\u003d${{BUILD_NUMBER}} argument also, this is very valuable information and is used to tag the docker image.",
+      "range": {
+        "startLine": 16,
+        "startChar": 0,
+        "endLine": 16,
+        "endChar": 3
+      },
+      "revId": "db4557d2ab4b567a0ef8e436784d8a10e2a0b5ab",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "bd1eb2ae_30eadb3a",
+        "filename": "jjb/spark-model-runner/spark-model-runner.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2019-09-12T14:31:30Z",
+      "side": 1,
+      "message": "Why did you remove the docker verify job!!?!!?",
+      "range": {
+        "startLine": 20,
+        "startChar": 0,
+        "endLine": 20,
+        "endChar": 2
+      },
+      "revId": "db4557d2ab4b567a0ef8e436784d8a10e2a0b5ab",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "a123c210_3c0fd069",
+        "filename": "jjb/spark-model-runner/spark-model-runner.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2019-09-12T14:31:30Z",
+      "side": 1,
+      "message": "Restore the BUILD_NUMBER stuff.",
+      "range": {
+        "startLine": 36,
+        "startChar": 0,
+        "endLine": 36,
+        "endChar": 3
+      },
+      "revId": "db4557d2ab4b567a0ef8e436784d8a10e2a0b5ab",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "c534669a_6b3e3093",
+        "filename": "jjb/spark-model-runner/spark-model-runner.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2019-09-12T14:31:30Z",
+      "side": 1,
+      "message": "Missing verify job see above.",
+      "range": {
+        "startLine": 40,
+        "startChar": 0,
+        "endLine": 41,
+        "endChar": 0
+      },
+      "revId": "db4557d2ab4b567a0ef8e436784d8a10e2a0b5ab",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    }
+  ]
+}
