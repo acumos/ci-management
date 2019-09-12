@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5a7b05dd_04321162",
+        "filename": "jjb/security-verification/security-verification.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2019-09-12T20:09:00Z",
+      "side": 1,
+      "message": "why switch from Centos to Ubuntu?",
+      "range": {
+        "startLine": 19,
+        "startChar": 16,
+        "endLine": 19,
+        "endChar": 26
+      },
+      "revId": "0ddb9be959356f699dffb8550bb5be3df40ca80e",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    }
+  ]
+}
