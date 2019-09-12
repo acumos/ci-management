@@ -1,0 +1,142 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "50714c14_955d7da1",
+        "filename": "jjb/spark-model-runner/spark-model-runner.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2019-09-12T14:57:21Z",
+      "side": 1,
+      "message": "Please be careful here, put the quotes around the whole string",
+      "range": {
+        "startLine": 16,
+        "startChar": 0,
+        "endLine": 16,
+        "endChar": 4
+      },
+      "revId": "34e1e9cdaeadd3ab064fc10d99a5cf23ad3c3db1",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "e69f9769_46bd0913",
+        "filename": "jjb/spark-model-runner/spark-model-runner.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2019-09-12T14:57:21Z",
+      "side": 1,
+      "message": "Thanks for restoring the verify job.  You also removed the stage job, was that on purpose, or will you never stage a job for release?",
+      "range": {
+        "startLine": 22,
+        "startChar": 0,
+        "endLine": 22,
+        "endChar": 2
+      },
+      "revId": "34e1e9cdaeadd3ab064fc10d99a5cf23ad3c3db1",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "e69925cf_fecbc3db",
+        "filename": "jjb/spark-model-runner/spark-model-runner.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2019-09-12T14:57:21Z",
+      "side": 1,
+      "message": "Does this repo have real code yet?  It\u0027s inconsistent to have maven/docker jobs AND maven-javadoc jobs.  Javadoc jobs are only needed for libraries that are distributed. A docker doesn\u0027t need a javadoc.",
+      "range": {
+        "startLine": 22,
+        "startChar": 0,
+        "endLine": 22,
+        "endChar": 3
+      },
+      "revId": "34e1e9cdaeadd3ab064fc10d99a5cf23ad3c3db1",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "af0cf6a2_6ba6d452",
+        "filename": "jjb/spark-model-runner/spark-model-runner.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2019-09-12T14:57:21Z",
+      "side": 1,
+      "message": "See above",
+      "range": {
+        "startLine": 37,
+        "startChar": 49,
+        "endLine": 37,
+        "endChar": 77
+      },
+      "revId": "34e1e9cdaeadd3ab064fc10d99a5cf23ad3c3db1",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "e25f816b_875ac4a4",
+        "filename": "jjb/spark-model-runner/spark-model-runner.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2019-09-12T14:57:21Z",
+      "side": 1,
+      "message": "See above",
+      "range": {
+        "startLine": 42,
+        "startChar": 0,
+        "endLine": 42,
+        "endChar": 2
+      },
+      "revId": "34e1e9cdaeadd3ab064fc10d99a5cf23ad3c3db1",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "c76659d5_2693b732",
+        "filename": "jjb/spark-model-runner/spark-model-runner.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2019-09-12T14:57:21Z",
+      "side": 1,
+      "message": "See above.",
+      "range": {
+        "startLine": 43,
+        "startChar": 0,
+        "endLine": 43,
+        "endChar": 2
+      },
+      "revId": "34e1e9cdaeadd3ab064fc10d99a5cf23ad3c3db1",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    }
+  ]
+}
