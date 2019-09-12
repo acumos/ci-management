@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "f412cd29_9e005304",
+        "filename": "jjb/acumos-python-client/acumos-python-client.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2019-09-12T13:42:58Z",
+      "side": 1,
+      "message": "should we remove this old job?",
+      "range": {
+        "startLine": 24,
+        "startChar": 6,
+        "endLine": 25,
+        "endChar": 24
+      },
+      "revId": "bb80321b0fd708d5fc069579b42cb2695bb50f66",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    }
+  ]
+}
