@@ -28,8 +28,11 @@
     stream:
       - master:
           branch: master
+          java-version: openjdk11
       - boreas:
           branch: boreas
+          java-version: openjdk8
+
       # no athena stream needed
 
 - project:
