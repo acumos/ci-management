@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "a2f85661_2c1e494e",
+        "filename": "jenkins-config/clouds/openstack/ACUMOSVEX/ubuntu1804-avx-4c-4g.cfg",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 223
+      },
+      "writtenOn": "2019-09-20T18:12:40Z",
+      "side": 1,
+      "message": "Trailing whitespace.",
+      "range": {
+        "startLine": 1,
+        "startChar": 71,
+        "endLine": 1,
+        "endChar": 72
+      },
+      "revId": "03b03e49fff964910ac91bb93aa3e1efc4e3237b",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "fcf56dce_c24f26c7",
+        "filename": "jenkins-config/clouds/openstack/ACUMOSVEX/ubuntu1804-docker-2c-1g.cfg",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 223
+      },
+      "writtenOn": "2019-09-20T18:12:40Z",
+      "side": 1,
+      "message": "Trailing whitespace.",
+      "range": {
+        "startLine": 1,
+        "startChar": 70,
+        "endLine": 1,
+        "endChar": 71
+      },
+      "revId": "03b03e49fff964910ac91bb93aa3e1efc4e3237b",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    }
+  ]
+}
