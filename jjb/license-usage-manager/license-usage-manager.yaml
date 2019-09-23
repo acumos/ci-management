@@ -26,6 +26,7 @@
       - gerrit-maven-dl-merge
       - gerrit-maven-dl-stage
       # standard Global JJB templates
+      - '{project-name}-gerrit-release-jobs':
       - '{project-name}-maven-javadoc-jobs'
       - gerrit-maven-clm
     stream:
