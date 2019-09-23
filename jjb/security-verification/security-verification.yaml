@@ -24,6 +24,8 @@
       - gerrit-maven-dl-stage
       # standard Global JJB templates
       - '{project-name}-maven-javadoc-jobs'
+      - '{project-name}-gerrit-release-jobs':
+          build-node: centos7-docker-4c-4g
       - gerrit-maven-clm
     stream:
       - master:

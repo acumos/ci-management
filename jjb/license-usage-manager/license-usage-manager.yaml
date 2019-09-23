@@ -26,6 +26,9 @@
       - gerrit-maven-dl-merge
       - gerrit-maven-dl-stage
       # standard Global JJB templates
+      # release job sigul requires centos
+      - '{project-name}-gerrit-release-jobs':
+          build-node: centos7-docker-4c-4g
       - '{project-name}-maven-javadoc-jobs'
       - gerrit-maven-clm
     stream:
