@@ -33,6 +33,19 @@
           branch: master
 
 - project:
+    name: license-usage-manager-release
+    project-name: license-usage-manager
+    project: license-usage-manager
+    mvn-settings: license-usage-manager-settings
+    # release job sigul requires centos
+    build-node: centos7-docker-4c-4g
+    jobs:
+      - '{project-name}-gerrit-release-jobs'
+    stream:
+      - master:
+          branch: master
+
+- project:
     name: license-usage-manager-sonar
     project: license-usage-manager
     project-name: license-usage-manager
