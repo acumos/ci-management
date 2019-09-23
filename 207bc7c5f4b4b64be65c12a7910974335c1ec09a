@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "403abdf4_02602e69",
+        "filename": "jjb/license-usage-manager/license-usage-manager.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 223
+      },
+      "writtenOn": "2019-09-23T21:08:32Z",
+      "side": 1,
+      "message": "Acumos does not have this node type. Please use centos7-docker-4c-4g",
+      "range": {
+        "startLine": 31,
+        "startChar": 37,
+        "endLine": 31,
+        "endChar": 42
+      },
+      "revId": "207bc7c5f4b4b64be65c12a7910974335c1ec09a",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    }
+  ]
+}
