@@ -22,6 +22,30 @@
       "revId": "a5ed4419c19416c366b9c8e076052af1491052ec",
       "serverId": "655300a2-7a56-4504-9153-881edd907bea",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "33c9aeba_e4ac7fa9",
+        "filename": "jjb/security-verification/security-verification.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 290
+      },
+      "writtenOn": "2019-09-24T00:07:00Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "b855aea3_dc3afeaf",
+      "range": {
+        "startLine": 27,
+        "startChar": 6,
+        "endLine": 27,
+        "endChar": 45
+      },
+      "revId": "a5ed4419c19416c366b9c8e076052af1491052ec",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
     }
   ]
 }
