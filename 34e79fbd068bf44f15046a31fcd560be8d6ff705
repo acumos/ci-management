@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "2b2219e1_6927e9f6",
+        "filename": "jjb/license-usage-manager/license-usage-manager.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 290
+      },
+      "writtenOn": "2019-09-24T23:41:33Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "14e6b266_0415f2de",
+      "range": {
+        "startLine": 34,
+        "startChar": 6,
+        "endLine": 34,
+        "endChar": 32
+      },
+      "revId": "34e79fbd068bf44f15046a31fcd560be8d6ff705",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "b0a05a65_208c4576",
         "filename": "jjb/license-usage-manager/license-usage-manager.yaml",
         "patchSetId": 3
@@ -45,6 +69,30 @@
       "revId": "34e79fbd068bf44f15046a31fcd560be8d6ff705",
       "serverId": "655300a2-7a56-4504-9153-881edd907bea",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "c0c7f1ea_ac6067c7",
+        "filename": "jjb/license-usage-manager/license-usage-manager.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 290
+      },
+      "writtenOn": "2019-09-24T23:41:33Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "b0a05a65_208c4576",
+      "range": {
+        "startLine": 38,
+        "startChar": 0,
+        "endLine": 39,
+        "endChar": 0
+      },
+      "revId": "34e79fbd068bf44f15046a31fcd560be8d6ff705",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
     }
   ]
 }
