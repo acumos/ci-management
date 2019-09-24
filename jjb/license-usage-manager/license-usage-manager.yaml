@@ -5,43 +5,81 @@
     views:
       - project-view
 
-- project:
-    name: license-usage-manager-project
-    # jenkins job name prefix
-    project-name: license-usage-manager
+- lum_common: &lum_common
+    # values apply to all projects here
+    name: lum-common
     # git repo
     project: license-usage-manager
+    # docker jobs require docker- build node
+    # release job requires centos build node
+    build-node: centos7-docker-4c-4g
+    # maven settings file has credentials
     mvn-settings: license-usage-manager-settings
+
+- project:
+    <<: *lum_common
+    name: license-usage-manager-client
+    # jenkins job name prefix
+    project-name: '{name}'
+    # defaults.yaml value is NOT used reliably
+    java-version: openjdk11
     # pass Jenkins build number
     mvn-params: -Dbuild.number=${{BUILD_NUMBER}}
+    # subdir
+    mvn-pom: lum-java-rest-client/pom.xml
+    # CLM
     nexus-iq-namespace: 'acumos-'
-    # needs docker-enabled build node
-    build-node: ubuntu1804-docker-4c-4g
-    browser:
-      - chrome
-    java-version: openjdk11
+    # limit match to subdir
+    gerrit_trigger_file_paths:
+      - compare-type: REG_EXP
+        pattern: 'lum-java-rest-client/.*'
     jobs:
-      # custom Acumos templates
-      - gerrit-maven-dl-verify
-      - gerrit-maven-dl-merge
-      - gerrit-maven-dl-stage
-      # standard Global JJB templates
-      # release job sigul requires centos
-      - '{project-name}-gerrit-release-jobs':
-          build-node: centos7-docker-4c-4g
+      - '{project-name}-maven-jobs'
       - '{project-name}-maven-javadoc-jobs'
-      - gerrit-maven-clm
+      - '{project-name}-gerrit-release-jobs'
     stream:
       - master:
           branch: master
 
 - project:
+    <<: *lum_common
+    name: license-usage-manager-server
+    # jenkins job name prefix
+    project-name: '{name}'
+    # subdir
+    docker-root: lum-server
+    docker-name: '{docker-root}'
+    # limit match to subdir
+    gerrit_trigger_file_paths:
+      - compare-type: REG_EXP
+        pattern: 'lum-server/.*'
+    jobs:
+      - '{project-name}-gerrit-docker-jobs'
+    stream:
+      - master:
+          branch: master
+
+- project:
+    <<: *lum_common
+    name: license-usage-manager-db
+    # jenkins job name prefix
+    project-name: '{name}'
+    docker-root: lum-db
+    docker-name: '{docker-root}'
+    # limit match to subdir
+    gerrit_trigger_file_paths:
+      - compare-type: REG_EXP
+        pattern: 'lum-db/.*'
+    jobs:
+      - '{project-name}-gerrit-docker-jobs'
+    stream:
+      - master:
+          branch: master
+
+- project:
+    <<: *lum_common
     name: license-usage-manager-sonar
-    project: license-usage-manager
     project-name: license-usage-manager
-    mvn-settings: license-usage-manager-settings
-    build-node: ubuntu1804-docker-4c-4g
-    java-version: openjdk11
     jobs:
       - gerrit-maven-sonar
     branch: master
