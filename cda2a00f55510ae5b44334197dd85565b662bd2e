@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "271343c2_6ad80ea0",
+        "filename": "jjb/spark-model-runner/spark-model-runner.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2019-09-24T11:45:29Z",
+      "side": 1,
+      "message": "pls remove empty line",
+      "range": {
+        "startLine": 17,
+        "startChar": 0,
+        "endLine": 17,
+        "endChar": 1
+      },
+      "revId": "cda2a00f55510ae5b44334197dd85565b662bd2e",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "a27eaecc_2fb9d7f5",
+        "filename": "jjb/spark-model-runner/spark-model-runner.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2019-09-24T11:45:29Z",
+      "side": 1,
+      "message": "please remove empty line",
+      "range": {
+        "startLine": 38,
+        "startChar": 0,
+        "endLine": 38,
+        "endChar": 1
+      },
+      "revId": "cda2a00f55510ae5b44334197dd85565b662bd2e",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "69e912c3_b4a1f302",
+        "filename": "jjb/spark-model-runner/spark-model-runner.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2019-09-24T11:45:29Z",
+      "side": 1,
+      "message": "please remove empty line",
+      "range": {
+        "startLine": 56,
+        "startChar": 0,
+        "endLine": 56,
+        "endChar": 1
+      },
+      "revId": "cda2a00f55510ae5b44334197dd85565b662bd2e",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    }
+  ]
+}
