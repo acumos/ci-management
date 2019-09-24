@@ -1,0 +1,211 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "b6cbdc29_d4f1cfd6",
+        "filename": "jjb/spark-model-runner/spark-model-runner.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2019-09-24T10:00:39Z",
+      "side": 1,
+      "message": "you might change this name to spark-model-runner-smr",
+      "range": {
+        "startLine": 9,
+        "startChar": 10,
+        "endLine": 9,
+        "endChar": 36
+      },
+      "revId": "5670bcc01a64ef28acddf28c2233442109f3d669",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "5f8d8049_218ae24e",
+        "filename": "jjb/spark-model-runner/spark-model-runner.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2019-09-24T10:00:39Z",
+      "side": 1,
+      "message": "remove this comment",
+      "range": {
+        "startLine": 17,
+        "startChar": 0,
+        "endLine": 17,
+        "endChar": 2
+      },
+      "revId": "5670bcc01a64ef28acddf28c2233442109f3d669",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "4ba3c5dd_07109695",
+        "filename": "jjb/spark-model-runner/spark-model-runner.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2019-09-24T10:00:39Z",
+      "side": 1,
+      "message": "remove build-node line",
+      "range": {
+        "startLine": 18,
+        "startChar": 0,
+        "endLine": 18,
+        "endChar": 3
+      },
+      "revId": "5670bcc01a64ef28acddf28c2233442109f3d669",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "bcaa4c21_27c928be",
+        "filename": "jjb/spark-model-runner/spark-model-runner.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2019-09-24T10:00:39Z",
+      "side": 1,
+      "message": "Try replacing all three with just:\n\n    - \u0027{project-name}-maven-jobs\u0027",
+      "range": {
+        "startLine": 20,
+        "startChar": 6,
+        "endLine": 22,
+        "endChar": 33
+      },
+      "revId": "5670bcc01a64ef28acddf28c2233442109f3d669",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "6985f917_de2cbe0a",
+        "filename": "jjb/spark-model-runner/spark-model-runner.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2019-09-24T10:00:39Z",
+      "side": 1,
+      "message": "you might change this name to spark-model-runner-pc also",
+      "range": {
+        "startLine": 32,
+        "startChar": 10,
+        "endLine": 32,
+        "endChar": 33
+      },
+      "revId": "5670bcc01a64ef28acddf28c2233442109f3d669",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "5aa68f2d_97a48d5e",
+        "filename": "jjb/spark-model-runner/spark-model-runner.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2019-09-24T10:00:39Z",
+      "side": 1,
+      "message": "Remove this comment",
+      "range": {
+        "startLine": 40,
+        "startChar": 0,
+        "endLine": 40,
+        "endChar": 2
+      },
+      "revId": "5670bcc01a64ef28acddf28c2233442109f3d669",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "a845ad6b_4247da54",
+        "filename": "jjb/spark-model-runner/spark-model-runner.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2019-09-24T10:00:39Z",
+      "side": 1,
+      "message": "Remove build-node line",
+      "range": {
+        "startLine": 41,
+        "startChar": 0,
+        "endLine": 41,
+        "endChar": 3
+      },
+      "revId": "5670bcc01a64ef28acddf28c2233442109f3d669",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "81b8e710_4d7d8748",
+        "filename": "jjb/spark-model-runner/spark-model-runner.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2019-09-24T10:00:39Z",
+      "side": 1,
+      "message": "Replace all three with just:\n\n    - \u0027{project-name}-maven-jobs\u0027",
+      "range": {
+        "startLine": 43,
+        "startChar": 5,
+        "endLine": 45,
+        "endChar": 33
+      },
+      "revId": "5670bcc01a64ef28acddf28c2233442109f3d669",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "390bd1f2_0aeb32e9",
+        "filename": "jjb/spark-model-runner/spark-model-runner.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2019-09-24T10:00:39Z",
+      "side": 1,
+      "message": "remove this line",
+      "range": {
+        "startLine": 60,
+        "startChar": 4,
+        "endLine": 60,
+        "endChar": 36
+      },
+      "revId": "5670bcc01a64ef28acddf28c2233442109f3d669",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    }
+  ]
+}
