@@ -36,6 +36,50 @@
           branch: master
 
 - project:
+    name: lum-server
+    # jenkins job name prefix
+    project-name: lum-server
+    # git repo
+    project: license-usage-manager
+    project-settings: license-usage-manager-settings
+    nexus-iq-namespace: 'acumos-'
+    build-node: centos7-docker-4c-4g
+    # subdirectory
+    docker_root: lum-server
+    # subdirectory
+    gerrit_trigger_file_paths:
+      - compare-type: REG_EXP
+        pattern: 'lum-server/.*'
+    jobs:
+      # build docker jobs
+      - '{project-name}-acumos-docker-jobs'
+    stream:
+      - master:
+          branch: master
+
+- project:
+    name: lum-database
+    # jenkins job name prefix
+    project-name: lum-database
+    # git repo
+    project: license-usage-manager
+    project-settings: license-usage-manager-settings
+    nexus-iq-namespace: 'acumos-'
+    build-node: centos7-docker-4c-4g
+    # subdirectory
+    docker_root: lum-db
+    # subdirectory
+    gerrit_trigger_file_paths:
+      - compare-type: REG_EXP
+        pattern: 'lum-db/.*'
+    jobs:
+      # build docker jobs
+      - '{project-name}-acumos-docker-jobs'
+    stream:
+      - master:
+          branch: master
+
+- project:
     name: license-usage-manager-sonar
     project: license-usage-manager
     project-name: license-usage-manager
