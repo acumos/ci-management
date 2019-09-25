@@ -11,7 +11,7 @@
     project: acumos-c-client
     mvn-settings: acumos-c-client-settings
     build-timeout: 30
-    build-node: ubuntu1804-avx-4c-4g
+    build-node: centos7-avx-4c-4g
     jobs:
       - gerrit-cmake-verify
     stream:
@@ -23,7 +23,7 @@
     project-name: acumos-c-client
     project: acumos-c-client
     mvn-settings: acumos-c-client-settings
-    build-node: ubuntu1804-avx-4c-4g
+    build-node: centos7-avx-4c-4g
     branch: master
     stream: master
     jobs:
