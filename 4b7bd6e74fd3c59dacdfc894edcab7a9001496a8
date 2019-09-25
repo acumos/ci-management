@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "01f7a72f_b0af9b61",
+        "filename": "jjb/license-usage-manager/license-usage-manager.yaml",
+        "patchSetId": 8
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2019-09-25T16:44:06Z",
+      "side": 0,
+      "message": "Yes, centos should be fine",
+      "parentUuid": "d933bfab_10eb04e4",
+      "revId": "4b7bd6e74fd3c59dacdfc894edcab7a9001496a8",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "938c2848_32e1db6c",
         "filename": "jjb/license-usage-manager/license-usage-manager.yaml",
         "patchSetId": 8
@@ -30,6 +48,24 @@
       "writtenOn": "2019-09-25T16:28:01Z",
       "side": 0,
       "message": "Did you accidentally remove release job?",
+      "revId": "4b7bd6e74fd3c59dacdfc894edcab7a9001496a8",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "744328a7_d49163a2",
+        "filename": "jjb/license-usage-manager/license-usage-manager.yaml",
+        "patchSetId": 8
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2019-09-25T16:44:06Z",
+      "side": 0,
+      "message": "yikes how did that happen?",
+      "parentUuid": "938c2848_32e1db6c",
       "revId": "4b7bd6e74fd3c59dacdfc894edcab7a9001496a8",
       "serverId": "655300a2-7a56-4504-9153-881edd907bea",
       "unresolved": true
