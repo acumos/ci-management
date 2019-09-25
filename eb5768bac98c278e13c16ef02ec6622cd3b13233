@@ -22,6 +22,30 @@
       "revId": "eb5768bac98c278e13c16ef02ec6622cd3b13233",
       "serverId": "655300a2-7a56-4504-9153-881edd907bea",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "7130cb2e_94d76643",
+        "filename": "jjb/documentation/documentation.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 137
+      },
+      "writtenOn": "2019-09-25T18:04:17Z",
+      "side": 1,
+      "message": "hi, yes this is true,\neach project should handle this with a tox verify job, imo.\n\npreviously the ref was not even being passed properly so the verify job was just verifying what was in master previously.",
+      "parentUuid": "b2ab0f64_f86f2194",
+      "range": {
+        "startLine": 11,
+        "startChar": 0,
+        "endLine": 11,
+        "endChar": 3
+      },
+      "revId": "eb5768bac98c278e13c16ef02ec6622cd3b13233",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
     }
   ]
 }
