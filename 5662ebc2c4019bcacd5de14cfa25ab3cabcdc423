@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8acbcb73_9c21f66b",
+        "filename": "jjb/common-dataservice/common-dataservice-config-management.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 223
+      },
+      "writtenOn": "2019-09-25T20:49:33Z",
+      "side": 1,
+      "message": "If you\u0027re going to define this here, should it be \"acumos/config-management\"?",
+      "range": {
+        "startLine": 11,
+        "startChar": 17,
+        "endLine": 11,
+        "endChar": 34
+      },
+      "revId": "5662ebc2c4019bcacd5de14cfa25ab3cabcdc423",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "687c9e47_545d0a7c",
+        "filename": "jjb/on-boarding/on-boarding.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 61,
+      "author": {
+        "id": 223
+      },
+      "writtenOn": "2019-09-25T20:49:33Z",
+      "side": 1,
+      "message": "Trailing whitespace.",
+      "range": {
+        "startLine": 61,
+        "startChar": 22,
+        "endLine": 61,
+        "endChar": 23
+      },
+      "revId": "5662ebc2c4019bcacd5de14cfa25ab3cabcdc423",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    }
+  ]
+}
