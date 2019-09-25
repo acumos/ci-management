@@ -1,21 +1,24 @@
 ---
 - project:
-    name: platform-oam-metricbeat-project
+    name: platform-oam-metricbeat
     # jenkins job name prefix
-    project-name: platform-oam-metricbeat
+    project-name: '{name}'
     # git repo
     project: platform-oam
-    project-settings: platform-oam-settings
+    mvn-settings: platform-oam-settings
     # need docker-enabled host
     build-node: centos7-docker-4c-4g
+    # use host network
+    docker-build-args: '--network=host'
+    docker-name: acumos-metricbeat
     # subdirectory of project
-    docker_root: metricbeat
+    docker-root: metricbeat
     # only trigger on file changes in subdir
     gerrit_trigger_file_paths:
       - compare-type: ANT
         pattern: 'metricbeat/**'
     jobs:
-      - '{project-name}-acumos-docker-jobs'
+      - '{project-name}-gerrit-docker-jobs'
     stream:
       - master:
           branch: master

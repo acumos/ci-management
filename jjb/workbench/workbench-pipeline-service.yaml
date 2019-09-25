@@ -5,7 +5,6 @@
     project-name: workbench-pipeline-service
     # git repo
     project: workbench
-    project-settings: workbench-settings
     mvn-settings: workbench-settings
     # subdirectory
     mvn-params: '-f pipeline-service -Dbuild.number=${{BUILD_NUMBER}}'

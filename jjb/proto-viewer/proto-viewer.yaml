@@ -14,10 +14,12 @@
     python-version: python3
     build-node: centos7-docker-4c-4g
     build-timeout: 30
-    # docker_root no needed, docker file is in root
+    # use host network
+    docker-build-args: '--network=host'
+    docker-name: acumos-proto-viewer
     jobs:
       - '{project-name}-python-jobs'
-      - '{project-name}-acumos-docker-jobs'
+      - '{project-name}-gerrit-docker-jobs'
     stream:
       - master:
           branch: master
