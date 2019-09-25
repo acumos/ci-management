@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "b2ab0f64_f86f2194",
+        "filename": "jjb/documentation/documentation.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2019-09-25T17:58:38Z",
+      "side": 1,
+      "message": "But .. but .. this means that when teams modify RST files in their projects that are pulled in here via git submodules, the RST job will not flag errors, and the errors will build up.",
+      "range": {
+        "startLine": 11,
+        "startChar": 0,
+        "endLine": 11,
+        "endChar": 3
+      },
+      "revId": "eb5768bac98c278e13c16ef02ec6622cd3b13233",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    }
+  ]
+}
