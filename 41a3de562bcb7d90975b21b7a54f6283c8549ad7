@@ -33,6 +33,24 @@
       "revId": "41a3de562bcb7d90975b21b7a54f6283c8549ad7",
       "serverId": "655300a2-7a56-4504-9153-881edd907bea",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "61a117ad_f4bd0daf",
+        "filename": "jjb/license-usage-manager/license-usage-manager.yaml",
+        "patchSetId": 9
+      },
+      "lineNbr": 67,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2019-09-25T18:21:10Z",
+      "side": 1,
+      "message": "done",
+      "parentUuid": "5f4cc921_c0f2b9a0",
+      "revId": "41a3de562bcb7d90975b21b7a54f6283c8549ad7",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
     }
   ]
 }
