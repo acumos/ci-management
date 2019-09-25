@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "cc1a7cdd_aacf9b11",
+        "filename": "jjb/license-manager/license-manager.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 223
+      },
+      "writtenOn": "2019-09-25T18:43:03Z",
+      "side": 1,
+      "message": "Please remove extra space.",
+      "range": {
+        "startLine": 11,
+        "startChar": 18,
+        "endLine": 11,
+        "endChar": 19
+      },
+      "revId": "5b8aa3df92b9fb129ca95aff533c8b5c2e49d1c0",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "87a52bb1_369199a5",
+        "filename": "jjb/license-manager/license-manager.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 223
+      },
+      "writtenOn": "2019-09-25T18:43:03Z",
+      "side": 1,
+      "message": "Remove extra blank line.",
+      "revId": "5b8aa3df92b9fb129ca95aff533c8b5c2e49d1c0",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    }
+  ]
+}
