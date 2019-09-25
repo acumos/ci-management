@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "31cb3054_33840121",
+        "filename": "jjb/license-usage-manager/license-usage-manager.yaml",
+        "patchSetId": 8
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 290
+      },
+      "writtenOn": "2019-09-25T17:03:13Z",
+      "side": 0,
+      "message": "Can we verify that in jenkins sandbox first? Just to be sure centos is supported.",
+      "parentUuid": "01f7a72f_b0af9b61",
+      "revId": "4b7bd6e74fd3c59dacdfc894edcab7a9001496a8",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "938c2848_32e1db6c",
         "filename": "jjb/license-usage-manager/license-usage-manager.yaml",
         "patchSetId": 8
@@ -66,6 +84,41 @@
       "side": 0,
       "message": "yikes how did that happen?",
       "parentUuid": "938c2848_32e1db6c",
+      "revId": "4b7bd6e74fd3c59dacdfc894edcab7a9001496a8",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "59a39778_a0db6b6e",
+        "filename": "jjb/license-usage-manager/license-usage-manager.yaml",
+        "patchSetId": 8
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 290
+      },
+      "writtenOn": "2019-09-25T17:03:13Z",
+      "side": 0,
+      "message": "Done",
+      "parentUuid": "744328a7_d49163a2",
+      "revId": "4b7bd6e74fd3c59dacdfc894edcab7a9001496a8",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "68f7e8dd_af48e076",
+        "filename": "jjb/license-usage-manager/license-usage-manager.yaml",
+        "patchSetId": 8
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 290
+      },
+      "writtenOn": "2019-09-25T17:03:13Z",
+      "side": 0,
+      "message": "It looks like you consolidated all the maven jobs into 2 jobs... maven-jobs and maven-javadoc-jobs .. I believe this is because of the parent definition here:  https://gerrit.linuxfoundation.org/infra/gitweb?p\u003dreleng/global-jjb.git;a\u003dblob_plain;f\u003djjb/lf-maven-jobs.yaml;hb\u003dHEAD",
       "revId": "4b7bd6e74fd3c59dacdfc894edcab7a9001496a8",
       "serverId": "655300a2-7a56-4504-9153-881edd907bea",
       "unresolved": true
