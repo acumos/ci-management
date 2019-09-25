@@ -18,6 +18,7 @@
     nexus-iq-namespace: 'acumos-'
     # needs docker-enabled build node
     build-node: centos7-docker-4c-4g
+    java-version: openjdk11
     jobs:
       # custom Acumos templates
       - gerrit-maven-dl-verify
@@ -29,10 +30,9 @@
     stream:
       - master:
           branch: master
-      - dev-challenge:
-          branch: dev-challenge
       - athena:
           branch: athena
+          java-version: openjdk8
 
 - project:
     # analyzes everything including libraries
@@ -42,6 +42,7 @@
     mvn-settings: design-studio-settings
     branch: master
     build-node: centos7-docker-4c-4g
+    java-version: openjdk11
     jobs:
       - gerrit-maven-sonar
 
@@ -57,6 +58,7 @@
     mvn-params: '-f gdmservice -Dbuild.number=${{BUILD_NUMBER}}'
     # do not need docker
     build-node: centos7-basebuild-4c-4g
+    java-version: openjdk11
     jobs:
       # standard Global JJB templates
       - gerrit-maven-stage
@@ -65,6 +67,7 @@
           branch: master
       - athena:
           branch: athena
+          java-version: openjdk8
 
 - project:
     # builds only a library child module, for convenience of releasing
@@ -78,6 +81,7 @@
     mvn-params: '-f TOSCAGeneratorClient -Dbuild.number=${{BUILD_NUMBER}}'
     # do not need docker
     build-node: centos7-basebuild-4c-4g
+    java-version: openjdk11
     jobs:
       # standard Global JJB templates
       - gerrit-maven-stage
@@ -86,3 +90,4 @@
           branch: master
       - athena:
           branch: athena
+          java-version: openjdk8
