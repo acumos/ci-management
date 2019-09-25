@@ -46,6 +46,30 @@
       "revId": "eb5768bac98c278e13c16ef02ec6622cd3b13233",
       "serverId": "655300a2-7a56-4504-9153-881edd907bea",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "10e7fc94_9b605c1f",
+        "filename": "jjb/documentation/documentation.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 361
+      },
+      "writtenOn": "2019-09-25T18:15:48Z",
+      "side": 1,
+      "message": "Houa Yang\n\nThe original issue below:\n\nWhile trying to test the rtd-verify jobs for lfn-process I\u0027m adding in 71134 it seems the GERRIT_REFSPEC param doesn\u0027t get passed correctly, stays the same default no matter what\u0027s passed. For example, passing \"refs/changes/51/10151/2\" or even \"foobartest\" still resulted in using \"+refs/heads/*:refs/remotes/origin/*\".\n\nRELENG-911",
+      "parentUuid": "7130cb2e_94d76643",
+      "range": {
+        "startLine": 11,
+        "startChar": 0,
+        "endLine": 11,
+        "endChar": 3
+      },
+      "revId": "eb5768bac98c278e13c16ef02ec6622cd3b13233",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
     }
   ]
 }
