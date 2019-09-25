@@ -1,7 +1,8 @@
 ---
 - project:
-    name: model-deployments-predictor-management-project
-    project-name: model-deployments-predictor-management
+    name: model-deployments-predictor-management
+    # jenkins job name prefix
+    project-name: '{name}'
     project: model-deployments/predictor-management
     project-settings: model-deployments-predictor-management-settings
     build-node: centos7-docker-4c-4g
@@ -9,9 +10,12 @@
     python-version: python3
     build-timeout: 30
     concurrent: false
+    # use host network
+    docker-build-args: '--network=host'
+    docker-name: acumos/predictor-management
     jobs:
       - '{project-name}-python-jobs'
-      - '{project-name}-acumos-docker-jobs'
+      - '{project-name}-gerrit-docker-jobs'
     stream:
       - master:
           branch: master

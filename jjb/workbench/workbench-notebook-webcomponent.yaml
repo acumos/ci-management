@@ -1,22 +1,24 @@
 ---
 - project:
-    name: workbench-notebook-webcomponent-project
+    name: workbench-notebook-webcomponent
     # jenkins job name prefix
-    project-name: workbench-notebook-webcomponent
+    project-name: '{name}'
     # git repo
     project: workbench
-    project-settings: workbench-settings
+    mvn-settings: workbench-settings
     nexus-iq-namespace: 'acumos-'
     build-node: centos7-docker-4c-4g
+    # use host network
+    docker-build-args: '--network=host'
+    docker-name: acumos/notebook-webcomponent
     # subdirectory
-    docker_root: notebook-webcomponent
+    docker-root: notebook-webcomponent
     # subdirectory
     gerrit_trigger_file_paths:
       - compare-type: REG_EXP
         pattern: 'notebook-webcomponent/.*'
     jobs:
-      # Only build is the docker
-      - '{project-name}-acumos-docker-jobs'
+      - '{project-name}-gerrit-docker-jobs'
     stream:
       - master:
           branch: master

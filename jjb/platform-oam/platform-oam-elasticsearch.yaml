@@ -1,21 +1,24 @@
 ---
 - project:
-    name: platform-oam-elasticsearch-project
+    name: platform-oam-elasticsearch
     # jenkins job name prefix
-    project-name: platform-oam-elasticsearch
+    project-name: '{name}'
     # git repo
     project: platform-oam
-    project-settings: platform-oam-settings
+    mvn-settings: platform-oam-settings
     # need docker-enabled host
     build-node: centos7-docker-4c-4g
+    # use host network
+    docker-build-args: '--network=host'
+    docker-name: acumos/acumos-elasticsearch
     # subdirectory of project
-    docker_root: elk-stack/elasticsearch
+    docker-root: elk-stack/elasticsearch
     # only trigger on file changes in subdir
     gerrit_trigger_file_paths:
       - compare-type: ANT
         pattern: 'elk-stack/elasticsearch/**'
     jobs:
-      - '{project-name}-acumos-docker-jobs'
+      - '{project-name}-gerrit-docker-jobs'
     stream:
       - master:
           branch: master
