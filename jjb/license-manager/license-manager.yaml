@@ -33,6 +33,51 @@
       - master:
           branch: master
 
+
+- project:
+    name: license-rtu-editor
+    # jenkins job name prefix
+    project-name: license-rtu-editor
+    # git repo
+    project: license-manager
+    project-settings: license-manager-settings
+    nexus-iq-namespace: 'acumos-'
+    build-node: centos7-docker-4c-4g
+    # subdirectory
+    docker_root: license-rtu-editor
+    # subdirectory
+    gerrit_trigger_file_paths:
+      - compare-type: REG_EXP
+        pattern: 'license-rtu-editor/.*'
+    jobs:
+      # Build docker job
+      - '{project-name}-acumos-docker-jobs'
+    stream:
+      - master:
+          branch: master
+
+- project:
+    name: license-profile-editor
+    # jenkins job name prefix
+    project-name: license-profile-editor
+    # git repo
+    project: license-manager
+    project-settings: license-manager-settings
+    nexus-iq-namespace: 'acumos-'
+    build-node: centos7-docker-4c-4g
+    # subdirectory
+    docker_root: license-profile-editor
+    # subdirectory
+    gerrit_trigger_file_paths:
+      - compare-type: REG_EXP
+        pattern: 'license-profile-editor/.*'
+    jobs:
+      # Build docker job
+      - '{project-name}-acumos-docker-jobs'
+    stream:
+      - master:
+          branch: master
+
 - project:
     name: license-manager-sonar
     project: license-manager
