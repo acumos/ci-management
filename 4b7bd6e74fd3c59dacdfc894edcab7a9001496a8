@@ -55,6 +55,24 @@
     },
     {
       "key": {
+        "uuid": "7775f027_81d140fb",
+        "filename": "jjb/license-usage-manager/license-usage-manager.yaml",
+        "patchSetId": 8
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2019-09-25T17:52:55Z",
+      "side": 0,
+      "message": "I have defined jobs in the sandbox, they are failing due to missing settings files, see https://jira.linuxfoundation.org/servicedesk/customer/portal/2/IT-17707",
+      "parentUuid": "31cb3054_33840121",
+      "revId": "4b7bd6e74fd3c59dacdfc894edcab7a9001496a8",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "938c2848_32e1db6c",
         "filename": "jjb/license-usage-manager/license-usage-manager.yaml",
         "patchSetId": 8
