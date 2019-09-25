@@ -16,7 +16,7 @@
     mvn-params: -Dbuild.number=${{BUILD_NUMBER}}
     nexus-iq-namespace: 'acumos-'
     # needs docker-enabled build node
-    build-node: ubuntu1804-docker-4c-4g
+    build-node: centos7-docker-4c-4g
     jobs:
       # custom Acumos templates
       - gerrit-maven-dl-verify
@@ -45,6 +45,6 @@
     mvn-settings: security-verification-settings
     branch: master
     java-version: openjdk11
-    build-node: ubuntu1804-docker-4c-4g
+    build-node: centos7-docker-4c-4g
     jobs:
       - gerrit-maven-sonar
