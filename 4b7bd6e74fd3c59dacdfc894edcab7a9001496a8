@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "d933bfab_10eb04e4",
+        "filename": "jjb/license-usage-manager/license-usage-manager.yaml",
+        "patchSetId": 8
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 290
+      },
+      "writtenOn": "2019-09-25T16:28:01Z",
+      "side": 0,
+      "message": "For java11 -- was it intentional that you switched us from ubuntu for java build?",
+      "revId": "4b7bd6e74fd3c59dacdfc894edcab7a9001496a8",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "938c2848_32e1db6c",
+        "filename": "jjb/license-usage-manager/license-usage-manager.yaml",
+        "patchSetId": 8
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 290
+      },
+      "writtenOn": "2019-09-25T16:28:01Z",
+      "side": 0,
+      "message": "Did you accidentally remove release job?",
+      "revId": "4b7bd6e74fd3c59dacdfc894edcab7a9001496a8",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    }
+  ]
+}

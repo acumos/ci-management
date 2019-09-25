@@ -1,0 +1,89 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "e950f5b7_69fb17bd",
+        "filename": "jjb/license-usage-manager/license-usage-manager.yaml",
+        "patchSetId": 8
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 290
+      },
+      "writtenOn": "2019-09-25T16:28:01Z",
+      "side": 1,
+      "message": "I like this concept of common properties -- didn\u0027t know jjb had that feature. Thanks for changing to use this.",
+      "revId": "b4c8bd335d4b5d5526b0d8055b9af1a154df37c5",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "72908a63_71b74ad9",
+        "filename": "jjb/license-usage-manager/license-usage-manager.yaml",
+        "patchSetId": 8
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 290
+      },
+      "writtenOn": "2019-09-25T16:28:01Z",
+      "side": 1,
+      "message": "Can we name it the same as the folder? lum-java-rest-client?",
+      "revId": "b4c8bd335d4b5d5526b0d8055b9af1a154df37c5",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "0c73693e_da9b464c",
+        "filename": "jjb/license-usage-manager/license-usage-manager.yaml",
+        "patchSetId": 8
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 290
+      },
+      "writtenOn": "2019-09-25T16:28:01Z",
+      "side": 1,
+      "message": "Do all builds need java-version? I think only maven does.",
+      "revId": "b4c8bd335d4b5d5526b0d8055b9af1a154df37c5",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "8dc07205_96c983e8",
+        "filename": "jjb/license-usage-manager/license-usage-manager.yaml",
+        "patchSetId": 8
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 290
+      },
+      "writtenOn": "2019-09-25T16:28:01Z",
+      "side": 1,
+      "message": "Can we name it the same as the folder? lum-server?",
+      "revId": "b4c8bd335d4b5d5526b0d8055b9af1a154df37c5",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "6e5b92c7_91b4af9d",
+        "filename": "jjb/license-usage-manager/license-usage-manager.yaml",
+        "patchSetId": 8
+      },
+      "lineNbr": 63,
+      "author": {
+        "id": 290
+      },
+      "writtenOn": "2019-09-25T16:28:01Z",
+      "side": 1,
+      "message": "Can we name it the same as the folder? lum-db?",
+      "revId": "b4c8bd335d4b5d5526b0d8055b9af1a154df37c5",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    }
+  ]
+}
