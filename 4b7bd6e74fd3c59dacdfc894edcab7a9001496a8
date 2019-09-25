@@ -157,6 +157,24 @@
       "revId": "4b7bd6e74fd3c59dacdfc894edcab7a9001496a8",
       "serverId": "655300a2-7a56-4504-9153-881edd907bea",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "03a5b28b_f305543d",
+        "filename": "jjb/license-usage-manager/license-usage-manager.yaml",
+        "patchSetId": 9
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2019-09-25T17:52:55Z",
+      "side": 0,
+      "message": "CLM is part of the job group \u0027{project-name}-maven-jobs\u0027 look in file global-jjb/jjb/lf-maven-job-groups.yaml",
+      "parentUuid": "e3385e03_00069a1c",
+      "revId": "4b7bd6e74fd3c59dacdfc894edcab7a9001496a8",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
     }
   ]
 }
