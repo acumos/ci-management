@@ -7,6 +7,8 @@
 
 - project:
     name: documentation-project
+    #Only trigger on changes to documentation project
+    project-pattern: 'documentation'
     project-name: documentation
     project: documentation
     mvn-settings: documentation-settings
