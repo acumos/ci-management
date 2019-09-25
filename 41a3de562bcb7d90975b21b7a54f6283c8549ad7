@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "19d9c144_ab84b31d",
+        "filename": "jjb/license-usage-manager/license-usage-manager.yaml",
+        "patchSetId": 9
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 290
+      },
+      "writtenOn": "2019-09-25T17:57:43Z",
+      "side": 1,
+      "message": "just realized this is not correct -- we need to change this pattern since we need code gen to be invoked when there is a change to gerrit pattern... to include two paths... : \u0027lum-java-rest-client/.*,lum-server/lum-server-api/.*\u0027.  I need to check the syntax.",
+      "revId": "41a3de562bcb7d90975b21b7a54f6283c8549ad7",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    }
+  ]
+}
