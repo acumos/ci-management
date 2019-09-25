@@ -5,41 +5,80 @@
     views:
       - project-view
 
-- project:
-    name: license-manager-project
-    # jenkins job name prefix
-    project-name: license-manager
+- lmcl_common: &lmcl_common
+    # values apply to all projects here
+    name: lmcl_common
     # git repo
     project: license-manager
+    # docker jobs require docker build node
+    # release job requires centos build node
+    build-node: centos7-docker-4c-4g
+    # maven settings file has credentials
     mvn-settings: license-manager-settings
-    # pass Jenkins build number
-    mvn-params: -Dbuild.number=${{BUILD_NUMBER}}
-    nexus-iq-namespace: 'acumos-'
-    # needs docker-enabled build node
-    build-node: ubuntu1804-docker-4c-4g
+
+- project:
+    <<: *lmcl_common
+    name: license-manager-client
+    # jenkins job name prefix
+    project-name: '{name}'
+    # defaults.yaml value is NOT used reliably
     java-version: openjdk11
+    # pass Jenkins build number and work in subdir
+    mvn-params: '-Dbuild.number=${{BUILD_NUMBER}}'
+    # CLM
+    nexus-iq-namespace: 'acumos-'
+    # limit match to subdir
+    gerrit_trigger_file_paths:
+      - compare-type: REG_EXP
+        pattern: 'license-manager-client-library/.*'
     jobs:
-      # custom Acumos templates
-      - gerrit-maven-dl-verify
-      - gerrit-maven-dl-merge
-      - gerrit-maven-dl-stage
-      # standard Global JJB templates
-      # release job sigul requires centos
-      - '{project-name}-gerrit-release-jobs':
-          build-node: centos7-docker-4c-4g
+      - '{project-name}-maven-jobs'
       - '{project-name}-maven-javadoc-jobs'
-      - gerrit-maven-clm
+      - '{project-name}-gerrit-release-jobs'
     stream:
       - master:
           branch: master
 
 - project:
+    <<: *lmcl_common
+    name: license-manager-rtu-editor
+    # jenkins job name prefix
+    project-name: '{name}'
+    # subdir
+    docker-name: acumos/license-rtu-editor
+    docker-root: license-rtu-editor
+    # limit match to subdir
+    gerrit_trigger_file_paths:
+      - compare-type: REG_EXP
+        pattern: 'license-rtu-editor/.*'
+    jobs:
+      - '{project-name}-gerrit-docker-jobs'
+    stream:
+      - master:
+          branch: master
+
+- project:
+    <<: *lmcl_common
+    name: license-manager-profile-editor
+    # jenkins job name prefix
+    project-name: '{name}'
+    # subdir
+    docker-name: acumos/license-profile-editor
+    docker-root: license-profile-editor
+    # limit match to subdir
+    gerrit_trigger_file_paths:
+      - compare-type: REG_EXP
+        pattern: 'license-profile-editor/.*'
+    jobs:
+      - '{project-name}-gerrit-docker-jobs'
+    stream:
+      - master:
+          branch: master
+
+- project:
+    <<: *lmcl_common
     name: license-manager-sonar
-    project: license-manager
     project-name: license-manager
-    mvn-settings: license-manager-settings
-    build-node: ubuntu1804-docker-4c-4g
-    java-version: openjdk11
     jobs:
       - gerrit-maven-sonar
     branch: master
