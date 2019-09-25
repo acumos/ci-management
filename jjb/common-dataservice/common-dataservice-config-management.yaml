@@ -3,15 +3,17 @@
     name: common-dataservice-config-management-project
     project-name: common-dataservice-config-management
     project: common-dataservice/config-management
-    project-settings: common-dataservice-config-management-settings
     build-node: centos7-docker-4c-4g
     mvn-settings: common-dataservice-config-management-settings
     python-version: python3
     build-timeout: 30
     concurrent: false
+    docker-name: config-management
+    # use host network 
+    docker-build-args: '--network=host'
     jobs:
       - '{project-name}-python-jobs'
-      - '{project-name}-acumos-docker-jobs'
+      - '{project-name}-gerrit-docker-jobs'
     stream:
       - master:
           branch: master

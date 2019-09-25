@@ -1,17 +1,20 @@
 ---
 - project:
-    name: model-runner-rds-model-runner-project
-    project-name: model-runner-rds-model-runner
+    name: model-runner-rds-model-runner
+    # jenkins job name prefix
+    project-name: '{name}'
     project: model-runner/rds-model-runner
-    project-settings: model-runner-rds-model-runner-settings
     build-node: centos7-docker-4c-4g
     mvn-settings: model-runner-rds-model-runner-settings
     python-version: python3
     build-timeout: 30
     concurrent: false
+    # use host network
+    docker-build-args: '--network=host'
+    docker-name: rds-model-runner
     jobs:
       - '{project-name}-python-jobs'
-      - '{project-name}-acumos-docker-jobs'
+      - '{project-name}-gerrit-docker-jobs'
     stream:
       - master:
           branch: master
