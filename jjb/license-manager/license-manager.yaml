@@ -6,15 +6,21 @@
       - project-view
 
 - project:
-    name: license-manager-project
+    name: license-manager-client-library
     # jenkins job name prefix
-    project-name: license-manager
+    project-name:  license-manager-client-library
     # git repo
     project: license-manager
     mvn-settings: license-manager-settings
     # pass Jenkins build number
     mvn-params: -Dbuild.number=${{BUILD_NUMBER}}
     nexus-iq-namespace: 'acumos-'
+    # subdirectory
+    mvn-pom: license-manager-client-library/pom.xml
+    # subdirectory
+    gerrit_trigger_file_paths:
+      - compare-type: REG_EXP
+        pattern: 'license-manager-client-library/.*'
     # needs docker-enabled build node
     build-node: ubuntu1804-docker-4c-4g
     java-version: openjdk11
@@ -29,6 +35,51 @@
           build-node: centos7-docker-4c-4g
       - '{project-name}-maven-javadoc-jobs'
       - gerrit-maven-clm
+    stream:
+      - master:
+          branch: master
+
+
+- project:
+    name: license-rtu-editor
+    # jenkins job name prefix
+    project-name: license-rtu-editor
+    # git repo
+    project: license-manager
+    project-settings: license-manager-settings
+    nexus-iq-namespace: 'acumos-'
+    build-node: centos7-docker-4c-4g
+    # subdirectory
+    docker_root: license-rtu-editor
+    # subdirectory
+    gerrit_trigger_file_paths:
+      - compare-type: REG_EXP
+        pattern: 'license-rtu-editor/.*'
+    jobs:
+      # Build docker job
+      - '{project-name}-acumos-docker-jobs'
+    stream:
+      - master:
+          branch: master
+
+- project:
+    name: license-profile-editor
+    # jenkins job name prefix
+    project-name: license-profile-editor
+    # git repo
+    project: license-manager
+    project-settings: license-manager-settings
+    nexus-iq-namespace: 'acumos-'
+    build-node: centos7-docker-4c-4g
+    # subdirectory
+    docker_root: license-profile-editor
+    # subdirectory
+    gerrit_trigger_file_paths:
+      - compare-type: REG_EXP
+        pattern: 'license-profile-editor/.*'
+    jobs:
+      # Build docker job
+      - '{project-name}-acumos-docker-jobs'
     stream:
       - master:
           branch: master
