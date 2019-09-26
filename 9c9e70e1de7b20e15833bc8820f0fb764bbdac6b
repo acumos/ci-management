@@ -1,0 +1,96 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a68803e_80a136d7",
+        "filename": "jjb/design-studio/design-studio.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2019-09-26T10:44:48Z",
+      "side": 1,
+      "message": "I suggest moving this up to the main block of parameters so all future branches will benefit",
+      "range": {
+        "startLine": 32,
+        "startChar": 0,
+        "endLine": 32,
+        "endChar": 3
+      },
+      "revId": "9c9e70e1de7b20e15833bc8820f0fb764bbdac6b",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "ca06cd21_36daad7c",
+        "filename": "jjb/design-studio/design-studio.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2019-09-26T10:44:48Z",
+      "side": 1,
+      "message": "I think you could remove the old dev-challenge branch at this point, no need to keep building it",
+      "range": {
+        "startLine": 33,
+        "startChar": 0,
+        "endLine": 33,
+        "endChar": 1
+      },
+      "revId": "9c9e70e1de7b20e15833bc8820f0fb764bbdac6b",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "260be0dc_be2b4e0b",
+        "filename": "jjb/design-studio/design-studio.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 73,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2019-09-26T10:44:48Z",
+      "side": 1,
+      "message": "Above for athena branch you set openjdk8, probably should be consistent",
+      "range": {
+        "startLine": 73,
+        "startChar": 24,
+        "endLine": 73,
+        "endChar": 33
+      },
+      "revId": "9c9e70e1de7b20e15833bc8820f0fb764bbdac6b",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "835c5c90_607d0f49",
+        "filename": "jjb/design-studio/design-studio.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 96,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2019-09-26T10:44:48Z",
+      "side": 1,
+      "message": "See above",
+      "range": {
+        "startLine": 96,
+        "startChar": 0,
+        "endLine": 96,
+        "endChar": 3
+      },
+      "revId": "9c9e70e1de7b20e15833bc8820f0fb764bbdac6b",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    }
+  ]
+}
