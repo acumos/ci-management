@@ -34,7 +34,6 @@
     jobs:
       - '{project-name}-maven-jobs'
       - '{project-name}-maven-javadoc-jobs'
-      - '{project-name}-gerrit-release-jobs'
     stream:
       - master:
           branch: master
@@ -70,6 +69,16 @@
         pattern: 'lum-db/.*'
     jobs:
       - '{project-name}-gerrit-docker-jobs'
+    stream:
+      - master:
+          branch: master
+
+- project:
+    <<: *lum_common
+    name: license-usage-manager-release
+    project-name: license-usage-manager
+    jobs:
+      - '{project-name}-gerrit-release-jobs'
     stream:
       - master:
           branch: master
