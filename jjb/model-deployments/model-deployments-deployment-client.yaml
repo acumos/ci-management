@@ -1,0 +1,27 @@
+---
+- project:
+    name: model-deployments-deployment-client
+    project-name: '{name}'
+    project: model-deployments/deployment-client
+    mvn-settings: model-deployments-deployment-client-settings
+    build-node: centos7-docker-4c-4g
+    java-version: openjdk11
+    jobs:
+      - '{project-name}-maven-docker-jobs'
+    stream:
+      - master:
+          branch: master
+
+- project:
+    name: model-deployments-deployment-client-sonar
+    project-name: model-deployments-deployment-client
+    project: model-deployments/deployment-client
+    mvn-settings: model-deployments-deployment-client-settings
+    build-node: centos7-avx-4c-4g
+    cron: 'H 11 * * *'
+    mvn-goals: 'clean install'
+    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+    branch: 'master'
+    java-version: openjdk11
+    jobs:
+      - gerrit-maven-sonar
