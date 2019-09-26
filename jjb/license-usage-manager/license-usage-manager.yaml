@@ -24,7 +24,7 @@
     # defaults.yaml value is NOT used reliably
     java-version: openjdk11
     # pass Jenkins build number and work in subdir
-    mvn-params: '-Dbuild.number=${{BUILD_NUMBER}} -f lum-java-rest-client/pom.xml'
+    mvn-params: '-Dbuild.number=${{BUILD_NUMBER}}'
     # CLM
     nexus-iq-namespace: 'acumos-'
     # limit match to subdir
