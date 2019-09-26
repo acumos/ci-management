@@ -46,6 +46,7 @@
     # subdir
     docker-name: acumos/license-rtu-editor
     docker-root: license-rtu-editor
+    container-tag-method: yaml-file
     # limit match to subdir
     gerrit_trigger_file_paths:
       - compare-type: REG_EXP
@@ -64,6 +65,7 @@
     # subdir
     docker-name: acumos/license-profile-editor
     docker-root: license-profile-editor
+    container-tag-method: yaml-file
     # limit match to subdir
     gerrit_trigger_file_paths:
       - compare-type: REG_EXP

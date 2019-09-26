@@ -46,6 +46,7 @@
     # subdir
     docker-name: acumos/lum-server
     docker-root: lum-server
+    container-tag-method: yaml-file
     # limit match to subdir
     gerrit_trigger_file_paths:
       - compare-type: REG_EXP
@@ -63,6 +64,7 @@
     project-name: '{name}'
     docker-name: acumos/lum-db
     docker-root: lum-db
+    container-tag-method: yaml-file
     # limit match to subdir
     gerrit_trigger_file_paths:
       - compare-type: REG_EXP
