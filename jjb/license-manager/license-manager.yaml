@@ -34,7 +34,6 @@
     jobs:
       - '{project-name}-maven-jobs'
       - '{project-name}-maven-javadoc-jobs'
-      - '{project-name}-gerrit-release-jobs'
     stream:
       - master:
           branch: master
@@ -77,7 +76,19 @@
 
 - project:
     <<: *lmcl_common
+    name: license-manager-release
+    project-name: license-manager
+    jobs:
+      - '{project-name}-gerrit-release-jobs'
+    stream:
+      - master:
+          branch: master
+
+
+- project:
+    <<: *lmcl_common
     name: license-manager-sonar
+    java-version: openjdk11
     project-name: license-manager
     jobs:
       - gerrit-maven-sonar
