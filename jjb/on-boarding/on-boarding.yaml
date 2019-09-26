@@ -55,16 +55,20 @@
     project-name: on-boarding-base-r
     # git repo
     project: on-boarding
-    branch: master
+    mvn-settings: on-boarding-settings
     # needs docker-enabled build node
     build-node: centos7-docker-4c-4g
-    # params required by docker-jobs
-    project-settings: on-boarding-settings
-    docker_root: base-image/r
+    # use host network
+    docker-build-args: '--network=host'
+    docker-name: acumos/onboarding-base-r
+    docker-root: base-image/r
     # only trigger on file changes in subdir
     gerrit_trigger_file_paths:
       - compare-type: ANT
         pattern: 'base-image/r/**'
     jobs:
       # R base image
-      - '{project-name}-acumos-docker-jobs'
+      - '{project-name}-gerrit-docker-jobs'
+    stream:
+      - master:
+          branch: master
