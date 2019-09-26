@@ -34,7 +34,6 @@
     jobs:
       - '{project-name}-maven-jobs'
       - '{project-name}-maven-javadoc-jobs'
-      - '{project-name}-gerrit-release-jobs'
     stream:
       - master:
           branch: master
@@ -76,7 +75,18 @@
 
 - project:
     <<: *lum_common
+    name: license-usage-manager-release
+    project-name: license-usage-manager
+    jobs:
+      - '{project-name}-gerrit-release-jobs'
+    stream:
+      - master:
+          branch: master
+
+- project:
+    <<: *lum_common
     name: license-usage-manager-sonar
+    java-version: openjdk11
     project-name: license-usage-manager
     jobs:
       - gerrit-maven-sonar
