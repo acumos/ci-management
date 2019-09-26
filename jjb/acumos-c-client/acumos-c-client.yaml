@@ -11,6 +11,9 @@
     project: acumos-c-client
     mvn-settings: acumos-c-client-settings
     build-timeout: 30
+    # requires c++11 support
+    # centos7 provides gcc/g++ 4.8, fails
+    # ubuntu1804 provides gcc/g++ 7.4, passes
     build-node: ubuntu1804-avx-4c-4g
     jobs:
       - gerrit-cmake-verify
