@@ -1,0 +1,7 @@
+Verified+1: Acumos Jobbuilder <acumos-jobbuilder@jenkins.acumos.org>
+Code-Review+2: Eric Ball <eball@linuxfoundation.org>
+Submitted-by: Daniel Pono Takamori <dtakamori@contractor.linuxfoundation.org>
+Submitted-at: Fri, 27 Sep 2019 20:20:11 +0000
+Reviewed-on: https://gerrit.acumos.org/r/c/ci-management/+/5406
+Project: ci-management
+Branch: refs/heads/master
