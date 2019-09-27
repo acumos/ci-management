@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3e210282_e9218824",
+        "filename": "jjb/workbench/workbench-predictor-service.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2019-09-27T15:56:45Z",
+      "side": 1,
+      "message": "please remove project-settings",
+      "range": {
+        "startLine": 8,
+        "startChar": 0,
+        "endLine": 8,
+        "endChar": 3
+      },
+      "revId": "539559208208225cf64302e97887913f5db11a43",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "2c658b4a_cb51b25d",
+        "filename": "jjb/workbench/workbench-predictor-service.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2019-09-27T15:56:45Z",
+      "side": 1,
+      "message": "Incorrect indentation here, it should be below the project, not the trigger file paths",
+      "range": {
+        "startLine": 17,
+        "startChar": 1,
+        "endLine": 17,
+        "endChar": 4
+      },
+      "revId": "539559208208225cf64302e97887913f5db11a43",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    }
+  ]
+}
