@@ -14,7 +14,7 @@
     mvn-settings: spark-model-runner-settings
     # pass Jenkins build number
     mvn-params: '-Dbuild.number=${{BUILD_NUMBER}} -f spark-modelrunner/pom.xml'
-    java-version: openjdk11
+    java-version: openjdk8
     jobs:
       - '{project-name}-maven-jobs'
       - '{project-name}-maven-javadoc-jobs'
