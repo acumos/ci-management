@@ -13,6 +13,7 @@
     gerrit_trigger_file_paths:
       - compare-type: REG_EXP
         pattern: 'project-service/.*'
+    java-version: openjdk11
     jobs:
       - gerrit-maven-docker-verify
       - gerrit-maven-docker-merge

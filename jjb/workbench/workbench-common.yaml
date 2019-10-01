@@ -12,6 +12,7 @@
     gerrit_trigger_file_paths:
       - compare-type: REG_EXP
         pattern: 'workbench-common/.*'
+    java-version: openjdk11
     jobs:
       - '{project-name}-maven-jobs'
       # Javadoc template does not yet support -f
