@@ -17,13 +17,26 @@
     java-version: openjdk11
     jobs:
       - '{project-name}-maven-jobs'
-      - '{project-name}-maven-javadoc-jobs'
     stream:
       - master:
           branch: master
     gerrit_trigger_file_paths:
       - compare-type: REG_EXP
         pattern: 'spark-modelrunner/.*'
+
+- project:
+    name: spark-model-runner-javadoc
+    # jenkins job name prefix
+    project-name: spark-model-runner
+    # git repo
+    project: spark-model-runner
+    mvn-settings: spark-model-runner-settings
+    java-version: openjdk11
+    jobs:
+      - '{project-name}-maven-javadoc-jobs'
+    stream:
+      - master:
+          branch: master
 
 - project:
     name: spark-model-runner-pc
@@ -37,7 +50,6 @@
     java-version: openjdk11
     jobs:
       - '{project-name}-maven-jobs'
-      - '{project-name}-maven-javadoc-jobs'
     stream:
       - master:
           branch: master
