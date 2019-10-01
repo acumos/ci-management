@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5661db6b_d28d1ef3",
+        "filename": "jjb/spark-model-runner/spark-model-runner.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 223
+      },
+      "writtenOn": "2019-10-01T16:45:16Z",
+      "side": 1,
+      "message": "Please remove extra line.",
+      "revId": "4c00c00c945aa35808658326127cb4185ee924cb",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    }
+  ]
+}
