@@ -51,3 +51,7 @@
 
     # Self-release process
     jenkins-ssh-release-credential: 'acumos-release'
+
+    # Sonarcloud
+    sonarcloud_project_organization: acumos
+    sonarcloud_api_token: 84d1a5d8b3ca0a80e3ad8c202677733f174630f1
