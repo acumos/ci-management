@@ -24,6 +24,10 @@
     project: acumos-nexus-client
     project-name: acumos-nexus-client
     mvn-settings: acumos-nexus-client-settings
+    sonarcloud: true
+    sonarcloud-project-organization: '{sonarcloud_project_organization}'
+    sonarcloud-api-token: '{sonarcloud_api_token}'
+    sonarcloud-project-key: '{sonarcloud_project_organization}_{project-name}'
     branch: master
     jobs:
       - gerrit-maven-sonar

@@ -17,6 +17,10 @@
     project-name: model-deployments-deployment-client
     project: model-deployments/deployment-client
     mvn-settings: model-deployments-deployment-client-settings
+    sonarcloud: true
+    sonarcloud-project-organization: '{sonarcloud_project_organization}'
+    sonarcloud-api-token: '{sonarcloud_api_token}'
+    sonarcloud-project-key: '{sonarcloud_project_organization}_{project-name}'
     build-node: centos7-avx-4c-4g
     cron: 'H 11 * * *'
     mvn-goals: 'clean install'

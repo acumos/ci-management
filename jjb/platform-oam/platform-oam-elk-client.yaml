@@ -26,6 +26,10 @@
     project: platform-oam
     project-name: platform-oam-elk-client
     mvn-settings: platform-oam-settings
+    sonarcloud: true
+    sonarcloud-project-organization: '{sonarcloud_project_organization}'
+    sonarcloud-api-token: '{sonarcloud_api_token}'
+    sonarcloud-project-key: '{sonarcloud_project_organization}_{project-name}'
     branch: master
     build-node: centos7-docker-4c-4g
     jobs:
