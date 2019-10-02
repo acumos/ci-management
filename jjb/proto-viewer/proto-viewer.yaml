@@ -14,6 +14,7 @@
     python-version: python3
     build-node: centos7-docker-4c-4g
     build-timeout: 30
+    container-tag-method: yaml-file
     # use host network
     docker-build-args: '--network=host'
     docker-name: acumos/acumos-proto-viewer

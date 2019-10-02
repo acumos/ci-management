@@ -8,6 +8,7 @@
     python-version: python3
     build-timeout: 30
     concurrent: false
+    container-tag-method: yaml-file
     docker-name: acumos/config-management
     # use host network
     docker-build-args: '--network=host'

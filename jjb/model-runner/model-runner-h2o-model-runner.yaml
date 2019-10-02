@@ -9,6 +9,7 @@
     python-version: python3
     build-timeout: 30
     concurrent: false
+    container-tag-method: yaml-file
     # use host network
     docker-build-args: '--network=host'
     docker-name: acumos/h2o-model-runner

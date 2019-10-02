@@ -8,6 +8,7 @@
     mvn-settings: workbench-settings
     nexus-iq-namespace: 'acumos-'
     build-node: centos7-docker-4c-4g
+    container-tag-method: yaml-file
     # use host network
     docker-build-args: '--network=host'
     docker-name: acumos/project-catalog-webcomponent
