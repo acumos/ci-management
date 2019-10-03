@@ -12,6 +12,12 @@
     gerrit_trigger_file_paths:
       - compare-type: REG_EXP
         pattern: 'workbench-common/.*'
+      - compare-type: REG_EXP
+        pattern: 'home-webcomponent/.*'
+      - compare-type: REG_EXP
+        pattern: 'project-catalog-webcomponent/.*'
+      - compare-type: REG_EXP
+        pattern: 'project-webcomponent/.*'
     java-version: openjdk11
     jobs:
       - '{project-name}-maven-jobs'
