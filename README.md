@@ -67,41 +67,6 @@ jar or pom file for deployment, should use these jobs in its project.yaml file::
 
 Note that the same verify job is used in both scenarios.
 
-### Custom JJB templates for Python library projects
-
-A Python library project can be configured to publish artifacts to Nexus3 PyPI repositories
-at the Linux Foundation and the global PyPI index.
-
-#### Python Custom JJB Templates
-
-If a Python project needs to publish artifacts to the Nexus3 PyPI repositories, we have
-python-release and python-staging jobs.  A Python project can add these jobs to their
-project.yaml file::
-
-    jobs:
-      - '{project-name}-python-staging-{stream}'
-      - '{project-name}-python-release-{stream}'
-
-The python-staging job builds the project and pushes the build artifacts to an index named
-"PyPi.staging" in the Linux Foundation's Nexus3 repository.  This job is triggered on every
-Gerrit merge event.  If the same version of the artifact already exists in the staging repo
-it will be overwritten.  These artifacts in the staging repo should be viewed as release
-candidates, and are the prime artifacts for integration and user acceptance testing.
-
-The python-release job builds the project and pushes the build artifacts to the pypi.org
-index. This job must be triggered manually by posting a comment "pypi-release" or "pypi-remerge"
-in the appropriate Gerrit review request.  Note that if the same version of the artifact already
-exists in the release repo the push will fail. Note also the deviation from Java release practices:
-this release job re-builds the artifact where in the Java/Maven workflow a staged artifact is copied.
-
-Library authors can configure pip to pull artifacts from PyPI URL:
-
-The python-staging job publishes to the Nexus3 staging repository
-    Nexus3 PyPI staging URL: https://nexus3.acumos.org/repository/PyPi.staging/
-
-The python-release job publishes to the PyPI repository
-    PyPI URL:  https://pypi.python.org/pypi/acumos/
-
 ## Testing the templates
 
 These instructions explain how to test the Acumos templates using the Jenkins sandbox.

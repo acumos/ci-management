@@ -6,17 +6,16 @@
       - project-view
 
 - project:
-    name: python-dcae-model-runner-project
-    project-name: python-dcae-model-runner
-    project: python-dcae-model-runner
+    name: python-dcae-model-runner
+    project-name: '{name}'
+    project: '{name}'
     mvn-settings: python-dcae-model-runner-settings
-    python-version: python3
     build-timeout: 30
-    concurrent: false
+    # centos is required for releases
+    build-node: centos7-avx-4c-4g
+    parallel: false
     jobs:
-      - '{project-name}-python-jobs'
-      - '{project-name}-python-release-{stream}'
-      - '{project-name}-python-staging-{stream}'
+      - '{project-name}-gerrit-pypi-jobs'
     stream:
       - master:
           branch: master

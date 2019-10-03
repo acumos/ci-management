@@ -6,17 +6,16 @@
       - project-view
 
 - project:
-    name: python-model-runner-project
-    project-name: python-model-runner
-    project: python-model-runner
+    name: python-model-runner
+    project-name: '{name}'
+    project: '{name}'
     mvn-settings: python-model-runner-settings
-    python-version: python3
     build-timeout: 30
-    concurrent: false
+    # centos is required for releases
+    build-node: centos7-avx-4c-4g
+    parallel: false
     jobs:
-      - '{project-name}-python-jobs'
-      - '{project-name}-python-release-{stream}'
-      - '{project-name}-python-staging-{stream}'
+      - '{project-name}-gerrit-pypi-jobs'
     stream:
       - master:
           branch: master
@@ -28,7 +27,7 @@
     project-name: python-model-runner
     project: python-model-runner
     mvn-settings: python-model-runner-settings
-    build-node: centos7-docker-4c-4g
+    build-node: centos7-avx-4c-4g
     jobs:
       - gerrit-maven-sonar
     cron: 'H 11 * * *'
