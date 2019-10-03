@@ -7,7 +7,7 @@
     build-node: centos7-docker-4c-4g
     java-version: openjdk11
     jobs:
-      - '{project-name}-maven-docker-jobs'
+      - '{project-name}-gerrit-maven-docker-jobs'
     stream:
       - master:
           branch: master
