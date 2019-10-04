@@ -13,7 +13,7 @@
     project: spark-model-runner
     mvn-settings: spark-model-runner-settings
     # pass Jenkins build number
-    mvn-params: '-Dbuild.number=${{BUILD_NUMBER}} -f spark-modelrunner/pom.xml'
+    mvn-params: '-f spark-modelrunner/pom.xml -Dbuild.number=${{BUILD_NUMBER}}'
     java-version: openjdk11
     jobs:
       - '{project-name}-maven-jobs'
@@ -46,7 +46,7 @@
     project: spark-model-runner
     mvn-settings: spark-model-runner-settings
     # pass Jenkins build number
-    mvn-params: '-Dbuild.number=${{BUILD_NUMBER}} -f protobuf-common/pom.xml'
+    mvn-params: '-f protobuf-common/pom.xml -Dbuild.number=${{BUILD_NUMBER}}'
     java-version: openjdk11
     jobs:
       - '{project-name}-maven-jobs'
