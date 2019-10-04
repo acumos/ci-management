@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3e298ce3_817913b8",
+        "filename": "jjb/on-boarding/on-boarding.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 82,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2019-10-04T10:15:30Z",
+      "side": 1,
+      "message": "Please remove. This is not a java project, it\u0027s a docker project.",
+      "range": {
+        "startLine": 82,
+        "startChar": 0,
+        "endLine": 82,
+        "endChar": 3
+      },
+      "revId": "494e2c641a86bbefa565f1b6dd13c5c0d03c7947",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "76135478_6608599f",
+        "filename": "jjb/on-boarding/on-boarding.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 85,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2019-10-04T10:15:30Z",
+      "side": 1,
+      "message": "Remove",
+      "range": {
+        "startLine": 85,
+        "startChar": 0,
+        "endLine": 85,
+        "endChar": 3
+      },
+      "revId": "494e2c641a86bbefa565f1b6dd13c5c0d03c7947",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "6d340d36_fa37c210",
+        "filename": "jjb/on-boarding/on-boarding.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 88,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2019-10-04T10:15:30Z",
+      "side": 1,
+      "message": "remove",
+      "range": {
+        "startLine": 88,
+        "startChar": 0,
+        "endLine": 88,
+        "endChar": 3
+      },
+      "revId": "494e2c641a86bbefa565f1b6dd13c5c0d03c7947",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    }
+  ]
+}
