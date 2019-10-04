@@ -26,8 +26,13 @@
     stream:
       - master:
           branch: master
+          java-version: openjdk11
       - athena:
           branch: athena
+          java-version: openjdk8
+      - boreas:
+          branch: boreas
+          java-version: openjdk8
 
 - project:
     name: microservice-generation-project-sonar
@@ -38,5 +43,6 @@
     mvn-settings: microservice-generation-settings
     branch: master
     build-node: centos7-docker-4c-4g
+    java-version: openjdk11
     jobs:
       - gerrit-maven-sonar
