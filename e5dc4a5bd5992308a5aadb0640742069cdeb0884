@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ba4896c_d9c82cc1",
+        "filename": "jjb/on-boarding/on-boarding.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 89,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2019-10-04T09:32:36Z",
+      "side": 1,
+      "message": "Philippe please remove this trailing whitespace.  I know it\u0027s a tiny thing.",
+      "range": {
+        "startLine": 89,
+        "startChar": 0,
+        "endLine": 89,
+        "endChar": 8
+      },
+      "revId": "e5dc4a5bd5992308a5aadb0640742069cdeb0884",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    }
+  ]
+}
