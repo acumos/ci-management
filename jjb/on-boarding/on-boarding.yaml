@@ -28,14 +28,19 @@
     stream:
       - master:
           branch: master
+          java-version: openjdk11
       - dev-challenge:
           branch: dev-challenge
+          java-version: openjdk8
       - onboarding-r1280:
           branch: onboarding-r1280
+          java-version: openjdk11
       - athena:
           branch: athena
+          java-version: openjdk8
       - boreas:
           branch: boreas
+          java-version: openjdk8
 
 - project:
     name: on-boarding-project-sonar
@@ -46,6 +51,7 @@
     mvn-settings: on-boarding-settings
     branch: master
     build-node: centos7-docker-4c-4g
+    java-version: openjdk11
     jobs:
       - gerrit-maven-sonar
 
@@ -73,3 +79,10 @@
     stream:
       - master:
           branch: master
+          java-version: openjdk11
+      - athena:
+          branch: athena
+          java-version: openjdk8
+      - boreas:
+          branch: boreas
+          java-version: openjdk8
