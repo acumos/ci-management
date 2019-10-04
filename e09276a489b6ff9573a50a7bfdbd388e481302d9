@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "f33eca24_356dad1f",
+        "filename": "jjb/on-boarding/on-boarding.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2019-10-04T09:37:40Z",
+      "side": 1,
+      "message": "Why did you change from centos7 to ubuntu1804?  This is not a required change.  Please revert.",
+      "range": {
+        "startLine": 19,
+        "startChar": 16,
+        "endLine": 19,
+        "endChar": 26
+      },
+      "revId": "e09276a489b6ff9573a50a7bfdbd388e481302d9",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "e269f582_ae90cb26",
+        "filename": "jjb/on-boarding/on-boarding.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2019-10-04T09:37:40Z",
+      "side": 1,
+      "message": "Why did you change from centos7 to ubuntu1804?  This is not a required change.  Please revert.",
+      "range": {
+        "startLine": 53,
+        "startChar": 16,
+        "endLine": 53,
+        "endChar": 26
+      },
+      "revId": "e09276a489b6ff9573a50a7bfdbd388e481302d9",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "b003997e_75ec9b96",
+        "filename": "jjb/on-boarding/on-boarding.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 66,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2019-10-04T09:37:40Z",
+      "side": 1,
+      "message": "Why did you change from centos7 to ubuntu1804?  This is not a required change.  Please revert.",
+      "range": {
+        "startLine": 66,
+        "startChar": 16,
+        "endLine": 66,
+        "endChar": 26
+      },
+      "revId": "e09276a489b6ff9573a50a7bfdbd388e481302d9",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    }
+  ]
+}
