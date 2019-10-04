@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "faf3a301_e2e50852",
+        "filename": "jjb/microservice-generation/microservice-generation.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2019-10-04T09:35:57Z",
+      "side": 1,
+      "message": "Please remove these two extra \u0026 unneeded blank lines, thanks.",
+      "revId": "0356b58ce5ed59bd5f25f4ae62eaa0c1f19a089f",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    }
+  ]
+}
