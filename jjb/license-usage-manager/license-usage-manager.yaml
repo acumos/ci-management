@@ -90,6 +90,10 @@
     name: license-usage-manager-sonar
     java-version: openjdk11
     project-name: license-usage-manager
+    sonarcloud: true
+    sonarcloud-project-organization: '{sonarcloud_project_organization}'
+    sonarcloud-api-token: '{sonarcloud_api_token}'
+    sonarcloud-project-key: '{sonarcloud_project_organization}_{project-name}'
     jobs:
       - gerrit-maven-sonar
     branch: master

@@ -21,6 +21,10 @@
     project-name: on-boarding-model-management
     project: on-boarding/model-management
     mvn-settings: on-boarding-model-management-settings
+    sonarcloud: true
+    sonarcloud-project-organization: '{sonarcloud_project_organization}'
+    sonarcloud-api-token: '{sonarcloud_api_token}'
+    sonarcloud-project-key: '{sonarcloud_project_organization}_{project-name}'
     build-node: centos7-avx-4c-4g
     jobs:
       - gerrit-maven-sonar

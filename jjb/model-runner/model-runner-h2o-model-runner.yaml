@@ -26,6 +26,10 @@
     project-name: model-runner-h2o-model-runner
     project: model-runner/h2o-model-runner
     mvn-settings: model-runner-h2o-model-runner-settings
+    sonarcloud: true
+    sonarcloud-project-organization: '{sonarcloud_project_organization}'
+    sonarcloud-api-token: '{sonarcloud_api_token}'
+    sonarcloud-project-key: '{sonarcloud_project_organization}_{project-name}'
     build-node: centos7-avx-4c-4g
     jobs:
       - gerrit-maven-sonar

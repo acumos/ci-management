@@ -25,6 +25,10 @@
     project-name: model-runner-pmml-model-runner
     project: model-runner/pmml-model-runner
     mvn-settings: model-runner-pmml-model-runner-settings
+    sonarcloud: true
+    sonarcloud-project-organization: '{sonarcloud_project_organization}'
+    sonarcloud-api-token: '{sonarcloud_api_token}'
+    sonarcloud-project-key: '{sonarcloud_project_organization}_{project-name}'
     build-node: centos7-docker-4c-4g
     jobs:
       - gerrit-maven-sonar
