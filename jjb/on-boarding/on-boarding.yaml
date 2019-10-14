@@ -43,6 +43,18 @@
           java-version: openjdk8
 
 - project:
+    name: on-boarding-release
+    project-name: on-boarding-app
+    project: on-boarding
+    mvn-settings: on-boarding-settings
+    build-node: centos7-docker-4c-4g
+    jobs:
+      - '{project-name}-gerrit-release-jobs'
+    stream:
+      - master:
+          branch: master
+
+- project:
     name: on-boarding-project-sonar
     # jenkins job name prefix
     project-name: on-boarding
