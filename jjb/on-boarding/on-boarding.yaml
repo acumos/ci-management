@@ -43,6 +43,15 @@
           java-version: openjdk8
 
 - project:
+    name: on-boarding-release
+    project-name: on-boarding
+    jobs:
+      - '{project-name}-gerrit-release-jobs' 
+    stream:
+      - master:
+          branch: master
+      
+- project:
     name: on-boarding-project-sonar
     # jenkins job name prefix
     project-name: on-boarding
