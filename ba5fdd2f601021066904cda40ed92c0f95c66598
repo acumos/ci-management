@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fb6e0fd2_76edda9e",
+        "filename": "jjb/on-boarding/on-boarding.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2019-10-14T13:52:09Z",
+      "side": 1,
+      "message": "Please remove trailing space",
+      "range": {
+        "startLine": 49,
+        "startChar": 44,
+        "endLine": 49,
+        "endChar": 45
+      },
+      "revId": "ba5fdd2f601021066904cda40ed92c0f95c66598",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "6e562dcc_50b69ddb",
+        "filename": "jjb/on-boarding/on-boarding.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2019-10-14T13:52:09Z",
+      "side": 1,
+      "message": "Please remove trailing whitespace",
+      "range": {
+        "startLine": 53,
+        "startChar": 0,
+        "endLine": 53,
+        "endChar": 1
+      },
+      "revId": "ba5fdd2f601021066904cda40ed92c0f95c66598",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    }
+  ]
+}
