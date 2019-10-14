@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "86d21aba_8d417e36",
+        "filename": "jjb/on-boarding/on-boarding.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2019-10-14T18:05:55Z",
+      "side": 1,
+      "message": "This \"-app\" suffix was a minor mistake, it will appear in the release job names, no real harm done but you might clean it up on the next change to this file.",
+      "range": {
+        "startLine": 47,
+        "startChar": 29,
+        "endLine": 47,
+        "endChar": 33
+      },
+      "revId": "ccfda014d1b9beb22c25eafebdf8852c9c4e745c",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    }
+  ]
+}
