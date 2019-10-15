@@ -39,3 +39,15 @@
     build-node: centos7-docker-4c-4g
     jobs:
       - gerrit-maven-sonar
+
+- project:
+    name: openstack-client-release
+    project: openstack-client
+    project-name: openstack-client
+    mvn-settings: openstack-client-settings
+    branch: master
+    # maven release uses sigul which requires centos
+    # container release uses docker
+    build-node: centos7-docker-2c-1g
+    jobs:
+      - '{project-name}-gerrit-release-jobs'

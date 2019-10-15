@@ -70,3 +70,14 @@
     jobs:
       - gerrit-maven-sonar
       - gerrit-maven-clm
+
+- project:
+    name: spark-model-runner-release
+    project: spark-model-runner
+    project-name: spark-model-runner
+    mvn-settings: spark-model-runner-settings
+    branch: master
+    # maven release uses sigul which requires centos
+    build-node: centos7-builder-2c-1g
+    jobs:
+      - '{project-name}-gerrit-release-jobs'

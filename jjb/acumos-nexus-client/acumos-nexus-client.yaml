@@ -31,3 +31,14 @@
     branch: master
     jobs:
       - gerrit-maven-sonar
+
+- project:
+    name: acumos-nexus-client-release
+    project: acumos-nexus-client
+    project-name: acumos-nexus-client
+    mvn-settings: acumos-nexus-client-settings
+    branch: master
+    # maven release uses sigul which requires centos
+    build-node: centos7-builder-2c-1g
+    jobs:
+      - '{project-name}-gerrit-release-jobs'

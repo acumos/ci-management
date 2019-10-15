@@ -52,3 +52,15 @@
     jobs:
       - gerrit-maven-sonar
     java-version: openjdk11
+
+- project:
+    name: portal-marketplace-release
+    project: portal-marketplace
+    project-name: portal-marketplace
+    mvn-settings: portal-marketplace-settings
+    branch: master
+    # maven release uses sigul which requires centos
+    # container release uses docker
+    build-node: centos7-docker-2c-1g
+    jobs:
+      - '{project-name}-gerrit-release-jobs'

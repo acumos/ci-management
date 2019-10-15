@@ -50,3 +50,15 @@
     java-version: openjdk11
     jobs:
       - gerrit-maven-sonar
+
+- project:
+    name: federation-release
+    project: federation-client
+    project-name: federation-client
+    mvn-settings: federation-settings
+    branch: master
+    # maven release uses sigul which requires centos
+    # container release uses docker
+    build-node: centos7-docker-2c-1g
+    jobs:
+      - '{project-name}-gerrit-release-jobs'

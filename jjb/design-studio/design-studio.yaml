@@ -95,3 +95,15 @@
       - athena:
           branch: athena
           java-version: openjdk8
+
+- project:
+    name: design-studio-release
+    project: design-studio
+    project-name: design-studio
+    mvn-settings: design-studio-settings
+    branch: master
+    # maven release uses sigul which requires centos
+    # container release uses docker
+    build-node: centos7-docker-2c-1g
+    jobs:
+      - '{project-name}-gerrit-release-jobs'

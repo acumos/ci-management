@@ -50,3 +50,15 @@
     java-version: openjdk11
     jobs:
       - gerrit-maven-sonar
+
+- project:
+    name: microservice-generation-release
+    project: microservice-generation
+    project-name: microservice-generation
+    mvn-settings: microservice-generation-settings
+    branch: master
+    # maven release uses sigul which requires centos
+    # container release uses docker
+    build-node: centos7-docker-2c-1g
+    jobs:
+      - '{project-name}-gerrit-release-jobs'

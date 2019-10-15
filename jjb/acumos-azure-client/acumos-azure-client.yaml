@@ -43,3 +43,15 @@
     build-node: centos7-docker-4c-4g
     jobs:
       - gerrit-maven-sonar
+
+- project:
+    name: acumos-azure-client-release
+    project: acumos-azure-client
+    project-name: acumos-azure-client
+    mvn-settings: acumos-azure-client-settings
+    branch: master
+    # maven release uses sigul which requires centos
+    # container release uses docker
+    build-node: centos7-docker-2c-1g
+    jobs:
+      - '{project-name}-gerrit-release-jobs'

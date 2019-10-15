@@ -24,9 +24,6 @@
       - gerrit-maven-dl-stage
       # standard Global JJB templates
       - '{project-name}-maven-javadoc-jobs'
-      # release job sigul requires centos
-      - '{project-name}-gerrit-release-jobs':
-          build-node: centos7-docker-4c-4g
       - gerrit-maven-clm
     stream:
       - master:
@@ -52,3 +49,15 @@
     build-node: centos7-docker-4c-4g
     jobs:
       - gerrit-maven-sonar
+
+- project:
+    name: security-verification-release
+    project: security-verification
+    project-name: security-verification
+    mvn-settings: security-verification-settings
+    branch: master
+    # maven release uses sigul which requires centos
+    # container release uses docker
+    build-node: centos7-docker-2c-1g
+    jobs:
+      - '{project-name}-gerrit-release-jobs'
