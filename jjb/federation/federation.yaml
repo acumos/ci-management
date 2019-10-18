@@ -53,8 +53,8 @@
 
 - project:
     name: federation-release
-    project: federation-client
-    project-name: federation-client
+    project: federation
+    project-name: federation
     mvn-settings: federation-settings
     branch: master
     # maven release uses sigul which requires centos
