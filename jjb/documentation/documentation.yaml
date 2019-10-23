@@ -24,3 +24,5 @@
           branch: athena
       - boreas:
           branch: boreas
+      - clio:
+          branch: clio
