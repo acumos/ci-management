@@ -37,6 +37,8 @@
     stream:
       - master:
           branch: master
+      - clio:
+          branch: clio
 
 - project:
     <<: *lmcl_common
@@ -56,6 +58,8 @@
     stream:
       - master:
           branch: master
+      - clio:
+          branch: clio
 
 - project:
     <<: *lmcl_common
@@ -75,6 +79,8 @@
     stream:
       - master:
           branch: master
+      - clio:
+          branch: clio
 
 - project:
     <<: *lmcl_common
