@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3b1df26e_4f18e33a",
+        "filename": "jjb/license-manager/license-manager.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 93,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2019-11-05T19:19:54Z",
+      "side": 1,
+      "message": "If you\u0027re messing with branches, and want to clean something up, I recommend removing this stream/master/branch/master business in the release job.  Not needed.  Totally ignored in fact.",
+      "range": {
+        "startLine": 91,
+        "startChar": 0,
+        "endLine": 93,
+        "endChar": 3
+      },
+      "revId": "0110153d3186096ae3ec3a409b19c09257e877d7",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    }
+  ]
+}
