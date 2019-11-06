@@ -17,8 +17,6 @@
     jobs:
       - '{project-name}-rtd-jobs'
     stream:
-      - master:
-          branch: master
       - athena:
           branch: athena
       - boreas:
