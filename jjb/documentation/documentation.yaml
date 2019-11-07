@@ -32,6 +32,11 @@
     # verify and merge (publish) changes on all release branches
     <<: *doc_common
     name: documentation-verify-merge-branches
+    # override the template default to ignore ref-updated-event
+    gerrit_merge_triggers:
+      - change-merged-event
+      - comment-added-contains-event:
+          comment-contains-value: remerge$
     jobs:
       - '{project-name}-rtd-jobs'
     stream:
