@@ -1,0 +1,8 @@
+Verified+1: Acumos Jobbuilder <acumos-jobbuilder@jenkins.acumos.org>
+Code-Review+1: Akash Srivastava <AS00493574@techmahindra.com>
+Code-Review+2: Eric Ball <eball@linuxfoundation.org>
+Submitted-by: Eric Ball <eball@linuxfoundation.org>
+Submitted-at: Thu, 07 Nov 2019 16:28:46 +0000
+Reviewed-on: https://gerrit.acumos.org/r/c/ci-management/+/5844
+Project: ci-management
+Branch: refs/heads/master
