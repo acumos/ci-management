@@ -5,41 +5,25 @@
     views:
       - project-view
 
-- doc_common: &doc_common
-    # values common to all projects below
-    name: doc-common
+- project:
+    name: documentation-rtd
     # git repo
     project: documentation
     # jenkins job name prefix
     project-name: documentation
-    # maven settings file has docker credentials
-    mvn-settings: documentation-settings
-    # ReadTheDocs.org configuration
-    rtd-build-url: https://readthedocs.org/api/v2/webhook/acumos/30570/
-    rtd-token: 16db5d3ab702c6f956de7a326250b1b1794b9d1b
-
-- project:
-    # verify doc changes on all master branches
-    <<: *doc_common
-    name: documentation-verify-master
-    jobs:
-      - gerrit-rtd-verify
-    stream:
-      - master:
-          branch: master
-
-- project:
-    # verify and merge (publish) changes on all release branches
-    <<: *doc_common
-    name: documentation-verify-merge-branches
-    # override the template default to ignore ref-updated-event
+    # override the default to ignore ref-updated-event
     gerrit_merge_triggers:
       - change-merged-event
       - comment-added-contains-event:
           comment-contains-value: remerge$
+    # acumos.readthedocs.io configuration
+    rtd-build-url: https://readthedocs.org/api/v2/webhook/acumos/30570/
+    rtd-token: 16db5d3ab702c6f956de7a326250b1b1794b9d1b
     jobs:
       - '{project-name}-rtd-jobs'
     stream:
+      - master:
+          branch: master
       - athena:
           branch: athena
       - boreas:
