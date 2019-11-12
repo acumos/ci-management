@@ -41,18 +41,19 @@
       - boreas:
           branch: boreas
           java-version: openjdk8
+      - clio:
+          branch: clio
+          java-version: openjdk11
 
 - project:
     name: on-boarding-release
     project-name: on-boarding-app
     project: on-boarding
     mvn-settings: on-boarding-settings
+    branch: master
     build-node: centos7-docker-4c-4g
     jobs:
       - '{project-name}-gerrit-release-jobs'
-    stream:
-      - master:
-          branch: master
 
 - project:
     name: on-boarding-project-sonar
