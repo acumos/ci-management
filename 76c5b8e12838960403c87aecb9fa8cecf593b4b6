@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "17e8356b_42928552",
+        "filename": "jjb/on-boarding/on-boarding.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2019-11-15T15:34:18Z",
+      "side": 1,
+      "message": "No. You don\u0027t need a release job in every branch.  The release job should not even have the \"stream\" block, it should only have \"branch: master\" within it.  Copy from one of the existing examples, maybe CDS.",
+      "range": {
+        "startLine": 60,
+        "startChar": 0,
+        "endLine": 60,
+        "endChar": 3
+      },
+      "revId": "76c5b8e12838960403c87aecb9fa8cecf593b4b6",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    }
+  ]
+}
