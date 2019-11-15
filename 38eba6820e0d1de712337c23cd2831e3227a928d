@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "928251fa_b3bf62e0",
+        "filename": "jjb/on-boarding/on-boarding.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2019-11-15T15:53:12Z",
+      "side": 1,
+      "message": "Please remove this line with unnecessary whitespace",
+      "range": {
+        "startLine": 57,
+        "startChar": 0,
+        "endLine": 57,
+        "endChar": 4
+      },
+      "revId": "38eba6820e0d1de712337c23cd2831e3227a928d",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    }
+  ]
+}
