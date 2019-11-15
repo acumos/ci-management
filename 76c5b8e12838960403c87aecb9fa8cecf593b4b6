@@ -22,6 +22,30 @@
       "revId": "76c5b8e12838960403c87aecb9fa8cecf593b4b6",
       "serverId": "655300a2-7a56-4504-9153-881edd907bea",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "7c46bd61_71a7437a",
+        "filename": "jjb/on-boarding/on-boarding.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 14
+      },
+      "writtenOn": "2019-11-15T15:45:42Z",
+      "side": 1,
+      "message": "We have tested onboarding release job with below \u0027stream\u0027 and \u0027master\u0027 tags but thats fine it will be removed if its not require.\nstream:\n      - master:\n          branch: master\n\nHowever in CDS there is no brnach or master tag at all. shall I do accordingly in onboarding?\n- project:\n  42     name: common-dataservice-release\n  43     project: common-dataservice\n  44     project-name: common-dataservice\n  45     mvn-settings: common-dataservice-settings\n  46     branch: master\n  47     # maven release requires sigul which requires centos\n  48     # container release requires docker\n  49     build-node: centos7-docker-4c-4g\n  50     jobs:\n  51       # new self-release process\n  52       - \u0027{project-name}-gerrit-release-jobs\u0027",
+      "parentUuid": "17e8356b_42928552",
+      "range": {
+        "startLine": 60,
+        "startChar": 0,
+        "endLine": 60,
+        "endChar": 3
+      },
+      "revId": "76c5b8e12838960403c87aecb9fa8cecf593b4b6",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
     }
   ]
 }
