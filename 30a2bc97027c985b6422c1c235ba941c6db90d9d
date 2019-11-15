@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "efad3685_9b543f46",
+        "filename": "jjb/on-boarding/on-boarding.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 223
+      },
+      "writtenOn": "2019-11-15T21:01:05Z",
+      "side": 1,
+      "message": "Please clean up white space.",
+      "range": {
+        "startLine": 57,
+        "startChar": 0,
+        "endLine": 57,
+        "endChar": 1
+      },
+      "revId": "30a2bc97027c985b6422c1c235ba941c6db90d9d",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    }
+  ]
+}
