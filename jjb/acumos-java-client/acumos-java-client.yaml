@@ -18,6 +18,10 @@
           branch: master
       - athena:
           branch: athena
+      - boreas:
+          branch: boreas
+      - clio:
+          branch: clio
 
 - project:
     name: acumos-java-client-sonar
