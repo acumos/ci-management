@@ -1,0 +1,7 @@
+Verified+1: Acumos Jobbuilder <acumos-jobbuilder@jenkins.acumos.org>
+Code-Review+2: Andrew Grimberg <agrimberg@linuxfoundation.org>
+Submitted-by: Andrew Grimberg <agrimberg@linuxfoundation.org>
+Submitted-at: Mon, 25 Nov 2019 15:42:25 +0000
+Reviewed-on: https://gerrit.acumos.org/r/c/ci-management/+/5967
+Project: ci-management
+Branch: refs/heads/master
