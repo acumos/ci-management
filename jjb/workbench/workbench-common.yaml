@@ -20,6 +20,8 @@
     stream:
       - master:
           branch: master
+      - clio:
+          branch: clio
 
 - project:
     name: workbench-common-sonar
