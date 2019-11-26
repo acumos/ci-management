@@ -1,0 +1,20 @@
+---
+- project:
+    name: acumos-r-client-project-view
+    project-name: acumos-r-client
+    views:
+      - project-view
+
+- project:
+    name: acumos-r-client-project
+    project-name: acumos-r-client
+    project: acumos-r-client
+    mvn-settings: acumos-r-client-settings
+    build-node: ubuntu1804-avx-4c-4g
+    jobs:
+      - '{project-name}-r-docs-jobs'
+    stream:
+      - master:
+          branch: master
+      - clio:
+          branch: clio
