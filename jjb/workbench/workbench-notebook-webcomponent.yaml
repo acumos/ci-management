@@ -23,3 +23,5 @@
     stream:
       - master:
           branch: master
+      - Clio:
+          branch: clio
