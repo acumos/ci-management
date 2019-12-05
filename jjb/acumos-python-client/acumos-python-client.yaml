@@ -5,14 +5,28 @@
     views:
       - project-view
 
-- project:
-    name: acumos-python-client
-    project-name: '{name}'
-    project: '{name}'
+- acp_common: &acp_common
+    name: acp-common
+    # git repo
+    project: acumos-python-client
+    # jenkins job name prefix
+    project-name: acumos-python-client
+    # maven settings file has credentials
     mvn-settings: acumos-python-client-settings
-    build-timeout: 30
-    # centos is required for releases
-    build-node: centos7-avx-4c-4g
+    # release job requires centos
+    build-node: centos7-builder-2c-1g
+
+# committer management
+- project:
+    name: acumos-python-client-info
+    <<: *acp_common
+    jobs:
+      - gerrit-info-yaml-verify
+
+# verify distribution and publish to test.pypi.org
+- project:
+    name: acumos-python-client-pypi
+    <<: *acp_common
     parallel: false
     jobs:
       - '{project-name}-gerrit-pypi-jobs'
@@ -22,17 +36,21 @@
       - boreas:
           branch: boreas
 
+# promote distribution from test.pypi.org to pypi.org
+- project:
+    name: acumos-python-client-release
+    <<: *acp_common
+    jobs:
+      - '{project-name}-gerrit-pypi-release-jobs'
+
+# analyze unit test coverage
 - project:
     name: acumos-python-client-sonar
-    project-name: acumos-python-client
-    project: acumos-python-client
-    branch: 'master'
-    build-node: centos7-avx-4c-4g
-    cron: 'H 11 * * *'
+    <<: *acp_common
+    branch: master
     # runs maven plugin to push report
-    mvn-goals: 'clean install'
-    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
-    mvn-settings: acumos-python-client-settings
+    mvn-goals: clean install
+    mvn-opts: -Xmx1024m -XX:MaxPermSize=256m
     sonarcloud: true
     sonarcloud-project-organization: '{sonarcloud_project_organization}'
     sonarcloud-api-token: '{sonarcloud_api_token}'
