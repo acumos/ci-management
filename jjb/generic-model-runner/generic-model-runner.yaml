@@ -15,19 +15,12 @@
     # pass Jenkins build number
     mvn-params: -Dbuild.number=${{BUILD_NUMBER}}
     nexus-iq-namespace: 'acumos-'
-    # needs docker-enabled build node
-    build-node: centos7-docker-4c-4g
     jobs:
-      - gerrit-maven-docker-verify
-      - gerrit-maven-docker-merge
-      - gerrit-maven-docker-stage
+      - '{project-name}-maven-jobs'
       - '{project-name}-maven-javadoc-jobs'
-      - gerrit-maven-clm
     stream:
       - master:
           branch: master
-      - athena:
-          branch: athena
 
 - project:
     name: generic-model-runner-sonar
@@ -39,7 +32,6 @@
     sonarcloud-api-token: '{sonarcloud_api_token}'
     sonarcloud-project-key: '{sonarcloud_project_organization}_{project-name}'
     branch: master
-    build-node: centos7-docker-4c-4g
     jobs:
       - gerrit-maven-sonar
 
@@ -50,7 +42,6 @@
     mvn-settings: generic-model-runner-settings
     branch: master
     # maven release uses sigul which requires centos
-    # container release uses docker
     build-node: centos7-docker-2c-1g
     jobs:
       - '{project-name}-gerrit-release-jobs'
