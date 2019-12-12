@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "cbb3c4a9_2dd9440d",
+        "filename": "jjb/acumos-python-client/acumos-python-client.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2019-12-12T21:21:12Z",
+      "side": 1,
+      "message": "I wish you had added a comment that these client tests require avx, or even better, the specific package that is on the build node labeled \"avx\"",
+      "range": {
+        "startLine": 16,
+        "startChar": 0,
+        "endLine": 16,
+        "endChar": 2
+      },
+      "revId": "b1e174b910e5cae727d982447f174a63e9fe53ba",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    }
+  ]
+}
