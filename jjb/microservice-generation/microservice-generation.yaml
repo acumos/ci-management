@@ -33,6 +33,9 @@
       - boreas:
           branch: boreas
           java-version: openjdk8
+      - clio:
+          branch: clio
+          java-version: openjdk11
 
 - project:
     name: microservice-generation-project-sonar
