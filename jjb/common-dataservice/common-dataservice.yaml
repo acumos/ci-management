@@ -1,4 +1,3 @@
-# Builds a jar then a docker
 ---
 - project:
     name: common-dataservice-project-view
@@ -6,85 +5,65 @@
     views:
       - project-view
 
-- project:
-    name: cds-project
-    # jenkins job name prefix
-    project-name: common-dataservice
+- cds_common: &cds_common
+    name: cds-common
     # git repo
     project: common-dataservice
+    # jenkins job name prefix
+    project-name: common-dataservice
+    # maven settings file has credentials
     mvn-settings: common-dataservice-settings
+    # build job requires docker
+    # release job requires centos and docker
+    build-node: centos7-docker-4c-4g
+
+# committer management
+- project:
+    name: common-dataservice-info
+    <<: *cds_common
+    jobs:
+      - gerrit-info-yaml-verify
+
+# release management
+- project:
+    name: common-dataservice-release
+    <<: *cds_common
+    jobs:
+      - "{project-name}-gerrit-release-jobs"
+
+# build jar and docker artifacts
+- project:
+    name: common-dataservice-build
+    <<: *cds_common
     mvn-params: -Dbuild.number=${{BUILD_NUMBER}}
     gerrit_trigger_file_paths:
       - compare-type: REG_EXP
         pattern: '^((?!migrate-cms-to-cds|\/COMMIT_MSG).)*$'
-    nexus-iq-namespace: 'acumos-'
-    build-node: centos7-docker-4c-4g
+    java-version: openjdk11
+    nexus-iq-namespace: "acumos-"
     jobs:
-      # custom Acumos templates
+      # custom Acumos templates run docker login and maven
       - gerrit-maven-dl-verify
       - gerrit-maven-dl-merge
       - gerrit-maven-dl-stage
       # standard Global JJB templates
-      - '{project-name}-maven-javadoc-jobs'
+      - "{project-name}-maven-javadoc-jobs"
       - gerrit-maven-clm
     stream:
       - master:
           branch: master
-          java-version: openjdk11
-      - athena:
-          branch: athena
-          java-version: openjdk8
-      - boreas:
-          branch: boreas
-          java-version: openjdk8
+      - clio:
+          branch: clio
 
-- project:
-    name: common-dataservice-release
-    project: common-dataservice
-    project-name: common-dataservice
-    mvn-settings: common-dataservice-settings
-    branch: master
-    # maven release requires sigul which requires centos
-    # container release requires docker
-    build-node: centos7-docker-4c-4g
-    jobs:
-      # new self-release process
-      - '{project-name}-gerrit-release-jobs'
-
+# analyze source code
 - project:
     name: common-dataservice-sonar
-    project: common-dataservice
-    project-name: common-dataservice
-    mvn-settings: common-dataservice-settings
-    sonarcloud: true
-    sonarcloud-project-organization: '{sonarcloud_project_organization}'
-    sonarcloud-api-token: '{sonarcloud_api_token}'
-    sonarcloud-project-key: '{sonarcloud_project_organization}_{project-name}'
+    <<: *cds_common
     branch: master
-    build-node: centos7-docker-4c-4g
     java-version: openjdk11
+    sonarcloud: true
+    sonarcloud-project-organization: "{sonarcloud_project_organization}"
+    sonarcloud-api-token: "{sonarcloud_api_token}"
+    sonarcloud-project-key: "{sonarcloud_project_organization}_{project-name}"
     jobs:
       - gerrit-maven-sonar
-
-- project:
-    name: cds-migration-project
-    # jenkins job name prefix
-    project-name: cds-migration
-    # git repo
-    project: common-dataservice
-    mvn-settings: common-dataservice-settings
-    # subdirectory
-    mvn-params: '-f migrate-cms-to-cds -Dbuild.number=${{BUILD_NUMBER}}'
-    gerrit_trigger_file_paths:
-      - compare-type: REG_EXP
-        pattern: 'migrate-cms-to-cds/.*'
-    build-node: centos7-docker-4c-4g
-    java-version: openjdk8
-    jobs:
-      # custom Acumos templates
-      - gerrit-maven-dl-verify
-      - gerrit-maven-dl-merge
-      - gerrit-maven-dl-stage
-    stream:
-      - master:
-          branch: master
