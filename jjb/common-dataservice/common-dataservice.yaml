@@ -35,10 +35,10 @@
 - project:
     name: common-dataservice-build
     <<: *cds_common
-    mvn-params: -Dbuild.number=${{BUILD_NUMBER}}
+    mvn-params: -f cmn-data-svc -Dbuild.number=${{BUILD_NUMBER}}
     gerrit_trigger_file_paths:
       - compare-type: REG_EXP
-        pattern: '^((?!migrate-cms-to-cds|\/COMMIT_MSG).)*$'
+        pattern: 'cmn-data-svc/.*'
     java-version: openjdk11
     nexus-iq-namespace: acumos-
     jobs:
@@ -47,8 +47,21 @@
       - gerrit-maven-dl-merge
       - gerrit-maven-dl-stage
       # standard Global JJB templates
-      - '{project-name}-maven-javadoc-jobs'
       - gerrit-maven-clm
+    stream:
+      - master:
+          branch: master
+      - clio:
+          branch: clio
+
+# generate javadoc for client only
+- project:
+    name: common-dataservice-client-javadoc
+    <<: *cds_common
+    java-version: openjdk11
+    mvn-dir: cmn-data-svc/cmn-data-svc-client
+    jobs:
+      - '{project-name}-maven-javadoc-jobs'
     stream:
       - master:
           branch: master
@@ -61,6 +74,7 @@
     <<: *cds_common
     branch: master
     java-version: openjdk11
+    mvn-params: -f cmn-data-svc
     sonarcloud: true
     sonarcloud-project-organization: '{sonarcloud_project_organization}'
     sonarcloud-api-token: '{sonarcloud_api_token}'
