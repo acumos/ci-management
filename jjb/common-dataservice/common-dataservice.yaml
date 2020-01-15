@@ -74,7 +74,8 @@
     <<: *cds_common
     branch: master
     java-version: openjdk11
-    mvn-params: -f cmn-data-svc
+    # template goal install builds image which is not needed
+    mvn-params: -f cmn-data-svc -Ddocker.skip=true
     sonarcloud: true
     sonarcloud-project-organization: '{sonarcloud_project_organization}'
     sonarcloud-api-token: '{sonarcloud_api_token}'
