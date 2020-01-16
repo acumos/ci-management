@@ -28,6 +28,7 @@
     name: acumos-python-client-pypi
     <<: *apc_common
     parallel: false
+    tox-dir: acumos-package
     gerrit_trigger_file_paths:
       - compare-type: REG_EXP
         pattern: 'acumos-package/.*'
