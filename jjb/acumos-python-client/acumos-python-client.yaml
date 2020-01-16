@@ -5,8 +5,8 @@
     views:
       - project-view
 
-- acp_common: &acp_common
-    name: acp-common
+- apc_common: &apc_common
+    name: apc-common
     # git repo
     project: acumos-python-client
     # jenkins job name prefix
@@ -19,38 +19,42 @@
 # committer management
 - project:
     name: acumos-python-client-info
-    <<: *acp_common
+    <<: *apc_common
     jobs:
       - gerrit-info-yaml-verify
 
 # verify distribution and publish to test.pypi.org
 - project:
     name: acumos-python-client-pypi
-    <<: *acp_common
+    <<: *apc_common
     parallel: false
+    gerrit_trigger_file_paths:
+      - compare-type: REG_EXP
+        pattern: 'acumos-package/.*'
     jobs:
       - '{project-name}-gerrit-pypi-jobs'
     stream:
       - master:
           branch: master
-      - boreas:
-          branch: boreas
+      - clio:
+          branch: clio
 
 # promote distribution from test.pypi.org to pypi.org
 - project:
     name: acumos-python-client-release
-    <<: *acp_common
+    <<: *apc_common
     jobs:
       - '{project-name}-gerrit-pypi-release-jobs'
 
 # analyze unit test coverage
 - project:
     name: acumos-python-client-sonar
-    <<: *acp_common
+    <<: *apc_common
     branch: master
     # runs maven plugin to push report
     mvn-goals: clean install
     mvn-opts: -Xmx1024m -XX:MaxPermSize=256m
+    mvn-params: -f acumos-package
     sonarcloud: true
     sonarcloud-project-organization: '{sonarcloud_project_organization}'
     sonarcloud-api-token: '{sonarcloud_api_token}'
