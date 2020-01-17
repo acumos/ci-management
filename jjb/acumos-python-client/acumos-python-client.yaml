@@ -14,6 +14,7 @@
     # maven settings file has credentials
     mvn-settings: acumos-python-client-settings
     # release job requires centos
+    # ML libraries require avx
     build-node: centos7-avx-4c-4g
 
 # committer management
@@ -27,6 +28,10 @@
 - project:
     name: acumos-python-client-pypi
     <<: *apc_common
+    tox-dir: acumos-package
+    gerrit_trigger_file_paths:
+     - compare-type: REG_EXP
+       pattern: 'acumos-package/.*'
     parallel: false
     jobs:
       - '{project-name}-gerrit-pypi-jobs'
@@ -51,6 +56,7 @@
     # runs maven plugin to push report
     mvn-goals: clean install
     mvn-opts: -Xmx1024m -XX:MaxPermSize=256m
+    mvn-params: -f acumos-package
     sonarcloud: true
     sonarcloud-project-organization: '{sonarcloud_project_organization}'
     sonarcloud-api-token: '{sonarcloud_api_token}'
