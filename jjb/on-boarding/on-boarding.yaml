@@ -4,6 +4,7 @@
     project-name: on-boarding
     views:
       - project-view
+
 - project:
     name: on-boarding-project
     # jenkins job name prefix
@@ -28,21 +29,13 @@
       - master:
           branch: master
           java-version: openjdk11
-      - dev-challenge:
-          branch: dev-challenge
-          java-version: openjdk8
       - onboarding-r1280:
           branch: onboarding-r1280
           java-version: openjdk11
-      - athena:
-          branch: athena
-          java-version: openjdk8
-      - boreas:
-          branch: boreas
-          java-version: openjdk8
       - clio:
           branch: clio
           java-version: openjdk11
+
 - project:
     name: on-boarding-release
     project-name: on-boarding-app
@@ -52,6 +45,7 @@
     build-node: centos7-docker-4c-4g
     jobs:
       - '{project-name}-gerrit-release-jobs'
+
 - project:
     name: on-boarding-project-sonar
     # jenkins job name prefix
@@ -68,6 +62,7 @@
     java-version: openjdk11
     jobs:
       - gerrit-maven-sonar
+
 - project:
     name: on-boarding-project-base-r
     # jenkins job name prefix
@@ -92,9 +87,5 @@
     stream:
       - master:
           branch: master
-      - athena:
-          branch: athena
-      - boreas:
-          branch: boreas
       - clio:
           branch: clio
