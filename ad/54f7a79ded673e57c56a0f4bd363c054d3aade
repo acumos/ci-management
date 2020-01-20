@@ -1,0 +1,9 @@
+Verified+1: Acumos Jobbuilder <acumos-jobbuilder@jenkins.acumos.org>
+Code-Review+1: Philippe  Dooze <philippe.dooze@orange.com>
+Code-Review+1: Eric Z <ezavesky@research.att.com>
+Code-Review+2: Eric Ball <eball@linuxfoundation.org>
+Submitted-by: Eric Ball <eball@linuxfoundation.org>
+Submitted-at: Mon, 20 Jan 2020 20:23:27 +0000
+Reviewed-on: https://gerrit.acumos.org/r/c/ci-management/+/6294
+Project: ci-management
+Branch: refs/heads/master
