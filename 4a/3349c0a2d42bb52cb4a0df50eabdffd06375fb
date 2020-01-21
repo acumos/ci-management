@@ -1,0 +1,7 @@
+Verified+1: Acumos Jobbuilder <acumos-jobbuilder@jenkins.acumos.org>
+Code-Review+2: Tim Johnson <tijohnson@linuxfoundation.org>
+Submitted-by: Jessica Wagantall <jwagantall@linuxfoundation.org>
+Submitted-at: Tue, 21 Jan 2020 17:00:39 +0000
+Reviewed-on: https://gerrit.acumos.org/r/c/ci-management/+/6287
+Project: ci-management
+Branch: refs/heads/master
