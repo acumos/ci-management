@@ -47,6 +47,16 @@
       - '{project-name}-gerrit-release-jobs'
 
 - project:
+    name: on-boarding-base-r-release
+    project-name: on-boarding-base-r
+    project: on-boarding
+    mvn-settings: on-boarding-settings
+    branch: master
+    build-node: centos7-docker-4c-4g
+    jobs:
+      - '{project-name}-gerrit-release-jobs' 
+
+- project:
     name: on-boarding-project-sonar
     # jenkins job name prefix
     project-name: on-boarding
