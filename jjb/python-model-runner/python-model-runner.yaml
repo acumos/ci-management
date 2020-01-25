@@ -5,14 +5,23 @@
     views:
       - project-view
 
+- pmr_common: &pmr_common
+    # docker jobs require docker build node
+    # release job requires centos build node
+    name: pmr_common
+        # git repo
+    project: python-model-runner
+    build-node: centos7-docker-4c-4g
+    # mvn settings
+    mvn-settings: python-model-runner-settings
+
 - project:
+    <<: *pmr_common
     name: python-model-runner
     project-name: '{name}'
     project: '{name}'
-    mvn-settings: python-model-runner-settings
     build-timeout: 30
     # centos is required for releases
-    build-node: centos7-avx-4c-4g
     parallel: false
     jobs:
       - '{project-name}-gerrit-pypi-jobs'
@@ -23,15 +32,21 @@
           branch: athena
 
 - project:
-    name: python-model-runner-sonar
+    <<: *pmr_common
+    name: python-model-runner-release
     project-name: python-model-runner
-    project: python-model-runner
+    jobs:
+      - '{project-name}-gerrit-release-jobs'
+
+- project:
+    <<: *pmr_common
+    name: python-model-runner-sonar
+    project-name: '{name}'
+    project: '{name}'
     cron: 'H 11 * * *'
     branch: 'master'
-    build-node: centos7-avx-4c-4g
     mvn-goals: 'clean install'
     mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
-    mvn-settings: python-model-runner-settings
     sonarcloud: true
     sonarcloud-project-organization: '{sonarcloud_project_organization}'
     sonarcloud-api-token: '{sonarcloud_api_token}'
