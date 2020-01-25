@@ -1,0 +1,234 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "774204cb_c4870719",
+        "filename": "jjb/python-model-runner/python-model-runner.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2020-01-25T11:46:28Z",
+      "side": 1,
+      "message": "move comments next to build-node line",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 10,
+        "endChar": 2
+      },
+      "revId": "3f0462e2e67dad4720a71bc54417d330560e9340",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "5b9f43e6_e9660d70",
+        "filename": "jjb/python-model-runner/python-model-runner.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2020-01-25T11:46:28Z",
+      "side": 1,
+      "message": "pls fix indentation",
+      "range": {
+        "startLine": 12,
+        "startChar": 7,
+        "endLine": 12,
+        "endChar": 18
+      },
+      "revId": "3f0462e2e67dad4720a71bc54417d330560e9340",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "6a7c470c_fba34eed",
+        "filename": "jjb/python-model-runner/python-model-runner.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2020-01-25T11:46:28Z",
+      "side": 1,
+      "message": "add the Jenkins job prefix line the macro, and remove from all others:\n\n    project-name: python-model-runner",
+      "range": {
+        "startLine": 14,
+        "startChar": 0,
+        "endLine": 14,
+        "endChar": 3
+      },
+      "revId": "3f0462e2e67dad4720a71bc54417d330560e9340",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "d37ea2e0_596429a1",
+        "filename": "jjb/python-model-runner/python-model-runner.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2020-01-25T11:46:28Z",
+      "side": 1,
+      "message": "remove",
+      "range": {
+        "startLine": 21,
+        "startChar": 4,
+        "endLine": 21,
+        "endChar": 26
+      },
+      "revId": "3f0462e2e67dad4720a71bc54417d330560e9340",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "10cb2217_b471c8a2",
+        "filename": "jjb/python-model-runner/python-model-runner.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2020-01-25T11:46:28Z",
+      "side": 1,
+      "message": "redundant, remove",
+      "range": {
+        "startLine": 22,
+        "startChar": 0,
+        "endLine": 22,
+        "endChar": 4
+      },
+      "revId": "3f0462e2e67dad4720a71bc54417d330560e9340",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "5535901c_0638e65b",
+        "filename": "jjb/python-model-runner/python-model-runner.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2020-01-25T11:46:28Z",
+      "side": 1,
+      "message": "why is this timeout here? do you need a longer (or shorter) timeout than the default?",
+      "range": {
+        "startLine": 23,
+        "startChar": 0,
+        "endLine": 23,
+        "endChar": 4
+      },
+      "revId": "3f0462e2e67dad4720a71bc54417d330560e9340",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "d12262f6_9ef7efe1",
+        "filename": "jjb/python-model-runner/python-model-runner.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2020-01-25T11:46:28Z",
+      "side": 1,
+      "message": "should update to latest branch; don\u0027t need athena anymore",
+      "range": {
+        "startLine": 32,
+        "startChar": 0,
+        "endLine": 32,
+        "endChar": 4
+      },
+      "revId": "3f0462e2e67dad4720a71bc54417d330560e9340",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "fffeabe7_932836fe",
+        "filename": "jjb/python-model-runner/python-model-runner.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2020-01-25T11:46:28Z",
+      "side": 1,
+      "message": "remove",
+      "range": {
+        "startLine": 37,
+        "startChar": 4,
+        "endLine": 37,
+        "endChar": 37
+      },
+      "revId": "3f0462e2e67dad4720a71bc54417d330560e9340",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "00e606b2_98f6481b",
+        "filename": "jjb/python-model-runner/python-model-runner.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2020-01-25T11:46:28Z",
+      "side": 1,
+      "message": "remove",
+      "range": {
+        "startLine": 44,
+        "startChar": 3,
+        "endLine": 44,
+        "endChar": 26
+      },
+      "revId": "3f0462e2e67dad4720a71bc54417d330560e9340",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "189d7d07_971ef2b5",
+        "filename": "jjb/python-model-runner/python-model-runner.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2020-01-25T11:46:28Z",
+      "side": 1,
+      "message": "redundant, did you add this? pls remove",
+      "range": {
+        "startLine": 45,
+        "startChar": 0,
+        "endLine": 45,
+        "endChar": 4
+      },
+      "revId": "3f0462e2e67dad4720a71bc54417d330560e9340",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    }
+  ]
+}
