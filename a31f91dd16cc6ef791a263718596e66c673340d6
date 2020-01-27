@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "65314b4f_025af257",
+        "filename": "jjb/python-model-runner/python-model-runner.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2020-01-27T17:55:57Z",
+      "side": 1,
+      "message": "wait WAIT you dropped \"avx\".  That image has special libraries in it to support ML stuff, I think (but don\u0027t quote me) TensorFlow, and/or access to special CPU instructions, don\u0027t press me on the details.  You cannot simply switch images at will.  (I have done that and messed things up.)\n\nI highly recommend you put centos7-avx-4c-4g back into the common macro, and use this build node down in the release job definition ONLY.",
+      "range": {
+        "startLine": 15,
+        "startChar": 0,
+        "endLine": 15,
+        "endChar": 4
+      },
+      "revId": "a31f91dd16cc6ef791a263718596e66c673340d6",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    }
+  ]
+}
