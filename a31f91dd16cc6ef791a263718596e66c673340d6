@@ -22,6 +22,30 @@
       "revId": "a31f91dd16cc6ef791a263718596e66c673340d6",
       "serverId": "655300a2-7a56-4504-9153-881edd907bea",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "45447208_bc7a3f20",
+        "filename": "jjb/python-model-runner/python-model-runner.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 290
+      },
+      "writtenOn": "2020-01-27T18:04:28Z",
+      "side": 1,
+      "message": "yes that makes sense ..I accidentally removed the avx image.\n\nThe docker image did work however when I build it in sandbox  -- just in case there is some issue I am switching back ... https://jenkins.acumos.org/sandbox/job/python-model-runner-pypi-verify-master/1/console",
+      "parentUuid": "65314b4f_025af257",
+      "range": {
+        "startLine": 15,
+        "startChar": 0,
+        "endLine": 15,
+        "endChar": 4
+      },
+      "revId": "a31f91dd16cc6ef791a263718596e66c673340d6",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
     }
   ]
 }
