@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ac3e26e5_9bd3fe83",
+        "filename": "jjb/python-model-runner/python-model-runner.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2020-01-27T17:45:26Z",
+      "side": 1,
+      "message": "Not just sonar -- docker registry credentials to allow push etc.",
+      "range": {
+        "startLine": 15,
+        "startChar": 19,
+        "endLine": 15,
+        "endChar": 28
+      },
+      "revId": "3ed7656f48eee6f38834f613ef05481bde250a4b",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "5d2ba441_0a0ac01b",
+        "filename": "jjb/python-model-runner/python-model-runner.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2020-01-27T17:45:26Z",
+      "side": 1,
+      "message": "why is this comment here?",
+      "range": {
+        "startLine": 21,
+        "startChar": 0,
+        "endLine": 21,
+        "endChar": 2
+      },
+      "revId": "3ed7656f48eee6f38834f613ef05481bde250a4b",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    }
+  ]
+}
