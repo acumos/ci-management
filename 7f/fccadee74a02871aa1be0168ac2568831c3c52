@@ -1,0 +1,10 @@
+Verified+1: Acumos Jobbuilder <acumos-jobbuilder@jenkins.acumos.org>
+Code-Review+1: Ramanaiah Pirla <RP00490596@TechMahindra.com>
+Code-Review+1: Vaibhav Shirsat <VS00485966@TechMahindra.com>
+Code-Review+2: Anil Belur <abelur@linuxfoundation.org>
+Code-Review+2: Eric Ball <eball@linuxfoundation.org>
+Submitted-by: Eric Ball <eball@linuxfoundation.org>
+Submitted-at: Tue, 28 Jan 2020 15:44:27 +0000
+Reviewed-on: https://gerrit.acumos.org/r/c/ci-management/+/6365
+Project: ci-management
+Branch: refs/heads/master
