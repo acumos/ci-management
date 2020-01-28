@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4f3e6554_0fc144bd",
+        "filename": "jjb/python-model-runner/python-model-runner.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2020-01-28T11:15:57Z",
+      "side": 1,
+      "message": "centos AND docker is required to promote (i.e., release) a docker image",
+      "range": {
+        "startLine": 31,
+        "startChar": 6,
+        "endLine": 31,
+        "endChar": 12
+      },
+      "revId": "4dafa76834f1fd24b259d0f3b59e44eec7e705ed",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    }
+  ]
+}
