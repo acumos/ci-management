@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "875b74c4_2f64ed03",
+        "filename": "jjb/python-model-runner/python-model-runner.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2020-01-29T19:20:07Z",
+      "side": 1,
+      "message": "This should be:\n\n      - \u0027{project-name}-gerrit-pypi-release-jobs\u0027",
+      "range": {
+        "startLine": 33,
+        "startChar": 0,
+        "endLine": 33,
+        "endChar": 2
+      },
+      "revId": "5cdd54ca416903e8a87e1f09d928f8c695b25ebb",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    }
+  ]
+}
