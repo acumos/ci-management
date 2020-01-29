@@ -10,6 +10,8 @@
     # git repo
     project: python-model-runner
     project-name: python-model-runner
+    # release job requires centos
+    # ML libraries require avx
     build-node: centos7-avx-4c-4g
     # mvn settings
     mvn-settings: python-model-runner-settings
