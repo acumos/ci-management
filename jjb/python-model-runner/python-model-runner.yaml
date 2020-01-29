@@ -10,6 +10,7 @@
     # git repo
     project: python-model-runner
     project-name: python-model-runner
+    # centos is required for release
     build-node: centos7-avx-4c-4g
     # mvn settings
     mvn-settings: python-model-runner-settings
@@ -27,10 +28,8 @@
 - project:
     <<: *pmr_common
     name: python-model-runner-release
-    # centos and docker are required for release
-    build-node: centos7-docker-4c-4g
     jobs:
-      - '{project-name}-gerrit-release-jobs'
+      - '{project-name}-gerrit-pypi-release-jobs'
 
 - project:
     <<: *pmr_common
