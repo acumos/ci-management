@@ -30,7 +30,7 @@
     # centos and docker are required for release
     build-node: centos7-docker-4c-4g
     jobs:
-      - '{project-name}-gerrit-release-jobs'
+      - '{project-name}-gerrit-pypi-release-jobs'
 
 - project:
     <<: *pmr_common
