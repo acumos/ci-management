@@ -1,22 +1,21 @@
 ---
 - project:
-    name: platform-oam-logging-demo-project
+    name: platform-oam-logging-library-project
     # jenkins job name prefix
-    project-name: platform-oam-logging-demo
+    project-name: platform-oam-logging-library
     # git repo
     project: platform-oam
     project-settings: platform-oam-settings
     mvn-settings: platform-oam-settings
-    # POC code subdirectory
-    mvn-params: '-f logging-demo'
-    # POC code subdirectory
+    # code subdirectory
+    mvn-dir: logging-library
+    mvn-params: '-f logging-library'
     gerrit_trigger_file_paths:
       - compare-type: REG_EXP
-        pattern: 'logging-demo/.*'
+        pattern: 'logging-library/.*'
     jobs:
       - '{project-name}-maven-jobs'
-      # no javadoc because that fails on subdirectory
-      # - '{project-name}-maven-javadoc-jobs'
+      - '{project-name}-maven-javadoc-jobs'
     stream:
       - master:
           branch: master
