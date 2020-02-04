@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "defc098f_c3eb0c9f",
+        "filename": "jjb/platform-oam/platform-oam-logging.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 223
+      },
+      "writtenOn": "2020-02-04T21:07:14Z",
+      "side": 1,
+      "message": "The comment on the previous version says that this fails for subdirectories. Has that been fixed?",
+      "range": {
+        "startLine": 18,
+        "startChar": 6,
+        "endLine": 18,
+        "endChar": 43
+      },
+      "revId": "feaaa0ececf0aa6e7a52cfaee0ce35731ca10a3c",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    }
+  ]
+}
