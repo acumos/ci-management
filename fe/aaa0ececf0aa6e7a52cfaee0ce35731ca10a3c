@@ -1,0 +1,8 @@
+Verified+1: Acumos Jobbuilder <acumos-jobbuilder@jenkins.acumos.org>
+Code-Review+1: Vineet Tripathi <vt00325492@techmahindra.com>
+Code-Review+2: Eric Ball <eball@linuxfoundation.org>
+Submitted-by: Eric Ball <eball@linuxfoundation.org>
+Submitted-at: Tue, 04 Feb 2020 21:18:04 +0000
+Reviewed-on: https://gerrit.acumos.org/r/c/ci-management/+/6418
+Project: ci-management
+Branch: refs/heads/master
