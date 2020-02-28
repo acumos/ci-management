@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "415955dc_9635de4b",
+        "filename": "jjb/federation/federation.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2020-02-28T19:25:52Z",
+      "side": 1,
+      "message": "please move this (now common) setting up into the body, the branches no longer differ, then then the entry only has to appear once",
+      "range": {
+        "startLine": 31,
+        "startChar": 10,
+        "endLine": 31,
+        "endChar": 33
+      },
+      "revId": "16b30dc55542f3893a990643e41b0de4362aefc1",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    }
+  ]
+}
