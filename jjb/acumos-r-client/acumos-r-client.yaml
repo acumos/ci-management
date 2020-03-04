@@ -1,0 +1,61 @@
+---
+- project:
+    name: acumos-r-client-project-view
+    project-name: acumos-r-client
+    views:
+      - project-view
+
+- project:
+    name: acumos-r-client-project
+    # jenkins job name prefix
+    project-name: acumos-r-client
+    # git repo
+    project: acumos-r-client
+    mvn-settings: acumos-r-client-settings
+    # pass Jenkins build number
+    mvn-params: -Dbuild.number=${{BUILD_NUMBER}}
+    nexus-iq-namespace: 'acumos-'
+    # needs docker-enabled build node
+    build-node: centos7-docker-4c-4g
+    jobs:
+      - gerrit-maven-docker-verify
+      - gerrit-maven-docker-merge
+      - gerrit-maven-docker-stage
+      - '{project-name}-maven-javadoc-jobs'
+      - gerrit-maven-clm
+    stream:
+      - master:
+          branch: master
+          java-version: openjdk11
+      - clio:
+          branch: clio
+          java-version: openjdk11
+
+- project:
+    name: acumos-r-client-project-sonar
+    # jenkins job name prefix
+    project-name: acumos-r-client
+    # git repo
+    project: acumos-r-client
+    mvn-settings: acumos-r-client-settings
+    sonarcloud: true
+    sonarcloud-project-organization: '{sonarcloud_project_organization}'
+    sonarcloud-api-token: '{sonarcloud_api_token}'
+    sonarcloud-project-key: '{sonarcloud_project_organization}_{project-name}'
+    branch: master
+    build-node: centos7-docker-4c-4g
+    java-version: openjdk11
+    jobs:
+      - gerrit-maven-sonar
+
+- project:
+    name: acumos-r-client-generation-release
+    project: acumos-r-client
+    project-name: acumos-r-client
+    mvn-settings: acumos-r-client-settings
+    branch: master
+    # maven release uses sigul which requires centos
+    # container release uses docker
+    build-node: centos7-docker-2c-1g
+    jobs:
+      - '{project-name}-gerrit-release-jobs'
