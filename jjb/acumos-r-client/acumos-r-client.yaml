@@ -1,0 +1,39 @@
+---
+- project:
+    name: acumos-r-client-project-view
+    project-name: acumos-r-client
+    views:
+      - project-view
+
+- arc_common: &arc_common
+    name: arc-common
+    # git repo
+    project: acumos-r-client
+    # jenkins job name prefix
+    project-name: acumos-r-client
+    # maven settings file has credentials
+    mvn-settings: acumos-r-client-settings
+
+# committer management
+- project:
+    <<: *arc_common
+    name: acumos-r-client-info
+    jobs:
+      - gerrit-info-yaml-verify
+
+# verify submitted changes in Docker
+- project:
+    <<: *arc_common
+    name: acumos-r-client-docker
+    build-node: centos7-docker-2c-1g
+    # use trivial tag, no image is pushed
+    container-tag-method: latest
+    # use host network
+    docker-build-args: '--network=host'
+    # acumos prefix is required
+    docker-name: acumos/acumos-r-client
+    jobs:
+      - gerrit-docker-verify
+    stream:
+      - master:
+          branch: master
