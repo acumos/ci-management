@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0afd0f65_707c6c39",
+        "filename": "jjb/acumos-r-client/acumos-r-client.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2020-03-04T10:17:30Z",
+      "side": 1,
+      "message": "It\u0027s difficult to know, since there is zero source in the git and gerrit repositories, but I don\u0027t think this is a Java project so these jobs are inappropriate.",
+      "range": {
+        "startLine": 21,
+        "startChar": 6,
+        "endLine": 25,
+        "endChar": 24
+      },
+      "revId": "a77c7c571c4e585cbfc0a9121bc26ee2a138e176",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "0dd7b7ba_b487cbfe",
+        "filename": "jjb/acumos-r-client/acumos-r-client.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2020-03-04T10:17:30Z",
+      "side": 1,
+      "message": "Remove, Sonar does not support R",
+      "range": {
+        "startLine": 34,
+        "startChar": 1,
+        "endLine": 49,
+        "endChar": 26
+      },
+      "revId": "a77c7c571c4e585cbfc0a9121bc26ee2a138e176",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "92252dca_08fd1b61",
+        "filename": "jjb/acumos-r-client/acumos-r-client.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 61,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2020-03-04T10:17:30Z",
+      "side": 1,
+      "message": "Remove, the self-service release feature does not support R",
+      "range": {
+        "startLine": 51,
+        "startChar": 0,
+        "endLine": 61,
+        "endChar": 44
+      },
+      "revId": "a77c7c571c4e585cbfc0a9121bc26ee2a138e176",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    }
+  ]
+}
