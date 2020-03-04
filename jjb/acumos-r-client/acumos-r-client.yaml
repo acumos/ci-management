@@ -1,0 +1,30 @@
+---
+- project:
+    name: acumos-r-client-project-view
+    project-name: acumos-r-client
+    views:
+      - project-view
+
+- project:
+    name: acumos-r-client-project
+    # jenkins job name prefix
+    project-name: acumos-r-client
+    # git repo
+    project: acumos-r-client
+    mvn-settings: acumos-r-client-settings
+    # pass Jenkins build number
+    mvn-params: -Dbuild.number=${{BUILD_NUMBER}}
+    nexus-iq-namespace: 'acumos-'
+    # needs docker-enabled build node
+    build-node: centos7-docker-4c-4g
+    jobs:
+
+    stream:
+      - master:
+          branch: master
+          java-version: openjdk11
+      - clio:
+          branch: clio
+          java-version: openjdk11
+
+
