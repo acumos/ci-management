@@ -32,6 +32,10 @@
     docker-build-args: '--network=host'
     # acumos prefix is required
     docker-name: acumos/acumos-r-client
+    # R code subdir
+    gerrit_trigger_file_paths:
+      - compare-type: REG_EXP
+        pattern: 'acumos-package/.*'
     jobs:
       - gerrit-docker-verify
     stream:
