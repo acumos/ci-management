@@ -6,6 +6,14 @@
       - project-view
 
 - project:
+    name: federation-info
+    project: federation
+    project-name: federation
+    build-node: centos7-builder-2c-1g
+    jobs:
+      - gerrit-info-yaml-verify
+
+- project:
     name: federation-project
     # jenkins job name prefix
     project-name: federation
