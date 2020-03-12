@@ -1,0 +1,9 @@
+Verified+1: Acumos Jobbuilder <acumos-jobbuilder@jenkins.acumos.org>
+Code-Review+1: Manoop Talasila <talasila@research.att.com>
+Code-Review+1: Andrew Gauld <agauld@att.com>
+Code-Review+2: Eric Ball <eball@linuxfoundation.org>
+Submitted-by: Eric Ball <eball@linuxfoundation.org>
+Submitted-at: Thu, 12 Mar 2020 18:56:44 +0000
+Reviewed-on: https://gerrit.acumos.org/r/c/ci-management/+/7580
+Project: ci-management
+Branch: refs/heads/master
