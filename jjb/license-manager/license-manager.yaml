@@ -5,6 +5,13 @@
     views:
       - project-view
 
+- project:
+    name: license-manager-info
+    project: license-manager
+    project-name: license-manager
+    jobs:
+      - gerrit-info-yaml-verify
+
 - lmcl_common: &lmcl_common
     # values apply to all projects here
     name: lmcl_common
