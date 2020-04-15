@@ -48,18 +48,33 @@
     # subdir
     docker-name: acumos/lum-server
     docker-root: lum-server
-    container-tag-method: yaml-file
+    docker-get-container-tag-script: ../../jjb/license-usage-manager/shell/tag-from-pom.sh
+    docker-build-args: '--build-arg SVRVERSION=$DOCKER_IMAGE_TAG'
     # limit match to subdir
     gerrit_trigger_file_paths:
       - compare-type: REG_EXP
         pattern: 'lum-server/.*'
     jobs:
-      - '{project-name}-gerrit-docker-jobs'
-    stream:
-      - master:
+      - '{project-name}-gerrit-docker-jobs':
+          stream:
+            - master:
+                branch: master
+            - clio:
+                branch: clio
+      - gerrit-tox-verify:
+          stream: all
+          branch: '*'
+          tox-dir: lum-server
+      - gerrit-tox-sonar:
+          stream: master
           branch: master
-      - clio:
-          branch: clio
+          sonar-mvn-goal: '-f lum-server sonar:sonar'
+          tox-dir: lum-server
+          cron: '@daily'
+          sonarcloud: true
+          sonarcloud-project-organization: '{sonarcloud_project_organization}'
+          sonarcloud-api-token: '{sonarcloud_api_token}'
+          sonarcloud-project-key: '{sonarcloud_project_organization}_{project-name}'
 
 - project:
     <<: *lum_common
@@ -68,7 +83,8 @@
     project-name: '{name}'
     docker-name: acumos/lum-db
     docker-root: lum-db
-    container-tag-method: yaml-file
+    docker-get-container-tag-script: ../../jjb/license-usage-manager/shell/tag-from-pom.sh
+    docker-build-args: '--build-arg SVRVERSION=$DOCKER_IMAGE_TAG'
     # limit match to subdir
     gerrit_trigger_file_paths:
       - compare-type: REG_EXP
