@@ -44,22 +44,50 @@
     <<: *lum_common
     name: license-usage-manager-server
     # jenkins job name prefix
-    project-name: '{name}'
+    project-name: license-usage-manager-server
     # subdir
     docker-name: acumos/lum-server
     docker-root: lum-server
-    container-tag-method: yaml-file
+    container-tag-yaml-dir: lum-java-rest-client
+    docker-get-container-tag-script: ../../jjb/license-usage-manager/shell/tag-from-pom.sh
+    docker-build-args: '--build-arg SVRVERSION=$DOCKER_IMAGE_TAG'
     # limit match to subdir
     gerrit_trigger_file_paths:
       - compare-type: REG_EXP
         pattern: 'lum-server/.*'
     jobs:
-      - '{project-name}-gerrit-docker-jobs'
-    stream:
-      - master:
+      - '{project-name}-gerrit-docker-jobs':
+          stream:
+            - master:
+                branch: master
+            - clio:
+                branch: clio
+      - gerrit-tox-verify:
+          stream: all
+          branch: '*'
+          tox-dir: lum-server
+      - gerrit-tox-sonarqube:
+          stream: master
           branch: master
-      - clio:
-          branch: clio
+          build-node: ubuntu1804-docker-4c-4g
+          pre-build-script: |
+            sudo apt install -y nodejs
+            node -v
+          sonar-project-file: ''
+          sonar-properties: |
+            sonar.host.url=https://sonarcloud.io/
+            sonar.login={sonarcloud_api_token}
+            sonar.projectKey={sonarcloud_project_organization}_{project-name}
+            sonar.projectName={project-name}
+            sonar.organization={sonarcloud_project_organization}
+            sonar.build.sourceEncoding=UTF-8
+            sonar.projectBaseDir=lum-server
+            sonar.sources=.
+            sonar.exclusions=coverage/**,setup.py
+            sonar.javascript.lcov.reportPaths=coverage/lcov.info
+            sonar.language=js
+          tox-dir: lum-server
+          cron: '@daily'
 
 - project:
     <<: *lum_common
@@ -68,7 +96,9 @@
     project-name: '{name}'
     docker-name: acumos/lum-db
     docker-root: lum-db
-    container-tag-method: yaml-file
+    container-tag-yaml-dir: lum-java-rest-client
+    docker-get-container-tag-script: ../../jjb/license-usage-manager/shell/tag-from-pom.sh
+    docker-build-args: '--build-arg SVRVERSION=$DOCKER_IMAGE_TAG'
     # limit match to subdir
     gerrit_trigger_file_paths:
       - compare-type: REG_EXP
