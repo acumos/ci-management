@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "472817e7_10cb9a73",
+        "filename": "jjb/license-usage-manager/license-usage-manager.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2020-04-16T13:16:26Z",
+      "side": 1,
+      "message": "Andrew, if you\u0027re gonna add a Sonar analysis job, you might consider using the new gerrit-tox-sonarqube job so you can avoid adding sonar properties to your pom.xml file.",
+      "range": {
+        "startLine": 68,
+        "startChar": 0,
+        "endLine": 68,
+        "endChar": 1
+      },
+      "revId": "35aa57b749d32f361704f7262a0985ae6899adbd",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "8f7d0601_3469eb7a",
+        "filename": "jjb/license-usage-manager/shell/tag-from-pom.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2020-04-16T13:16:26Z",
+      "side": 1,
+      "message": "why is lum-server/ hardcoded here?  This really seems to limit its use.  The global-jjb script get-container-tag looks for docker_root and another alternate directory name in environment variables, then works in the appropriate directory; you might consider emulating that behavior.",
+      "range": {
+        "startLine": 7,
+        "startChar": 94,
+        "endLine": 7,
+        "endChar": 104
+      },
+      "revId": "35aa57b749d32f361704f7262a0985ae6899adbd",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    }
+  ]
+}
