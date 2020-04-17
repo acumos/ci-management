@@ -1,0 +1,130 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "63ebca81_249fe90d",
+        "filename": "jjb/license-usage-manager/license-usage-manager.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2020-04-17T16:47:32Z",
+      "side": 1,
+      "message": "if you like avoiding repeats, you might consider writing this as:\n\n    project-name: \u0027{name}\u0027",
+      "range": {
+        "startLine": 47,
+        "startChar": 18,
+        "endLine": 47,
+        "endChar": 46
+      },
+      "revId": "56a4823deb30ab81ad2b7e341fbd00bf7d872277",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "329ee0e8_3b0b3550",
+        "filename": "jjb/license-usage-manager/license-usage-manager.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 71,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2020-04-17T16:47:32Z",
+      "side": 1,
+      "message": "Remove, you don\u0027t specify stream or branch on a sonar job; it only uses master",
+      "range": {
+        "startLine": 70,
+        "startChar": 10,
+        "endLine": 71,
+        "endChar": 24
+      },
+      "revId": "56a4823deb30ab81ad2b7e341fbd00bf7d872277",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "d98abf9b_6f03b5f3",
+        "filename": "jjb/license-usage-manager/license-usage-manager.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2020-04-17T16:47:32Z",
+      "side": 1,
+      "message": "I love the in-line script here!",
+      "range": {
+        "startLine": 74,
+        "startChar": 0,
+        "endLine": 74,
+        "endChar": 1
+      },
+      "revId": "56a4823deb30ab81ad2b7e341fbd00bf7d872277",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "29ef1b26_f8576408",
+        "filename": "jjb/license-usage-manager/license-usage-manager.yaml",
+        "patchSetId": 4
+      },
+      "lineNbr": 90,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2020-04-17T16:47:32Z",
+      "side": 1,
+      "message": "do you really REALLY want sonar running daily?  Most opt for weekly.  Even that can be excessive.",
+      "range": {
+        "startLine": 90,
+        "startChar": 0,
+        "endLine": 90,
+        "endChar": 1
+      },
+      "revId": "56a4823deb30ab81ad2b7e341fbd00bf7d872277",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "dd63eadd_dc77640f",
+        "filename": "jjb/license-usage-manager/shell/tag-from-pom.sh",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2020-04-17T16:47:32Z",
+      "side": 1,
+      "message": "You don\u0027t have to bury this in a shell subdirectory, why bother, just leave it in jjb/license-usage-manager.  But of course it\u0027s up to you.  You might like spam/spam/sausage/and/spam/shell better :)",
+      "revId": "56a4823deb30ab81ad2b7e341fbd00bf7d872277",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "56573d96_018e5076",
+        "filename": "jjb/license-usage-manager/shell/tag-from-pom.sh",
+        "patchSetId": 4
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2020-04-17T16:47:32Z",
+      "side": 1,
+      "message": "May I please ask for a comment here at the top, explaining the script prereqs, the script purpose, the side effects etc.?",
+      "revId": "56a4823deb30ab81ad2b7e341fbd00bf7d872277",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    }
+  ]
+}
