@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "39493c29_649e17fe",
+        "filename": "jjb/license-usage-manager/tag-from-pom.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2020-04-20T14:36:33Z",
+      "side": 1,
+      "message": "hear, hear",
+      "range": {
+        "startLine": 12,
+        "startChar": 14,
+        "endLine": 12,
+        "endChar": 18
+      },
+      "revId": "bc62e44c22ce2bc8705764a7f7cad421ad4c0d4f",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    }
+  ]
+}
