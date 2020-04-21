@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "43271552_b247c80a",
+        "filename": "jjb/license-usage-manager/license-usage-manager.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 278
+      },
+      "writtenOn": "2020-04-21T21:25:27Z",
+      "side": 1,
+      "message": "there is nothing else in that directory - just pom.xml",
+      "parentUuid": "857a5339_379a1de8",
+      "range": {
+        "startLine": 54,
+        "startChar": 21,
+        "endLine": 54,
+        "endChar": 27
+      },
+      "revId": "1e8223fc469cd804149bc349d229fa6ab6845104",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "8bccd96e_c70103b6",
         "filename": "jjb/license-usage-manager/license-usage-manager.yaml",
         "patchSetId": 1
@@ -36,6 +60,30 @@
       "writtenOn": "2020-04-21T21:20:03Z",
       "side": 1,
       "message": "same comment here",
+      "range": {
+        "startLine": 99,
+        "startChar": 21,
+        "endLine": 99,
+        "endChar": 27
+      },
+      "revId": "1e8223fc469cd804149bc349d229fa6ab6845104",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "298dc634_16583f17",
+        "filename": "jjb/license-usage-manager/license-usage-manager.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 99,
+      "author": {
+        "id": 278
+      },
+      "writtenOn": "2020-04-21T21:25:27Z",
+      "side": 1,
+      "message": "there is nothing else in that directory - just pom.xml",
+      "parentUuid": "8bccd96e_c70103b6",
       "range": {
         "startLine": 99,
         "startChar": 21,
