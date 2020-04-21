@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "857a5339_379a1de8",
+        "filename": "jjb/license-usage-manager/license-usage-manager.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2020-04-21T21:20:03Z",
+      "side": 1,
+      "message": "so, not just the subdir?",
+      "range": {
+        "startLine": 54,
+        "startChar": 21,
+        "endLine": 54,
+        "endChar": 27
+      },
+      "revId": "1e8223fc469cd804149bc349d229fa6ab6845104",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "8bccd96e_c70103b6",
+        "filename": "jjb/license-usage-manager/license-usage-manager.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 99,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2020-04-21T21:20:03Z",
+      "side": 1,
+      "message": "same comment here",
+      "range": {
+        "startLine": 99,
+        "startChar": 21,
+        "endLine": 99,
+        "endChar": 27
+      },
+      "revId": "1e8223fc469cd804149bc349d229fa6ab6845104",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    }
+  ]
+}
