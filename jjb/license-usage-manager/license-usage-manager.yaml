@@ -54,7 +54,7 @@
     # limit match to subdir
     gerrit_trigger_file_paths:
       - compare-type: REG_EXP
-        pattern: 'lum-server/.*'
+        pattern: 'lum-server/.*|lum-java-rest-client/pom.xml'
     jobs:
       - '{project-name}-gerrit-docker-jobs':
           stream:
@@ -99,7 +99,7 @@
     # limit match to subdir
     gerrit_trigger_file_paths:
       - compare-type: REG_EXP
-        pattern: 'lum-db/.*'
+        pattern: 'lum-db/.*|lum-java-rest-client/pom.xml'
     jobs:
       - '{project-name}-gerrit-docker-jobs'
     stream:
