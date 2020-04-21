@@ -1,0 +1,8 @@
+Code-Review+1: Chris Lott <cl778h@att.com>
+Code-Review+2: Eric Ball <eball@linuxfoundation.org>
+Verified+1: Acumos Jobbuilder <acumos-jobbuilder@jenkins.acumos.org>
+Submitted-by: Eric Ball <eball@linuxfoundation.org>
+Submitted-at: Tue, 21 Apr 2020 01:15:53 +0000
+Reviewed-on: https://gerrit.acumos.org/r/c/ci-management/+/7780
+Project: ci-management
+Branch: refs/heads/master
