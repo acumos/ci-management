@@ -6,6 +6,14 @@
       - project-view
 
 - project:
+    name: portal-marketplace-info
+    project: portal-marketplace
+    project-name: portal-marketplace
+    build-node: centos7-builder-2c-1g
+    jobs:
+      - gerrit-info-yaml-verify
+
+- project:
     name: portal-marketplace-project
     # jenkins job name prefix
     project-name: portal-marketplace

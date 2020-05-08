@@ -16,6 +16,13 @@
     mvn-settings: python-model-runner-settings
 
 - project:
+    name: python-model-runner-info
+    <<: *pmr_common
+    build-node: centos7-builder-2c-1g
+    jobs:
+      - gerrit-info-yaml-verify
+
+- project:
     <<: *pmr_common
     name: python-model-runner
     parallel: false

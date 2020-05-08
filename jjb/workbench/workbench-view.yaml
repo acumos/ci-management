@@ -4,3 +4,11 @@
     project-name: workbench
     views:
       - project-view
+
+- project:
+    name: workbench-info
+    project: workbench
+    project-name: workbench
+    build-node: centos7-builder-2c-1g
+    jobs:
+      - gerrit-info-yaml-verify

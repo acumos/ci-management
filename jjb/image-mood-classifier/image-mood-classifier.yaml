@@ -6,6 +6,14 @@
       - project-view
 
 - project:
+    name: image-mood-classifier-info
+    project: image-mood-classifier
+    project-name: image-mood-classifier
+    build-node: centos7-builder-2c-1g
+    jobs:
+      - gerrit-info-yaml-verify
+
+- project:
     name: image-mood-classifier-project
     project-name: image-mood-classifier
     project: image-mood-classifier

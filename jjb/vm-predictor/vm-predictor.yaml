@@ -6,6 +6,14 @@
       - project-view
 
 - project:
+    name: vm-predictor-info
+    project: vm-predictor
+    project-name: vm-predictor
+    build-node: centos7-builder-2c-1g
+    jobs:
+      - gerrit-info-yaml-verify
+
+- project:
     name: vm-predictor-project
     project-name: vm-predictor
     project: vm-predictor

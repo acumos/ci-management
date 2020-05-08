@@ -6,6 +6,14 @@
       - project-view
 
 - project:
+    name: image-classification-info
+    project: image-classification
+    project-name: image-classification
+    build-node: centos7-builder-2c-1g
+    jobs:
+      - gerrit-info-yaml-verify
+
+- project:
     name: image-classification-project
     project-name: image-classification
     project: image-classification

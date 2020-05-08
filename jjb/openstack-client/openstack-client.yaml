@@ -7,6 +7,14 @@
       - project-view
 
 - project:
+    name: openstack-client-info
+    project: openstack-client
+    project-name: openstack-client
+    build-node: centos7-builder-2c-1g
+    jobs:
+      - gerrit-info-yaml-verify
+
+- project:
     name: openstack-client-project
     project-name: openstack-client
     project: openstack-client

@@ -4,3 +4,11 @@
     project-name: model-runner
     views:
       - project-view
+
+- project:
+    name: model-runner-info
+    project: model-runner
+    project-name: model-runner
+    build-node: centos7-builder-2c-1g
+    jobs:
+      - gerrit-info-yaml-verify

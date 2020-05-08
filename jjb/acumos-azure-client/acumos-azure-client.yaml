@@ -6,6 +6,14 @@
       - project-view
 
 - project:
+    name: acumos-azure-client-info
+    project: acumos-azure-client
+    project-name: acumos-azure-client
+    build-node: centos7-builder-2c-1g
+    jobs:
+      - gerrit-info-yaml-verify
+
+- project:
     name: acumos-azure-client-project
     # jenkins job name prefix
     project-name: acumos-azure-client

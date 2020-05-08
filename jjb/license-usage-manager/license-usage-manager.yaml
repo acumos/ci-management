@@ -5,6 +5,14 @@
     views:
       - project-view
 
+- project:
+    name: license-usage-manager-info
+    project: license-usage-manager
+    project-name: license-usage-manager
+    build-node: centos7-builder-2c-1g
+    jobs:
+      - gerrit-info-yaml-verify
+
 - lum_common: &lum_common
     # values apply to all projects here
     name: lum-common

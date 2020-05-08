@@ -6,6 +6,14 @@
       - project-view
 
 - project:
+    name: platform-oam-info
+    project: platform-oam
+    project-name: platform-oam
+    build-node: centos7-builder-2c-1g
+    jobs:
+      - gerrit-info-yaml-verify
+
+- project:
     name: platform-oam-release
     project: platform-oam
     project-name: platform-oam

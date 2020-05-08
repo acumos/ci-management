@@ -4,3 +4,11 @@
     project-name: model-builder
     views:
       - project-view
+
+- project:
+    name: model-builder-info
+    project: model-builder
+    project-name: model-builder
+    build-node: centos7-builder-2c-1g
+    jobs:
+      - gerrit-info-yaml-verify

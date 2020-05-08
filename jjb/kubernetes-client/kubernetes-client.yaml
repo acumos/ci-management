@@ -6,6 +6,14 @@
       - project-view
 
 - project:
+    name: kubernetes-client-info
+    project: kubernetes-client
+    project-name: kubernetes-client
+    build-node: centos7-builder-2c-1g
+    jobs:
+      - gerrit-info-yaml-verify
+
+- project:
     name: k8s-client-project
     # jenkins job name prefix
     project-name: kubernetes-client
