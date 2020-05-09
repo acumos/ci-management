@@ -1,5 +1,13 @@
 ---
 - project:
+    name: model-deployments-info
+    project: model-deployments/predictor-management
+    project-name: model-deployments-predictor-management
+    build-node: centos7-builder-2c-1g
+    jobs:
+      - gerrit-info-yaml-verify
+
+- project:
     name: model-deployments-predictor-management
     # jenkins job name prefix
     project-name: '{name}'
