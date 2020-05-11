@@ -45,6 +45,30 @@
       "revId": "5af8a792595bb4605d6e0aa18797cc8c94873104",
       "serverId": "655300a2-7a56-4504-9153-881edd907bea",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "d7540b47_94c8cdcd",
+        "filename": "jjb/model-deployments/model-deployments-predictor-management.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2020-05-11T16:58:14Z",
+      "side": 1,
+      "message": "Eric, that project entry looks right to me.",
+      "parentUuid": "9e6c93c0_348ae570",
+      "range": {
+        "startLine": 4,
+        "startChar": 13,
+        "endLine": 4,
+        "endChar": 51
+      },
+      "revId": "5af8a792595bb4605d6e0aa18797cc8c94873104",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
     }
   ]
 }
