@@ -2,7 +2,7 @@
 - project:
     name: model-deployments-deployment-client-info
     project: model-deployments/deployment-client
-    project-name: model-deployments/deployment-client
+    project-name: model-deployments-deployment-client
     build-node: centos7-builder-2c-1g
     jobs:
       - gerrit-info-yaml-verify
