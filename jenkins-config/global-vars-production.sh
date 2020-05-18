@@ -8,6 +8,7 @@ NEXUSPROXY=https://nexus.acumos.org
 REGISTRY_PORTS=10001 10002 10003 10004
 RELEASE_EMAIL=collab-it+acumos-release@linuxfoundation.org
 RELEASE_USERNAME=acumos-release
+S3_BUCKET=
 SIGUL_BRIDGE_IP=10.30.184.3
 SIGUL_KEY=acumos-release-2018
 SILO=production
