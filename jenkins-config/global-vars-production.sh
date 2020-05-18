@@ -12,3 +12,4 @@ SIGUL_BRIDGE_IP=10.30.184.3
 SIGUL_KEY=acumos-release-2018
 SILO=production
 SONAR_URL=https://sonar.acumos.org
+S3_BUCKET=
