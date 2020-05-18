@@ -38,3 +38,5 @@
           branch: boreas
       - clio:
           branch: clio
+      - demeter:
+          branch: demeter
