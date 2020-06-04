@@ -33,16 +33,16 @@
       # standard Global JJB templates
       - '{project-name}-maven-javadoc-jobs'
       - gerrit-maven-clm
+    java-version: openjdk11
     stream:
       - master:
           branch: master
-          java-version: openjdk11
       - onboarding-r1280:
           branch: onboarding-r1280
-          java-version: openjdk11
       - clio:
           branch: clio
-          java-version: openjdk11
+      - demeter:
+          branch: demeter
 
 - project:
     name: on-boarding-release
@@ -97,3 +97,5 @@
           branch: master
       - clio:
           branch: clio
+      - demeter:
+          branch: demeter
