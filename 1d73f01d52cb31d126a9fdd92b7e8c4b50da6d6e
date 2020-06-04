@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "e441bba3_35544d64",
+        "filename": "jjb/on-boarding/on-boarding.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2020-06-04T13:21:40Z",
+      "side": 1,
+      "message": "Since the java-version is now the same for all 4 branches here, please move the java-version key-value pair to the body of this project and remove it from the 4 stream/branch entries.",
+      "range": {
+        "startLine": 39,
+        "startChar": 10,
+        "endLine": 39,
+        "endChar": 33
+      },
+      "revId": "1d73f01d52cb31d126a9fdd92b7e8c4b50da6d6e",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    }
+  ]
+}
