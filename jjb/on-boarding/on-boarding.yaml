@@ -43,6 +43,9 @@
       - clio:
           branch: clio
           java-version: openjdk11
+      - demeter:
+          branch: demeter
+          java-version: openjdk11
 
 - project:
     name: on-boarding-release
@@ -97,3 +100,5 @@
           branch: master
       - clio:
           branch: clio
+      - demeter:
+          branch: demeter
