@@ -1,13 +1,6 @@
 [all]
 ignore = .**
 
-[all.Documentation]
-bears = WriteGoodLintBear
-files = *.md
-allow_so_beginning = False
-allow_there_is = False
-allow_cliche_phrases = False
-
 [all.GitCommit]
 bears = GitCommitBear
 ignore_length_regex = Signed-off-by,
