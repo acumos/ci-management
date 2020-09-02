@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6f9a0907_77892dd9",
+        "filename": ".pre-commit-config.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 223
+      },
+      "writtenOn": "2020-09-02T16:52:06Z",
+      "side": 1,
+      "message": "Black, flake8, and pydocstyle are all python-specific. I don\u0027t see any need for them here.",
+      "range": {
+        "startLine": 29,
+        "startChar": 2,
+        "endLine": 50,
+        "endChar": 22
+      },
+      "revId": "0e0074f4030cb6fb5285c90ce68eff8b2d0a27d0",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    }
+  ]
+}

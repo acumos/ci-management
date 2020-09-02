@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "64e567fd_b0700332",
+        "filename": ".coafile",
+        "patchSetId": 1
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 223
+      },
+      "writtenOn": "2020-09-02T16:52:06Z",
+      "side": 0,
+      "message": "Why are we removing the ignore all dotfiles?",
+      "range": {
+        "startLine": 1,
+        "startChar": 0,
+        "endLine": 2,
+        "endChar": 12
+      },
+      "revId": "e83e96d4c1f1714eaa92f1e4f7320f76e2029e5a",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    }
+  ]
+}
