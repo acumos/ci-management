@@ -21,7 +21,9 @@ import fnmatch
 import os
 import re
 import sys
+import logging
 
+log = logging.getLogger(__name__)
 
 def get_robot_systems(filename):
     """Scan for robot vms.

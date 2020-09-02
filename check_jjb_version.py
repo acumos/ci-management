@@ -15,7 +15,9 @@ __author__ = "Anil Belur"
 import os
 import re
 import sys
+import logging
 
+log = logging.getLogger(__name__)
 
 def check_jjb_version(tox_file, releng_jobs_file):
     """Check that JJB version matches in job cfg and tox.ini."""

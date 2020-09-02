@@ -18,7 +18,9 @@ __author__ = "Anil Belur"
 import os
 import re
 import sys
+import logging
 
+log = logging.getLogger(__name__)
 
 def check_prefix(filename):
     """Check if a prefix was checked into this repo."""
