@@ -1,0 +1,96 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fe713560_1b8194f0",
+        "filename": "check_jjb_version.py",
+        "patchSetId": 4
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 373
+      },
+      "writtenOn": "2020-09-03T12:20:33Z",
+      "side": 1,
+      "message": "Avoid print, use log.info instead.",
+      "range": {
+        "startLine": 34,
+        "startChar": 0,
+        "endLine": 35,
+        "endChar": 3
+      },
+      "revId": "d62b3607de0adecd5b368806f2d3237f325bbe72",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "b0ae189b_5934db64",
+        "filename": "check_jjb_version.py",
+        "patchSetId": 4
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 373
+      },
+      "writtenOn": "2020-09-03T12:20:33Z",
+      "side": 1,
+      "message": "same",
+      "range": {
+        "startLine": 38,
+        "startChar": 0,
+        "endLine": 38,
+        "endChar": 3
+      },
+      "revId": "d62b3607de0adecd5b368806f2d3237f325bbe72",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "a62ffe4a_e23118da",
+        "filename": "check_prefix.py",
+        "patchSetId": 4
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 373
+      },
+      "writtenOn": "2020-09-03T12:20:33Z",
+      "side": 1,
+      "message": "avoid print, use log.info",
+      "range": {
+        "startLine": 29,
+        "startChar": 0,
+        "endLine": 29,
+        "endChar": 1
+      },
+      "revId": "d62b3607de0adecd5b368806f2d3237f325bbe72",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "510c7113_33b46cde",
+        "filename": "check_robot.py",
+        "patchSetId": 4
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 373
+      },
+      "writtenOn": "2020-09-03T12:20:33Z",
+      "side": 1,
+      "message": "avoid print, use log.info",
+      "range": {
+        "startLine": 48,
+        "startChar": 0,
+        "endLine": 50,
+        "endChar": 3
+      },
+      "revId": "d62b3607de0adecd5b368806f2d3237f325bbe72",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    }
+  ]
+}
