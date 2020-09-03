@@ -1,52 +1,52 @@
 ---
-project: 'ci-management'
-project_creation_date: '2017-12-08'
-project_category: ''
-lifecycle_state: 'Incubation'
+project: "ci-management"
+project_creation_date: "2017-12-08"
+project_category: ""
+lifecycle_state: "Incubation"
 project_lead: &acumos_ci-management_ptl
-    name: 'Andrew Grimberg'
-    email: 'agrimberg@linuxfoundation.org'
-    id: 'tykeal'
-    company: 'The Linux Foundation'
-    timezone: 'America/Los_Angeles'
-primary_contact: '*acumos_ci-management_ptl'
+  name: "Andrew Grimberg"
+  email: "agrimberg@linuxfoundation.org"
+  id: "tykeal"
+  company: "The Linux Foundation"
+  timezone: "America/Los_Angeles"
+primary_contact: "*acumos_ci-management_ptl"
 issue_tracking:
-    type: 'jira'
-    url: 'https://jira.acumos.org/projects/ACUMOS'
-    key: 'ACUMOS'
+  type: "jira"
+  url: "https://jira.acumos.org/projects/ACUMOS"
+  key: "ACUMOS"
 mailing_list:
-    type: 'groups.io'
-    url: 'lists.acumos.org'
-    tag: '<[sub-project_name]>'
+  type: "groups.io"
+  url: "lists.acumos.org"
+  tag: "<[sub-project_name]>"
 realtime_discussion:
-    type: 'irc'
-    server: 'freenode.net'
-    channel: '#lf-releng'
+  type: "irc"
+  server: "freenode.net"
+  channel: "#lf-releng"
 meetings:
-    - type: 'zoom'
-      agenda: ''
-      url: ''
-      server: 'n/a'
-      channel: 'n/a'
-      repeats: 'n/a'
-      time: 'n/a'
+  - type: "zoom"
+    agenda: ""
+    url: ""
+    server: "n/a"
+    channel: "n/a"
+    repeats: "n/a"
+    time: "n/a"
 repositories:
-    - 'ci-management'
+  - "ci-management"
 committers:
-    - <<: *acumos_ci-management_ptl
-    - name: 'Vanessa Valderrama'
-      email: 'vvalderrama@linuxfoundation.org'
-      company: 'The Linux Foundation'
-      id: 'valderrv'
-      timezone: 'America/Chicago'
-    - name: 'Jeremy Phelps'
-      email: 'jphelps@linuxfoundation.org'
-      company: 'The Linux Foundation'
-      id: 'jphelps'
-      timezone: 'America/Chicago'
+  - <<: *acumos_ci-management_ptl
+  - name: "Vanessa Valderrama"
+    email: "vvalderrama@linuxfoundation.org"
+    company: "The Linux Foundation"
+    id: "valderrv"
+    timezone: "America/Chicago"
+  - name: "Jeremy Phelps"
+    email: "jphelps@linuxfoundation.org"
+    company: "The Linux Foundation"
+    id: "jphelps"
+    timezone: "America/Chicago"
 tsc:
-    approval: 'https://wiki.acumos.org/display/TSC'
-    changes:
-        - type: ''
-          name: ''
-          link: ''
+  approval: "https://wiki.acumos.org/display/TSC"
+  changes:
+    - type: ""
+      name: ""
+      link: ""

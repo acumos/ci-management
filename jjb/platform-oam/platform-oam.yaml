@@ -23,4 +23,4 @@
     # container release uses docker
     build-node: centos7-docker-2c-1g
     jobs:
-      - '{project-name}-gerrit-release-jobs'
+      - "{project-name}-gerrit-release-jobs"

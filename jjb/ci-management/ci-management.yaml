@@ -11,10 +11,10 @@
     build-timeout: 30
 
     jobs:
-      - '{project-name}-ci-jobs'
+      - "{project-name}-ci-jobs"
       - gerrit-tox-verify
 
     project: ci-management
     project-name: ci-management
     build-node: centos7-builder-2c-1g
-    jjb-version: 2.2.1
+    jjb-version: 3.5.0

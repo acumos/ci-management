@@ -13,8 +13,7 @@
     jobs:
       - gerrit-info-yaml-verify
 
-- lum_common: &lum_common
-    # values apply to all projects here
+- lum_common: &lum_common # values apply to all projects here
     name: lum-common
     # git repo
     project: license-usage-manager
@@ -28,20 +27,20 @@
     <<: *lum_common
     name: license-usage-manager-client
     # jenkins job name prefix
-    project-name: '{name}'
+    project-name: "{name}"
     # defaults.yaml value is NOT used reliably
     java-version: openjdk11
     # pass Jenkins build number and work in subdir
-    mvn-params: '-Dbuild.number=${{BUILD_NUMBER}}'
+    mvn-params: "-Dbuild.number=${{BUILD_NUMBER}}"
     # CLM
-    nexus-iq-namespace: 'acumos-'
+    nexus-iq-namespace: "acumos-"
     # limit match to subdir
     gerrit_trigger_file_paths:
       - compare-type: REG_EXP
-        pattern: 'lum-server-api/.*|lum-java-rest-client/.*'
+        pattern: "lum-server-api/.*|lum-java-rest-client/.*"
     jobs:
-      - '{project-name}-maven-jobs'
-      - '{project-name}-maven-javadoc-jobs'
+      - "{project-name}-maven-jobs"
+      - "{project-name}-maven-javadoc-jobs"
     stream:
       - master:
           branch: master
@@ -52,19 +51,20 @@
     <<: *lum_common
     name: license-usage-manager-server
     # jenkins job name prefix
-    project-name: '{name}'
+    project-name: "{name}"
     # subdir
     docker-name: acumos/lum-server
     docker-root: lum-server
     container-tag-yaml-dir: lum-java-rest-client
+    # yamllint disable-line rule:line-length
     docker-get-container-tag-script: ../../jjb/license-usage-manager/tag-from-pom.sh
-    docker-build-args: '--build-arg SVRVERSION=$DOCKER_IMAGE_TAG'
+    docker-build-args: "--build-arg SVRVERSION=$DOCKER_IMAGE_TAG"
     # limit match to subdir
     gerrit_trigger_file_paths:
       - compare-type: REG_EXP
-        pattern: 'lum-server/.*|lum-java-rest-client/pom.xml'
+        pattern: "lum-server/.*|lum-java-rest-client/pom.xml"
     jobs:
-      - '{project-name}-gerrit-docker-jobs':
+      - "{project-name}-gerrit-docker-jobs":
           stream:
             - master:
                 branch: master
@@ -72,14 +72,14 @@
                 branch: clio
       - gerrit-tox-verify:
           stream: all
-          branch: '*'
+          branch: "*"
           tox-dir: lum-server
       - gerrit-tox-sonarqube:
           build-node: ubuntu1804-docker-4c-4g
           pre-build-script: |
             sudo apt install -y nodejs
             node -v
-          sonar-project-file: ''
+          sonar-project-file: ""
           sonar-properties: |
             sonar.host.url=https://sonarcloud.io/
             sonar.login={sonarcloud_api_token}
@@ -98,18 +98,19 @@
     <<: *lum_common
     name: license-usage-manager-db
     # jenkins job name prefix
-    project-name: '{name}'
+    project-name: "{name}"
     docker-name: acumos/lum-db
     docker-root: lum-db
     container-tag-yaml-dir: lum-java-rest-client
+    # yamllint disable-line rule:line-length
     docker-get-container-tag-script: ../../jjb/license-usage-manager/tag-from-pom.sh
-    docker-build-args: '--build-arg SVRVERSION=$DOCKER_IMAGE_TAG'
+    docker-build-args: "--build-arg SVRVERSION=$DOCKER_IMAGE_TAG"
     # limit match to subdir
     gerrit_trigger_file_paths:
       - compare-type: REG_EXP
-        pattern: 'lum-db/.*|lum-java-rest-client/pom.xml'
+        pattern: "lum-db/.*|lum-java-rest-client/pom.xml"
     jobs:
-      - '{project-name}-gerrit-docker-jobs'
+      - "{project-name}-gerrit-docker-jobs"
     stream:
       - master:
           branch: master
@@ -121,7 +122,7 @@
     name: license-usage-manager-release
     project-name: license-usage-manager
     jobs:
-      - '{project-name}-gerrit-release-jobs'
+      - "{project-name}-gerrit-release-jobs"
 
 - project:
     <<: *lum_common
@@ -129,9 +130,9 @@
     java-version: openjdk11
     project-name: license-usage-manager
     sonarcloud: true
-    sonarcloud-project-organization: '{sonarcloud_project_organization}'
-    sonarcloud-api-token: '{sonarcloud_api_token}'
-    sonarcloud-project-key: '{sonarcloud_project_organization}_{project-name}'
+    sonarcloud-project-organization: "{sonarcloud_project_organization}"
+    sonarcloud-api-token: "{sonarcloud_api_token}"
+    sonarcloud-project-key: "{sonarcloud_project_organization}_{project-name}"
     jobs:
       - gerrit-maven-sonar
     branch: master

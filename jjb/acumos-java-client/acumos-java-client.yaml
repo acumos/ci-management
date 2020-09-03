@@ -19,8 +19,8 @@
     project: acumos-java-client
     mvn-settings: acumos-java-client-settings
     jobs:
-      - '{project-name}-maven-jobs'
-      - '{project-name}-maven-javadoc-jobs'
+      - "{project-name}-maven-jobs"
+      - "{project-name}-maven-javadoc-jobs"
     stream:
       - master:
           branch: master
@@ -37,9 +37,9 @@
     project-name: acumos-java-client
     mvn-settings: acumos-java-client-settings
     sonarcloud: true
-    sonarcloud-project-organization: '{sonarcloud_project_organization}'
-    sonarcloud-api-token: '{sonarcloud_api_token}'
-    sonarcloud-project-key: '{sonarcloud_project_organization}_{project-name}'
+    sonarcloud-project-organization: "{sonarcloud_project_organization}"
+    sonarcloud-api-token: "{sonarcloud_api_token}"
+    sonarcloud-project-key: "{sonarcloud_project_organization}_{project-name}"
     branch: master
     jobs:
       - gerrit-maven-sonar
@@ -53,4 +53,4 @@
     # maven release uses sigul which requires centos
     build-node: centos7-builder-2c-1g
     jobs:
-      - '{project-name}-gerrit-release-jobs'
+      - "{project-name}-gerrit-release-jobs"

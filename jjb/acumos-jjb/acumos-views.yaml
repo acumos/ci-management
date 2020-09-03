@@ -2,27 +2,27 @@
 - project:
     name: clm-view
     view-name: clm
-    view-regex: '.*-clm-.*'
+    view-regex: ".*-clm-.*"
     views:
       - common-view
 
 - project:
     name: merge-view
     view-name: merge-jobs
-    view-regex: '.*-merge-.*'
+    view-regex: ".*-merge-.*"
     views:
       - common-view
 
 - project:
     name: stage-view
     view-name: stage-jobs
-    view-regex: '.*-stage-.*'
+    view-regex: ".*-stage-.*"
     views:
       - common-view
 
 - project:
     name: verify-view
     view-name: verify-jobs
-    view-regex: '.*-verify-.*'
+    view-regex: ".*-verify-.*"
     views:
       - common-view

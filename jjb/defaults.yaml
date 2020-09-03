@@ -17,7 +17,7 @@
     build-timeout: 30
     build-node: centos7-basebuild-4c-4g
 
-    archive-artifacts: ''
+    archive-artifacts: ""
 
     # default gerrit server definition
     gerrit-server-name: gerrit.acumos.org
@@ -28,9 +28,9 @@
     # Default maven version
     mvn-version: mvn35
     # Default maven goals
-    mvn-goals: 'clean install'
+    mvn-goals: "clean install"
     # Default JVM invocation options
-    mvn-opts: ''
+    mvn-opts: ""
 
     # Nexus2 for jars
     mvn-snapshot-id: snapshots
@@ -42,15 +42,15 @@
     # Nexus3 docker registries
     container-public-registry: nexus3.acumos.org:10001
     container-snapshot-registry: nexus3.acumos.org:10003
-    container-staging-registry:  nexus3.acumos.org:10004
+    container-staging-registry: nexus3.acumos.org:10004
     # the quotes here are REQUIRED
-    container-push-registry: '{container-staging-registry}'
+    container-push-registry: "{container-staging-registry}"
 
     # Javadoc
     javadoc-path: org.acumos.$PROJECT/$STREAM
 
     # Self-release process
-    jenkins-ssh-release-credential: 'acumos-release'
+    jenkins-ssh-release-credential: "acumos-release"
 
     # Sonarcloud
     sonarcloud_project_organization: acumos

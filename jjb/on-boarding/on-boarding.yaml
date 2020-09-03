@@ -22,7 +22,7 @@
     mvn-settings: on-boarding-settings
     # pass Jenkins build number
     mvn-params: -Dbuild.number=${{BUILD_NUMBER}}
-    nexus-iq-namespace: 'acumos-'
+    nexus-iq-namespace: "acumos-"
     # needs docker-enabled build node
     build-node: centos7-docker-4c-4g
     jobs:
@@ -31,7 +31,7 @@
       - gerrit-maven-dl-merge
       - gerrit-maven-dl-stage
       # standard Global JJB templates
-      - '{project-name}-maven-javadoc-jobs'
+      - "{project-name}-maven-javadoc-jobs"
       - gerrit-maven-clm
     java-version: openjdk11
     stream:
@@ -52,7 +52,7 @@
     branch: master
     build-node: centos7-docker-4c-4g
     jobs:
-      - '{project-name}-gerrit-release-jobs'
+      - "{project-name}-gerrit-release-jobs"
 
 - project:
     name: on-boarding-project-sonar
@@ -62,9 +62,9 @@
     project: on-boarding
     mvn-settings: on-boarding-settings
     sonarcloud: true
-    sonarcloud-project-organization: '{sonarcloud_project_organization}'
-    sonarcloud-api-token: '{sonarcloud_api_token}'
-    sonarcloud-project-key: '{sonarcloud_project_organization}_{project-name}'
+    sonarcloud-project-organization: "{sonarcloud_project_organization}"
+    sonarcloud-api-token: "{sonarcloud_api_token}"
+    sonarcloud-project-key: "{sonarcloud_project_organization}_{project-name}"
     branch: master
     build-node: centos7-docker-4c-4g
     java-version: openjdk11
@@ -82,16 +82,16 @@
     build-node: centos7-docker-4c-4g
     container-tag-method: yaml-file
     # use host network
-    docker-build-args: '--network=host'
+    docker-build-args: "--network=host"
     docker-name: acumos/onboarding-base-r
     docker-root: base-image/r
     # only trigger on file changes in subdir
     gerrit_trigger_file_paths:
       - compare-type: ANT
-        pattern: 'base-image/r/**'
+        pattern: "base-image/r/**"
     jobs:
       # R base image
-      - '{project-name}-gerrit-docker-jobs'
+      - "{project-name}-gerrit-docker-jobs"
     stream:
       - master:
           branch: master

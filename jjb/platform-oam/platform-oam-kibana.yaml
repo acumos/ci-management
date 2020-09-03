@@ -2,7 +2,7 @@
 - project:
     name: platform-oam-kibana
     # jenkins job name prefix
-    project-name: '{name}'
+    project-name: "{name}"
     # git repo
     project: platform-oam
     mvn-settings: platform-oam-settings
@@ -10,16 +10,16 @@
     build-node: centos7-docker-4c-4g
     container-tag-method: yaml-file
     # use host network
-    docker-build-args: '--network=host'
+    docker-build-args: "--network=host"
     docker-name: acumos/acumos-kibana
     # subdirectory of project
     docker-root: elk-stack/kibana
     # only trigger on file changes in subdir
     gerrit_trigger_file_paths:
       - compare-type: ANT
-        pattern: 'elk-stack/kibana/**'
+        pattern: "elk-stack/kibana/**"
     jobs:
-      - '{project-name}-gerrit-docker-jobs'
+      - "{project-name}-gerrit-docker-jobs"
     stream:
       - master:
           branch: master

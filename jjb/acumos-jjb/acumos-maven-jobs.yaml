@@ -16,41 +16,41 @@
     name: acumos-maven-common
 
     project-type: freestyle
-    node: '{build-node}'
+    node: "{build-node}"
     maven-versions-plugin: false
 
     properties:
       - lf-infra-properties:
-          build-days-to-keep: '{build-days-to-keep}'
+          build-days-to-keep: "{build-days-to-keep}"
 
     parameters:
       - lf-infra-parameters:
-          project: '{project}'
-          branch: '{branch}'
-          stream: '{stream}'
-          lftools-version: '{lftools-version}'
+          project: "{project}"
+          branch: "{branch}"
+          stream: "{stream}"
+          lftools-version: "{lftools-version}"
       - lf-infra-maven-parameters:
-          mvn-opts: '{mvn-opts}'
-          mvn-params: '{mvn-params}'
-          mvn-version: '{mvn-version}'
-          staging-profile-id: '{staging-profile-id}'
+          mvn-opts: "{mvn-opts}"
+          mvn-params: "{mvn-params}"
+          mvn-version: "{mvn-version}"
+          staging-profile-id: "{staging-profile-id}"
       - string:
           name: ARCHIVE_ARTIFACTS
-          default: '{archive-artifacts}'
+          default: "{archive-artifacts}"
           description: Artifacts to archive to the logs server.
       - string:
           name: STAGING_PROFILE_ID
-          default: '{staging-profile-id}'
+          default: "{staging-profile-id}"
           description: Nexus staging profile ID.
       - bool:
           name: MAVEN_VERSIONS_PLUGIN
-          default: '{maven-versions-plugin}'
+          default: "{maven-versions-plugin}"
           description: Use maven-versions-plugin to update pom versions.
 
     wrappers:
       - lf-infra-wrappers:
-          build-timeout: '{build-timeout}'
-          jenkins-ssh-credential: '{jenkins-ssh-credential}'
+          build-timeout: "{build-timeout}"
+          jenkins-ssh-credential: "{jenkins-ssh-credential}"
 
     publishers:
       - lf-infra-publish
@@ -71,20 +71,20 @@
     # Default parameters #
     ######################
 
-    archive-artifacts: ''
+    archive-artifacts: ""
     branch: master
-    build-days-to-keep: 30  # 30 days in case we need to troubleshoot
+    build-days-to-keep: 30 # 30 days in case we need to troubleshoot
     build-timeout: 30
-    cron: 'H H * * 0'  # build weekly to refresh snapshots
-    git-url: '$GIT_URL/$PROJECT'
+    cron: "H H * * 0" # build weekly to refresh snapshots
+    git-url: "$GIT_URL/$PROJECT"
     java-version: openjdk8
     mvn-global-settings: global-settings
     mvn-goals: clean deploy
-    mvn-opts: ''
-    mvn-params: '-Dmerge'
+    mvn-opts: ""
+    mvn-params: "-Dmerge"
     mvn-version: mvn35
-    nexus-cut-dirs: 6  # Number of dirs in the Nexus path to remove for wget -r.
-    staging-profile-id: ''  # Unused by this job.
+    nexus-cut-dirs: 6 # Number of dirs in the Nexus path to remove for wget -r.
+    staging-profile-id: "" # Unused by this job.
     stream: master
     submodule-recursive: true
 
@@ -95,9 +95,9 @@
 
     gerrit_trigger_file_paths:
       - compare-type: ANT
-        pattern: '**'
+        pattern: "**"
 
-    post_build_trigger: ''
+    post_build_trigger: ""
 
     #####################
     # Job Configuration #
@@ -106,29 +106,29 @@
     builders:
       - lf-jacoco-nojava-workaround
       - lf-maven-install:
-          mvn-version: '{mvn-version}'
+          mvn-version: "{mvn-version}"
       - lf-update-java-alternatives:
-          java-version: '{java-version}'
+          java-version: "{java-version}"
       - lf-infra-docker-login:
-          global-settings-file: '{mvn-global-settings}'
-          settings-file: '{mvn-settings}'
+          global-settings-file: "{mvn-global-settings}"
+          settings-file: "{mvn-settings}"
       # must provide maven settings AFTER docker due to its cleanup
       - lf-provide-maven-settings:
-          global-settings-file: '{mvn-global-settings}'
-          settings-file: '{mvn-settings}'
+          global-settings-file: "{mvn-global-settings}"
+          settings-file: "{mvn-settings}"
       - lf-infra-create-netrc:
-          server-id: '{mvn-snapshot-id}'
+          server-id: "{mvn-snapshot-id}"
       - inject:
           properties-content: |
-              NEXUS_CUT_DIRS={nexus-cut-dirs}
-              NEXUS_REPO={nexus-snapshot-repo}
-              NEXUS3_PULL_REGISTRY={container-public-registry}
-              NEXUS3_PUSH_REGISTRY={container-snapshot-registry}
+            NEXUS_CUT_DIRS={nexus-cut-dirs}
+            NEXUS_REPO={nexus-snapshot-repo}
+            NEXUS3_PULL_REGISTRY={container-public-registry}
+            NEXUS3_PUSH_REGISTRY={container-snapshot-registry}
       - lf-infra-pre-build
       - shell: !include-raw-escape:
           - ../global-jjb/shell/maven-fetch-metadata.sh
       - lf-maven-build:
-          mvn-goals: '{mvn-goals}'
+          mvn-goals: "{mvn-goals}"
       - lf-maven-deploy
       - lf-provide-maven-settings-cleanup
 
@@ -136,13 +136,13 @@
       - findbugs
       - lf-jacoco-report
       - lf-infra-publish
-      - trigger-parameterized-builds: '{obj:post_build_trigger}'
+      - trigger-parameterized-builds: "{obj:post_build_trigger}"
 
 # Job template for docker login, maven deploy, lf deploy
 # Revised version of global jjb '{project-name}-maven-merge-{stream}'
 #  - calls locally defined macros
 - job-template:
-    name: '{project-name}-maven-dl-merge-{stream}'
+    name: "{project-name}-maven-dl-merge-{stream}"
     id: gerrit-maven-dl-merge
     <<: *acumos_maven_common
     # yamllint disable-line rule:key-duplicates
@@ -150,27 +150,27 @@
 
     scm:
       - lf-infra-gerrit-scm:
-          jenkins-ssh-credential: '{jenkins-ssh-credential}'
-          git-url: '{git-url}'
-          refspec: '$GERRIT_REFSPEC'
-          branch: '$GERRIT_BRANCH'
-          submodule-recursive: '{submodule-recursive}'
+          jenkins-ssh-credential: "{jenkins-ssh-credential}"
+          git-url: "{git-url}"
+          refspec: "$GERRIT_REFSPEC"
+          branch: "$GERRIT_BRANCH"
+          submodule-recursive: "{submodule-recursive}"
           choosing-strategy: default
           submodule-timeout: 10
           submodule-disable: false
 
     triggers:
-      - timed: '{cron}'
+      - timed: "{cron}"
       - gerrit:
-          server-name: '{gerrit-server-name}'
-          trigger-on: '{obj:gerrit_merge_triggers}'
+          server-name: "{gerrit-server-name}"
+          trigger-on: "{obj:gerrit_merge_triggers}"
           projects:
             - project-compare-type: ANT
-              project-pattern: '{project}'
+              project-pattern: "{project}"
               branches:
                 - branch-compare-type: ANT
-                  branch-pattern: '**/{branch}'
-              file-paths: '{obj:gerrit_trigger_file_paths}'
+                  branch-pattern: "**/{branch}"
+              file-paths: "{obj:gerrit_trigger_file_paths}"
 
 ###########################
 # Maven Stage aka Release #
@@ -188,15 +188,15 @@
     ######################
 
     branch: master
-    build-days-to-keep: 30  # 30 days in case it takes long to get approved.
+    build-days-to-keep: 30 # 30 days in case it takes long to get approved.
     build-timeout: 30
-    cron: 'H 11 * * *'  # build daily release candidate
-    git-url: '$GIT_URL/$PROJECT'
+    cron: "H 11 * * *" # build daily release candidate
+    git-url: "$GIT_URL/$PROJECT"
     java-version: openjdk8
     mvn-global-settings: global-settings
     mvn-goals: clean deploy
-    mvn-opts: ''
-    mvn-params: ''
+    mvn-opts: ""
+    mvn-params: ""
     mvn-version: mvn35
     stream: master
     submodule-recursive: true
@@ -207,7 +207,7 @@
 
     gerrit_trigger_file_paths:
       - compare-type: ANT
-        pattern: '**'
+        pattern: "**"
 
     #####################
     # Job Configuration #
@@ -216,27 +216,27 @@
     builders:
       - lf-jacoco-nojava-workaround
       - lf-maven-install:
-          mvn-version: '{mvn-version}'
+          mvn-version: "{mvn-version}"
       - lf-update-java-alternatives:
-          java-version: '{java-version}'
+          java-version: "{java-version}"
       - lf-infra-docker-login:
-          global-settings-file: '{mvn-global-settings}'
-          settings-file: '{mvn-settings}'
+          global-settings-file: "{mvn-global-settings}"
+          settings-file: "{mvn-settings}"
       # must provide maven settings AFTER docker-login due to its cleanup
       - lf-provide-maven-settings:
-          global-settings-file: '{mvn-global-settings}'
-          settings-file: '{mvn-settings}'
+          global-settings-file: "{mvn-global-settings}"
+          settings-file: "{mvn-settings}"
       - lf-infra-create-netrc:
-          server-id: '{mvn-staging-id}'
+          server-id: "{mvn-staging-id}"
       - inject:
           properties-content: |
-              NEXUS3_PULL_REGISTRY={container-public-registry}
-              NEXUS3_PUSH_REGISTRY={container-staging-registry}
+            NEXUS3_PULL_REGISTRY={container-public-registry}
+            NEXUS3_PUSH_REGISTRY={container-staging-registry}
       - lf-infra-pre-build
       - shell: !include-raw-escape:
           - ../global-jjb/shell/maven-patch-release.sh
       - lf-maven-build:
-          mvn-goals: '{mvn-goals}'
+          mvn-goals: "{mvn-goals}"
       - shell: !include-raw-escape:
           - ../global-jjb/shell/common-variables.sh
           - ../global-jjb/shell/maven-stage.sh
@@ -247,7 +247,7 @@
 #  - changes name
 #  - calls locally defined macros
 - job-template:
-    name: '{project-name}-maven-dl-stage-{stream}'
+    name: "{project-name}-maven-dl-stage-{stream}"
     id: gerrit-maven-dl-stage
     <<: *acumos_maven_common
     # yamllint disable-line rule:key-duplicates
@@ -255,27 +255,27 @@
 
     scm:
       - lf-infra-gerrit-scm:
-          jenkins-ssh-credential: '{jenkins-ssh-credential}'
-          git-url: '{git-url}'
-          refspec: '$GERRIT_REFSPEC'
-          branch: '$GERRIT_BRANCH'
-          submodule-recursive: '{submodule-recursive}'
+          jenkins-ssh-credential: "{jenkins-ssh-credential}"
+          git-url: "{git-url}"
+          refspec: "$GERRIT_REFSPEC"
+          branch: "$GERRIT_BRANCH"
+          submodule-recursive: "{submodule-recursive}"
           choosing-strategy: default
           submodule-timeout: 10
           submodule-disable: false
 
     triggers:
-      - timed: '{obj:cron}'
+      - timed: "{obj:cron}"
       - gerrit:
-          server-name: '{gerrit-server-name}'
-          trigger-on: '{obj:gerrit_stage_triggers}'
+          server-name: "{gerrit-server-name}"
+          trigger-on: "{obj:gerrit_stage_triggers}"
           projects:
             - project-compare-type: ANT
-              project-pattern: '{project}'
+              project-pattern: "{project}"
               branches:
                 - branch-compare-type: ANT
-                  branch-pattern: '**/{branch}'
-              file-paths: '{obj:gerrit_trigger_file_paths}'
+                  branch-pattern: "**/{branch}"
+              file-paths: "{obj:gerrit_trigger_file_paths}"
 
 ################
 # Maven Verify #
@@ -293,18 +293,18 @@
     # Default parameters #
     ######################
 
-    archive-artifacts: ''
+    archive-artifacts: ""
     branch: master
     build-days-to-keep: 7
     build-timeout: 30
-    git-url: '$GIT_URL/$PROJECT'
+    git-url: "$GIT_URL/$PROJECT"
     java-version: openjdk8
     mvn-global-settings: global-settings
     mvn-goals: clean install
-    mvn-opts: ''
-    mvn-params: '-Dstream=$STREAM'
+    mvn-opts: ""
+    mvn-params: "-Dstream=$STREAM"
     mvn-version: mvn35
-    staging-profile-id: ''  # Unused in this job
+    staging-profile-id: "" # Unused in this job
     stream: master
     submodule-recursive: true
 
@@ -319,7 +319,7 @@
 
     gerrit_trigger_file_paths:
       - compare-type: ANT
-        pattern: '**'
+        pattern: "**"
 
     #####################
     # Job Configuration #
@@ -330,22 +330,22 @@
     builders:
       - lf-jacoco-nojava-workaround
       - lf-maven-install:
-          mvn-version: '{mvn-version}'
+          mvn-version: "{mvn-version}"
       - lf-update-java-alternatives:
-          java-version: '{java-version}'
+          java-version: "{java-version}"
       - lf-infra-docker-login:
-          global-settings-file: '{mvn-global-settings}'
-          settings-file: '{mvn-settings}'
+          global-settings-file: "{mvn-global-settings}"
+          settings-file: "{mvn-settings}"
       # must provide maven settings AFTER docker due to its cleanup
       - lf-provide-maven-settings:
-          global-settings-file: '{mvn-global-settings}'
-          settings-file: '{mvn-settings}'
+          global-settings-file: "{mvn-global-settings}"
+          settings-file: "{mvn-settings}"
       - inject:
           properties-content: |
-              NEXUS3_PULL_REGISTRY={container-public-registry}
+            NEXUS3_PULL_REGISTRY={container-public-registry}
       - lf-infra-pre-build
       - lf-maven-build:
-          mvn-goals: '{mvn-goals}'
+          mvn-goals: "{mvn-goals}"
       - lf-provide-maven-settings-cleanup
 
     publishers:
@@ -354,11 +354,12 @@
       - lf-infra-publish
 
 # Job template for docker login, maven install
-# Revised version of global jjb '{project-name}-maven-verify-{stream}-{mvn-version}-{java-version}'
+# Revised version of global-jjb template:
+#  '{project-name}-maven-verify-{stream}-{mvn-version}-{java-version}'
 #  - changes name
 #  - calls locally defined macros
 - job-template:
-    name: '{project-name}-maven-dl-verify-{stream}-{mvn-version}-{java-version}'
+    name: "{project-name}-maven-dl-verify-{stream}-{mvn-version}-{java-version}"
     id: gerrit-maven-dl-verify
     <<: *acumos_maven_common
     # yamllint disable-line rule:key-duplicates
@@ -366,23 +367,23 @@
 
     scm:
       - lf-infra-gerrit-scm:
-          jenkins-ssh-credential: '{jenkins-ssh-credential}'
-          git-url: '{git-url}'
-          refspec: '$GERRIT_REFSPEC'
-          branch: '$GERRIT_BRANCH'
-          submodule-recursive: '{submodule-recursive}'
+          jenkins-ssh-credential: "{jenkins-ssh-credential}"
+          git-url: "{git-url}"
+          refspec: "$GERRIT_REFSPEC"
+          branch: "$GERRIT_BRANCH"
+          submodule-recursive: "{submodule-recursive}"
           choosing-strategy: gerrit
           submodule-timeout: 10
           submodule-disable: false
 
     triggers:
       - gerrit:
-          server-name: '{gerrit-server-name}'
-          trigger-on: '{obj:gerrit_verify_triggers}'
+          server-name: "{gerrit-server-name}"
+          trigger-on: "{obj:gerrit_verify_triggers}"
           projects:
             - project-compare-type: ANT
-              project-pattern: '{project}'
+              project-pattern: "{project}"
               branches:
                 - branch-compare-type: ANT
-                  branch-pattern: '**/{branch}'
-              file-paths: '{obj:gerrit_trigger_file_paths}'
+                  branch-pattern: "**/{branch}"
+              file-paths: "{obj:gerrit_trigger_file_paths}"

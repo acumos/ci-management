@@ -9,13 +9,13 @@
 
 - project:
     name: model-deployments-deployment-client
-    project-name: '{name}'
+    project-name: "{name}"
     project: model-deployments/deployment-client
     mvn-settings: model-deployments-deployment-client-settings
     build-node: centos7-docker-4c-4g
     java-version: openjdk11
     jobs:
-      - '{project-name}-gerrit-maven-docker-jobs'
+      - "{project-name}-gerrit-maven-docker-jobs"
     stream:
       - master:
           branch: master
@@ -26,14 +26,14 @@
     project: model-deployments/deployment-client
     mvn-settings: model-deployments-deployment-client-settings
     sonarcloud: true
-    sonarcloud-project-organization: '{sonarcloud_project_organization}'
-    sonarcloud-api-token: '{sonarcloud_api_token}'
-    sonarcloud-project-key: '{sonarcloud_project_organization}_{project-name}'
+    sonarcloud-project-organization: "{sonarcloud_project_organization}"
+    sonarcloud-api-token: "{sonarcloud_api_token}"
+    sonarcloud-project-key: "{sonarcloud_project_organization}_{project-name}"
     build-node: centos7-avx-4c-4g
-    cron: 'H 11 * * *'
-    mvn-goals: 'clean install'
-    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
-    branch: 'master'
+    cron: "H 11 * * *"
+    mvn-goals: "clean install"
+    mvn-opts: "-Xmx1024m -XX:MaxPermSize=256m"
+    branch: "master"
     java-version: openjdk11
     jobs:
       - gerrit-maven-sonar
@@ -48,4 +48,4 @@
     # container release uses docker
     build-node: centos7-docker-2c-1g
     jobs:
-      - '{project-name}-gerrit-release-jobs'
+      - "{project-name}-gerrit-release-jobs"

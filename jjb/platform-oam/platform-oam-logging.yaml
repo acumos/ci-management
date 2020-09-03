@@ -9,13 +9,13 @@
     mvn-settings: platform-oam-settings
     # code subdirectory
     mvn-dir: logging-library
-    mvn-params: '-f logging-library'
+    mvn-params: "-f logging-library"
     gerrit_trigger_file_paths:
       - compare-type: REG_EXP
-        pattern: 'logging-library/.*'
+        pattern: "logging-library/.*"
     jobs:
-      - '{project-name}-maven-jobs'
-      - '{project-name}-maven-javadoc-jobs'
+      - "{project-name}-maven-jobs"
+      - "{project-name}-maven-javadoc-jobs"
     stream:
       - master:
           branch: master

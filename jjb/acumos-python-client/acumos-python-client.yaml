@@ -30,11 +30,11 @@
     <<: *apc_common
     tox-dir: acumos-package
     gerrit_trigger_file_paths:
-     - compare-type: REG_EXP
-       pattern: 'acumos-package/.*'
+      - compare-type: REG_EXP
+        pattern: "acumos-package/.*"
     parallel: false
     jobs:
-      - '{project-name}-gerrit-pypi-jobs'
+      - "{project-name}-gerrit-pypi-jobs"
     stream:
       - master:
           branch: master
@@ -46,7 +46,7 @@
     name: acumos-python-client-release
     <<: *apc_common
     jobs:
-      - '{project-name}-gerrit-pypi-release-jobs'
+      - "{project-name}-gerrit-pypi-release-jobs"
 
 # analyze unit test coverage
 - project:
@@ -58,8 +58,8 @@
     mvn-opts: -Xmx1024m -XX:MaxPermSize=256m
     mvn-params: -f acumos-package
     sonarcloud: true
-    sonarcloud-project-organization: '{sonarcloud_project_organization}'
-    sonarcloud-api-token: '{sonarcloud_api_token}'
-    sonarcloud-project-key: '{sonarcloud_project_organization}_{project-name}'
+    sonarcloud-project-organization: "{sonarcloud_project_organization}"
+    sonarcloud-api-token: "{sonarcloud_api_token}"
+    sonarcloud-project-key: "{sonarcloud_project_organization}_{project-name}"
     jobs:
       - gerrit-tox-sonar
