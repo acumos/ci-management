@@ -21,16 +21,16 @@
     project: spark-model-runner
     mvn-settings: spark-model-runner-settings
     # pass Jenkins build number
-    mvn-params: '-f spark-modelrunner/pom.xml -Dbuild.number=${{BUILD_NUMBER}}'
+    mvn-params: "-f spark-modelrunner/pom.xml -Dbuild.number=${{BUILD_NUMBER}}"
     java-version: openjdk11
     jobs:
-      - '{project-name}-maven-jobs'
+      - "{project-name}-maven-jobs"
     stream:
       - master:
           branch: master
     gerrit_trigger_file_paths:
       - compare-type: REG_EXP
-        pattern: 'spark-modelrunner/.*'
+        pattern: "spark-modelrunner/.*"
 
 - project:
     name: spark-model-runner-javadoc
@@ -41,7 +41,7 @@
     mvn-settings: spark-model-runner-settings
     java-version: openjdk11
     jobs:
-      - '{project-name}-maven-javadoc-jobs'
+      - "{project-name}-maven-javadoc-jobs"
     stream:
       - master:
           branch: master
@@ -54,16 +54,16 @@
     project: spark-model-runner
     mvn-settings: spark-model-runner-settings
     # pass Jenkins build number
-    mvn-params: '-f protobuf-common/pom.xml -Dbuild.number=${{BUILD_NUMBER}}'
+    mvn-params: "-f protobuf-common/pom.xml -Dbuild.number=${{BUILD_NUMBER}}"
     java-version: openjdk11
     jobs:
-      - '{project-name}-maven-jobs'
+      - "{project-name}-maven-jobs"
     stream:
       - master:
           branch: master
     gerrit_trigger_file_paths:
       - compare-type: REG_EXP
-        pattern: 'protobuf-common/.*'
+        pattern: "protobuf-common/.*"
 
 - project:
     name: spark-model-runner-sonar
@@ -71,9 +71,9 @@
     project-name: spark-model-runner
     mvn-settings: spark-model-runner-settings
     sonarcloud: true
-    sonarcloud-project-organization: '{sonarcloud_project_organization}'
-    sonarcloud-api-token: '{sonarcloud_api_token}'
-    sonarcloud-project-key: '{sonarcloud_project_organization}_{project-name}'
+    sonarcloud-project-organization: "{sonarcloud_project_organization}"
+    sonarcloud-api-token: "{sonarcloud_api_token}"
+    sonarcloud-project-key: "{sonarcloud_project_organization}_{project-name}"
     branch: master
     jobs:
       - gerrit-maven-sonar
@@ -88,4 +88,4 @@
     # maven release uses sigul which requires centos
     build-node: centos7-builder-2c-1g
     jobs:
-      - '{project-name}-gerrit-release-jobs'
+      - "{project-name}-gerrit-release-jobs"

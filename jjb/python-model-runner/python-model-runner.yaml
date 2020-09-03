@@ -27,7 +27,7 @@
     name: python-model-runner
     parallel: false
     jobs:
-      - '{project-name}-gerrit-pypi-jobs'
+      - "{project-name}-gerrit-pypi-jobs"
     stream:
       - master:
           branch: master
@@ -36,18 +36,18 @@
     <<: *pmr_common
     name: python-model-runner-release
     jobs:
-      - '{project-name}-gerrit-pypi-release-jobs'
+      - "{project-name}-gerrit-pypi-release-jobs"
 
 - project:
     <<: *pmr_common
     name: python-model-runner-sonar
-    cron: 'H 11 * * *'
-    branch: 'master'
-    mvn-goals: 'clean install'
-    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+    cron: "H 11 * * *"
+    branch: "master"
+    mvn-goals: "clean install"
+    mvn-opts: "-Xmx1024m -XX:MaxPermSize=256m"
     sonarcloud: true
-    sonarcloud-project-organization: '{sonarcloud_project_organization}'
-    sonarcloud-api-token: '{sonarcloud_api_token}'
-    sonarcloud-project-key: '{sonarcloud_project_organization}_{project-name}'
+    sonarcloud-project-organization: "{sonarcloud_project_organization}"
+    sonarcloud-api-token: "{sonarcloud_api_token}"
+    sonarcloud-project-key: "{sonarcloud_project_organization}_{project-name}"
     jobs:
       - gerrit-maven-sonar

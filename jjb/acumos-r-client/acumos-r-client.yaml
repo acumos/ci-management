@@ -29,13 +29,13 @@
     # use trivial tag, no image is pushed
     container-tag-method: latest
     # use host network
-    docker-build-args: '--network=host'
+    docker-build-args: "--network=host"
     # acumos prefix is required
     docker-name: acumos/acumos-r-client
     # R code subdir
     gerrit_trigger_file_paths:
       - compare-type: REG_EXP
-        pattern: 'acumos-package/.*'
+        pattern: "acumos-package/.*"
     jobs:
       - gerrit-docker-verify
     stream:

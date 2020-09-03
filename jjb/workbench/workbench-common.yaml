@@ -7,14 +7,14 @@
     project: workbench
     mvn-settings: workbench-settings
     # subdirectory
-    mvn-params: '-f workbench-common -Dbuild.number=${{BUILD_NUMBER}}'
-    nexus-iq-namespace: 'acumos-'
+    mvn-params: "-f workbench-common -Dbuild.number=${{BUILD_NUMBER}}"
+    nexus-iq-namespace: "acumos-"
     gerrit_trigger_file_paths:
       - compare-type: REG_EXP
-        pattern: 'workbench-common/.*'
+        pattern: "workbench-common/.*"
     java-version: openjdk11
     jobs:
-      - '{project-name}-maven-jobs'
+      - "{project-name}-maven-jobs"
       # Javadoc template does not yet support -f
       # - '{project-name}-maven-javadoc-jobs'
     stream:
@@ -29,11 +29,11 @@
     project: workbench
     mvn-settings: workbench-settings
     sonarcloud: true
-    sonarcloud-project-organization: '{sonarcloud_project_organization}'
-    sonarcloud-api-token: '{sonarcloud_api_token}'
-    sonarcloud-project-key: '{sonarcloud_project_organization}_{project-name}'
+    sonarcloud-project-organization: "{sonarcloud_project_organization}"
+    sonarcloud-api-token: "{sonarcloud_api_token}"
+    sonarcloud-project-key: "{sonarcloud_project_organization}_{project-name}"
     # subdirectory
-    mvn-params: '-f workbench-common -Dbuild.number=${{BUILD_NUMBER}}'
+    mvn-params: "-f workbench-common -Dbuild.number=${{BUILD_NUMBER}}"
     branch: master
     jobs:
       - gerrit-maven-sonar
@@ -49,4 +49,4 @@
     # container release uses docker
     build-node: centos7-docker-2c-1g
     jobs:
-      - '{project-name}-gerrit-release-jobs'
+      - "{project-name}-gerrit-release-jobs"

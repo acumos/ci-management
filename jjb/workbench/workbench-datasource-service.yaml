@@ -7,12 +7,12 @@
     project: workbench
     mvn-settings: workbench-settings
     # subdirectory
-    mvn-params: '-f datasource-service -Dbuild.number=${{BUILD_NUMBER}}'
-    nexus-iq-namespace: 'acumos-'
+    mvn-params: "-f datasource-service -Dbuild.number=${{BUILD_NUMBER}}"
+    nexus-iq-namespace: "acumos-"
     build-node: centos7-docker-4c-4g
     gerrit_trigger_file_paths:
       - compare-type: REG_EXP
-        pattern: 'datasource-service/.*'
+        pattern: "datasource-service/.*"
     java-version: openjdk11
     jobs:
       - gerrit-maven-docker-verify

@@ -29,7 +29,7 @@
     name: common-dataservice-release
     <<: *cds_common
     jobs:
-      - '{project-name}-gerrit-release-jobs'
+      - "{project-name}-gerrit-release-jobs"
 
 # build jar and docker artifacts
 - project:
@@ -38,7 +38,7 @@
     mvn-params: -f cmn-data-svc -Dbuild.number=${{BUILD_NUMBER}}
     gerrit_trigger_file_paths:
       - compare-type: REG_EXP
-        pattern: 'cmn-data-svc/.*'
+        pattern: "cmn-data-svc/.*"
     java-version: openjdk11
     nexus-iq-namespace: acumos-
     jobs:
@@ -61,7 +61,7 @@
     java-version: openjdk11
     mvn-dir: cmn-data-svc/cmn-data-svc-client
     jobs:
-      - '{project-name}-maven-javadoc-jobs'
+      - "{project-name}-maven-javadoc-jobs"
     stream:
       - master:
           branch: master
@@ -77,8 +77,8 @@
     # template goal install builds image which is not needed
     mvn-params: -f cmn-data-svc -Ddocker.skip=true
     sonarcloud: true
-    sonarcloud-project-organization: '{sonarcloud_project_organization}'
-    sonarcloud-api-token: '{sonarcloud_api_token}'
-    sonarcloud-project-key: '{sonarcloud_project_organization}_{project-name}'
+    sonarcloud-project-organization: "{sonarcloud_project_organization}"
+    sonarcloud-api-token: "{sonarcloud_api_token}"
+    sonarcloud-project-key: "{sonarcloud_project_organization}_{project-name}"
     jobs:
       - gerrit-maven-sonar

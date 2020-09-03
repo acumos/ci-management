@@ -23,7 +23,7 @@
     mvn-settings: design-studio-settings
     # pass Jenkins build number
     mvn-params: -Dbuild.number=${{BUILD_NUMBER}}
-    nexus-iq-namespace: 'acumos-'
+    nexus-iq-namespace: "acumos-"
     # needs docker-enabled build node
     build-node: centos7-docker-4c-4g
     java-version: openjdk11
@@ -33,7 +33,7 @@
       - gerrit-maven-dl-merge
       - gerrit-maven-dl-stage
       # standard Global JJB templates
-      - '{project-name}-maven-javadoc-jobs'
+      - "{project-name}-maven-javadoc-jobs"
       - gerrit-maven-clm
     stream:
       - master:
@@ -52,9 +52,9 @@
     project-name: design-studio
     mvn-settings: design-studio-settings
     sonarcloud: true
-    sonarcloud-project-organization: '{sonarcloud_project_organization}'
-    sonarcloud-api-token: '{sonarcloud_api_token}'
-    sonarcloud-project-key: '{sonarcloud_project_organization}_{project-name}'
+    sonarcloud-project-organization: "{sonarcloud_project_organization}"
+    sonarcloud-api-token: "{sonarcloud_api_token}"
+    sonarcloud-project-key: "{sonarcloud_project_organization}_{project-name}"
     branch: master
     build-node: centos7-docker-4c-4g
     java-version: openjdk11
@@ -70,7 +70,7 @@
     project: design-studio
     mvn-settings: design-studio-settings
     # run on subdir with Jenkins build number
-    mvn-params: '-f gdmservice -Dbuild.number=${{BUILD_NUMBER}}'
+    mvn-params: "-f gdmservice -Dbuild.number=${{BUILD_NUMBER}}"
     # do not need docker
     build-node: centos7-basebuild-4c-4g
     java-version: openjdk11
@@ -93,7 +93,7 @@
     project: design-studio
     mvn-settings: design-studio-settings
     # run on subdir with Jenkins build number
-    mvn-params: '-f TOSCAGeneratorClient -Dbuild.number=${{BUILD_NUMBER}}'
+    mvn-params: "-f TOSCAGeneratorClient -Dbuild.number=${{BUILD_NUMBER}}"
     # do not need docker
     build-node: centos7-basebuild-4c-4g
     java-version: openjdk11
@@ -117,4 +117,4 @@
     # container release uses docker
     build-node: centos7-docker-2c-1g
     jobs:
-      - '{project-name}-gerrit-release-jobs'
+      - "{project-name}-gerrit-release-jobs"

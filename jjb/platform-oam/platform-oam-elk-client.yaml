@@ -6,12 +6,12 @@
     # git repo
     project: platform-oam
     mvn-settings: platform-oam-settings
-    mvn-params: '-f elk-client -Dbuild.number=${{BUILD_NUMBER}}'
-    nexus-iq-namespace: 'acumos-'
+    mvn-params: "-f elk-client -Dbuild.number=${{BUILD_NUMBER}}"
+    nexus-iq-namespace: "acumos-"
     build-node: centos7-docker-4c-4g
     gerrit_trigger_file_paths:
       - compare-type: REG_EXP
-        pattern: 'elk-client/.*'
+        pattern: "elk-client/.*"
     jobs:
       - gerrit-maven-docker-verify
       - gerrit-maven-docker-merge
@@ -27,9 +27,9 @@
     project-name: platform-oam-elk-client
     mvn-settings: platform-oam-settings
     sonarcloud: true
-    sonarcloud-project-organization: '{sonarcloud_project_organization}'
-    sonarcloud-api-token: '{sonarcloud_api_token}'
-    sonarcloud-project-key: '{sonarcloud_project_organization}_{project-name}'
+    sonarcloud-project-organization: "{sonarcloud_project_organization}"
+    sonarcloud-api-token: "{sonarcloud_api_token}"
+    sonarcloud-project-key: "{sonarcloud_project_organization}_{project-name}"
     branch: master
     build-node: centos7-docker-4c-4g
     jobs:

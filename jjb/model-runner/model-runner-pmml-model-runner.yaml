@@ -2,7 +2,7 @@
 - project:
     name: model-runner-pmml-model-runner
     # jenkins job name prefix
-    project-name: '{name}'
+    project-name: "{name}"
     project: model-runner/pmml-model-runner
     build-node: centos7-docker-4c-4g
     mvn-settings: model-runner-pmml-model-runner-settings
@@ -11,11 +11,11 @@
     concurrent: false
     container-tag-method: yaml-file
     # use host network
-    docker-build-args: '--network=host'
+    docker-build-args: "--network=host"
     docker-name: acumos/pmml-model-runner
     jobs:
-      - '{project-name}-python-jobs'
-      - '{project-name}-gerrit-docker-jobs'
+      - "{project-name}-python-jobs"
+      - "{project-name}-gerrit-docker-jobs"
     stream:
       - master:
           branch: master
@@ -26,13 +26,13 @@
     project: model-runner/pmml-model-runner
     mvn-settings: model-runner-pmml-model-runner-settings
     sonarcloud: true
-    sonarcloud-project-organization: '{sonarcloud_project_organization}'
-    sonarcloud-api-token: '{sonarcloud_api_token}'
-    sonarcloud-project-key: '{sonarcloud_project_organization}_{project-name}'
+    sonarcloud-project-organization: "{sonarcloud_project_organization}"
+    sonarcloud-api-token: "{sonarcloud_api_token}"
+    sonarcloud-project-key: "{sonarcloud_project_organization}_{project-name}"
     build-node: centos7-docker-4c-4g
     jobs:
       - gerrit-maven-sonar
-    cron: 'H 11 * * *'
-    branch: 'master'
-    mvn-goals: 'clean install'
-    mvn-opts: '-Xmx1024m -XX:MaxPermSize=256m'
+    cron: "H 11 * * *"
+    branch: "master"
+    mvn-goals: "clean install"
+    mvn-opts: "-Xmx1024m -XX:MaxPermSize=256m"

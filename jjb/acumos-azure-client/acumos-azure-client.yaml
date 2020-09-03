@@ -28,7 +28,7 @@
       - gerrit-maven-docker-verify
       - gerrit-maven-docker-merge
       - gerrit-maven-docker-stage
-      - '{project-name}-maven-javadoc-jobs'
+      - "{project-name}-maven-javadoc-jobs"
       - gerrit-maven-clm
     stream:
       - master:
@@ -44,9 +44,9 @@
     project-name: acumos-azure-client
     mvn-settings: acumos-azure-client-settings
     sonarcloud: true
-    sonarcloud-project-organization: '{sonarcloud_project_organization}'
-    sonarcloud-api-token: '{sonarcloud_api_token}'
-    sonarcloud-project-key: '{sonarcloud_project_organization}_{project-name}'
+    sonarcloud-project-organization: "{sonarcloud_project_organization}"
+    sonarcloud-api-token: "{sonarcloud_api_token}"
+    sonarcloud-project-key: "{sonarcloud_project_organization}_{project-name}"
     branch: master
     build-node: centos7-docker-4c-4g
     jobs:
@@ -62,4 +62,4 @@
     # container release uses docker
     build-node: centos7-docker-2c-1g
     jobs:
-      - '{project-name}-gerrit-release-jobs'
+      - "{project-name}-gerrit-release-jobs"

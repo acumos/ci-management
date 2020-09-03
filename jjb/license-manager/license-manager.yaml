@@ -12,8 +12,7 @@
     jobs:
       - gerrit-info-yaml-verify
 
-- lmcl_common: &lmcl_common
-    # values apply to all projects here
+- lmcl_common: &lmcl_common # values apply to all projects here
     name: lmcl_common
     # git repo
     project: license-manager
@@ -27,20 +26,20 @@
     <<: *lmcl_common
     name: license-manager-client
     # jenkins job name prefix
-    project-name: '{name}'
+    project-name: "{name}"
     # defaults.yaml value is NOT used reliably
     java-version: openjdk11
     # pass Jenkins build number and work in subdir
-    mvn-params: '-Dbuild.number=${{BUILD_NUMBER}}'
+    mvn-params: "-Dbuild.number=${{BUILD_NUMBER}}"
     # CLM
-    nexus-iq-namespace: 'acumos-'
+    nexus-iq-namespace: "acumos-"
     # limit match to subdir
     gerrit_trigger_file_paths:
       - compare-type: REG_EXP
-        pattern: 'license-manager-client-library/.*'
+        pattern: "license-manager-client-library/.*"
     jobs:
-      - '{project-name}-maven-jobs'
-      - '{project-name}-maven-javadoc-jobs'
+      - "{project-name}-maven-jobs"
+      - "{project-name}-maven-javadoc-jobs"
     stream:
       - master:
           branch: master
@@ -51,7 +50,7 @@
     <<: *lmcl_common
     name: license-manager-rtu-editor
     # jenkins job name prefix
-    project-name: '{name}'
+    project-name: "{name}"
     # subdir
     docker-name: acumos/license-rtu-editor
     docker-root: license-rtu-editor
@@ -59,9 +58,9 @@
     # limit match to subdir
     gerrit_trigger_file_paths:
       - compare-type: REG_EXP
-        pattern: 'license-rtu-editor/.*'
+        pattern: "license-rtu-editor/.*"
     jobs:
-      - '{project-name}-gerrit-docker-jobs'
+      - "{project-name}-gerrit-docker-jobs"
     stream:
       - master:
           branch: master
@@ -72,7 +71,7 @@
     <<: *lmcl_common
     name: license-manager-profile-editor
     # jenkins job name prefix
-    project-name: '{name}'
+    project-name: "{name}"
     # subdir
     docker-name: acumos/license-profile-editor
     docker-root: license-profile-editor
@@ -80,9 +79,9 @@
     # limit match to subdir
     gerrit_trigger_file_paths:
       - compare-type: REG_EXP
-        pattern: 'license-profile-editor/.*'
+        pattern: "license-profile-editor/.*"
     jobs:
-      - '{project-name}-gerrit-docker-jobs'
+      - "{project-name}-gerrit-docker-jobs"
     stream:
       - master:
           branch: master
@@ -94,7 +93,7 @@
     name: license-manager-release
     project-name: license-manager
     jobs:
-      - '{project-name}-gerrit-release-jobs'
+      - "{project-name}-gerrit-release-jobs"
 
 - project:
     <<: *lmcl_common
@@ -102,9 +101,9 @@
     java-version: openjdk11
     project-name: license-manager
     sonarcloud: true
-    sonarcloud-project-organization: '{sonarcloud_project_organization}'
-    sonarcloud-api-token: '{sonarcloud_api_token}'
-    sonarcloud-project-key: '{sonarcloud_project_organization}_{project-name}'
+    sonarcloud-project-organization: "{sonarcloud_project_organization}"
+    sonarcloud-api-token: "{sonarcloud_api_token}"
+    sonarcloud-project-key: "{sonarcloud_project_organization}_{project-name}"
     jobs:
       - gerrit-maven-sonar
     branch: master
