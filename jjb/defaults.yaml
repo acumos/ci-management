@@ -17,6 +17,10 @@
     build-timeout: 30
     build-node: centos7-basebuild-4c-4g
 
+    # openstack-cron notification defaults
+    failure-notification: "releng+acumos@linuxfoundation.org"
+    failure-notification-prefix: "[releng]"
+
     archive-artifacts: ""
 
     # default gerrit server definition
