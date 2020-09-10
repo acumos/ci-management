@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5412380c_9f38663c",
+        "filename": "check_prefix.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 223
+      },
+      "writtenOn": "2020-09-10T16:36:45Z",
+      "side": 1,
+      "message": "I still don\u0027t love this setup. Why not test for the blank string in the RE? Why are we not checking for two single quotes, which would also be valid?",
+      "range": {
+        "startLine": 29,
+        "startChar": 12,
+        "endLine": 30,
+        "endChar": 36
+      },
+      "revId": "06aad609baff63aecdacc4bc02eda77dc3a33d4b",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    }
+  ]
+}
