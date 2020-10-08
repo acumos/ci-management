@@ -1,0 +1,7 @@
+Verified+1: Acumos Jobbuilder <acumos-jobbuilder@jenkins.acumos.org>
+Code-Review+2: LF Jenkins CI <releng+lf-jobbuilder@linuxfoundation.org>
+Submitted-by: Eric Ball <eball@linuxfoundation.org>
+Submitted-at: Thu, 08 Oct 2020 21:10:36 +0000
+Reviewed-on: https://gerrit.acumos.org/r/c/ci-management/+/8340
+Project: ci-management
+Branch: refs/heads/master
