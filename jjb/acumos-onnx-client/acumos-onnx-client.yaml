@@ -1,0 +1,14 @@
+---
+- project:
+    name: acumos-onnx-client-project-view
+    project-name: acumos-onnx-client
+    views:
+      - project-view
+
+- project:
+    name: acumos-onnx-client-info
+    project: acumos-onnx-client
+    project-name: acumos-onnx-client
+    build-node: centos7-builder-2c-1g
+    jobs:
+      - gerrit-info-yaml-verify
