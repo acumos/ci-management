@@ -33,7 +33,7 @@
       - master:
           branch: master
       - athena:
-          branch: athena
+          branch: clio
 
 - project:
     name: kubernetes-client-sonar
