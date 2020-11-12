@@ -1,0 +1,9 @@
+Code-Review+2: Bengt Thuree <bthuree@linuxfoundation.org>
+Code-Review+2: Eric Ball <eball@linuxfoundation.org>
+Verified+1: Bengt Thuree <bthuree@linuxfoundation.org>
+Verified+1: Acumos Jobbuilder <acumos-jobbuilder@jenkins.acumos.org>
+Submitted-by: Eric Ball <eball@linuxfoundation.org>
+Submitted-at: Thu, 12 Nov 2020 00:52:21 +0000
+Reviewed-on: https://gerrit.acumos.org/r/c/ci-management/+/8256
+Project: ci-management
+Branch: refs/heads/master
