@@ -5,10 +5,60 @@
     views:
       - project-view
 
+- apc_common: &apc_common
+      name: apc-common
+      # git repo
+      project: acumos-onnx-client
+      # jenkins job name prefix
+      project-name: acumos-onnx-client
+      # maven settings file has credentials
+      mvn-settings: acumos-onnx-client-settings
+      # release job requires centos
+      # ML libraries require avx
+      build-node: centos7-avx-4c-4g
+
 - project:
     name: acumos-onnx-client-info
-    project: acumos-onnx-client
-    project-name: acumos-onnx-client
-    build-node: centos7-builder-2c-1g
+    <<: *apc_common
     jobs:
       - gerrit-info-yaml-verify
+
+# verify distribution and publish to test.pypi.org
+- project:
+    name: acumos-onnx-client-pypi
+    <<: *apc_common
+    tox-dir: acumos-package
+    gerrit_trigger_file_paths:
+      - compare-type: REG_EXP
+        pattern: "acumos-package/.*"
+    parallel: false
+    jobs:
+      - "{project-name}-gerrit-pypi-jobs"
+    stream:
+      - master:
+          branch: master
+      - demeter:
+          branch: demeter
+
+# promote distribution from test.pypi.org to pypi.org
+- project:
+    name: acumos-onnx-client-release
+    <<: *apc_common
+    jobs:
+      - "{project-name}-gerrit-pypi-release-jobs"
+
+# analyze unit test coverage
+- project:
+    name: acumos-python-client-sonar
+    <<: *apc_common
+    branch: master
+    runs maven plugin to push report
+    mvn-goals: clean install
+    mvn-opts: -Xmx1024m -XX:MaxPermSize=256m
+    mvn-params: -f acumos-package
+    sonarcloud: true
+    sonarcloud-project-organization: "{sonarcloud_project_organization}"
+    sonarcloud-api-token: "{sonarcloud_api_token}"
+    sonarcloud-project-key: "{sonarcloud_project_organization}_{project-name}"
+    jobs:
+      - gerrit-tox-sonar
