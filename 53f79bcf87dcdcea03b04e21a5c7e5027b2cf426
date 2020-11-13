@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "e55bbf4c_d346f83f",
+        "filename": "jjb/acumos-onnx-client/acumos-onnx-client.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 223
+      },
+      "writtenOn": "2020-11-13T19:26:21Z",
+      "side": 1,
+      "message": "This should be \"onnx_common\". Besides the fact that this is not the acumos python client, having this anchor share the name with one in another file is a syntax error.",
+      "range": {
+        "startLine": 8,
+        "startChar": 2,
+        "endLine": 8,
+        "endChar": 25
+      },
+      "revId": "53f79bcf87dcdcea03b04e21a5c7e5027b2cf426",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    }
+  ]
+}
