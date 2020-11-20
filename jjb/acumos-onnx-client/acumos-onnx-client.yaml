@@ -47,18 +47,3 @@
     jobs:
       - "{project-name}-gerrit-pypi-release-jobs"
 
-# analyze unit test coverage
-- project:
-    name: acumos-onnx-client-sonar
-    <<: *onnx_common
-    branch: master
-    #runs maven plugin to push report
-    mvn-goals: clean install
-    mvn-opts: -Xmx1024m -XX:MaxPermSize=256m
-    mvn-params: -f acumos-package
-    sonarcloud: true
-    sonarcloud-project-organization: "{sonarcloud_project_organization}"
-    sonarcloud-api-token: "{sonarcloud_api_token}"
-    sonarcloud-project-key: "{sonarcloud_project_organization}_{project-name}"
-    jobs:
-      - gerrit-tox-sonar
