@@ -33,6 +33,8 @@
       - master:
           branch: master
       - athena:
+          branch: athena
+      - clio:
           branch: clio
 
 - project:
