@@ -32,7 +32,7 @@
     stream:
       - master:
           branch: master
-      - athena:
+      - clio:
           branch: clio
 
 - project:
