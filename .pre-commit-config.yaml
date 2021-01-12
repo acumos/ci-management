@@ -1,13 +1,13 @@
 ---
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v2.5.0
+    rev: v3.1.0
     hooks:
       - id: check-json
       - id: trailing-whitespace
 
-  - repo: https://github.com/prettier/prettier
-    rev: 2.0.5
+  - repo: https://github.com/prettier/pre-commit
+    rev: v2.1.2
     hooks:
       - id: prettier
 
@@ -17,7 +17,7 @@ repos:
       - id: gitlint
 
   - repo: https://github.com/jumanjihouse/pre-commit-hooks
-    rev: 2.0.2
+    rev: 2.1.1
     hooks:
       - id: shellcheck
         exclude: >
