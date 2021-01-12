@@ -4,6 +4,7 @@
 
     jobs:
       - "{project-name}-packer-jobs"
+      - gerrit-packer-verify-build
 
     project: ci-management
     project-name: ci-management

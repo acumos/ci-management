@@ -6,16 +6,16 @@
       - project-view
 
 - onnx_common: &onnx_common
-      name: onnx-common
-      # git repo
-      project: acumos-onnx-client
-      # jenkins job name prefix
-      project-name: acumos-onnx-client
-      # maven settings file has credentials
-      mvn-settings: acumos-onnx-client-settings
-      # release job requires centos
-      # ML libraries require avx
-      build-node: centos7-avx-4c-4g
+    name: onnx-common
+    # git repo
+    project: acumos-onnx-client
+    # jenkins job name prefix
+    project-name: acumos-onnx-client
+    # maven settings file has credentials
+    mvn-settings: acumos-onnx-client-settings
+    # release job requires centos
+    # ML libraries require avx
+    build-node: centos7-avx-4c-4g
 
 - project:
     name: acumos-onnx-client-info
@@ -46,4 +46,3 @@
     <<: *onnx_common
     jobs:
       - "{project-name}-gerrit-pypi-release-jobs"
-
