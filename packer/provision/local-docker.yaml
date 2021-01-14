@@ -8,6 +8,7 @@
   roles:
     - lfit.protobuf-install
 
+  tasks:
     - name: "Set docker proxy"
       lineinfile:
         dest: /etc/docker/daemon.json
