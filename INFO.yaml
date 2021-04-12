@@ -39,11 +39,11 @@ committers:
     company: "The Linux Foundation"
     id: "valderrv"
     timezone: "America/Chicago"
-  - name: "Jeremy Phelps"
-    email: "jphelps@linuxfoundation.org"
+  - name: "Eric Ball"
+    email: "eball@linuxfoundation.org"
     company: "The Linux Foundation"
-    id: "jphelps"
-    timezone: "America/Chicago"
+    id: "eball"
+    timezone: "America/Los_Angeles"
 tsc:
   approval: "https://wiki.acumos.org/display/TSC"
   changes:
