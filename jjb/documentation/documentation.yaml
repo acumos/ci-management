@@ -40,3 +40,5 @@
           branch: clio
       - demeter:
           branch: demeter
+      - elpis:
+          branch: elpis
