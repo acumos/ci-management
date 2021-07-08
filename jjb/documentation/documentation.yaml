@@ -1,4 +1,4 @@
----
+--
 - project:
     name: documentation-project-view
     project-name: documentation
@@ -40,3 +40,5 @@
           branch: clio
       - demeter:
           branch: demeter
+      - elpis:
+          branch: elpis
