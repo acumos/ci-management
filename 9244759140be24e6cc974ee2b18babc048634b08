@@ -1,0 +1,188 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5f2fe783_c980c54a",
+        "filename": "jenkins-config/managed-config-files/custom/jjbini/content",
+        "patchSetId": 2
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2021-07-30T21:47:51Z",
+      "side": 1,
+      "message": "While the username really isn\u0027t secret, I do recommend actually using the token variable when it\u0027s there, that way you are 100% certain of using the correct user and password pair.\n\nAs such this should be $PROD_USR",
+      "range": {
+        "startLine": 8,
+        "startChar": 5,
+        "endLine": 8,
+        "endChar": 22
+      },
+      "revId": "9244759140be24e6cc974ee2b18babc048634b08",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "ad64db9a_1336ac14",
+        "filename": "jenkins-config/managed-config-files/custom/jjbini/content",
+        "patchSetId": 2
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2021-07-30T21:47:51Z",
+      "side": 1,
+      "message": "See above",
+      "range": {
+        "startLine": 14,
+        "startChar": 5,
+        "endLine": 14,
+        "endChar": 22
+      },
+      "revId": "9244759140be24e6cc974ee2b18babc048634b08",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "5e4ae212_43a43980",
+        "filename": "jenkins-config/managed-config-files/custom/jjbini/content",
+        "patchSetId": 2
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2021-07-30T21:47:51Z",
+      "side": 1,
+      "message": "See above",
+      "range": {
+        "startLine": 20,
+        "startChar": 5,
+        "endLine": 20,
+        "endChar": 22
+      },
+      "revId": "9244759140be24e6cc974ee2b18babc048634b08",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "ab4076f2_9afd2084",
+        "filename": "jenkins-config/managed-config-files/custom/jjbini/customizedCredentialMappings.sandbox.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2021-07-30T21:47:51Z",
+      "side": 1,
+      "message": "See above",
+      "range": {
+        "startLine": 4,
+        "startChar": 19,
+        "endLine": 4,
+        "endChar": 24
+      },
+      "revId": "9244759140be24e6cc974ee2b18babc048634b08",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "21c07740_17f4cb1c",
+        "filename": "jenkins-config/managed-config-files/custom/jjbini/customizedCredentialMappings.sandbox.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2021-07-30T21:47:51Z",
+      "side": 1,
+      "message": "See above",
+      "range": {
+        "startLine": 6,
+        "startChar": 22,
+        "endLine": 6,
+        "endChar": 27
+      },
+      "revId": "9244759140be24e6cc974ee2b18babc048634b08",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "65039446_fd05b8d0",
+        "filename": "jenkins-config/managed-config-files/custom/jjbini/customizedCredentialMappings.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2021-07-30T21:47:51Z",
+      "side": 1,
+      "message": "Your token shouldn\u0027t have _USR or _PASS in it, that is automatically appended by the tokenizer (see the Jenkins help text related to the credential tokens)",
+      "range": {
+        "startLine": 4,
+        "startChar": 19,
+        "endLine": 4,
+        "endChar": 24
+      },
+      "revId": "9244759140be24e6cc974ee2b18babc048634b08",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "4ad7f4ea_8478a514",
+        "filename": "jenkins-config/managed-config-files/custom/jjbini/customizedCredentialMappings.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2021-07-30T21:47:51Z",
+      "side": 1,
+      "message": "See above",
+      "range": {
+        "startLine": 6,
+        "startChar": 22,
+        "endLine": 6,
+        "endChar": 27
+      },
+      "revId": "9244759140be24e6cc974ee2b18babc048634b08",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "69a5cbb9_20d39cb4",
+        "filename": "jenkins-config/managed-config-files/mavenSettings/acumos-automation-settings/serverCredentialMappings.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2021-07-30T21:47:51Z",
+      "side": 1,
+      "message": "Does this anchor bit actually do what\u0027s expected? I\u0027m not certain that the Jenkins JCasC loader knows how to handle anchors. Hopefully the python script we\u0027re using expands it properly before writing it out?",
+      "range": {
+        "startLine": 4,
+        "startChar": 19,
+        "endLine": 4,
+        "endChar": 44
+      },
+      "revId": "9244759140be24e6cc974ee2b18babc048634b08",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    }
+  ]
+}
