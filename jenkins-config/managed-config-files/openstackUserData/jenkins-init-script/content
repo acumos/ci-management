@@ -1,0 +1,11 @@
+#!/bin/bash
+until host github.com &>/dev/null
+do
+    echo "Waiting until github.com is resolvable..."
+done
+
+# Clone the repo
+git clone --recurse-submodules https://github.com/acumos/ci-management.git /opt/ciman
+
+# Run the scripts
+/opt/ciman/jjb/global-jjb/jenkins-init-scripts/init.sh
