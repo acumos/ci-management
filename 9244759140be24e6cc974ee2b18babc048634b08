@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "dca7dcfc_231b99cd",
+        "filename": "jenkins-config/managed-config-files/custom/jjbini/content",
+        "patchSetId": 2
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 223
+      },
+      "writtenOn": "2021-07-30T22:43:54Z",
+      "side": 1,
+      "message": "I can move these from secret text to username/password, but the acumos-jobbuilder credentials are not in LP (and of course, are no longer stored in clear text anywhere). Will this require doing account recovery for acumos-jobbuilder?",
+      "parentUuid": "5f2fe783_c980c54a",
+      "range": {
+        "startLine": 8,
+        "startChar": 5,
+        "endLine": 8,
+        "endChar": 22
+      },
+      "revId": "9244759140be24e6cc974ee2b18babc048634b08",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "ad64db9a_1336ac14",
         "filename": "jenkins-config/managed-config-files/custom/jjbini/content",
         "patchSetId": 2
@@ -94,6 +118,30 @@
     },
     {
       "key": {
+        "uuid": "5dfa615e_b76d3450",
+        "filename": "jenkins-config/managed-config-files/custom/jjbini/customizedCredentialMappings.sandbox.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 223
+      },
+      "writtenOn": "2021-07-30T22:43:54Z",
+      "side": 1,
+      "message": "See above.",
+      "parentUuid": "ab4076f2_9afd2084",
+      "range": {
+        "startLine": 4,
+        "startChar": 19,
+        "endLine": 4,
+        "endChar": 24
+      },
+      "revId": "9244759140be24e6cc974ee2b18babc048634b08",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "21c07740_17f4cb1c",
         "filename": "jenkins-config/managed-config-files/custom/jjbini/customizedCredentialMappings.sandbox.yaml",
         "patchSetId": 2
@@ -105,6 +153,30 @@
       "writtenOn": "2021-07-30T21:47:51Z",
       "side": 1,
       "message": "See above",
+      "range": {
+        "startLine": 6,
+        "startChar": 22,
+        "endLine": 6,
+        "endChar": 27
+      },
+      "revId": "9244759140be24e6cc974ee2b18babc048634b08",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "a92cedca_f112ce4b",
+        "filename": "jenkins-config/managed-config-files/custom/jjbini/customizedCredentialMappings.sandbox.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 223
+      },
+      "writtenOn": "2021-07-30T22:43:54Z",
+      "side": 1,
+      "message": "See above.",
+      "parentUuid": "21c07740_17f4cb1c",
       "range": {
         "startLine": 6,
         "startChar": 22,
@@ -140,6 +212,30 @@
     },
     {
       "key": {
+        "uuid": "27976c2c_206f5c59",
+        "filename": "jenkins-config/managed-config-files/custom/jjbini/customizedCredentialMappings.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 223
+      },
+      "writtenOn": "2021-07-30T22:43:54Z",
+      "side": 1,
+      "message": "This is secret text rather than username/password. There is no USR/PSW for a single-field credential like secret text (that I know of; it wouldn\u0027t really make sense).",
+      "parentUuid": "65039446_fd05b8d0",
+      "range": {
+        "startLine": 4,
+        "startChar": 19,
+        "endLine": 4,
+        "endChar": 24
+      },
+      "revId": "9244759140be24e6cc974ee2b18babc048634b08",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "4ad7f4ea_8478a514",
         "filename": "jenkins-config/managed-config-files/custom/jjbini/customizedCredentialMappings.yaml",
         "patchSetId": 2
@@ -163,6 +259,30 @@
     },
     {
       "key": {
+        "uuid": "6cea6173_77bf35da",
+        "filename": "jenkins-config/managed-config-files/custom/jjbini/customizedCredentialMappings.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 223
+      },
+      "writtenOn": "2021-07-30T22:43:54Z",
+      "side": 1,
+      "message": "See above.",
+      "parentUuid": "4ad7f4ea_8478a514",
+      "range": {
+        "startLine": 6,
+        "startChar": 22,
+        "endLine": 6,
+        "endChar": 27
+      },
+      "revId": "9244759140be24e6cc974ee2b18babc048634b08",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "69a5cbb9_20d39cb4",
         "filename": "jenkins-config/managed-config-files/mavenSettings/acumos-automation-settings/serverCredentialMappings.yaml",
         "patchSetId": 2
@@ -174,6 +294,30 @@
       "writtenOn": "2021-07-30T21:47:51Z",
       "side": 1,
       "message": "Does this anchor bit actually do what\u0027s expected? I\u0027m not certain that the Jenkins JCasC loader knows how to handle anchors. Hopefully the python script we\u0027re using expands it properly before writing it out?",
+      "range": {
+        "startLine": 4,
+        "startChar": 19,
+        "endLine": 4,
+        "endChar": 44
+      },
+      "revId": "9244759140be24e6cc974ee2b18babc048634b08",
+      "serverId": "655300a2-7a56-4504-9153-881edd907bea",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "c555dfa3_4c6dddff",
+        "filename": "jenkins-config/managed-config-files/mavenSettings/acumos-automation-settings/serverCredentialMappings.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 223
+      },
+      "writtenOn": "2021-07-30T22:43:54Z",
+      "side": 1,
+      "message": "I wasn\u0027t able to verify how JCasC would handle these anchors. They pass linting, and I was able to verify they worked in JJB (I know JJB does some extra legwork when processing yaml, but same-file anchors should be supported by any yaml interpreter).\n\nThey are not resolved/expanded by the python script. It rewrites them as-is (which seems to be by design; the ruamel docs mention preserving anchors).",
+      "parentUuid": "69a5cbb9_20d39cb4",
       "range": {
         "startLine": 4,
         "startChar": 19,
