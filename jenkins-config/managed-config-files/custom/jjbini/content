@@ -17,7 +17,7 @@ url=https://jenkins.acumos.org
 query_plugins_info=True
 
 [sandbox]
-user=$JOBBUILDER_PROD_USR
-password=$JOBBUILDER_PROD_PSW
+user=$JOBBUILDER_SANDBOX_USR
+password=$JOBBUILDER_SANDBOX_PSW
 url=https://jenkins.acumos.org/sandbox
 query_plugins_info=True
