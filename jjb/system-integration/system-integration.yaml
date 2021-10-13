@@ -1,0 +1,24 @@
+---
+- project:
+    name: system-integration-project-view
+    project-name: system-integration
+    views:
+      - project-view
+
+- system_integration_common: &system_integration_common
+    name: system-integration-common
+    # git repo
+    project: system-integration
+    # jenkins job name prefix
+    project-name: system-integration
+    # maven settings file has credentials
+    mvn-settings: system-integration-settings
+    # release job requires centos
+    # ML libraries require avx
+    build-node: centos7-avx-4c-4g
+
+- project:
+    name: system-integration-info
+    <<: *system_integration_common
+    jobs:
+      - gerrit-info-yaml-verify
