@@ -11,7 +11,11 @@
     build-timeout: 30
 
     jobs:
-      - "{project-name}-ci-jobs"
+      - gerrit-jenkins-cfg-verify
+      - gerrit-jenkins-sandbox-cleanup
+      - gerrit-jjb-deploy-job
+      - gerrit-jjb-merge
+      - gerrit-jjb-verify
       - gerrit-tox-verify:
           tox-envs: "jenkins-jobs,prefix,robot,jjb-version"
 
