@@ -6,6 +6,14 @@
       - project-view
 
 - project:
+    name: face-privacy-filter-info
+    project: face-privacy-filter
+    project-name: face-privacy-filter
+    build-node: centos7-builder-2c-1g
+    jobs:
+      - gerrit-info-yaml-verify
+
+- project:
     name: face-privacy-filter-project
     project-name: face-privacy-filter
     project: face-privacy-filter
