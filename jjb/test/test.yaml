@@ -1,0 +1,14 @@
+---
+- project:
+    name: test-project-view
+    project-name: test
+    views:
+      - project-view
+
+- project:
+    name: test-info
+    project: test
+    project-name: test
+    build-node: centos7-builder-2c-1g
+    jobs:
+      - gerrit-info-yaml-verify
