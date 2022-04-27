@@ -20,20 +20,3 @@
       - master:
           branch: master
       # no athena stream needed
-
-- project:
-    name: model-runner-rds-model-runner-sonar
-    project-name: model-runner-rds-model-runner
-    project: model-runner/rds-model-runner
-    mvn-settings: model-runner-rds-model-runner-settings
-    sonarcloud: true
-    sonarcloud-project-organization: "{sonarcloud_project_organization}"
-    sonarcloud-api-token: "{sonarcloud_api_token}"
-    sonarcloud-project-key: "{sonarcloud_project_organization}_{project-name}"
-    build-node: centos7-avx-4c-4g
-    jobs:
-      - gerrit-maven-sonar
-    cron: "H 11 * * *"
-    branch: "master"
-    mvn-goals: "clean install"
-    mvn-opts: "-Xmx1024m -XX:MaxPermSize=256m"

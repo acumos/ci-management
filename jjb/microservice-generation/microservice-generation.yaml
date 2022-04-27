@@ -30,7 +30,6 @@
       - gerrit-maven-docker-merge
       - gerrit-maven-docker-stage
       - "{project-name}-maven-javadoc-jobs"
-      - gerrit-maven-clm
     stream:
       - master:
           branch: master
@@ -38,23 +37,6 @@
       - clio:
           branch: clio
           java-version: openjdk11
-
-- project:
-    name: microservice-generation-project-sonar
-    # jenkins job name prefix
-    project-name: microservice-generation
-    # git repo
-    project: microservice-generation
-    mvn-settings: microservice-generation-settings
-    sonarcloud: true
-    sonarcloud-project-organization: "{sonarcloud_project_organization}"
-    sonarcloud-api-token: "{sonarcloud_api_token}"
-    sonarcloud-project-key: "{sonarcloud_project_organization}_{project-name}"
-    branch: master
-    build-node: centos7-docker-4c-4g
-    java-version: openjdk11
-    jobs:
-      - gerrit-maven-sonar
 
 - project:
     name: microservice-generation-release

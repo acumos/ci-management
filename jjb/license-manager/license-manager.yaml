@@ -94,16 +94,3 @@
     project-name: license-manager
     jobs:
       - "{project-name}-gerrit-release-jobs"
-
-- project:
-    <<: *lmcl_common
-    name: license-manager-sonar
-    java-version: openjdk11
-    project-name: license-manager
-    sonarcloud: true
-    sonarcloud-project-organization: "{sonarcloud_project_organization}"
-    sonarcloud-api-token: "{sonarcloud_api_token}"
-    sonarcloud-project-key: "{sonarcloud_project_organization}_{project-name}"
-    jobs:
-      - gerrit-maven-sonar
-    branch: master

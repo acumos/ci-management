@@ -32,7 +32,6 @@
       - gerrit-maven-dl-stage
       # standard Global JJB templates
       - "{project-name}-maven-javadoc-jobs"
-      - gerrit-maven-clm
     stream:
       - master:
           branch: master
@@ -48,21 +47,6 @@
       - clio:
           branch: clio
           java-version: openjdk11
-
-- project:
-    name: portal-marketplace-sonar
-    project: portal-marketplace
-    project-name: portal-marketplace
-    mvn-settings: portal-marketplace-settings
-    sonarcloud: true
-    sonarcloud-project-organization: "{sonarcloud_project_organization}"
-    sonarcloud-api-token: "{sonarcloud_api_token}"
-    sonarcloud-project-key: "{sonarcloud_project_organization}_{project-name}"
-    branch: master
-    build-node: centos7-docker-4c-4g
-    jobs:
-      - gerrit-maven-sonar
-    java-version: openjdk11
 
 - project:
     name: portal-marketplace-release

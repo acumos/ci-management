@@ -24,21 +24,6 @@
           branch: clio
 
 - project:
-    name: workbench-common-sonar
-    project-name: workbench-common
-    project: workbench
-    mvn-settings: workbench-settings
-    sonarcloud: true
-    sonarcloud-project-organization: "{sonarcloud_project_organization}"
-    sonarcloud-api-token: "{sonarcloud_api_token}"
-    sonarcloud-project-key: "{sonarcloud_project_organization}_{project-name}"
-    # subdirectory
-    mvn-params: "-f workbench-common -Dbuild.number=${{BUILD_NUMBER}}"
-    branch: master
-    jobs:
-      - gerrit-maven-sonar
-
-- project:
     name: workbench-release
     project: workbench
     project-name: workbench

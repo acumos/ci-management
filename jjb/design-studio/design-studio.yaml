@@ -34,7 +34,6 @@
       - gerrit-maven-dl-stage
       # standard Global JJB templates
       - "{project-name}-maven-javadoc-jobs"
-      - gerrit-maven-clm
     stream:
       - master:
           branch: master
@@ -44,22 +43,6 @@
       - clio:
           branch: clio
           java-version: openjdk11
-
-- project:
-    # analyzes everything including libraries
-    name: design-studio-sonar
-    project: design-studio
-    project-name: design-studio
-    mvn-settings: design-studio-settings
-    sonarcloud: true
-    sonarcloud-project-organization: "{sonarcloud_project_organization}"
-    sonarcloud-api-token: "{sonarcloud_api_token}"
-    sonarcloud-project-key: "{sonarcloud_project_organization}_{project-name}"
-    branch: master
-    build-node: centos7-docker-4c-4g
-    java-version: openjdk11
-    jobs:
-      - gerrit-maven-sonar
 
 - project:
     # builds only a library child module, for convenience of releasing

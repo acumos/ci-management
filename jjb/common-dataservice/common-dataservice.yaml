@@ -46,8 +46,6 @@
       - gerrit-maven-dl-verify
       - gerrit-maven-dl-merge
       - gerrit-maven-dl-stage
-      # standard Global JJB templates
-      - gerrit-maven-clm
     stream:
       - master:
           branch: master
@@ -67,18 +65,3 @@
           branch: master
       - clio:
           branch: clio
-
-# analyze source code
-- project:
-    name: common-dataservice-sonar
-    <<: *cds_common
-    branch: master
-    java-version: openjdk11
-    # template goal install builds image which is not needed
-    mvn-params: -f cmn-data-svc -Ddocker.skip=true
-    sonarcloud: true
-    sonarcloud-project-organization: "{sonarcloud_project_organization}"
-    sonarcloud-api-token: "{sonarcloud_api_token}"
-    sonarcloud-project-key: "{sonarcloud_project_organization}_{project-name}"
-    jobs:
-      - gerrit-maven-sonar

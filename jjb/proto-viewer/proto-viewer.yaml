@@ -36,23 +36,6 @@
           branch: athena
 
 - project:
-    name: proto-viewer-sonar
-    project-name: proto-viewer
-    project: proto-viewer
-    mvn-settings: proto-viewer-settings
-    sonarcloud: true
-    sonarcloud-project-organization: "{sonarcloud_project_organization}"
-    sonarcloud-api-token: "{sonarcloud_api_token}"
-    sonarcloud-project-key: "{sonarcloud_project_organization}_{project-name}"
-    build-node: centos7-docker-4c-4g
-    jobs:
-      - gerrit-maven-sonar
-    cron: "H 11 * * *"
-    branch: "master"
-    mvn-goals: "clean install"
-    mvn-opts: "-Xmx1024m -XX:MaxPermSize=256m"
-
-- project:
     name: proto-viewer-release
     project: proto-viewer
     project-name: proto-viewer

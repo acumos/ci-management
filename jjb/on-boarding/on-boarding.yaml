@@ -32,7 +32,6 @@
       - gerrit-maven-dl-stage
       # standard Global JJB templates
       - "{project-name}-maven-javadoc-jobs"
-      - gerrit-maven-clm
     java-version: openjdk11
     stream:
       - master:
@@ -53,23 +52,6 @@
     build-node: centos7-docker-4c-4g
     jobs:
       - "{project-name}-gerrit-release-jobs"
-
-- project:
-    name: on-boarding-project-sonar
-    # jenkins job name prefix
-    project-name: on-boarding
-    # git repo
-    project: on-boarding
-    mvn-settings: on-boarding-settings
-    sonarcloud: true
-    sonarcloud-project-organization: "{sonarcloud_project_organization}"
-    sonarcloud-api-token: "{sonarcloud_api_token}"
-    sonarcloud-project-key: "{sonarcloud_project_organization}_{project-name}"
-    branch: master
-    build-node: centos7-docker-4c-4g
-    java-version: openjdk11
-    jobs:
-      - gerrit-maven-sonar
 
 - project:
     name: on-boarding-project-base-r
