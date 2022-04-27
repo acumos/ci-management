@@ -33,27 +33,11 @@
       - gerrit-maven-dl-stage
       # standard Global JJB templates
       - "{project-name}-maven-javadoc-jobs"
-      - gerrit-maven-clm
     stream:
       - master:
           branch: master
       - clio:
           branch: clio
-
-- project:
-    name: federation-sonar
-    project: federation
-    project-name: federation
-    mvn-settings: federation-settings
-    sonarcloud: true
-    sonarcloud-project-organization: "{sonarcloud_project_organization}"
-    sonarcloud-api-token: "{sonarcloud_api_token}"
-    sonarcloud-project-key: "{sonarcloud_project_organization}_{project-name}"
-    branch: master
-    build-node: centos7-docker-4c-4g
-    java-version: openjdk11
-    jobs:
-      - gerrit-maven-sonar
 
 - project:
     name: federation-release

@@ -74,25 +74,6 @@
           stream: all
           branch: "*"
           tox-dir: lum-server
-      - gerrit-tox-sonarqube:
-          build-node: ubuntu1804-docker-4c-4g
-          pre-build-script: |
-            sudo apt install -y nodejs
-            node -v
-          sonar-project-file: ""
-          sonar-properties: |
-            sonar.host.url=https://sonarcloud.io/
-            sonar.login={sonarcloud_api_token}
-            sonar.projectKey={sonarcloud_project_organization}_{name}
-            sonar.projectName={name}
-            sonar.organization={sonarcloud_project_organization}
-            sonar.build.sourceEncoding=UTF-8
-            sonar.projectBaseDir=lum-server
-            sonar.sources=.
-            sonar.exclusions=coverage/**,setup.py
-            sonar.javascript.lcov.reportPaths=coverage/lcov.info
-            sonar.language=js
-          tox-dir: lum-server
 
 - project:
     <<: *lum_common
@@ -123,16 +104,3 @@
     project-name: license-usage-manager
     jobs:
       - "{project-name}-gerrit-release-jobs"
-
-- project:
-    <<: *lum_common
-    name: license-usage-manager-sonar
-    java-version: openjdk11
-    project-name: license-usage-manager
-    sonarcloud: true
-    sonarcloud-project-organization: "{sonarcloud_project_organization}"
-    sonarcloud-api-token: "{sonarcloud_api_token}"
-    sonarcloud-project-key: "{sonarcloud_project_organization}_{project-name}"
-    jobs:
-      - gerrit-maven-sonar
-    branch: master

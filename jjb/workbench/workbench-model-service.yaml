@@ -17,10 +17,8 @@
     jobs:
       - gerrit-maven-docker-verify
       - gerrit-maven-docker-merge
-      - gerrit-maven-docker-stage
       # Javadoc template does not yet support -f
       # - '{project-name}-maven-javadoc-jobs'
-      - gerrit-maven-clm
     stream:
       - master:
           branch: master

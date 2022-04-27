@@ -27,9 +27,7 @@
     jobs:
       - gerrit-maven-docker-verify
       - gerrit-maven-docker-merge
-      - gerrit-maven-docker-stage
       - "{project-name}-maven-javadoc-jobs"
-      - gerrit-maven-clm
     stream:
       - master:
           branch: master
@@ -37,20 +35,6 @@
           branch: dev-challenge
       - athena:
           branch: athena
-
-- project:
-    name: acumos-azure-client-sonar
-    project: acumos-azure-client
-    project-name: acumos-azure-client
-    mvn-settings: acumos-azure-client-settings
-    sonarcloud: true
-    sonarcloud-project-organization: "{sonarcloud_project_organization}"
-    sonarcloud-api-token: "{sonarcloud_api_token}"
-    sonarcloud-project-key: "{sonarcloud_project_organization}_{project-name}"
-    branch: master
-    build-node: centos7-docker-4c-4g
-    jobs:
-      - gerrit-maven-sonar
 
 - project:
     name: acumos-azure-client-release

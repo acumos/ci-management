@@ -32,19 +32,6 @@
           branch: clio
 
 - project:
-    name: acumos-java-client-sonar
-    project: acumos-java-client
-    project-name: acumos-java-client
-    mvn-settings: acumos-java-client-settings
-    sonarcloud: true
-    sonarcloud-project-organization: "{sonarcloud_project_organization}"
-    sonarcloud-api-token: "{sonarcloud_api_token}"
-    sonarcloud-project-key: "{sonarcloud_project_organization}_{project-name}"
-    branch: master
-    jobs:
-      - gerrit-maven-sonar
-
-- project:
     name: acumos-java-client-release
     project: acumos-java-client
     project-name: acumos-java-client

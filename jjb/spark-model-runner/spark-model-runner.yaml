@@ -66,20 +66,6 @@
         pattern: "protobuf-common/.*"
 
 - project:
-    name: spark-model-runner-sonar
-    project: spark-model-runner
-    project-name: spark-model-runner
-    mvn-settings: spark-model-runner-settings
-    sonarcloud: true
-    sonarcloud-project-organization: "{sonarcloud_project_organization}"
-    sonarcloud-api-token: "{sonarcloud_api_token}"
-    sonarcloud-project-key: "{sonarcloud_project_organization}_{project-name}"
-    branch: master
-    jobs:
-      - gerrit-maven-sonar
-      - gerrit-maven-clm
-
-- project:
     name: spark-model-runner-release
     project: spark-model-runner
     project-name: spark-model-runner

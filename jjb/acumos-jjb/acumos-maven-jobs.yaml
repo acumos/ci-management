@@ -75,7 +75,7 @@
     branch: master
     build-days-to-keep: 30 # 30 days in case we need to troubleshoot
     build-timeout: 30
-    cron: "H H * * 0" # build weekly to refresh snapshots
+    cron: ""
     git-url: "$GIT_URL/$PROJECT"
     java-version: openjdk8
     mvn-global-settings: global-settings
@@ -190,7 +190,7 @@
     branch: master
     build-days-to-keep: 30 # 30 days in case it takes long to get approved.
     build-timeout: 30
-    cron: "H 11 * * *" # build daily release candidate
+    cron: ""
     git-url: "$GIT_URL/$PROJECT"
     java-version: openjdk8
     mvn-global-settings: global-settings
